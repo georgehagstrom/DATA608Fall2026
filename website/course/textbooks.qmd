@@ -1,0 +1,40 @@
+---
+title: "Textbooks"
+---
+
+### Required
+
+This course makes use of several textbooks and other resources. I have attempted when possible to choose resources which are freely available.
+
+1. Claus Wilke. [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
+
+This book is a comprehensive and highly readable guide to making visualizations that accurately reflect the data, tell a story, and look professional. It is freely available online and forms the backbone of the weekly readings.
+
+2. Cole Nussbaumer Knaflic. *Storytelling with Data: A Data Visualization Guide for Business Professionals*
+
+This book teaches the fundamentals of communicating effectively with data: choosing an appropriate visual, eliminating clutter, focusing attention, and building a narrative.
+
+### Other Important Texts
+
+1. Kieran Healy. [Data Visualization: A Practical Introduction](https://socviz.co/)
+
+A hands-on introduction to making visualizations with `ggplot2` in R, freely available online.
+
+2. William Cleveland. *The Elements of Graphing Data.* Hobart Press, 1994
+
+A classic text on graphical perception theory from one of the pioneers of statistical graphics.
+
+3. Rafe Donahue. [Fundamental Statistical Concepts in Presenting Data](https://biostat.app.vumc.org/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf)
+
+### Data Visualization Resources
+
+- [The Data Visualization Catalogue](https://datavizcatalogue.com/resources.html)
+- [US Census](https://www.census.gov/about/adrm/linkage/guidance.html)
+- [Tyler Technologies - Data Insights](https://dev.socrata.com/)
+- [Centers for Disease Control](https://data.cdc.gov/)
+- [United Nations](https://data.un.org/)
+- [NOAA](https://www.noaa.gov/nodd/datasets)
+- [US Bureau of Labor Statistics](https://www.bls.gov/developers/home.htm)
+- [Federal Reserve Board](https://www.federalreserve.gov/data.htm)
+- [Pew Research Center](https://www.pewresearch.org/download-datasets/)
+- [Human Progress Datasets Archive](https://www.humanprogress.org/datasets/#more-info)

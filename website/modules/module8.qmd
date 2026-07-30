@@ -1,0 +1,26 @@
+---
+title: "Module 8 - Distributions and Histograms"
+editor: source
+---
+
+# Overview and Deliverables
+
+* 10/19: Attend the course meetup at 8:00PM Eastern
+* [Story 4](../assignments/stories/story4.qmd) is due at the end of this week (Sunday 10/25)
+
+There are two primary goals for this week:
+
+1. Read Chapters 7-9 in Fundamentals of Data Visualization
+2. Finish Data Story 4 and turn it in (Sunday by midnight)
+
+### Readings
+
+* __Wilke__ - Chapters 7-9
+
+### Meetup
+
+Slides: [Meetup 8 - Visualizing Distributions (PDF)](../meetups/meetup-8/meetup-8-slides.pdf)
+
+In this meetup we go over techniques for visualizing distributions. This starts with tips and tricks to optimize your histograms, frequency-polygons, and density plots. We then move on to visualizing cumulative distribution functions and show how to generate the empirical CDF and how that leads to qq-plots. Finally, we introduce tools for working with multiple distributions, such as ridge plots.
+
+[Spring 2025 recording](https://youtu.be/rQWjKhXjweU)

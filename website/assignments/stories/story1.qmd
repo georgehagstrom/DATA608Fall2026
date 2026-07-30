@@ -1,0 +1,20 @@
+---
+title: "Story 1: Infrastructure Investment and Jobs Act Funding Allocation"
+---
+
+**Assigned:** Week 1 | **Due:** Sunday, September 13 at midnight Eastern | **Points:** 100
+
+The Excel file linked below contains data on the present allocation of the Infrastructure Investment and Jobs Act funding by State and Territory.
+
+Source data on the current (or estimated) population of each state and territory listed in the Excel spreadsheet file, and on the official results of the presidential election. Your assignment is to use this data to create visualizations that answer the following two questions:
+
+1. Is the allocation equitable based on the population of each of the States and Territories, or is bias apparent?
+2. Does the allocation favor the political interests of the Biden administration?
+
+To frame your data story, use the storyboard/3-minute story/big idea framework from Chapter 1 of *Storytelling with Data*. Submit your storyboard (it can be a short, sequential list of phrases), a one-paragraph 3-minute story, and a one sentence big-idea summary of your story. Then create one or more visualizations using the data in order to tell your story.
+
+You may select which software you use to create your presentation. I recommend using R or python and submitting a reproducible quarto presentation. Your submission should be in the form of a report (document) or a presentation.
+
+### Data
+
+- [IIJA Funding as of March 2023 (xlsx)](data/IIJA_FUNDING_MARCH_2023.xlsx)

@@ -1,0 +1,13 @@
+---
+title: "Story 4: High Revenue Airbnbs in NYC"
+---
+
+**Assigned:** Week 7 | **Due:** Sunday, October 25 at midnight Eastern | **Points:** 100
+
+The data story for this week has a little bit of a richer dataset and as a result is more open ended. Basically you are tasked with looking at airbnb listings in NYC, trying to understand what drives their revenue/lack thereof, and making a short slideshow suggesting a strategy to either invest in airbnbs with unrealized profit potential, give advice to underperforming hosts, or target potential hosts and convince them to list their property on airbnb. This data involves a very crude estimation of revenue and occupancy rate, so don't invest money based on your findings, but it should be approximately accurate.
+
+### Assignment and Data
+
+- [Data Story 4 Assignment PDF](data/data_story_4.pdf)
+- [NYC Airbnb Listings Data](data/nyc_airbnb_listings.csv)
+- [NYC Neighbourhoods GeoJSON](data/neighbourhoods.geojson)

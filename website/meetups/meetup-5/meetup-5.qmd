@@ -1,0 +1,624 @@
+---
+title: "Meetup 5: Visualizing Geospatial Data"
+author: "George I. Hagstrom"
+format: revealjs
+---
+
+## Many Ways to Map the Same Data
+
+- Results of 2016 US Election
+![Healy 7.1](map1.png)
+
+
+## Many Ways to Map the Same Data
+
+- Results of 2016 US Election
+![Healy 7.1](map2.png)
+
+
+## Many Ways to Map the Same Data
+
+- Results of 2016 US Election
+![Healy 7.1](map3.png)
+
+## Many Ways to Map the Same Data
+
+- Results of 2016 US Election
+
+![Healy 7.1](map4.png)
+
+## Many Ways to Map the Same Data
+
+- Results of 2016 US Election
+![Healy 7.1](map5.png)
+
+## Many Ways to Map the Same Data
+
+- Results of 2016 US Election
+![Healy 7.1](map6.png)
+
+
+```{r}
+library(tidyverse)
+library(socviz)
+library(sf)
+library(maps)
+library(ggforce)
+library(ggrepel)
+library(patchwork)
+
+```
+
+```{r}
+library(maps)
+
+
+theme_map <- function(base_size=9, base_family="") {
+    require(grid)
+    theme_bw(base_size=base_size, base_family=base_family) %+replace%
+        theme(axis.line=element_blank(),
+              axis.text=element_blank(),
+              axis.ticks=element_blank(),
+              axis.title=element_blank(),
+              panel.background=element_blank(),
+              panel.border=element_blank(),
+              panel.grid=element_blank(),
+              panel.spacing=unit(0, "lines"),
+              plot.background=element_blank(),
+              legend.justification = c(0,0),
+              legend.position = c(0,0)
+              )
+}
+
+```
+
+```{r}
+party_colors <- c("#2E74C0", "#CB454A") 
+
+us_states <- map_data("state")
+
+```
+
+## Many Ways to "Map" the Same Data
+
+```{r}
+
+
+# Hex color codes for Dem Blue and Rep Red
+
+p0 <- ggplot(data = subset(election, st %nin% "DC"),
+             mapping = aes(x = r_points,
+                           y = reorder(state, r_points),
+                           color = party))
+
+p1 <- p0 + geom_vline(xintercept = 0, color = "gray30") +
+    geom_point(size = 2)
+
+p2 <- p1 + scale_color_manual(values = party_colors)
+
+p3 <- p2 + scale_x_continuous(breaks = c(-30, -20, -10, 0, 10, 20, 30, 40),
+                              labels = c("30\n (Clinton)", "20", "10", "0",
+                                         "10", "20", "30", "40\n(Trump)"))
+
+
+p3 + facet_wrap(~ census, scales="free_y",ncol=2) +
+    guides(color=FALSE) + labs(x = "Point Margin", y = NULL) +
+    theme(axis.text=element_text(size=8))
+
+
+```
+
+
+## Several Differences
+
+- Areas of different regions vary by a lot
+- Number of people vary by a lot
+- Different resolution shows different patterns
+- Pattern of votes vs. Meaningful outcome
+- For numbers, the dot-plot is better
+
+
+## Week Summary
+
+- Reading for the week:
+  - Chapter 15 of Wilke
+  - Chapter 7 of Healy (especially if R user)
+  - Cartopy Tutorial (for pythonistas)
+  - Ecological Fallacy Section
+- Discussion: Find a lying map
+- New Lab Available
+
+## How Does R Draw Maps?
+
+- Let's Look at the data available in a map:
+
+```{r}
+#| echo: true
+library(maps)
+us_counties = map_data("county") |> as_tibble()
+head(us_counties)
+
+
+```
+- Each unit is a polygon with coordinates and
+ordering
+
+
+## Draw Some Polygons
+
+- Use `geom_polygon` to see how it works
+
+```{r}
+#| echo: true
+us_counties |> filter(region == "new york") |>  ggplot(aes(x=long,y=lat,group=group)) +
+  geom_polygon(fill="white",color="black") +
+  theme_minimal(base_size=16) +
+  labs(title="Counties of New York")
+
+
+
+```
+
+
+## Mapping Libraries
+
+- There are several tools which are better at
+making maps:
+  - `sf` or `simple features`
+  - `tmap` or `tidy maps`
+- These bring full suit of GIS (Geographic Information Systems Tools)
+- Projections,
+
+
+## Mapping NYC
+
+```{r}
+library(nycgeo)
+
+nyc_boundaries(geography = "tract")
+
+```
+
+## Mapping NYC
+
+```{r}
+nyc_boundaries(geography = "tract") |>  ggplot() +
+  geom_sf() +
+  theme_minimal()
+
+```
+
+## Mapping NYC
+
+- Let's get some data
+```{r}
+
+tract_age = tract_acs_data |> select(med_age_est,geoid)
+
+nyc_boundaries(geography = "tract") %>% 
+  left_join(tract_age, by = c("geoid" = "geoid")) %>% 
+  ggplot() +
+  geom_sf(aes(fill = med_age_est)) +
+  scale_fill_viridis_c(name = "Median Age (estimated)") +
+  theme_void(base_size=16) +
+  theme(panel.grid = element_line(color = "transparent")) +
+  labs(title = "How does age vary across NYC Neighborhoods?")
+
+
+
+```
+
+## Mapping NYC
+
+- Let's get some data
+```{r}
+#| echo: true
+tract_acs_data |> select(pop_total_est:med_age_est) |> head(10)
+```
+
+
+## Mapping NYC
+
+- Let's get some data
+
+```{r}
+#| echo: true
+
+nyc_boundaries(geography = "tract") 
+```
+
+
+## Mapping NYC
+
+- Let's get some data
+```{r}
+#| echo: true
+#| eval: false
+
+tract_age = tract_acs_data |> select(med_age_est,geoid)
+
+nyc_boundaries(geography = "tract") %>% 
+  left_join(tract_age, by = c("geoid" = "geoid")) %>% 
+  ggplot() +
+  geom_sf(aes(fill = med_age_est)) +
+  scale_fill_viridis_c(name = "Median Age (estimated)") +
+  theme_void() +
+  theme(panel.grid = element_line(color = "transparent")) +
+  labs(title = "How does age vary across NYC Neighborhoods?")
+
+```
+
+## Projections
+
+- Mapping transforms from a spherical surface to a 2D plane
+- Many Choices
+
+```{r}
+library(rnaturalearth)
+sf_world <- ne_countries(returnclass='sf')
+ggplot(sf_world) + geom_sf() +
+  theme_minimal(base_size=16) +
+  labs(title="Default: WGS-84")
+
+
+
+```
+
+## Projections
+
+- Mapping transforms from a spherical surface to a 2D plane
+- Control with `coord_sf`
+
+```{r}
+#| echo: true
+#| eval: false
+library(rnaturalearth)
+sf_world <- ne_countries(returnclass='sf')
+ggplot(sf_world) + geom_sf() +
+  theme_minimal(base_size=16) +
+  labs(title="Default: WGS-84") +
+  coord_sf(crs = st_crs("ESRI:54009"))
+
+
+
+```
+
+## Projections
+
+- Mapping transforms from a spherical surface to a 2D plane
+- Control with `coord_sf`
+
+```{r}
+sf_world <- ne_countries(returnclass='sf')
+ggplot(sf_world) + geom_sf() +
+  theme_minimal(base_size=16) +
+  labs(title="Mollewide") +
+  coord_sf(crs = st_crs("ESRI:54009"))
+
+
+```
+
+
+## Projections
+
+- Mapping transforms from a spherical surface to a 2D plane
+- Control with `coord_sf`
+
+```{r}
+sf_world <- ne_countries(returnclass='sf')
+ggplot(sf_world) + geom_sf() +
+  theme_minimal(base_size=16) +
+  labs(title="Sinusoidal") +
+  coord_sf(crs = st_crs("ESRI:54008"))
+
+
+```
+
+
+## Choropleth Maps
+
+- Maps that color regions based on data
+
+```{r}
+library(usmapdata)
+library(usmap)
+
+us_counties = us_map(regions="county") |> mutate(fips = parse_number(fips))
+
+county_full <- us_counties |> left_join(county_data)  |> mutate(pop_density = pop/land_area)
+
+county_full |> ggplot(aes(fill = hh_income)) +
+  geom_sf() +
+  scale_fill_viridis_c(name = "HHIncome",option="inferno") +
+  theme_void(base_size=16) +
+  theme(panel.grid = element_line(color = "transparent")) +
+  labs(title = "County Level Household Income")
+
+
+```
+
+## Problems With Choropleths
+
+- Population distribution very heterogeneous
+
+```{r}
+county_full |> 
+ggplot(aes(fill = pop_density)) +
+  geom_sf() +
+  scale_fill_viridis_c(trans= "log10",option="magma") +
+  theme_void(base_size=16) +
+  theme(panel.grid = element_line(color = "transparent")) +
+  labs(title = "Population Density")
+
+
+```
+
+## Problems with Choropleths
+
+- Geographic definitions also heterogeneous
+
+```{r}
+county_full |> 
+ggplot(aes(fill = land_area)) +
+  geom_sf() +
+  scale_fill_viridis_c(option="G") +
+  theme_void(base_size=16) +
+  theme(panel.grid = element_line(color = "transparent")) +
+  labs(title = "Population Density")
+
+
+```
+
+## Problems with Choropleths
+
+- Geographic definitions also heterogeneous
+
+```{r}
+#| echo: true
+#| eval: false
+county_full |> 
+  filter(abbr != "AK")
+ggplot(aes(fill = land_area)) +
+  geom_sf() +
+  scale_fill_viridis_c(option="G") +
+  theme_void(base_size=16) +
+  theme(panel.grid = element_line(color = "transparent")) +
+  labs(title = "Population Density")
+
+
+```
+
+## Problems with Choropleths
+
+- Geographic definitions also heterogeneous
+
+```{r}
+county_full |> 
+  filter(abbr != "AK") |> 
+ggplot(aes(fill = land_area)) +
+  geom_sf() +
+  scale_fill_viridis_c(option="G") +
+  theme_void(base_size=16) +
+  theme(panel.grid = element_line(color = "transparent")) +
+  labs(title = "County Land Area")
+
+
+```
+
+
+## Ecological Fallacy
+
+- Properties of individuals may not correspond to mean properties of the group
+- Modifiable Areal Units Problem
+  - Different areas may show different story
+
+## Ecological Fallacy
+
+- Geographical disparities in cancer stage at diagnosis
+
+![Fontanet et al 2024](muap.jpg)
+
+## Cartogram
+
+- Equalize areas while retaining geography
+
+```{r}
+library(geofacet)
+library(statebins)
+state_unemp |> as_tibble() |> filter(year==2008) |> ggplot(aes(fill=rate,state=state)) + geom_statebins(lbl_size = 6) +
+  scale_fill_gradient(low="white",high="red") +
+  theme_void(base_size=18) +
+  labs(title="State Unemployment")
+
+```
+
+## `statebins` library
+
+- `geom_statebins`
+
+```{r}
+#| echo: true
+#| eval: false
+library(geofacet)
+library(statebins)
+state_unemp |> as_tibble() |> filter(year==2008) |>
+  ggplot(aes(fill=rate,                                                 state=state)) + 
+  geom_statebins(lbl_size = 6) +
+  scale_fill_gradient(low="white",high="red") +
+  theme_void(base_size=18) +
+  labs(title="State Unemployment")
+
+```
+
+
+## Time Series in Each Bin
+
+```{r}
+
+
+state_unemp %>%
+  ggplot(aes(year, rate)) + 
+  geom_area(fill = "#56B4E9", alpha = 0.7) +
+  geom_line() + 
+  scale_y_continuous(
+    name = "unemployment rate",
+    limits = c(0, 16), expand = c(0, 0),
+    breaks = c(5, 10),
+    labels = c( "5", "10")
+  ) +
+  scale_x_continuous(breaks = c(2006, 2012),
+    labels = c("\'06", "\'12")) +
+  coord_cartesian(clip = "off") +
+  facet_geo(~state, grid = "us_state_grid1") +
+  theme_minimal(base_size=12) +
+  theme(
+    axis.line.x = element_blank(),
+    panel.spacing.x = grid::unit(1, "pt"),
+    panel.spacing.y = grid::unit(1, "pt"),
+    panel.grid.major = element_line(color = "gray80"),
+    panel.background = element_rect(fill = "gray90")
+  ) 
+
+```
+
+## Time Series in Each Bin
+
+```{r}
+#| echo: true
+#| eval: false
+
+state_unemp %>%
+  ggplot(aes(year, rate)) + 
+  geom_area(fill = "#56B4E9", alpha = 0.7) +
+  geom_line() + 
+  scale_y_continuous(
+    name = "unemployment rate",
+    limits = c(0, 16), expand = c(0, 0),
+    breaks = c(5, 10),
+    labels = c( "5", "10")
+  ) +
+  scale_x_continuous(breaks = c(2006, 2012),
+    labels = c("\'06", "\'12")) +
+  coord_cartesian(clip = "off") +
+  facet_geo(~state, grid = "us_state_grid1") +
+  theme_minimal(base_size=12) +
+  theme(
+    axis.line.x = element_blank(),
+    panel.spacing.x = grid::unit(1, "pt"),
+    panel.spacing.y = grid::unit(1, "pt"),
+    panel.grid.major = element_line(color = "gray80"),
+    panel.background = element_rect(fill = "gray90")
+  ) 
+
+```
+
+
+## Small Multiples
+
+- Facet by time
+
+```{r}
+opiates$region <- tolower(opiates$state)
+opiates_map <- left_join(us_states, opiates)
+p0 <- ggplot(data = subset(opiates_map, year > 1999),
+             mapping = aes(x = long, y = lat,
+                 group = group,
+                 fill = adjusted))
+
+p1 <- p0 + geom_polygon(color = "gray90", size = 0.05) +
+    coord_map(projection = "albers", lat0 = 39, lat1 = 45) 
+
+p2 <- p1 + scale_fill_viridis_c(option = "plasma")
+
+p2 + theme_map() + facet_wrap(~ year, ncol = 3) +
+    theme(legend.position = "bottom",
+          strip.background = element_blank()) +
+    labs(fill = "Death rate per 100,000 population ",
+         title = "Opiate Related Deaths by State, 2000-2014")  
+
+```
+
+
+## Small Multiples
+
+```{r}
+#| echo: true
+#| eval: false
+
+opiates$region <- tolower(opiates$state)
+opiates_map <- left_join(us_states, opiates)
+
+p0 <- ggplot(data = subset(opiates_map, year > 1999),
+             mapping = aes(x = long, y = lat,
+                 group = group,
+                 fill = adjusted))
+
+p1 <- p0 + geom_polygon(color = "gray90", size = 0.05) +
+    coord_map(projection = "albers", lat0 = 39, lat1 = 45) 
+
+p2 <- p1 + scale_fill_viridis_c(option = "plasma")
+
+p2 + theme_map() + facet_wrap(~ year, ncol = 3) +
+    theme(legend.position = "bottom",
+          strip.background = element_blank()) +
+    labs(fill = "Death rate per 100,000 population ",
+         title = "Opiate Related Deaths by State, 2000-2014")
+
+```
+
+
+
+## Non-Spatial Plots
+
+- Direct numerical visualization more precise than colors
+
+```{r}
+library(socviz)
+
+
+socviz::election |> filter(st != "DC") |>  ggplot(
+             mapping = aes(x = r_points,
+                           y = reorder(state, r_points),
+                           color = party)) +
+ geom_vline(xintercept = 0, color = "gray30") +
+    geom_point(size = 2) +  scale_color_manual(
+      values = party_colors) + scale_x_continuous(
+        breaks = c(-30, -20, -10, 0, 10, 20, 30, 40),
+    labels = c("30\n (Clinton)", "20", "10", "0",
+  "10", "20", "30", "40\n(Trump)")) + 
+  facet_wrap(~ census, scales="free_y",ncol=2) +
+    guides(color=FALSE) + labs(x = "Point Margin", y = NULL) +
+    theme(axis.text=element_text(size=8))
+
+
+```
+
+
+## Non-Spatial Plots
+
+- Direct numerical visualization more precise than colors
+
+```{r}
+#| echo: true
+#| eval: false
+
+ election |> filter(state != "DC") |> ggplot(
+   aes(x = r_points, y = reorder(state, r_points),
+                           color = party)) + geom_vline(xintercept = 0, color = "gray30") +
+    geom_point(size = 2) + scale_color_manual(values = party_colors) + scale_x_continuous(breaks = c(-30, -20, -10, 0, 10, 20, 30, 40),                              labels = c("30\n (Clinton)", "20", "10", "0",
+                                         "10", "20", "30", "40\n(Trump)")) + 
+   facet_wrap(~ census, scales="free_y",ncol=2) +
+    guides(color=FALSE) + labs(x = "Point Margin", y = NULL) +
+    theme(axis.text=element_text(size=8))
+
+
+```
+
+
+
+
+## Thanks
+
+## References
+
+- Kieran Healy Data Visualization and Github

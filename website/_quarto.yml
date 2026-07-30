@@ -1,0 +1,141 @@
+project:
+  type: website
+  output-dir: "../docs/"
+  render:
+    - "**/*.qmd"
+    # The meetup decks recovered from Brightspace are missing some images and
+    # use R packages; re-enable them here one at a time as you fix them up.
+    - "!meetups/"
+    # The sample data story executes R code; students download it rather than
+    # view it as a page (the rendered PDF is linked from stories.qmd).
+    - "!assignments/stories/sample-data-story/"
+
+website:
+  page-navigation: true
+  title: "DATA 608 Fall 2026"
+  description: "DATA 608 - Knowledge and Visual Analytics - CUNY School of Professional Studies"
+  site-url: "https://georgehagstrom.github.io/DATA608Fall2026/"
+
+  repo-url: https://github.com/georgehagstrom/DATA608Fall2026
+
+  repo-actions: [edit, issue]
+
+  open-graph: true
+
+  page-footer:
+    right:
+    - text: "Some content on this page was derived from and inspired by the open source Data Science in a Box course materials developed by Mine Çetinkaya-Rundel"
+      href: https://datasciencebox.org/
+    left:
+    - text: "License"
+      href: license.qmd
+    background: "#FFD700"
+
+  sidebar:
+    background: "#FFD700"
+    logo: "images/course_logo.png"
+    pinned: true
+    align: center
+    # List of available icons: https://icons.getbootstrap.com
+    tools:
+      - icon: github
+        href: https://github.com/georgehagstrom/DATA608Fall2026
+        text: "Github"
+        target: _blank
+      - icon: slack
+        href: https://cuny-msds.slack.com
+        text: "Slack"
+        target: _blank
+      - icon: link-45deg
+        text: "CUNY"
+        menu:
+          - text: Brightspace LMS
+            url: https://brightspace.cuny.edu
+            target: _blank
+          - text: MSDS Program Page
+            url: https://sps.cuny.edu/academics/graduate/master-science-data-science-ms
+            target: _blank
+          - text: CUNYfirst
+            url: https://cunyfirst.cuny.edu
+            target: _blank
+      - icon: envelope
+        text: "Email"
+        url: mailto:george.hagstrom@cuny.edu?subject=DATA608
+
+    style: "docked"
+    search: true
+    collapse-level: 2
+    contents:
+      - href: "index.qmd"
+        text: "Announcements"
+      - section: "Course information"
+        contents:
+          - href: course/overview.qmd
+            text: Overview
+          - href: course/syllabus.qmd
+            text: Syllabus
+          - href: course/instructors.qmd
+            text: Instructors
+          - href: course/schedule.qmd
+            text: Schedule
+          - href: course/textbooks.qmd
+            text: Textbooks
+          - href: course/software.qmd
+            text: Software
+      - section: "Assignments"
+        contents:
+          - href: assignments/stories.qmd
+            text: "Data Stories"
+      - section: "Topics"
+        contents:
+          - href: modules/module1.qmd
+            text: "1 - Developing a Critical Eye"
+          - href: modules/module2.qmd
+            text: "2 - The Data Visualization Catalogue"
+          - href: modules/module3.qmd
+            text: "3 - Visualization Quality Features"
+          - href: modules/module4.qmd
+            text: "4 - Associations and Time Series"
+          - href: modules/module5.qmd
+            text: "5 - Visualizing Geospatial Data"
+          - href: modules/module6.qmd
+            text: "6 - Storytelling"
+          - href: modules/module7.qmd
+            text: "7 - Effective Use of Color and Fonts"
+          - href: modules/module8.qmd
+            text: "8 - Distributions and Histograms"
+          - href: modules/module9.qmd
+            text: "9 - Models and Uncertainty"
+          - href: modules/module10.qmd
+            text: "10 - Dimension Reduction and PCA"
+          - href: modules/module11.qmd
+            text: "11 - Clustering"
+          - href: modules/module12.qmd
+            text: "12 - Hierarchical Clustering"
+          - href: modules/module13.qmd
+            text: "13 - Introduction to Shiny Apps"
+          - href: modules/module14.qmd
+            text: "14 - Interactive Visualizations"
+          - href: modules/module15.qmd
+            text: "15 - Wrap-Up"
+
+      - href: "acknowledgements.qmd"
+        text: "Acknowledgements"
+
+
+format:
+  html:
+    # NOTE: do not add `embed-resources: true` here. Quarto does not support it
+    # for website projects -- it inlines every asset into every page, which
+    # bloats every page and the git repo.
+    theme:
+      light: cosmo
+      dark: darkly
+    mainfont: "Atkinson Hyperlegible"
+    code-copy: true
+    code-overflow: wrap
+    toc: false
+
+freeze: auto
+
+editor: source

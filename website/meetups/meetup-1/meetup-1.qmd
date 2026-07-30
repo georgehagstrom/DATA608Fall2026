@@ -1,0 +1,419 @@
+---
+title: "Meetup 1: Developing a Critical Eye"
+author: "George Hagstrom"
+format: revealjs
+logo: ../../images/CUNY_SPS_Logo_Wide.png
+footer: "DATA 608"
+---
+
+```{r}
+#| echo: False
+#| output: False
+library(tidyverse)
+library(kableExtra)
+library(ggrepel)
+library(lubridate)
+library(scales)
+library(patchwork)
+library(ggthemes)
+library(DT)
+
+```
+
+## Why Visualizations Matter
+
+- Graphs are the main way we communicate data
+- Your visualizations are how people will remember your analysis, can make or break your recommendations to decision makers.
+- Two goals of the class:
+  1. Learn how to tell stories with graphs
+  2. Learn to make good visualizations
+
+## Why do we need a class on this?
+
+- People are not naturally good at telling stories using data
+![](BadChatsCollection.png){width=40%}
+
+
+## Why do we need a class on this?
+
+- The world is full of awful visualizations
+
+![](BadHeightGraph.jpeg){width=50%}
+
+## Why do we need a class on this?
+
+- The world is full of awful visualizations
+
+![](Global-2-copy.jpg){width=50%}
+
+
+## Why do we need a class on this?
+
+- The world is full of awful visualizations
+
+![](stand_your_ground.png){width=60%}
+
+## Why do we need a class on this?
+
+- The world is full of awful visualizations
+
+![](glyphosate_thyroid.png){width=60%}
+
+
+## Case Study
+
+- Your firm had two employees leave in May
+- This caused a backlog of work
+
+![](TicketTrendsBad.png){width=70%}
+
+## Case Study
+
+- Highlight the key features to tell a story
+
+![Storytelling 0.3](TicketTrendsGood.png){width=70%}
+
+## Course Website and Meetup
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+-  Brightspace to submit homework
+- Course Meetup: Monday 8:00-9:00PM
+- [Zoom Link](https://us02web.zoom.us/j/6211354884?omn=86938044575)
+
+
+:::
+
+::: {.column width="50%"}
+
+![](brightspace.png)
+
+:::
+::::
+
+## Slack Channel
+
+:::: {.columns}
+::: {.column width="50%"}
+- Course slack channel for messaging and rapid communications
+- [https://data608-spring-2025.slack.com](https://data608-spring-2025.slack.com)
+- [Invite Link](https://join.slack.com/t/data-608-spring-2025/shared_invite/zt-2xuiwne04-iF4qyXLhhgLfnemxKJgmxA)
+
+:::
+
+::: {.column width="50%"}
+![](slack.png)
+:::
+::::
+
+## Textbooks
+
+:::: {.columns}
+::: {.column width="50%"}
+Two most important textbooks:
+
+1. [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
+
+2. [Storytelling with data](https://github.com/Saurav6789/Books-/blob/master/storytelling-with-data-cole-nussbaumer-knaflic.pdf)
+:::
+
+::: {.column width="50%"}
+
+![](dataviz.png)
+:::
+
+::::
+
+
+## Textbooks
+
+:::: {.columns}
+::: {.column width="50%"}
+Two most important textbooks:
+
+1. [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
+
+2. [Storytelling with data](https://github.com/Saurav6789/Books-/blob/master/storytelling-with-data-cole-nussbaumer-knaflic.pdf)
+:::
+
+::: {.column width="50%"}
+
+![](storytelling.png)
+:::
+
+::::
+
+## Assignments
+
+- 8 Lab Assignments (80\%)
+  - Submit a quarto slideshow and rendered slides to brightspace
+  - Language freedom, R or python recommended
+- Participation/Discussions (20\%)
+  - Usually one per week
+
+
+
+## Week Plan: Readings
+
+- Chapter 1 of Storytelling
+- Chapters 1 and 2 of Fundamentals of Dataviz
+- First 11 slides of Data Practitioner's Guide to Storytelling with Data
+- For fun: Two sets of History of Dataviz slides
+  
+## Week Plan: Assignments
+  
+- Elevator Pitch Intro 
+- Bad Figure (Critical Eye) Discussion
+  - By Friday to give classmates a chance to vote on the worst figure
+- Due in two weeks: Data Story 1
+
+## Week Plan: Key Concepts
+
+- Methods for creating a story (Storytelling)
+- What makes a quality figure (Wilke, Practioner's Guide)
+
+## Context: Purposes of Visualizations
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+- [Exploratory]{style="color:red;"}
+- Explanatory
+- Inferential
+
+:::
+
+::: {.column width="60%"}
+
+![](EDA.png)
+:::
+::::
+
+
+
+## Context: Purposes of Visualizations
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+- Exploratory
+- [Explanatory]{style="color:red;"}
+- Inferential
+
+:::
+
+::: {.column width="60%"}
+
+![IPCC SPM1 Special Report on 1.5C](ipcc-15.png)
+:::
+::::
+
+
+## Context: Purposes of Visualizations
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+- Exploratory
+- Explanatory
+- [Inferential]{style="color:red;"}
+
+:::
+
+::: {.column width="60%"}
+
+![](ppc-nb-pois.jpg)
+:::
+
+::::
+
+## Context: Who, What, and How
+
+Before you begin, start with three questions
+
+- Who will see your figure?
+  - You would make different choices presenting to experts,
+  decision makers/stakeholders, your supervisor, or the general public
+
+
+## Context: Who, What, and How
+
+- Figure for Decision Makers (IPCC SPM):
+
+![](IPCC_SPM_fig.png)
+
+## Context: Who, What, and How
+
+- Figure for other scientists (IPCC)
+
+![](ipcc-ts-fig.png)
+
+## Context: Who, What, and How
+
+- Figure for other scientists (IPCC)
+
+![](surface_temp_fig.png)
+
+## Context: Who, What, and How
+
+Before you begin, start with three questions
+
+- What do you want your audience to know or do?
+  - There needs to be a point or story beyond "this is interesting"
+
+
+## Context: Who, What, and How
+
+- Consider the Mechanism
+- More details in written comms than presentations
+
+
+![Storytelling](mechanism_fig.png)
+
+
+## Context: Who, What, and How
+
+Before you begin, start with three questions
+
+- How?
+  - What data will you use to accomplish this?
+- Don't hide non-supporting data
+  - Trust is built over time but destroyed in an instant
+  - Building trust is key for convincing people to take action on your recommendations, in all sorts of settings
+
+## The Elevator Pitch and Big Idea
+
+- If you had just 3 minutes to tell your audience what they need to know,
+what would you say?
+  - What is the overall topic/problem (get into it fast)
+  - Why is it important (bring emotion into it)
+  - Try to find a good punchline to complete the narrative
+
+## Big Idea: Single Sentence Summary
+
+- Convey your unique point of view
+- Must convey what is at stake
+
+![](IPCC_SPM_fig.png)
+
+
+## The Storyboard
+
+- Storyboard is like a visual outline of the story you want to tell
+- Arose in TV, film, and other narrative media
+- Sketch out the narrative and visual elements of your data story.
+- 2-6 elements
+- Problem, Research Question, Data, Insights, Recommendation/Conclusion
+
+## The Storyboard
+
+![](storyboard.png)
+
+## Why Stories?
+
+- Humans are wired to hear and tell stories, it is how we relate
+- Neuroscience research backs this up
+- Good stories create synchrony across multiple brain regions between storyteller and listener
+ 
+ ![](neural.png)
+
+## Why Stories?
+
+- Humans are wired to hear and tell stories, it is how we relate
+- Neuroscience research backs this up
+- Good stories create synchrony across multiple brain regions between storyteller and listener
+ 
+ ![](neural2.png)
+
+
+## Bad, Ugly, and Wrong Figures
+
+```{r fig.height=8, fig.width = 12}
+
+library(palmerpenguins)
+
+
+good = penguins |> ggplot(aes(x=species)) + 
+  geom_bar() +
+  theme_bw(base_size = 24) +
+  labs(title = "Good",
+       y = "Count",
+       x = "Species")
+
+ugly = penguins |> ggplot(aes(x=species,fill=species)) +
+  geom_bar(show.legend = FALSE) +
+  scale_fill_brewer(palette = "Pastel1") +
+  theme(text=element_text(size=38,  family="Arial",color="Purple")) +
+  labs(title = "Ugly",
+       y = "Count",
+       x = "Species")
+
+
+bad = penguins |> ggplot(aes(x=species)) + 
+  geom_bar() +
+  theme_bw(base_size = 24) +
+  labs(title = "Bad",
+       y = "Count",
+       x = "Species") +
+  coord_cartesian(ylim = c(55, 150))
+
+  wrong = penguins |> filter(body_mass_g <4300, sex == "female") |>   ggplot(aes(x=species)) + 
+  geom_bar() +
+    theme_bw() +
+    theme(axis.title.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank(),
+        text = element_text(size=24)) +
+  labs(title = "Wrong",
+       y ="",
+       x = "")
+
+(good + ugly)/(bad + wrong)
+
+```
+
+
+
+## Visualization Quality Features {.smaller}
+
+1. __Fidelity__: Should be a faithful representation of the underlying data, nothing added or hidden
+2. __Simplicity__: As simples as possible but no simpler. No irrelevant embellishments
+
+![](IPCC_SPM_fig.png){width=70%}
+
+## Visualization Quality Features {.smaller}
+
+3. __Utility__: Fit for purpose as defined by the viewers needs. No extraneous information
+4. __Saliency__: Focuses attention on the most important facts and conclusions
+
+![](IPCC_SPM_fig.png){width=70%}
+
+
+## Visualization Quality Features {.smaller}
+
+5. __Efficacy__: Accomplishes the purpose for which it was designed, in context
+6. __Uniformity__: Adheres to a predetermined presentation theme
+7. __Amity__: User friendly, takes minimal effort to grasp the main message
+
+![](IPCC_SPM_fig.png){width=70%}
+
+
+## Advert
+
+- Once per month (Tuesday, Wedneday, Thursday) "field trips" to New York Open Statistical Computing Meetup
+- Send me a DM I'll add you to the email list
+- [nyhackr.org](nyhackr.org)
+![](nyhackr.png)
+
+
+
+## Thanks!
+
+
+
+

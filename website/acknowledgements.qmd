@@ -1,0 +1,11 @@
+---
+title: "Acknowledgements"
+format: html
+editor: source
+---
+
+We acknowledge the wonderful resources made available on the open-source course [Data Science in a Box](https://datasciencebox.org/), which helped in the design of this course site.
+Portions of this course were developed from the CUNY SPS DATA 608 master course originally designed by Professor Samuel Gralnick.
+This material is shared under a [CC BY-SA 4.0 Creative Commons Share Alike License](https://creativecommons.org/licenses/by-sa/4.0/)
+
+This website would not be possible without the [quarto](https://quarto.org/) package.

@@ -1,0 +1,26 @@
+---
+title: "Module 6 - Storytelling"
+editor: source
+---
+
+# Overview and Deliverables
+
+* 10/5: Attend the course meetup at 8:00PM Eastern
+* [Story 3](../assignments/stories/story3.qmd) is due at the end of this week (Sunday 10/11)
+
+The goal of this week is to learn about different narrative structures and how to incorporate these structures into your data visualizations.
+
+### Readings
+
+* __Storytelling with Data__ - Chapter 7: Lessons in Storytelling
+* __Wilke__ - Chapter 29: Telling a story and making a point
+
+### Meetup
+
+Slides: [Meetup 6 - Narrative Structures (PDF)](../meetups/meetup-6/meetup-6-slides.pdf)
+
+In this meetup we describe several commonly used story arcs and apply them to data analysis and visualization. Common pitfalls that arise when trying to present data to non-data-scientist audiences are presented.
+
+[Spring 2025 recording](https://youtu.be/04DGPQE_P48)
+
+A sample data story is also available: [Electricity and Carbon Over Time (PDF)](../assignments/stories/sample-data-story/electricity-and-carbon-over-time.pdf)

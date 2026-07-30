@@ -1,0 +1,28 @@
+# Quarto build artifacts
+/website/.quarto/
+/website/_site/
+/website/_freeze/
+
+# Rendered previews sitting next to sources
+**/*_files/
+
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+venv/
+*.pyc
+
+# OS cruft
+.DS_Store
+__MACOSX/
+.Rhistory
+
+# Archives - notably the Brightspace course export sitting in the repo root
+# (D2LExport_*.zip, ~345MB). Keep it locally as the source of record; don't push it.
+*.zip
+*.tar
+*.tgz
+
+# Student submissions stay out of the public course repo
+/StudentWork/

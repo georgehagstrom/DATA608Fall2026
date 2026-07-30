@@ -1,0 +1,856 @@
+---
+title: "DATA 608 Meetup 8: Visualizing Distributions"
+author: "George I. Hagstrom"
+format: revealjs
+---
+
+## Week Summary
+
+- This focus is on distributions
+  - Histograms, density plots, ridge plots
+  - Build to working with models
+- Data Story 4 due Sunday
+- Reading: Chapter 7-9 of Fundamentals of Data Visualization
+
+## Data Story 2 Review
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(paletteer)
+library(RColorBrewer)
+library(ggthemes)
+library(cowplot)
+library(ggokabeito)
+library(colorspace)
+library(colorblindr)
+set.seed(100)
+nyc_bnb = read_csv("/home/georgehagstrom/work/Teaching/DATA608/DataStory4/nyc_airbnb_listings.csv")
+
+neighborhood_df = nyc_bnb |> group_by(neighborhood,borough) |> summarise(num_listings = n(), mean_revenue = mean(revenue,na.rm =TRUE), mean_rating = mean(review_scores_rating,na.rm=TRUE),mean_location = mean(review_scores_location,na.rm=TRUE),mean_value = mean(review_scores_value,na.rm=TRUE)) |> filter(num_listings > 200) |> 
+  ungroup() |> slice_sample(n=20) # Need ungroup to make slice_sample pick 20 neighborhoods 
+
+
+library(TTR)
+gdp = read_csv("../Meetup4/GDPC1.csv")
+gdp = gdp |> mutate(growth = 100*(GDPC1/lag(GDPC1,4)-1)) 
+unemp = read_csv("../Meetup4/UNRATE.csv")
+gdp = gdp |> filter(!is.na(growth))
+gdp = gdp |> left_join(unemp)
+
+
+gdp |> ggplot(aes(x=observation_date,y=growth)) +
+  geom_line(color="blue") +
+  geom_line(aes(y=UNRATE),color="red") +
+  theme_bw(base_size=16) +
+  theme(panel.grid.minor.x = element_blank(),
+          panel.grid.major.x = element_blank() )+
+  labs(title="GDP Growth and Unemployment") +
+  xlab("Date") +
+  ylab("Percent")
+
+```
+
+## Data Story 2 Review
+
+```{r}
+gdp |> ggplot(aes(x=observation_date,y=growth)) +
+  geom_line(color="blue") +
+  geom_line(aes(y=UNRATE),color="red") +
+  geom_line(aes(y=GDPC1),color="orange")+
+  theme_bw(base_size=16) +
+  theme(panel.grid.minor.x = element_blank(),
+          panel.grid.major.x = element_blank() )+
+  labs(title="GDP Growth and Unemployment") +
+  xlab("Date") +
+  ylab("Percent")
+
+
+```
+
+## Dual Axes Considerations
+
+- Generally only plot time series on the same axis if units are comparable
+- Dual axis plots very prone to misinterpretation
+- See here for more [Kieran Healy Blog](https://kieranhealy.org/blog/archives/2016/01/16/two-y-axes/)
+
+
+## How to Visualize Distributions
+
+- Histogram
+
+```{r}
+nyc_bnb |> 
+  ggplot(aes(price_per_accommodates)) +
+  geom_histogram() +
+  scale_x_continuous(limits = c(0,500)) +
+  theme_minimal(base_size = 16) +
+  labs(x = "Price per Accomodated Guest",
+       y = "Count",
+       title = "Distribution of Prices per Guest for Airbnb Accomodations in NYC ")
+
+
+```
+
+## How to Visualize Distributions
+
+- `geom_histogram`
+
+```{r}
+
+#| echo: true
+#| eval: false
+#| 
+nyc_bnb |> 
+  ggplot(aes(price_per_accommodates)) +
+  geom_histogram() +
+  scale_x_continuous(limits = c(0,500)) +
+  theme_minimal(base_size = 16) +
+  labs(x = "Price per Accomodated Guest",
+       y = "Count",
+       title = "Distribution of Prices per Guest for Airbnb Accomodations in NYC ")
+
+
+```
+
+
+
+## How to Visualize Distributions
+
+- Density
+
+```{r}
+nyc_bnb |> 
+  ggplot(aes(price_per_accommodates)) +
+  geom_density(kernel = "gaussian",fill = "skyblue",alpha=0.5) +
+  scale_x_continuous(limits = c(0,500)) +
+  theme_minimal(base_size = 16) +
+  labs(x = "Price per Accomodated Guest",
+       y = "Count",
+       title = "Distribution of Prices per Guest for Airbnb Accomodations in NYC ")
+
+```
+
+
+## Histogram Binwidth
+
+- Always experiment with binwidth
+
+```{r}
+diamonds |> 
+  ggplot(aes(carat)) +
+  geom_histogram(binwidth = 0.3, fill = "grey50",color = "grey50") +
+  theme_minimal(base_size = 16) +
+  scale_x_continuous(limits = c(0,3)) +
+  labs(title = "Histogram of Diamond Weights",
+       subtitle= "Bindwidth of 0.3 might be hiding features",
+       x="Carat",
+       y="Count")
+```
+
+
+
+## Histogram Binwidth
+
+- Always experiment with binwidth
+
+
+```{r}
+diamonds |> 
+  ggplot(aes(carat)) +
+  geom_histogram(binwidth = 0.03, fill = "grey50",color = "grey50") +
+  theme_minimal(base_size = 16) +
+  scale_x_continuous(limits = c(0,3)) +
+  labs(title = "Histogram of Diamond Weights",
+       subtitle= "Bindwidth of 0.03 reveals customer preferences for diamonds above a threshold size",
+       x="Carat",
+       y="Count")
+```
+
+## Number of Bins
+
+- Can also control number of bins
+
+```{r}
+diamonds |> 
+  ggplot(aes(carat)) +
+  geom_histogram(bins =10, fill = "grey50",color = "grey50") +
+  theme_minimal(base_size = 16) +
+  scale_x_continuous(limits = c(0,3)) +
+  labs(title = "Histogram of Diamond Weights",
+       subtitle= "10 bins",
+       x="Carat",
+       y="Count")
+```
+
+
+## Number of Bins
+
+- Can also control number of bins
+
+```{r}
+#| echo: true
+#| eval: false
+#| source-line-numbers: "3"
+diamonds |> 
+  ggplot(aes(carat)) +
+  geom_histogram(bins =20, fill = "grey50",color = "grey50") +
+  theme_minimal(base_size = 16) +
+  scale_x_continuous(limits = c(0,3)) +
+  labs(title = "Histogram of Diamond Weights",
+       subtitle= "10 bins",
+       x="Carat",
+       y="Count")
+```
+
+
+## center
+
+- Can control centering of bins
+
+```{r}
+diamonds |> 
+  ggplot(aes(carat)) +
+  geom_histogram(bins =5, fill = "grey50",color = "grey50",center = 1.5) +
+  theme_minimal(base_size = 16) +
+  scale_x_continuous(limits = c(0,4)) +
+  labs(title = "Histogram of Diamond Weights",
+       subtitle= "Bindwidth of 0.03 reveals customer preferences for diamonds above a threshold size",
+       x="Carat",
+       y="Count")
+```
+
+
+## center
+
+- Can control centering of bins
+
+```{r}
+diamonds |> 
+  ggplot(aes(carat)) +
+  geom_histogram(bins =5, fill = "grey50",color = "grey50",center = 1.5) +
+  theme_minimal(base_size = 16) +
+  scale_x_continuous(limits = c(0,4)) +
+  labs(title = "Histogram of Diamond Weights",
+       subtitle= "This is has a bin centered on 1.5",
+       x="Carat",
+       y="Count")
+```
+
+
+
+## center
+
+- Can control centering of bins
+
+```{r}
+#| echo: true
+#| eval: false
+
+diamonds |> 
+  ggplot(aes(carat)) +
+  geom_histogram(bins =5, fill = "grey50",color = "grey50",center = 1.5) +
+  theme_minimal(base_size = 16) +
+  scale_x_continuous(limits = c(0,4)) +
+  labs(title = "Histogram of Diamond Weights",
+       subtitle= "This is has a bin centered on 1.5",
+       x="Carat",
+       y="Count")
+```
+
+
+## boundary
+
+- `boundary` instead of `center` sets the edge
+
+```{r}
+diamonds |> 
+  ggplot(aes(carat)) +
+  geom_histogram(bins =5, fill = "grey50",color = "grey50", boundary = 1) +
+  theme_minimal(base_size = 16) +
+  scale_x_continuous(limits = c(0,4)) +
+  labs(title = "Histogram of Diamond Weights",
+       subtitle= "Boundary of 1 forces a bin to start there",
+       x="Carat",
+       y="Count")
+```
+
+
+
+## boundary
+
+- `boundary` instead of `center` sets the edge
+
+```{r}
+#| echo: true
+#| eval: false
+diamonds |> 
+  ggplot(aes(carat)) +
+  geom_histogram(bins =5, 
+                 fill = "grey50",
+                 color = "grey50", 
+                 boundary = 1) +
+  theme_minimal(base_size = 16) +
+  scale_x_continuous(limits = c(0,4)) +
+  labs(title = "Histogram of Diamond Weights",
+       subtitle= "Boundary of 1 forces a bin to start there",
+       x="Carat",
+       y="Count")
+```
+
+## geom_freqpoly
+
+- Histogram with lines
+
+```{r}
+
+diamonds |> 
+  ggplot(aes(carat)) +
+  geom_freqpoly(binwidth =0.03, fill = " ",color = "#CC79A7") +
+  theme_minimal(base_size = 16) +
+  scale_x_continuous(limits = c(0,3)) +
+  labs(title = "Histogram of Diamond Weights",
+       subtitle= "",
+       x="Carat",
+       y="Count")
+```
+
+
+## geom_freqpoly
+
+- Histogram with lines
+
+```{r}
+
+diamonds |> 
+  ggplot(aes(carat)) +
+  geom_freqpoly(binwidth =0.03, fill = " ",color = "#CC79A7") +
+  geom_histogram(binwidth =0.03,fill = "#CC79A730",color="grey20") +
+  theme_minimal(base_size = 16) +
+  scale_x_continuous(limits = c(0,3)) +
+  labs(title = "Histogram of Diamond Weights",
+       subtitle= "",
+       x="Carat",
+       y="Count")
+```
+
+
+## geom_freqpoly
+
+- Histogram with lines
+
+```{r}
+#| echo: true
+#| eval: false
+
+diamonds |> 
+  ggplot(aes(carat)) +
+  geom_freqpoly(binwidth =0.03, fill = " ",color = "#CC79A7") +
+  theme_minimal(base_size = 16) +
+  scale_x_continuous(limits = c(0,3)) +
+  labs(title = "Histogram of Diamond Weights",
+       subtitle= "",
+       x="Carat",
+       y="Count")
+```
+
+
+
+
+## Density 
+
+- Density estimates a smooth curve from the points
+- Uses `kernel density estimation` or `kde`
+$$
+p(x|{x_i}) = \frac{1}{nb_W}\sum_{i=1}^n K\left(\frac{x-x_i}{b_W}\right) 
+$$
+- $K$ is a standard probability distribution
+- $b_W$ is called the bandwidth
+
+
+## Density 
+
+- Two different bandwidths
+
+```{r}
+#| fig-width: 6
+#| fig-asp: 0.67
+
+data = tibble(x = rnorm(100))
+
+data |> ggplot(aes(x)) +
+  geom_density(bw = 0.01,color="#E69F00") +
+    geom_density(bw = 0.1,color="#56B4E9") +
+  theme_minimal(base_size=16) +
+  labs(title="Demonstrating different bandwidth")
+
+
+
+```
+
+
+## Density 
+
+- Two different bandwidths
+
+```{r}
+#| echo: true
+#| eval: false
+
+data = tibble(x = rnorm(100))
+
+data |> ggplot(aes(x)) +
+  geom_density(bw = 0.01,color="#E69F00") +
+    geom_density(bw = 0.1,color="#56B4E9") +
+  theme_minimal(base_size=16) +
+  labs(title="Demonstrating different bandwidth")
+
+
+
+```
+
+## Kernels
+
+- Function $K$ is a probability distribution
+- Common choices controlled by `kernel` arg
+  - `gaussian`, `rectangular`, `triangular`, `epanechnikov`, `biweight`, `cosine`, `optcosine`
+
+## Kernels
+
+- Different kernels give slightly different properties
+  
+
+```{r}
+
+data = tibble(x = rnorm(100))
+
+data |> ggplot(aes(x)) +
+  geom_density(bw = 0.05,color="#56B4E9",fill="#56B4E950",kernel = "e") +
+  theme_minimal(base_size=16) +
+  labs(title="Demonstrating different Kernels",
+       subtitle = "Epanechnikov is minimum RMS")
+
+```
+
+## Kernels
+
+- Different kernels give slightly different properties
+
+
+```{r}
+
+data = tibble(x = rnorm(100))
+
+data |> ggplot(aes(x)) +
+  geom_density(bw = 0.05,color="#56B4E9",fill="#56B4E950",kernel = "e") +
+  theme_minimal(base_size=16) +
+  labs(title="Demonstrating different Kernels",
+       subtitle = "Epanechnikov is minimum RMS")
+
+```
+
+
+
+## Kernels
+  
+- Different kernels give slightly different properties
+  
+
+```{r}
+
+
+data = tibble(x = rnorm(100))
+
+data |> ggplot(aes(x)) +
+  geom_density(bw = 0.05,color="#56B4E9",fill="#56B4E950", kernel = "rect") +
+  theme_minimal(base_size=16) +
+  labs(title="Demonstrating Different Kernels",
+       subtitle = "Rectangular")
+
+```
+
+
+## Kernels
+  
+- Different kernels give slightly different properties
+  
+```{r}
+#| echo: true
+#| eval: false
+data = tibble(x = rnorm(100))
+
+data |> ggplot(aes(x)) +
+  geom_density(bw = 0.05,color="#56B4E9",fill="#56B4E950",kernel = "rect") +
+  theme_minimal(base_size=16) +
+  labs(title="Demonstrating Different Kernels",
+       subtitle = "Rectangular")
+
+```
+
+
+## Value Cutoff
+
+- Kernel shape can estimate unrealistic data
+
+```{r}
+
+nyc_bnb |> ggplot(aes(revenue)) +
+  geom_density(color = palette_OkabeIto[1],fill = darken(palette_OkabeIto[1],-0.3)) +
+  scale_x_continuous(limits = c(-50,1000)) +
+  theme_minimal(base_size = 16) +
+  labs(title = "Revenue Per Month",
+       subtitle = "Why is the density non-zero for negative revenue?",
+       x = "Revenue")
+
+
+
+```
+
+
+## Value Cutoff
+
+- Use Bounds to set limits
+
+```{r}
+nyc_bnb |> ggplot(aes(revenue)) +
+  geom_density(color = palette_OkabeIto[1],
+               fill = darken(palette_OkabeIto[1],-0.3),
+               bounds = c(0,Inf)) +
+  scale_x_continuous(limits = c(-50,1000)) +
+  theme_minimal(base_size = 16) +
+  labs(title = "Revenue Per Month",
+       subtitle = "Why is the density non-zero for negative revenue?",
+       x = "Revenue")
+```
+
+## Value Cutoff
+
+- Use Bounds to set limits
+
+```{r}
+#| echo: true
+#| eval: false
+nyc_bnb |> ggplot(aes(revenue)) +
+  geom_density(color = palette_OkabeIto[1],
+               fill = darken(palette_OkabeIto[1],-0.3),
+               bounds = c(0,Inf)) +
+  scale_x_continuous(limits = c(-50,1000)) +
+  theme_minimal(base_size = 16) +
+  labs(title = "Revenue Per Month",
+       subtitle = "Why is the density non-zero for negative revenue?",
+       x = "Revenue")
+```
+
+
+
+
+## Cumulative Distribution Function
+
+- Alternative technique for showing a distribution
+- Regular CDF:
+$$
+F(x) = \int_{-\infty}^x dx' p(x')
+$$
+- What is the probability a point drawn from $p$ is less than x?
+- For data:
+$$
+F(x) = \frac{\# (x_i <x)}{N}
+$$
+
+## Empirical CDF
+
+
+```{r}
+
+nyc_bnb |> ggplot(aes(x = reviews_per_month,y = percent_rank(reviews_per_month))) + 
+  stat_ecdf(geom = "step", color = "#0072B2") +
+  geom_point(color = "#0072B2") +
+  theme_minimal(base_size = 16) +
+  scale_x_continuous(limits = c(0,25)) + 
+  labs(title = "Empirical CDF of Reviews Per Month",
+       y="Probability",
+       x="Reviews Per Month")
+
+```
+
+
+
+## Empirical CDF
+
+- `stat-ecdf`
+
+```{r}
+
+nyc_bnb |> ggplot(aes(x = reviews_per_month,y = percent_rank(reviews_per_month))) + 
+  stat_ecdf(geom = "step", color = "#0072B2") +
+  geom_point(color = "#0072B2") +
+  theme_minimal(base_size = 16) +
+  scale_x_continuous(limits = c(0,25)) + 
+  labs(title = "Empirical CDF of Reviews Per Month",
+       y="Probability",
+       x="Reviews Per Month")
+
+```
+
+
+
+
+## qq-plots
+
+- Compares ecdf to cdf of other distribution
+
+```{r }
+#| out-width: "80%"
+#| fig-asp: 0.67
+
+
+UScereal = MASS::UScereal
+
+UScereal |> ggplot(aes(sample=fibre)) + 
+  labs(title="QQ-Plot Fibre Content in US Cereal Brands",
+       x="Theoretical Quantile",
+       y="Fibre Content") +
+  theme_minimal(base_size=16) +
+  coord_cartesian(ylim = c(-0.1, 35)) +
+  stat_qq(size = 3) + 
+  stat_qq_line(color="red") 
+  
+
+```
+
+## qq-plot
+
+- Deviations from line indicate non-normal or problems
+
+```{r }
+#| out-width: "80%"
+#| fig-asp: 0.67
+
+
+
+UScereal = UScereal |> mutate(outlier = if_else(fibre>20,"Outlier","Normal"))
+UScereal = UScereal |> mutate(inlier = if_else(fibre == 0,"Inlier","Normal"))
+
+UScereal |> ggplot(aes(sample=fibre)) + 
+  labs(title="QQ-Plot Fibre Content in US Cereal Brands",
+       x="Theoretical Quantile",
+       y="Fibre Content") +
+  theme_minimal(base_size=16) +
+  coord_cartesian(ylim = c(-0.1, 35)) +
+  stat_qq(size = 3) + 
+  stat_qq_line(color="red") +
+  annotate("rect",xmin=1.5,xmax=2.5,ymin=25,ymax=35,,alpha = .2,linewidth=1,fill="red") +
+  annotate("text",x=2,y=22,label="Potential Outliers",size = 8)
+  
+
+```
+
+## qq-plot 
+
+- Flat spots suggest inliers
+
+```{r }
+#| out-width: "80%"
+#| fig-asp: 0.67
+
+
+
+UScereal = UScereal |> mutate(outlier = if_else(fibre>20,"Outlier","Normal"))
+UScereal = UScereal |> mutate(inlier = if_else(fibre == 0,"Inlier","Normal"))
+
+UScereal |> ggplot(aes(sample=fibre)) + 
+  labs(title="QQ-Plot Fibre Content in US Cereal Brands",
+       x="Theoretical Quantile",
+       y="Fibre Content") +
+  theme_minimal(base_size=16) +
+  coord_cartesian(ylim = c(-0.1, 35)) +
+  stat_qq(size = 3) + 
+  stat_qq_line(color="red") +
+  annotate("rect",xmin=-2.5,xmax=-0.6,ymin=-1,ymax=2,,alpha = .2,linewidth=1,fill="orange") +
+  annotate("text",x=-2,y=4,label="Potential Inliers",size = 8)
+  
+
+```
+
+
+## qq-plots
+
+- `stat_qq`
+- `stat_qq_line`
+
+
+```{r }
+#| echo: true
+#| eval: false
+
+
+
+UScereal = UScereal |> mutate(outlier = if_else(fibre>20,"Outlier","Normal"))
+UScereal = UScereal |> mutate(inlier = if_else(fibre == 0,"Inlier","Normal"))
+
+UScereal |> ggplot(aes(sample=fibre)) + 
+  labs(title="QQ-Plot Fibre Content in US Cereal Brands",
+       x="Theoretical Quantile",
+       y="Fibre Content") +
+  theme_minimal(base_size=16) +
+  coord_cartesian(ylim = c(-0.1, 35)) +
+  stat_qq(size = 3) + 
+  stat_qq_line(color="red") +
+  annotate("rect",xmin=-2.5,xmax=-0.6,ymin=-1,ymax=2,,alpha = .2,linewidth=1,fill="orange") +
+  annotate("text",x=-2,y=4,label="Potential Inliers",size = 8)
+  
+
+```
+
+
+
+## Multiple Distributions
+
+- Few: 
+  - Small multiples
+  - Same Axis with density/freq_poly if low overlap
+- Slightly More?
+  - Ridge Plots
+
+
+## Small Multiples
+
+```{r}
+
+nb_vec = c("Williamsburg","West Village","Park Slope","Upper East Side")
+nyc_bnb |> filter(neighborhood %in% nb_vec) |> 
+  ggplot(aes(x=revenue)) +
+  geom_histogram() +
+  facet_wrap(~neighborhood,scales="free_y") +
+  theme_minimal(base_size=16) +
+  scale_x_continuous(limits=c(0,1000)) +
+  labs(title="Revenue Distributions in 4 NYC Neighborhoods",
+       x="Revenue")
+
+
+
+```
+
+
+## Small Multiples
+
+```{r}
+#| echo: true
+#| eval: false
+
+nb_vec = c("Williamsburg","West Village","Park Slope","Upper East Side")
+nyc_bnb |> filter(neighborhood %in% nb_vec) |> 
+  ggplot(aes(x=revenue)) +
+  geom_histogram() +
+  facet_wrap(~neighborhood,scales="free_y") +
+  theme_minimal(base_size=16) +
+  scale_x_continuous(limits=c(0,1000)) +
+  labs(title="Revenue Distributions in 4 NYC Neighborhoods",
+       x="Revenue")
+
+```
+
+
+## Multiple Densities
+
+```{r}
+
+nb_vec = c("Williamsburg","West Village","Park Slope","Upper East Side")
+nyc_bnb |> filter(neighborhood %in% nb_vec) |> 
+  ggplot(aes(x=revenue,group = neighborhood,fill = neighborhood,color=neighborhood)) +
+  geom_density(alpha=0.4) +
+  scale_fill_OkabeIto() +
+  scale_color_OkabeIto() +
+  theme_minimal(base_size=16) +
+  scale_x_continuous(limits=c(0,1000)) +
+  labs(title="Revenue Distributions in 4 NYC Neighborhoods",
+       x="Revenue")
+
+
+
+```
+
+## Multiple Densities
+
+```{r}
+#| echo: true
+#| eval: false
+nb_vec = c("Williamsburg","West Village","Park Slope","Upper East Side")
+nyc_bnb |> filter(neighborhood %in% nb_vec) |> 
+  ggplot(aes(x=revenue,group = neighborhood,fill = neighborhood,color=neighborhood)) +
+  geom_density(alpha=0.4) +
+  scale_fill_OkabeIto() +
+  scale_color_OkabeIto() +
+  theme_minimal(base_size=16) +
+  scale_x_continuous(limits=c(0,1000)) +
+  labs(title="Revenue Distributions in 4 NYC Neighborhoods",
+       x="Revenue")
+
+
+
+```
+
+
+
+## When to Overlap Densities
+
+- Avoid Multiple Density Plot when there is major overlap
+- OK when densities are distinct
+
+```{r}
+library(palmerpenguins)
+
+penguins |> filter(sex == "male") |> 
+  ggplot(aes(x=body_mass_g,group = species,fill = species,color=species)) +
+  geom_density(alpha=0.4) +
+  scale_fill_OkabeIto() +
+  scale_color_OkabeIto() +
+  theme_minimal(base_size=16) +
+  labs(title="Male Body Mass of Penguins",
+       x="Body Mass (g)")
+```
+
+
+
+## Ridge Plots
+
+```{r}
+library(ggridges)
+nb_vec = c("Williamsburg","West Village","Park Slope","Upper East Side","Bedford-Stuyvesant","Astoria")
+nyc_bnb |> filter(neighborhood %in% nb_vec) |> 
+  ggplot(aes(x=reviews_per_month,y = neighborhood)) +
+  scale_x_continuous(limits = c(0,3)) +
+  geom_density_ridges(rel_min_height=0.05,alpha=0.4) +
+  theme_minimal(base_size=16) +
+  labs(title="Reviews Per Month in 4 NYC Neighborhoods",
+       x="Reviews Per Month",y="Neighborhood")
+
+
+```
+
+
+
+## Ridge Plots
+
+```{r}
+#| echo: true
+#| eval: false
+library(ggridges)
+nb_vec = c("Williamsburg","West Village","Park Slope","Upper East Side","Bedford-Stuyvesant","Astoria")
+nyc_bnb |> filter(neighborhood %in% nb_vec) |> 
+  ggplot(aes(x=reviews_per_month,y = neighborhood)) +
+  scale_x_continuous(limits = c(0,3)) +
+  geom_density_ridges(rel_min_height=0.05,alpha=0.4) +
+  theme_minimal(base_size=16) +
+  labs(title="Reviews Per Month in 4 NYC Neighborhoods",
+       x="Reviews Per Month",y="Neighborhood")
+
+
+```
+
+
+
+## Thanks!
+
+
+

@@ -1,0 +1,36 @@
+---
+title: "Schedule"
+editor: source
+---
+
+## Meetup Link
+
+[Click Here to Join the Meetups on Zoom](https://us02web.zoom.us/j/81858708616?pwd=eE9ZGJFco9iicq3BsmANIfWUVLwy0x.1)
+
+Meetups are Mondays at 8:00PM Eastern. We meet every Monday of the semester except the Monday after Thanksgiving.
+
+<!-- The Video column currently links to the Spring 2025 recordings; replace
+     them with the Fall 2026 recordings as meetups happen. -->
+
+| Date | Module | Slides | Video | Main Deliverables |
+|------|--------|--------|-------|-------------------|
+| Aug 31 | [Developing a Critical Eye](../modules/module1.qmd) | [PDF](../meetups/meetup-1/meetup-1-slides.pdf) | [SP25](https://youtu.be/l8NtnHOAQsM) | [Story 1 assigned](../assignments/stories/story1.qmd) |
+| Sep 7 | [The Data Visualization Catalogue](../modules/module2.qmd) | [PDF](../meetups/meetup-2/meetup-2-slides.pdf) | [SP25](https://youtu.be/HjS8PuOMFwI) | [Story 1](../assignments/stories/story1.qmd) due Sun Sep 13 |
+| Sep 14 | [Visualization Quality Features](../modules/module3.qmd) | [PDF](../meetups/meetup-3/meetup-3-slides.pdf) | [SP25](https://youtu.be/UogSmyGGRmc) | [Story 2 assigned](../assignments/stories/story2.qmd) |
+| Sep 21 | [Associations and Time Series](../modules/module4.qmd) | [PDF](../meetups/meetup-4/meetup-4-slides.pdf) | [SP25](https://youtu.be/Xd8QSTPuB0E) | [Story 2](../assignments/stories/story2.qmd) due Sun Sep 27 |
+| Sep 28 | [Visualizing Geospatial Data](../modules/module5.qmd) | [PDF](../meetups/meetup-5/meetup-5-slides.pdf) | [SP25](https://youtu.be/t81u3G0LvVs), [bonus](https://youtu.be/nSNibFttWsQ) | [Story 3 assigned](../assignments/stories/story3.qmd) |
+| Oct 5 | [Storytelling](../modules/module6.qmd) | [PDF](../meetups/meetup-6/meetup-6-slides.pdf) | [SP25](https://youtu.be/04DGPQE_P48) | [Story 3](../assignments/stories/story3.qmd) due Sun Oct 11 |
+| Oct 12 | [Effective Use of Color and Fonts](../modules/module7.qmd) | [PDF](../meetups/meetup-7/meetup-7-slides.pdf) | [SP25](https://youtu.be/H7QB1sIhuow) | [Story 4 assigned](../assignments/stories/story4.qmd) |
+| Oct 19 | [Distributions and Histograms](../modules/module8.qmd) | [PDF](../meetups/meetup-8/meetup-8-slides.pdf) | [SP25](https://youtu.be/rQWjKhXjweU) | [Story 4](../assignments/stories/story4.qmd) due Sun Oct 25 |
+| Oct 26 | [Models and Uncertainty](../modules/module9.qmd) | [PDF](../meetups/meetup-9/meetup-9-slides.pdf) | [SP25](https://youtu.be/SjsVs5Ee8S4) | [Story 5 assigned](../assignments/stories/story5.qmd) |
+| Nov 2 | [Dimension Reduction and PCA](../modules/module10.qmd) | [PDF](../meetups/meetup-10/meetup-10-slides.pdf) | [SP25](https://youtu.be/WnnwtQah2K0) | [Story 5](../assignments/stories/story5.qmd) due Sun Nov 8 |
+| Nov 9 | [Clustering](../modules/module11.qmd) | [PDF](../meetups/meetup-11/meetup-11-slides.pdf) | [SP25](https://youtu.be/YhLEHmMEyQE) | [Story 6 assigned](../assignments/stories/story6.qmd) |
+| Nov 16 | [Hierarchical Clustering](../modules/module12.qmd) | [PDF](../meetups/meetup-12/meetup-12-slides.pdf) | [SP25](https://youtu.be/Eolp-goYKCc) | [Story 6](../assignments/stories/story6.qmd) due Sun Nov 22 |
+| Nov 23 | [Introduction to Shiny Apps](../modules/module13.qmd) | | [SP25](https://youtu.be/KrLUrA8DoLI) | [Story 7 assigned](../assignments/stories/story7.qmd) |
+| Nov 30 | *No Meetup — Thanksgiving* | | | |
+| Dec 7 | [Interactive Visualizations](../modules/module14.qmd) | | [SP25](https://youtu.be/9bFYeSOHeE0) | [Story 7](../assignments/stories/story7.qmd) due Sun Dec 13 |
+| Dec 14 | [Wrap-Up](../modules/module15.qmd) | | | |
+
+: Course Schedule {.striped .hover}
+
+Slides and recordings are posted here after each meetup.

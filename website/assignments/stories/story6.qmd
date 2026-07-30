@@ -1,0 +1,17 @@
+---
+title: "Story 6: Customer Segmentation at Instacart"
+---
+
+**Assigned:** Week 11 | **Due:** Sunday, November 22 at midnight Eastern | **Points:** 100
+
+This assignment involves using dimensionality reduction, clustering, and other tools to tell a story about the types of customers at Instacart. See the assignment pdf below for details.
+
+### Assignment and Data
+
+- [Data Story 6 Assignment PDF](data/DataStory6.pdf)
+
+<!-- NOTE: The Instacart data archive (DataStory6_files.zip, ~200MB) is too
+     large to commit to this repository. Host it elsewhere (e.g. a release
+     asset, Google Drive, or the original Kaggle source) and link it here.
+     A copy is in the Brightspace export zip under _attachment_dropbox/133/. -->
+- Instacart data archive: **link to be posted**

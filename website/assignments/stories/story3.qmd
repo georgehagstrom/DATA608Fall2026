@@ -1,0 +1,25 @@
+---
+title: "Story 3: Do Stricter Gun Laws Reduce Firearm Gun Deaths?"
+---
+
+**Assigned:** Week 5 | **Due:** Sunday, October 11 at midnight Eastern | **Points:** 100
+
+The rate of firearm mortality varies tremendously between states. Several factors have been proposed to explain this public health disparity, from regulations in the given state, socioeconomic conditions like poverty, or cultural factors surrounding gun ownership. Your task in this data story is to make visualizations that investigate these potential explanations, and try to answer the question: "To what extent do gun laws versus other factors explain the differences in firearm mortality between states?"
+
+For this assignment I have provided several datasets, each of which you can choose to use as it suits your needs.
+
+1. The first is a firearm mortality dataset from the CDC, which reports total firearm mortality for each state per 100,000 persons: [CDC Firearm Mortality in 2022](data/firearm_mortality2022.csv)
+2. The second is a dataset describing the presence or absence of 157 different types of firearm laws in each state. The data was compiled by the [Institute for Social Research at the University of Michigan](https://www.icpsr.umich.edu/web/NACJD/studies/37363/versions/V1/datadocumentation), who tracked the data from 1991 to 2019. I am just uploading a dataset with the information in 2019: [Firearm Laws in 2019](data/firearm_laws.csv). If you want to read a description of the variables, you can find it [in this codebook](data/37363-0001-Codebook-ICPSR.pdf)
+3. The third is a dataset breaking down the fraction of gun deaths from homicide, suicide, or other, also from the CDC: [Firearm Death Breakdown](data/mortality_breakdown.csv)
+4. The fourth is a survey based estimate of household firearm ownership rates per state, estimated from a variety of polling sources: [Gun Ownership By State](data/gun-ownership-by-state.csv)
+5. The fifth looks at burglary rates per state, from the FBI UCR database: [State Burglary Rates per 100k](data/burglary.csv)
+
+For this assignment you will need to:
+
+- Create a combination of maps and other visualizations, using the techniques discussed during weeks 5 and 6 as well as prior modules, to tell a story about the causes of disparities in firearm mortality.
+
+**Notes:**
+
+1. I recommend submitting your visualizations as a quarto presentation or report, using either python or R to create the visualizations and submitting your qmd file to guarantee reproducibility.
+2. If you use color in your visuals you must use an accessible color palette.
+3. This assignment is due at the end of week six of the semester.

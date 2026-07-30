@@ -1,0 +1,11 @@
+---
+title: "Announcements"
+listing:
+  contents: posts
+  fields: [date, title, description, image]
+  type: default
+  sort: "date desc"
+---
+
+
+Be sure to check this page regularly for updates. In addition to periodic updates about the course, slides and recordings of the weekly meetups will be posted here.

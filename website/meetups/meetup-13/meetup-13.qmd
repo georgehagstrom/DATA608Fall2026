@@ -1,0 +1,14 @@
+---
+title: "DATA 608 Meetup 13: Introduction to Shiny"
+author: "George I. Hagstrom"
+format: revealjs
+---
+
+## Week Summary
+
+<!-- No meetup 13 deck existed in the Brightspace export (Shiny basics were
+     presented live). Build this deck for Fall 2026, or present from a live
+     demo as before. The Spring 2025 recording is at
+     https://youtu.be/KrLUrA8DoLI -->
+
+- Introduction to Shiny: UI, server, and reactivity

@@ -1,0 +1,32 @@
+---
+title: "Module 11 - Clustering"
+editor: source
+---
+
+# Overview and Deliverables
+
+* 11/9: Attend the course meetup at 8:00PM Eastern
+* [Story 6](../assignments/stories/story6.qmd) is assigned this week and due Sunday 11/22 (end of week 12). It consists of a customer segmentation analysis of Instacart data.
+
+During this week we will learn how to use clustering to enhance our data stories.
+
+### Readings
+
+For this week, there isn't a good reading from our normal textbooks. Instead, this chapter on data mining and visualization in R is excellent:
+
+* [R Companion chapter on cluster analysis in Introduction to Data Mining](https://mhahsler.github.io/Introduction_to_Data_Mining_R_Examples/book/cluster-analysis.html)
+
+Some other interesting resources are:
+
+* Wikipedia: [k-means clustering](https://en.wikipedia.org/wiki/K-means_clustering)
+* Naftali Harris blog post: [Interactive k-means demonstration](https://www.naftaliharris.com/blog/visualizing-k-means-clustering/)
+* Stackoverflow post: [Determining the appropriate number of clusters in k-means](https://stackoverflow.com/questions/15376075/cluster-analysis-in-r-determine-the-optimal-number-of-clusters/15376462#15376462)
+* Medium article: [The 5 Clustering Algorithms Data Scientists Need to Know](https://towardsdatascience.com/the-5-clustering-algorithms-data-scientists-need-to-know-a36d136ef68)
+
+### Meetup
+
+Slides: [Meetup 11 - Visualizing Clusters (PDF)](../meetups/meetup-11/meetup-11-slides.pdf)
+
+In this meetup we talk about how to use clustering algorithms to improve data visualizations. We go through the k-means algorithm, which is the most commonly used and most basic clustering method, and explain how to work with kmeans model fits in the tidyverse. Then we go over criteria for justifying how many clusters you should select and how to interpret the meaning of clusters. Finally, we discuss common pitfalls of the k-means algorithm and mention alternatives.
+
+[Spring 2025 recording](https://youtu.be/YhLEHmMEyQE)

@@ -1,0 +1,37 @@
+---
+title: "Module 1 - Developing a Critical Eye"
+editor: source
+---
+
+# Overview and Deliverables
+
+* 8/31: Attend the initial course meetup at 8:00PM Eastern
+* Introduce yourself on the course Slack and in the Brightspace discussion forum
+* [Story 1](../assignments/stories/story1.qmd) is assigned this week and due Sunday 9/13 (end of week 2)
+* Make sure your software toolkit is set up (see the [software page](../course/software.qmd))
+
+### Learning Objectives
+
+* Understand a data practitioner's role as a storyteller
+* Understand the importance of each of the "Who", "What", "Why", "When", and "How" of a data visualization story
+* Begin developing a "Critical Eye": the ability to discern poor quality and misleading visualizations from those of high quality
+
+### Readings
+
+* __Storytelling with Data__: Chapter 1
+* __Fundamentals of Data Visualization__ ([Wilke](https://clauswilke.com/dataviz/)): Chapters 1 and 2
+* [A Data Practitioner's Guide to Telling Stories with Data Visualizations](readings/data-practitioners-guide.pdf): Slides 1-11 (everything up to Tufte's Principles)
+
+#### Background/Optional
+
+* [Friendly - History of Data Visualization](readings/friendly-history-of-data-visualization.pdf) - excellent background
+* [History of Data Visualization Presentation](readings/history-of-data-visualization-presentation.pdf)
+* [Handbook of Data Visualization](https://www.academia.edu/11368972/Handbook_of_Data_Visualization_edited_by_Chun_houh_Chen_Wolfgang_H%C3%A4rdle_Antony_Unwin) (comprehensive reference work)
+
+### Meetup
+
+Slides: [Meetup 1 - Developing a Critical Eye (PDF)](../meetups/meetup-1/meetup-1-slides.pdf)
+
+In this meetup we show a case study of how a visualization can tell a more powerful message when improved, talk about the course structure, list considerations and tools to use to craft a data story, introduce the neuroscience behind why storytelling is effective, and talk about quality issues for figures.
+
+[Spring 2025 recording](https://youtu.be/l8NtnHOAQsM)

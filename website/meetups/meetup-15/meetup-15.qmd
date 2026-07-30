@@ -1,0 +1,13 @@
+---
+title: "DATA 608 Meetup 15: Wrap-Up"
+author: "George I. Hagstrom"
+format: revealjs
+---
+
+## Week Summary
+
+<!-- Week 15 had no meetup content in the Brightspace export (the spring
+     semester was 14 meetups + finals week). Build the Fall 2026 wrap-up
+     deck here. -->
+
+- Course wrap-up

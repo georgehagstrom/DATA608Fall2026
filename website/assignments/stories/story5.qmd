@@ -1,0 +1,16 @@
+---
+title: "Story 5: What Factors Determine Housing Prices in Ames, Iowa?"
+---
+
+**Assigned:** Week 9 | **Due:** Sunday, November 8 at midnight Eastern | **Points:** 100
+
+In week 9 we learn to visualize models, and in week 10 we learn about dimensionality reduction techniques. A good dataset to practice these tools on is the Ames housing price dataset, which is a sort of "model organism" for machine learning practice. The emphasis of this assignment (described in the pdf) is on building a model or models of the factors determining housing prices and using visualizations to explain their meaning and implications.
+
+- **This assignment is due at the end of week ten of the semester.**
+- **Assemble your visualizations using quarto while using python, R, or another language to create the visualizations. Submit your qmd along with your final submission.**
+
+### Assignment and Data
+
+- [Data Story 5 Assignment PDF](data/data_story_5.pdf)
+- [Ames Housing Data (train.csv)](data/train.csv)
+- [Data Dictionary](data/data_description.txt)

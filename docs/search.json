@@ -1,0 +1,371 @@
+[
+  {
+    "objectID": "modules/module9.html",
+    "href": "modules/module9.html",
+    "title": "Module 9 - Visualizing Models and Uncertainty",
+    "section": "",
+    "text": "Overview and Deliverables\n\n10/26: Attend the course meetup at 8:00PM Eastern\nStory 5 is assigned this week and due Sunday 11/8 (end of week 10). You will be making models of the (in)famous Ames housing price dataset.\n\n\nReadings\n\nKieran Healy - Chapter 6: Work with models\nWilke - Chapter 16: Visualizing uncertainty. While I like this chapter for its in depth discussion of confidence and credible intervals, the material from this chapter is secondary this week.\nChapter/Vignette 15 of Marginal Effects/Model to Meaning (and if you can read chapters 2 and 3 it will pay dividends for you as a data scientist). This book is wonderful and deserves its own course. We are just going to use it for the plotting functions, but the book is important to remember for the next time you wonder what your models mean and how you should (or should not) interpret your fits.\nThe broom library will also be useful to us.\n\n\n\nMeetup\nSlides: Meetup 9 - Models and Uncertainty (PDF)\nIn this meetup we talk about tools to visualize and interpret models. The emphasis is on using plots of model predictions, counterfactual comparisons, and slopes to show the implications of models instead of focusing on the values of coefficients, which we argue are hard to interpret. We go through how to work with model objects using the broom package in R, how to make large numbers of models using purrr and broom, and how to make the most important model visualizations using the marginaleffects package.\nSpring 2025 recording",
+    "crumbs": [
+      "Topics",
+      "9 - Models and Uncertainty"
+    ]
+  },
+  {
+    "objectID": "modules/module7.html",
+    "href": "modules/module7.html",
+    "title": "Module 7 - Emphasis: Effective Use of Color and Fonts",
+    "section": "",
+    "text": "Overview and Deliverables\n\n10/12: Attend the course meetup at 8:00PM Eastern\nStory 4 is assigned this week and due Sunday 10/25 (end of week 8)\n\nThis week’s learning objectives focus on how to selectively use color and choice of fonts to add emphasis to salient elements of your data visualization.\n\nReadings\n\nStorytelling with Data - Chapter 4\nWilke - Chapter 4, and review Chapter 19 if you need\nOkabe and Ito on Color Universal Design\nChoosing Colors (PDF)\n\n\n\nMeetup\nSlides: Meetup 7 - Using Color (PDF)\nIn this meetup we go through the basics of color vision in humans and how it influences color perception. We discuss how to use color for differentiating categories and for accenting or drawing attention to aspects of your visualization. We explore different packages for controlling color in R.\nSpring 2025 recording",
+    "crumbs": [
+      "Topics",
+      "7 - Effective Use of Color and Fonts"
+    ]
+  },
+  {
+    "objectID": "modules/module5.html",
+    "href": "modules/module5.html",
+    "title": "Module 5 - Visualizing Geospatial Data",
+    "section": "",
+    "text": "Overview and Deliverables\n\n9/28: Attend the course meetup at 8:00PM Eastern\nStory 3 is assigned this week and due Sunday 10/11 (end of week 6)\n\nDuring this week we will learn about how to make visualizations of geospatial data.\n\nReadings\n\nWilke - Chapter 15: Visualizing geospatial data, which teaches some general principles of geospatial data visualization\n“Lying With Maps”, a chapter from a geography textbook. In particular focus on the section on the ecological fallacy.\nIf you use R: Chapter 7 of Kieran Healy’s book (for the R user, but actually useful in general)\nIf you use Python: “Around the World in 80 days: An Introduction to Working With Geodata and Cartopy”, a tutorial for the python/matplotlib user\n\n\n\nMeetup\nSlides: Meetup 5 - Visualizing Geospatial Data (PDF)\nIn this meetup we discuss how to make a quarto slideshow, and how to visualize geospatial data. We go over common issues that arise when making maps, including the ecological fallacy/Modifiable Areal Unit Problem. We explore the simple features library and show how it and other tools in R can make different types of geospatial visualizations.\nSpring 2025 recording | Bonus video",
+    "crumbs": [
+      "Topics",
+      "5 - Visualizing Geospatial Data"
+    ]
+  },
+  {
+    "objectID": "modules/module3.html",
+    "href": "modules/module3.html",
+    "title": "Module 3 - Data Visualization Quality Features",
+    "section": "",
+    "text": "Overview and Deliverables\n\n9/14: Attend the course meetup at 8:00PM Eastern\nStory 2 is assigned this week and due Sunday 9/27 (end of week 4)\n\nThis week we will focus on distinguishing the bad and the ugly from a high quality data visualization.\n\nReadings\n\nA Data Practitioner’s Guide - Slides 8, 12-20\nWilke - Chapters 17-26 - there will be some reinforcement of the research principles we discussed last week\nStorytelling with Data - Chapter 3\nI will be covering a python visualization package called plotnine. If you want, you can read about the package and go through some of the tutorials.\n\n\n\nMeetup\nSlides: Meetup 3 - Visualization Quality Features (PDF)\nIn this meetup we go into a bit of detail on several principles that Edward Tufte articulated and discuss how to implement them in real visualizations. We talk about the principle of proportional ink and the data-ink ratio, and why minimalist graphs don’t always work.\nSpring 2025 recording",
+    "crumbs": [
+      "Topics",
+      "3 - Visualization Quality Features"
+    ]
+  },
+  {
+    "objectID": "modules/module15.html",
+    "href": "modules/module15.html",
+    "title": "Module 15 - Wrap-Up",
+    "section": "",
+    "text": "Overview and Deliverables\n\n12/14: Attend the final course meetup at 8:00PM Eastern\n\n\nContent for the wrap-up week will be posted here.",
+    "crumbs": [
+      "Topics",
+      "15 - Wrap-Up"
+    ]
+  },
+  {
+    "objectID": "modules/module13.html",
+    "href": "modules/module13.html",
+    "title": "Module 13 - Introduction to Shiny Apps",
+    "section": "",
+    "text": "Overview and Deliverables\n\n11/23: Attend the course meetup at 8:00PM Eastern\nStory 7 is assigned this week and due Sunday 12/13 (end of week 14). You will create an interactive shiny app based on one of your data stories.\n\nThe goal this week is to learn the basics of building an interactive data visualization using the shiny app framework.\n\nReadings\n\nChapters 1-4 of Mastering Shiny by Hadley Wickham\n\n\n\nMeetup\nIn this meetup we go through the basics of Shiny, which is a tool for creating interactive websites and visualizations based on R or python.\nSpring 2025 recording",
+    "crumbs": [
+      "Topics",
+      "13 - Introduction to Shiny Apps"
+    ]
+  },
+  {
+    "objectID": "modules/module11.html",
+    "href": "modules/module11.html",
+    "title": "Module 11 - Clustering",
+    "section": "",
+    "text": "Overview and Deliverables\n\n11/9: Attend the course meetup at 8:00PM Eastern\nStory 6 is assigned this week and due Sunday 11/22 (end of week 12). It consists of a customer segmentation analysis of Instacart data.\n\nDuring this week we will learn how to use clustering to enhance our data stories.\n\nReadings\nFor this week, there isn’t a good reading from our normal textbooks. Instead, this chapter on data mining and visualization in R is excellent:\n\nR Companion chapter on cluster analysis in Introduction to Data Mining\n\nSome other interesting resources are:\n\nWikipedia: k-means clustering\nNaftali Harris blog post: Interactive k-means demonstration\nStackoverflow post: Determining the appropriate number of clusters in k-means\nMedium article: The 5 Clustering Algorithms Data Scientists Need to Know\n\n\n\nMeetup\nSlides: Meetup 11 - Visualizing Clusters (PDF)\nIn this meetup we talk about how to use clustering algorithms to improve data visualizations. We go through the k-means algorithm, which is the most commonly used and most basic clustering method, and explain how to work with kmeans model fits in the tidyverse. Then we go over criteria for justifying how many clusters you should select and how to interpret the meaning of clusters. Finally, we discuss common pitfalls of the k-means algorithm and mention alternatives.\nSpring 2025 recording",
+    "crumbs": [
+      "Topics",
+      "11 - Clustering"
+    ]
+  },
+  {
+    "objectID": "modules/module1.html",
+    "href": "modules/module1.html",
+    "title": "Module 1 - Developing a Critical Eye",
+    "section": "",
+    "text": "Overview and Deliverables\n\n8/31: Attend the initial course meetup at 8:00PM Eastern\nIntroduce yourself on the course Slack and in the Brightspace discussion forum\nStory 1 is assigned this week and due Sunday 9/13 (end of week 2)\nMake sure your software toolkit is set up (see the software page)\n\n\nLearning Objectives\n\nUnderstand a data practitioner’s role as a storyteller\nUnderstand the importance of each of the “Who”, “What”, “Why”, “When”, and “How” of a data visualization story\nBegin developing a “Critical Eye”: the ability to discern poor quality and misleading visualizations from those of high quality\n\n\n\nReadings\n\nStorytelling with Data: Chapter 1\nFundamentals of Data Visualization (Wilke): Chapters 1 and 2\nA Data Practitioner’s Guide to Telling Stories with Data Visualizations: Slides 1-11 (everything up to Tufte’s Principles)\n\n\nBackground/Optional\n\nFriendly - History of Data Visualization - excellent background\nHistory of Data Visualization Presentation\nHandbook of Data Visualization (comprehensive reference work)\n\n\n\n\nMeetup\nSlides: Meetup 1 - Developing a Critical Eye (PDF)\nIn this meetup we show a case study of how a visualization can tell a more powerful message when improved, talk about the course structure, list considerations and tools to use to craft a data story, introduce the neuroscience behind why storytelling is effective, and talk about quality issues for figures.\nSpring 2025 recording",
+    "crumbs": [
+      "Topics",
+      "1 - Developing a Critical Eye"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Announcements",
+    "section": "",
+    "text": "Be sure to check this page regularly for updates. In addition to periodic updates about the course, slides and recordings of the weekly meetups will be posted here.\n\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Announcements"
+    ]
+  },
+  {
+    "objectID": "course/syllabus.html",
+    "href": "course/syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Instructor: George Hagstrom, Ph.D. Class Meetup: Mondays (see schedule) Office Hours: By appointment Email: george.hagstrom@cuny.edu\nDegree Program: M.S. in Data Science Credits: 3 graduate credits Prerequisites: DATA 602; DATA 607 Type of Course: Required Course\n\nDescription\nThis course is about the creation of high quality data visualizations - diagrams, graphs/plots, maps/geographic visualizations, tables, and interactive applications - that tell the story or stories hidden in the underlying data. You will learn the skills, techniques and the art of “Storytelling with Data”. You will gain the knowledge and experience necessary to source data and use the tools available to you as a data practitioner to build high quality data visualizations that tell a story, conveying the information that your audience needs to know and wants to hear.\n\n\nCourse Learning Outcomes\nBy the end of the course, as a data practitioner you will:\n\nBe able to create high quality data graphics using various libraries (Python, R and/or JavaScript), web applications, and/or desktop applications.\nUnderstand the quality factors that distinguish high quality data graphics.\nHave developed a “Critical Eye”, the ability to discern poor quality and misleading data visualizations as differentiated from those of high quality.\nBe cognizant of the data story process and your role as a data practitioner in identifying the story audience and the required story content, determining the context of the story, and the iterative process of developing high quality data visualizations and accompanying text.\n\n\n\nProgram Learning Outcomes addressed by the course\n\nBusiness Understanding. Learn when analytical and/or probabilistic techniques apply to certain categories of business problems, and be able to build data stories that guide business decisions.\nFoundational Data Visualization Skills. Explore and analyze data, build probabilistic and statistical models, and create meaningful data stories using the craft of data visualization.\nPresentation. Complete and submit assignments using techniques from the course.\n\n\n\nGrading\n\nData Story Assignments (80%)\nFinal Data Story/Project (20%)\n\n\nGrade Distribution\n\n\n\n\n\n\n\n\n\nQuality of Performance\nLetter Grade\nRange %\nGPA\n\n\n\n\nExcellent - work is of exceptional quality\nA\n93 - 100\n4\n\n\nExcellent\nA-\n90 - 92.9\n3.7\n\n\nGood - work is above average\nB+\n87 - 89.9\n3.3\n\n\nSatisfactory\nB\n83 - 86.9\n3\n\n\nBelow Average\nB-\n80 - 82.9\n2.7\n\n\nPoor\nC+\n77 - 79.9\n2.3\n\n\nPoor\nC\n70 - 76.9\n2\n\n\nFailure\nF\n&lt; 70\n0\n\n\n\n\n\n\nHow This Course Works\nThis course is conducted entirely online. Each week, you will have various resources made available, including weekly readings from the textbooks and occasionally additional readings provided by the instructor. The major assignments in this course are a series of data story assignments; see the schedule and the Data Stories page for details. You are expected to complete all assignments by their due dates.\nYou are expected to attend or watch every Meetup. I highly recommend attending the Meetups live if possible but understand that may not be possible for everyone. Recordings will be made available by the next morning on the Schedule page. In addition to highlighting key concepts from each learning module, some topics will be discussed that are not in the textbook. Moreover, we regularly make announcements in the Meetups that will be important to being successful in this course.\n\n\nTextbooks and Course Materials\nThis course makes use of several textbooks and other resources. I have attempted when possible to choose resources which are freely available.\n\nClaus Wilke. Fundamentals of Data Visualization\nCole Nussbaumer Knaflic. Storytelling with Data\n\nSee the Textbooks page for additional texts and resources.\n\n\nRelevant Software, Hardware, or Other Tools\nHomework assignments will be presentations or reports created using quarto, which supports a number of different frameworks for creating visualizations. R or python are the recommended languages for creating visualizations, but it is also possible to use other languages including julia or javascript. See the Software page for details.\n\n\nAccessibility and Accommodations\nThe CUNY School of Professional Studies is firmly committed to making higher education accessible to students with disabilities by removing architectural barriers and providing programs and support services necessary for them to benefit from the instruction and resources of the University. Early planning is essential for many of the resources and accommodations provided. Please see: Disability Services on the CUNY SPS Website\n\n\nOnline Etiquette and Anti-Harassment Policy\nThe University strictly prohibits the use of University online resources or facilities, including Brightspace, for the purpose of harassment of any individual or for the posting of any material that is scandalous, libelous, offensive or otherwise against the University’s policies. Please see: “Netiquette in an Online Academic Setting: A Guide for CUNY School of Professional Studies Students”\n\n\nAcademic Integrity\nAcademic dishonesty is unacceptable and will not be tolerated. Cheating, forgery, plagiarism and collusion in dishonest acts undermine the educational mission of the City University of New York and the students’ personal and intellectual growth. Please see: Academic Integrity on the CUNY SPS Website\n\n\nStudent Support Services\nIf you need any additional help, please visit Student Support Services\n\n\nIT Support\nhelpdesk@sps.cuny.edu",
+    "crumbs": [
+      "Course information",
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "course/schedule.html",
+    "href": "course/schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Click Here to Join the Meetups on Zoom\nMeetups are Mondays at 8:00PM Eastern. We meet every Monday of the semester except the Monday after Thanksgiving.\n\n\nCourse Schedule\n\n\nDate\nModule\nSlides\nVideo\nMain Deliverables\n\n\n\n\nAug 31\nDeveloping a Critical Eye\nPDF\nSP25\nStory 1 assigned\n\n\nSep 7\nThe Data Visualization Catalogue\nPDF\nSP25\nStory 1 due Sun Sep 13\n\n\nSep 14\nVisualization Quality Features\nPDF\nSP25\nStory 2 assigned\n\n\nSep 21\nAssociations and Time Series\nPDF\nSP25\nStory 2 due Sun Sep 27\n\n\nSep 28\nVisualizing Geospatial Data\nPDF\nSP25, bonus\nStory 3 assigned\n\n\nOct 5\nStorytelling\nPDF\nSP25\nStory 3 due Sun Oct 11\n\n\nOct 12\nEffective Use of Color and Fonts\nPDF\nSP25\nStory 4 assigned\n\n\nOct 19\nDistributions and Histograms\nPDF\nSP25\nStory 4 due Sun Oct 25\n\n\nOct 26\nModels and Uncertainty\nPDF\nSP25\nStory 5 assigned\n\n\nNov 2\nDimension Reduction and PCA\nPDF\nSP25\nStory 5 due Sun Nov 8\n\n\nNov 9\nClustering\nPDF\nSP25\nStory 6 assigned\n\n\nNov 16\nHierarchical Clustering\nPDF\nSP25\nStory 6 due Sun Nov 22\n\n\nNov 23\nIntroduction to Shiny Apps\n\nSP25\nStory 7 assigned\n\n\nNov 30\nNo Meetup — Thanksgiving\n\n\n\n\n\nDec 7\nInteractive Visualizations\n\nSP25\nStory 7 due Sun Dec 13\n\n\nDec 14\nWrap-Up\n\n\n\n\n\n\nSlides and recordings are posted here after each meetup.",
+    "crumbs": [
+      "Course information",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "course/schedule.html#meetup-link",
+    "href": "course/schedule.html#meetup-link",
+    "title": "Schedule",
+    "section": "",
+    "text": "Click Here to Join the Meetups on Zoom\nMeetups are Mondays at 8:00PM Eastern. We meet every Monday of the semester except the Monday after Thanksgiving.\n\n\nCourse Schedule\n\n\nDate\nModule\nSlides\nVideo\nMain Deliverables\n\n\n\n\nAug 31\nDeveloping a Critical Eye\nPDF\nSP25\nStory 1 assigned\n\n\nSep 7\nThe Data Visualization Catalogue\nPDF\nSP25\nStory 1 due Sun Sep 13\n\n\nSep 14\nVisualization Quality Features\nPDF\nSP25\nStory 2 assigned\n\n\nSep 21\nAssociations and Time Series\nPDF\nSP25\nStory 2 due Sun Sep 27\n\n\nSep 28\nVisualizing Geospatial Data\nPDF\nSP25, bonus\nStory 3 assigned\n\n\nOct 5\nStorytelling\nPDF\nSP25\nStory 3 due Sun Oct 11\n\n\nOct 12\nEffective Use of Color and Fonts\nPDF\nSP25\nStory 4 assigned\n\n\nOct 19\nDistributions and Histograms\nPDF\nSP25\nStory 4 due Sun Oct 25\n\n\nOct 26\nModels and Uncertainty\nPDF\nSP25\nStory 5 assigned\n\n\nNov 2\nDimension Reduction and PCA\nPDF\nSP25\nStory 5 due Sun Nov 8\n\n\nNov 9\nClustering\nPDF\nSP25\nStory 6 assigned\n\n\nNov 16\nHierarchical Clustering\nPDF\nSP25\nStory 6 due Sun Nov 22\n\n\nNov 23\nIntroduction to Shiny Apps\n\nSP25\nStory 7 assigned\n\n\nNov 30\nNo Meetup — Thanksgiving\n\n\n\n\n\nDec 7\nInteractive Visualizations\n\nSP25\nStory 7 due Sun Dec 13\n\n\nDec 14\nWrap-Up\n\n\n\n\n\n\nSlides and recordings are posted here after each meetup.",
+    "crumbs": [
+      "Course information",
+      "Schedule"
+    ]
+  },
+  {
+    "objectID": "course/instructors.html",
+    "href": "course/instructors.html",
+    "title": "Instructor",
+    "section": "",
+    "text": "George Hagstrom, Ph.D. Email: george.hagstrom@cuny.edu\nI am currently a Doctoral Lecturer in Data Science and Information Systems at the City University of New York. Additionally, I am a consultant with Princeton University where I development mathematical models of marine phytoplankton and heterotrophic bacteria to improve our understanding of the Earth’s Biogeochemical Cycles. Prior to joining CUNY, I was a Research Scientist at Princeton University in the Levin lab at the Department of Ecology and Evolutionary Biology and a postdoctoral researcher in the Magneto Fluids Division at the Courant Institute for Mathematical Sciences. My research interests include the application of Bayesian statistics and Machine Learning to incorporate nontraditional datasets (such as from ’omics) into mechanistic models of marine ecosystems and biogeochemical cycling, trait-based modeling, and critical transitions in complex ecological, social, or economic systems. In my free time, I enjoy cycling and exploring New York City.\n\nContact\nOffice Hours (Zoom is preferred): By appointment. You’re encouraged to schedule an appointment and I have time nearly everyday. You are also encouraged to ask us questions on Slack. If you wish to ask a question in private, you can email me directly.\nFor the most part, you can expect me to respond to questions by email within 24 hours. If you do not hear back from me within 48 hours of sending an email, please resend your message. I will be checking in on the course regularly, just about every day and likely several times each day. Please do not hesitate to ask if you have questions or concerns.",
+    "crumbs": [
+      "Course information",
+      "Instructors"
+    ]
+  },
+  {
+    "objectID": "assignments/stories/story6.html",
+    "href": "assignments/stories/story6.html",
+    "title": "Story 6: Customer Segmentation at Instacart",
+    "section": "",
+    "text": "Assigned: Week 11 | Due: Sunday, November 22 at midnight Eastern | Points: 100\nThis assignment involves using dimensionality reduction, clustering, and other tools to tell a story about the types of customers at Instacart. See the assignment pdf below for details.\n\nAssignment and Data\n\nData Story 6 Assignment PDF\n\n\n\nInstacart data archive: link to be posted"
+  },
+  {
+    "objectID": "assignments/stories/story4.html",
+    "href": "assignments/stories/story4.html",
+    "title": "Story 4: High Revenue Airbnbs in NYC",
+    "section": "",
+    "text": "Assigned: Week 7 | Due: Sunday, October 25 at midnight Eastern | Points: 100\nThe data story for this week has a little bit of a richer dataset and as a result is more open ended. Basically you are tasked with looking at airbnb listings in NYC, trying to understand what drives their revenue/lack thereof, and making a short slideshow suggesting a strategy to either invest in airbnbs with unrealized profit potential, give advice to underperforming hosts, or target potential hosts and convince them to list their property on airbnb. This data involves a very crude estimation of revenue and occupancy rate, so don’t invest money based on your findings, but it should be approximately accurate.\n\nAssignment and Data\n\nData Story 4 Assignment PDF\nNYC Airbnb Listings Data\nNYC Neighbourhoods GeoJSON"
+  },
+  {
+    "objectID": "assignments/stories/story2.html",
+    "href": "assignments/stories/story2.html",
+    "title": "Story 2: Can the FED Control Inflation and Maintain Full Employment?",
+    "section": "",
+    "text": "Assigned: Week 3 | Due: Sunday, September 27 at midnight Eastern | Points: 100\nThe Federal Reserve’s mandate from Congress is to control inflation and to maintain low unemployment. You can read about it here: Dual Mandate. These seem to be contradictory objectives - see this wikipedia article on the Phillips Curve. Another good but short news article which focuses on the specific context of recessions is here: Soft Landing.\nFor this story you will need to source the following data for the last 25 years:\n\nThe Consumer Price Index (CPI) (Bureau of Labor Statistics) - note that there are numerous ways to define a CPI, and you can create a custom definition on the BLS page. If you want the standard CPI it is the CPI for all Urban Consumers, or CPI-U. You can find this and other BLS datasets here: https://data.bls.gov/toppicks?survey=bls\nThe FED Funds Rate (FRED) (Federal Reserve Board) - This can be found here: https://fred.stlouisfed.org/series/FEDFUNDS\nUnemployment Rate (Bureau of Labor Statistics). I recommend using the seasonally adjusted rate.\n\nYour data visualizations should be designed to answer the question “Has the FED been able to fulfill the mandate given to it by Congress?”\nNotes:\n\nI recommend using quarto to compose your report with either R or python for the visualizations, though you may use something different if you choose.\nRemember, the FED raises rates after reviewing the CPI and other data, and unemployment (layoffs) occurs after company operating costs go up.\nThis assignment is due at the end of week four of the semester."
+  },
+  {
+    "objectID": "assignments/stories.html",
+    "href": "assignments/stories.html",
+    "title": "Data Stories",
+    "section": "",
+    "text": "The major assignments in this course are seven “Data Stories”, due respectively at the end of weeks 2, 4, 6, 8, 10, 12, and 14 (Sundays at midnight Eastern). Each assignment requires that you source and wrangle data, perform analysis, and build data visualizations that tell a story. The assignments are in the form of story requests.\nI recommend composing each story as a reproducible quarto report or presentation, using either R or python for the visualizations, and submitting your qmd file along with a rendered PDF or HTML file. Stories should be submitted on Brightspace.",
+    "crumbs": [
+      "Assignments",
+      "Data Stories"
+    ]
+  },
+  {
+    "objectID": "assignments/stories.html#sample-data-story",
+    "href": "assignments/stories.html#sample-data-story",
+    "title": "Data Stories",
+    "section": "Sample Data Story",
+    "text": "Sample Data Story\nTo see an example of what a finished data story looks like, see this sample: Electricity and Carbon Over Time (PDF) (quarto source).",
+    "crumbs": [
+      "Assignments",
+      "Data Stories"
+    ]
+  },
+  {
+    "objectID": "acknowledgements.html",
+    "href": "acknowledgements.html",
+    "title": "Acknowledgements",
+    "section": "",
+    "text": "We acknowledge the wonderful resources made available on the open-source course Data Science in a Box, which helped in the design of this course site. Portions of this course were developed from the CUNY SPS DATA 608 master course originally designed by Professor Samuel Gralnick. This material is shared under a CC BY-SA 4.0 Creative Commons Share Alike License\nThis website would not be possible without the quarto package.",
+    "crumbs": [
+      "Acknowledgements"
+    ]
+  },
+  {
+    "objectID": "assignments/stories/story1.html",
+    "href": "assignments/stories/story1.html",
+    "title": "Story 1: Infrastructure Investment and Jobs Act Funding Allocation",
+    "section": "",
+    "text": "Assigned: Week 1 | Due: Sunday, September 13 at midnight Eastern | Points: 100\nThe Excel file linked below contains data on the present allocation of the Infrastructure Investment and Jobs Act funding by State and Territory.\nSource data on the current (or estimated) population of each state and territory listed in the Excel spreadsheet file, and on the official results of the presidential election. Your assignment is to use this data to create visualizations that answer the following two questions:\n\nIs the allocation equitable based on the population of each of the States and Territories, or is bias apparent?\nDoes the allocation favor the political interests of the Biden administration?\n\nTo frame your data story, use the storyboard/3-minute story/big idea framework from Chapter 1 of Storytelling with Data. Submit your storyboard (it can be a short, sequential list of phrases), a one-paragraph 3-minute story, and a one sentence big-idea summary of your story. Then create one or more visualizations using the data in order to tell your story.\nYou may select which software you use to create your presentation. I recommend using R or python and submitting a reproducible quarto presentation. Your submission should be in the form of a report (document) or a presentation.\n\nData\n\nIIJA Funding as of March 2023 (xlsx)"
+  },
+  {
+    "objectID": "assignments/stories/story3.html",
+    "href": "assignments/stories/story3.html",
+    "title": "Story 3: Do Stricter Gun Laws Reduce Firearm Gun Deaths?",
+    "section": "",
+    "text": "Assigned: Week 5 | Due: Sunday, October 11 at midnight Eastern | Points: 100\nThe rate of firearm mortality varies tremendously between states. Several factors have been proposed to explain this public health disparity, from regulations in the given state, socioeconomic conditions like poverty, or cultural factors surrounding gun ownership. Your task in this data story is to make visualizations that investigate these potential explanations, and try to answer the question: “To what extent do gun laws versus other factors explain the differences in firearm mortality between states?”\nFor this assignment I have provided several datasets, each of which you can choose to use as it suits your needs.\n\nThe first is a firearm mortality dataset from the CDC, which reports total firearm mortality for each state per 100,000 persons: CDC Firearm Mortality in 2022\nThe second is a dataset describing the presence or absence of 157 different types of firearm laws in each state. The data was compiled by the Institute for Social Research at the University of Michigan, who tracked the data from 1991 to 2019. I am just uploading a dataset with the information in 2019: Firearm Laws in 2019. If you want to read a description of the variables, you can find it in this codebook\nThe third is a dataset breaking down the fraction of gun deaths from homicide, suicide, or other, also from the CDC: Firearm Death Breakdown\nThe fourth is a survey based estimate of household firearm ownership rates per state, estimated from a variety of polling sources: Gun Ownership By State\nThe fifth looks at burglary rates per state, from the FBI UCR database: State Burglary Rates per 100k\n\nFor this assignment you will need to:\n\nCreate a combination of maps and other visualizations, using the techniques discussed during weeks 5 and 6 as well as prior modules, to tell a story about the causes of disparities in firearm mortality.\n\nNotes:\n\nI recommend submitting your visualizations as a quarto presentation or report, using either python or R to create the visualizations and submitting your qmd file to guarantee reproducibility.\nIf you use color in your visuals you must use an accessible color palette.\nThis assignment is due at the end of week six of the semester."
+  },
+  {
+    "objectID": "assignments/stories/story5.html",
+    "href": "assignments/stories/story5.html",
+    "title": "Story 5: What Factors Determine Housing Prices in Ames, Iowa?",
+    "section": "",
+    "text": "Assigned: Week 9 | Due: Sunday, November 8 at midnight Eastern | Points: 100\nIn week 9 we learn to visualize models, and in week 10 we learn about dimensionality reduction techniques. A good dataset to practice these tools on is the Ames housing price dataset, which is a sort of “model organism” for machine learning practice. The emphasis of this assignment (described in the pdf) is on building a model or models of the factors determining housing prices and using visualizations to explain their meaning and implications.\n\nThis assignment is due at the end of week ten of the semester.\nAssemble your visualizations using quarto while using python, R, or another language to create the visualizations. Submit your qmd along with your final submission.\n\n\nAssignment and Data\n\nData Story 5 Assignment PDF\nAmes Housing Data (train.csv)\nData Dictionary"
+  },
+  {
+    "objectID": "assignments/stories/story7.html",
+    "href": "assignments/stories/story7.html",
+    "title": "Story 7: Telling a Data Story with Shiny",
+    "section": "",
+    "text": "Assigned: Week 13 | Due: Sunday, December 13 at midnight Eastern | Points: 100\nFor this assignment, take one of your data stories and convert it into an interactive dashboard using Shiny. You should submit your shiny app as an app.R file, and you may choose to also deploy it for free on shinyapps.io.\nYour app should go beyond just replicating some of the visualizations in your original data story; you should include interactive inputs that enhance the depth of insight generated from your visualizations."
+  },
+  {
+    "objectID": "course/overview.html",
+    "href": "course/overview.html",
+    "title": "DATA 608 - Knowledge and Visual Analytics",
+    "section": "",
+    "text": "This course is about the creation of high quality data visualizations - diagrams, graphs/plots, maps, tables, and interactive applications - that tell the story or stories hidden in the underlying data. You will learn the skills, techniques, and the art of “Storytelling with Data”. You will gain the knowledge and experience necessary to source data and use the tools available to you as a data practitioner to build high quality data visualizations that tell a story, conveying the information that your audience needs to know and wants to hear. Along the way we will study the theory of graphical perception, the quality features that distinguish excellent visualizations, how to visualize associations, time series, geospatial data, distributions, models and uncertainty, and how to use unsupervised learning techniques like dimension reduction and clustering to find structure in complex datasets. The course culminates with building interactive visualizations and dashboards using Shiny.",
+    "crumbs": [
+      "Course information",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "course/software.html",
+    "href": "course/software.html",
+    "title": "Software",
+    "section": "",
+    "text": "Homework assignments in this course are presentations or reports created using quarto, which supports a number of different frameworks for creating visualizations. R or python are the recommended languages for creating visualizations, but it is also possible to use other languages including julia or javascript.",
+    "crumbs": [
+      "Course information",
+      "Software"
+    ]
+  },
+  {
+    "objectID": "course/software.html#getting-set-up",
+    "href": "course/software.html#getting-set-up",
+    "title": "Software",
+    "section": "Getting set up",
+    "text": "Getting set up\n\nquarto is what you will use to author your assignments. Install it if you have not already.\npositron is a full featured IDE for both python and R that is tuned for data science. It is based on VS Code and is the environment that I recommend you use for this course. RStudio is also an excellent choice, especially if you plan to work primarily in R.\nR installation if you plan to work in R.\nPython 3 installation if you plan to work in python. There are many places to install python from; I recommend using anaconda (or the faster mamba).\nposit.cloud If you have insufficient computing resources, contact me about setting up an account with my course posit.cloud instance.",
+    "crumbs": [
+      "Course information",
+      "Software"
+    ]
+  },
+  {
+    "objectID": "course/software.html#guide-to-key-packages",
+    "href": "course/software.html#guide-to-key-packages",
+    "title": "Software",
+    "section": "Guide to Key Packages",
+    "text": "Guide to Key Packages\n\nR\n\nggplot2 is the workhorse plotting library for this course and implements the grammar of graphics.\ntidyverse collection of packages for wrangling and visualizing data.\nsf for working with geospatial data.\nplotly for R for interactive graphics.\nshiny for building interactive applications and dashboards.\npatchwork for composing multiple figures.\n\n\n\nPython\n\nmatplotlib is a powerful plotting library in python.\nseaborn is another powerful plotting library, technically powered by matplotlib.\nplotly for interactive graphics.\npandas standard python package for wrangling data.\ngeopandas for working with geospatial data.\nshiny for python for building interactive applications and dashboards.\nscikit-learn for the dimension reduction and clustering portions of the course.",
+    "crumbs": [
+      "Course information",
+      "Software"
+    ]
+  },
+  {
+    "objectID": "course/textbooks.html",
+    "href": "course/textbooks.html",
+    "title": "Textbooks",
+    "section": "",
+    "text": "Required\nThis course makes use of several textbooks and other resources. I have attempted when possible to choose resources which are freely available.\n\nClaus Wilke. Fundamentals of Data Visualization\n\nThis book is a comprehensive and highly readable guide to making visualizations that accurately reflect the data, tell a story, and look professional. It is freely available online and forms the backbone of the weekly readings.\n\nCole Nussbaumer Knaflic. Storytelling with Data: A Data Visualization Guide for Business Professionals\n\nThis book teaches the fundamentals of communicating effectively with data: choosing an appropriate visual, eliminating clutter, focusing attention, and building a narrative.\n\n\nOther Important Texts\n\nKieran Healy. Data Visualization: A Practical Introduction\n\nA hands-on introduction to making visualizations with ggplot2 in R, freely available online.\n\nWilliam Cleveland. The Elements of Graphing Data. Hobart Press, 1994\n\nA classic text on graphical perception theory from one of the pioneers of statistical graphics.\n\nRafe Donahue. Fundamental Statistical Concepts in Presenting Data\n\n\n\nData Visualization Resources\n\nThe Data Visualization Catalogue\nUS Census\nTyler Technologies - Data Insights\nCenters for Disease Control\nUnited Nations\nNOAA\nUS Bureau of Labor Statistics\nFederal Reserve Board\nPew Research Center\nHuman Progress Datasets Archive",
+    "crumbs": [
+      "Course information",
+      "Textbooks"
+    ]
+  },
+  {
+    "objectID": "license.html",
+    "href": "license.html",
+    "title": "Attribution-ShareAlike 4.0 International",
+    "section": "",
+    "text": "Creative Commons Corporation (“Creative Commons”) is not a law firm and does not provide legal services or legal advice. Distribution of Creative Commons public licenses does not create a lawyer-client or other relationship. Creative Commons makes its licenses and related information available on an “as-is” basis. Creative Commons gives no warranties regarding its licenses, any material licensed under their terms and conditions, or any related information. Creative Commons disclaims all liability for damages resulting from their use to the fullest extent possible."
+  },
+  {
+    "objectID": "license.html#creative-commons-attribution-sharealike-4.0-international-public-license",
+    "href": "license.html#creative-commons-attribution-sharealike-4.0-international-public-license",
+    "title": "Attribution-ShareAlike 4.0 International",
+    "section": "Creative Commons Attribution-ShareAlike 4.0 International Public License",
+    "text": "Creative Commons Attribution-ShareAlike 4.0 International Public License\nBy exercising the Licensed Rights (defined below), You accept and agree to be bound by the terms and conditions of this Creative Commons Attribution-ShareAlike 4.0 International Public License (“Public License”). To the extent this Public License may be interpreted as a contract, You are granted the Licensed Rights in consideration of Your acceptance of these terms and conditions, and the Licensor grants You such rights in consideration of benefits the Licensor receives from making the Licensed Material available under these terms and conditions.\n\nSection 1 – Definitions.\n\nAdapted Material means material subject to Copyright and Similar Rights that is derived from or based upon the Licensed Material and in which the Licensed Material is translated, altered, arranged, transformed, or otherwise modified in a manner requiring permission under the Copyright and Similar Rights held by the Licensor. For purposes of this Public License, where the Licensed Material is a musical work, performance, or sound recording, Adapted Material is always produced where the Licensed Material is synched in timed relation with a moving image.\nAdapter’s License means the license You apply to Your Copyright and Similar Rights in Your contributions to Adapted Material in accordance with the terms and conditions of this Public License.\nBY-SA Compatible License means a license listed at creativecommons.org/compatiblelicenses, approved by Creative Commons as essentially the equivalent of this Public License.\nCopyright and Similar Rights means copyright and/or similar rights closely related to copyright including, without limitation, performance, broadcast, sound recording, and Sui Generis Database Rights, without regard to how the rights are labeled or categorized. For purposes of this Public License, the rights specified in Section 2(b)(1)-(2) are not Copyright and Similar Rights.\nEffective Technological Measures means those measures that, in the absence of proper authority, may not be circumvented under laws fulfilling obligations under Article 11 of the WIPO Copyright Treaty adopted on December 20, 1996, and/or similar international agreements.\nExceptions and Limitations means fair use, fair dealing, and/or any other exception or limitation to Copyright and Similar Rights that applies to Your use of the Licensed Material.\nLicense Elements means the license attributes listed in the name of a Creative Commons Public License. The License Elements of this Public License are Attribution and ShareAlike.\nLicensed Material means the artistic or literary work, database, or other material to which the Licensor applied this Public License.\nLicensed Rights means the rights granted to You subject to the terms and conditions of this Public License, which are limited to all Copyright and Similar Rights that apply to Your use of the Licensed Material and that the Licensor has authority to license.\nLicensor means the individual(s) or entity(ies) granting rights under this Public License.\nShare means to provide material to the public by any means or process that requires permission under the Licensed Rights, such as reproduction, public display, public performance, distribution, dissemination, communication, or importation, and to make material available to the public including in ways that members of the public may access the material from a place and at a time individually chosen by them.\nSui Generis Database Rights means rights other than copyright resulting from Directive 96/9/EC of the European Parliament and of the Council of 11 March 1996 on the legal protection of databases, as amended and/or succeeded, as well as other essentially equivalent rights anywhere in the world.\nYou means the individual or entity exercising the Licensed Rights under this Public License. Your has a corresponding meaning.\n\n\n\nSection 2 – Scope.\n\nLicense grant.\n\nSubject to the terms and conditions of this Public License, the Licensor hereby grants You a worldwide, royalty-free, non-sublicensable, non-exclusive, irrevocable license to exercise the Licensed Rights in the Licensed Material to:\n\nreproduce and Share the Licensed Material, in whole or in part; and\nproduce, reproduce, and Share Adapted Material.\n\nExceptions and Limitations. For the avoidance of doubt, where Exceptions and Limitations apply to Your use, this Public License does not apply, and You do not need to comply with its terms and conditions.\nTerm. The term of this Public License is specified in Section 6(a).\nMedia and formats; technical modifications allowed. The Licensor authorizes You to exercise the Licensed Rights in all media and formats whether now known or hereafter created, and to make technical modifications necessary to do so. The Licensor waives and/or agrees not to assert any right or authority to forbid You from making technical modifications necessary to exercise the Licensed Rights, including technical modifications necessary to circumvent Effective Technological Measures. For purposes of this Public License, simply making modifications authorized by this Section 2(a)(4) never produces Adapted Material.\nDownstream recipients.\nA. Offer from the Licensor – Licensed Material. Every recipient of the Licensed Material automatically receives an offer from the Licensor to exercise the Licensed Rights under the terms and conditions of this Public License.\n\n__Additional offer from the Licensor – Adapted Material. Every recipient of Adapted Material from You automatically receives an offer from the Licensor to exercise the Licensed Rights in the Adapted Material under the conditions of the Adapter’s License You apply.\n\nC. No downstream restrictions. You may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, the Licensed Material if doing so restricts exercise of the Licensed Rights by any recipient of the Licensed Material.\nNo endorsement. Nothing in this Public License constitutes or may be construed as permission to assert or imply that You are, or that Your use of the Licensed Material is, connected with, or sponsored, endorsed, or granted official status by, the Licensor or others designated to receive attribution as provided in Section 3(a)(1)(A)(i).\n\nOther rights.\n\nMoral rights, such as the right of integrity, are not licensed under this Public License, nor are publicity, privacy, and/or other similar personality rights; however, to the extent possible, the Licensor waives and/or agrees not to assert any such rights held by the Licensor to the limited extent necessary to allow You to exercise the Licensed Rights, but not otherwise.\nPatent and trademark rights are not licensed under this Public License.\nTo the extent possible, the Licensor waives any right to collect royalties from You for the exercise of the Licensed Rights, whether directly or through a collecting society under any voluntary or waivable statutory or compulsory licensing scheme. In all other cases the Licensor expressly reserves any right to collect such royalties.\n\n\n\n\nSection 3 – License Conditions.\nYour exercise of the Licensed Rights is expressly made subject to the following conditions.\n\nAttribution.\n\nIf You Share the Licensed Material (including in modified form), You must:\n\nretain the following if it is supplied by the Licensor with the Licensed Material:\n\n\n\nidentification of the creator(s) of the Licensed Material and any others designated to receive attribution, in any reasonable manner requested by the Licensor (including by pseudonym if designated);\na copyright notice;\na notice that refers to this Public License;\na notice that refers to the disclaimer of warranties;\na URI or hyperlink to the Licensed Material to the extent reasonably practicable;\n\n\n\nindicate if You modified the Licensed Material and retain an indication of any previous modifications; and\nindicate the Licensed Material is licensed under this Public License, and include the text of, or the URI or hyperlink to, this Public License.\n\nYou may satisfy the conditions in Section 3(a)(1) in any reasonable manner based on the medium, means, and context in which You Share the Licensed Material. For example, it may be reasonable to satisfy the conditions by providing a URI or hyperlink to a resource that includes the required information.\nIf requested by the Licensor, You must remove any of the information required by Section 3(a)(1)(A) to the extent reasonably practicable.\n\nShareAlike.\n\nIn addition to the conditions in Section 3(a), if You Share Adapted Material You produce, the following conditions also apply.\n\nThe Adapter’s License You apply must be a Creative Commons license with the same License Elements, this version or later, or a BY-SA Compatible License.\nYou must include the text of, or the URI or hyperlink to, the Adapter’s License You apply. You may satisfy this condition in any reasonable manner based on the medium, means, and context in which You Share Adapted Material.\nYou may not offer or impose any additional or different terms or conditions on, or apply any Effective Technological Measures to, Adapted Material that restrict exercise of the rights granted under the Adapter’s License You apply.\n\n\n\nSection 4 – Sui Generis Database Rights.\nWhere the Licensed Rights include Sui Generis Database Rights that apply to Your use of the Licensed Material:\n\nfor the avoidance of doubt, Section 2(a)(1) grants You the right to extract, reuse, reproduce, and Share all or a substantial portion of the contents of the database;\nif You include all or a substantial portion of the database contents in a database in which You have Sui Generis Database Rights, then the database in which You have Sui Generis Database Rights (but not its individual contents) is Adapted Material, including for purposes of Section 3(b); and\nYou must comply with the conditions in Section 3(a) if You Share all or a substantial portion of the contents of the database.\n\nFor the avoidance of doubt, this Section 4 supplements and does not replace Your obligations under this Public License where the Licensed Rights include other Copyright and Similar Rights.\n\n\nSection 5 – Disclaimer of Warranties and Limitation of Liability.\n\nUnless otherwise separately undertaken by the Licensor, to the extent possible, the Licensor offers the Licensed Material as-is and as-available, and makes no representations or warranties of any kind concerning the Licensed Material, whether express, implied, statutory, or other. This includes, without limitation, warranties of title, merchantability, fitness for a particular purpose, non-infringement, absence of latent or other defects, accuracy, or the presence or absence of errors, whether or not known or discoverable. Where disclaimers of warranties are not allowed in full or in part, this disclaimer may not apply to You.\nTo the extent possible, in no event will the Licensor be liable to You on any legal theory (including, without limitation, negligence) or otherwise for any direct, special, indirect, incidental, consequential, punitive, exemplary, or other losses, costs, expenses, or damages arising out of this Public License or use of the Licensed Material, even if the Licensor has been advised of the possibility of such losses, costs, expenses, or damages. Where a limitation of liability is not allowed in full or in part, this limitation may not apply to You.\nThe disclaimer of warranties and limitation of liability provided above shall be interpreted in a manner that, to the extent possible, most closely approximates an absolute disclaimer and waiver of all liability.\n\n\n\nSection 6 – Term and Termination.\n\nThis Public License applies for the term of the Copyright and Similar Rights licensed here. However, if You fail to comply with this Public License, then Your rights under this Public License terminate automatically.\nWhere Your right to use the Licensed Material has terminated under Section 6(a), it reinstates:\n\nautomatically as of the date the violation is cured, provided it is cured within 30 days of Your discovery of the violation; or\nupon express reinstatement by the Licensor.\n\nFor the avoidance of doubt, this Section 6(b) does not affect any right the Licensor may have to seek remedies for Your violations of this Public License.\nFor the avoidance of doubt, the Licensor may also offer the Licensed Material under separate terms or conditions or stop distributing the Licensed Material at any time; however, doing so will not terminate this Public License.\nSections 1, 5, 6, 7, and 8 survive termination of this Public License.\n\n\n\nSection 7 – Other Terms and Conditions.\n\nThe Licensor shall not be bound by any additional or different terms or conditions communicated by You unless expressly agreed.\nAny arrangements, understandings, or agreements regarding the Licensed Material not stated herein are separate from and independent of the terms and conditions of this Public License.t stated herein are separate from and independent of the terms and conditions of this Public License.\n\n\n\nSection 8 – Interpretation.\n\nFor the avoidance of doubt, this Public License does not, and shall not be interpreted to, reduce, limit, restrict, or impose conditions on any use of the Licensed Material that could lawfully be made without permission under this Public License.\nTo the extent possible, if any provision of this Public License is deemed unenforceable, it shall be automatically reformed to the minimum extent necessary to make it enforceable. If the provision cannot be reformed, it shall be severed from this Public License without affecting the enforceability of the remaining terms and conditions.\nNo term or condition of this Public License will be waived and no failure to comply consented to unless expressly agreed to by the Licensor.\nNothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.\n\n\nCreative Commons is not a party to its public licenses. Notwithstanding, Creative Commons may elect to apply one of its public licenses to material it publishes and in those instances will be considered the “Licensor.” Except for the limited purpose of indicating that material is shared under a Creative Commons public license or as otherwise permitted by the Creative Commons policies published at creativecommons.org/policies, Creative Commons does not authorize the use of the trademark “Creative Commons” or any other trademark or logo of Creative Commons without its prior written consent including, without limitation, in connection with any unauthorized modifications to any of its public licenses or any other arrangements, understandings, or agreements concerning use of licensed material. For the avoidance of doubt, this paragraph does not form part of the public licenses.\nCreative Commons may be contacted at creativecommons.org"
+  },
+  {
+    "objectID": "modules/module10.html",
+    "href": "modules/module10.html",
+    "title": "Module 10 - Dimension Reduction and PCA",
+    "section": "",
+    "text": "Overview and Deliverables\n\n11/2: Attend the course meetup at 8:00PM Eastern\nFinish working on Story 5, due at the end of this week (Sunday 11/8)\n\n\nReadings\n\nWilke - Section 12.3: Dimension reduction\nA short visual explanation of PCA can be found here: https://setosa.io/ev/principal-component-analysis/\nA very in depth mathematical tutorial (optional) can be found here: https://arxiv.org/pdf/1404.1100\nThere are some excellent youtube videos which focus on the technique - I like the shorter videos by Steve Brunton but ymmv\n\n\n\nMeetup\nSlides: Meetup 10 - Working With High Dimensional Data (PDF)\nIn this meetup we talk about how to use principal component analysis to visualize patterns and structures in high dimensional datasets. We show how to choose the number of principal components using the “elbow” of the variance explained curve, how to tidy PCA models in R, how to interpret principal components, and how to visualize clusters using components.\nSpring 2025 recording",
+    "crumbs": [
+      "Topics",
+      "10 - Dimension Reduction and PCA"
+    ]
+  },
+  {
+    "objectID": "modules/module12.html",
+    "href": "modules/module12.html",
+    "title": "Module 12 - Hierarchical Clustering",
+    "section": "",
+    "text": "Overview and Deliverables\n\n11/16: Attend the course meetup at 8:00PM Eastern\nContinue working on Story 6, due at the end of this week (Sunday 11/22)\n\n\nReadings\n\nWikipedia article on Hierarchical Clustering\nggdendro introduction and reference\ntidyheatmaps documentation\nBioinformatics Training and Education Program Tutorial on Hierarchical Clustering\nFor Python: Seaborn Clustermap, scipy.cluster\n\n\n\nMeetup\nSlides: Meetup 12 - Hierarchical Clustering (PDF)\nIn this meetup we talk about hierarchical clustering, which is an alternative to traditional clustering methods. We discuss the neighbor-joining algorithm for building trees and show how to calculate them in R and visualize them using the ggdendro package. The clustered heatmap is introduced and we show how to customize them using the tidyheatmaps package. Pros and cons of the hierarchical approach are explored.\nSpring 2025 recording",
+    "crumbs": [
+      "Topics",
+      "12 - Hierarchical Clustering"
+    ]
+  },
+  {
+    "objectID": "modules/module14.html",
+    "href": "modules/module14.html",
+    "title": "Module 14 - Interactive Visualizations",
+    "section": "",
+    "text": "Overview and Deliverables\n\n12/7: Attend the course meetup at 8:00PM Eastern\nComplete work on Story 7, which is due this weekend, Sunday 12/13 at midnight\n\n\nReadings\n\nChapter 6 of Mastering Shiny, which covers the basics of controlling the layout of a shiny app\nExploration and Explanation in Data-Driven Storytelling (PDF), a research perspective paper on how to use interactive elements to further your data story\n\nFor those of you who want to go deeper into interactive visualizations, the most famous resources (not sure if they are universally good) are Stephen Few’s Information Dashboard Design and Wexler, Shaffer, and Cotgreave’s The Big Book of Dashboards. I think the writing on this topic is generally poor and has many gaps.\n\n\nMeetup\nSlides: the quarto deck for this meetup is in the course repository (no PDF rendering was in the export).\nIn this meetup we continue to further learn Shiny. We discuss themes and both single and multi-page layouts. We also discuss some of the differences between static and dynamic visualizations.\nSpring 2025 recording",
+    "crumbs": [
+      "Topics",
+      "14 - Interactive Visualizations"
+    ]
+  },
+  {
+    "objectID": "modules/module2.html",
+    "href": "modules/module2.html",
+    "title": "Module 2 - The Data Visualization Catalogue",
+    "section": "",
+    "text": "Overview and Deliverables\n\n9/7: Attend the course meetup at 8:00PM Eastern\nStory 1 is due this Sunday 9/13 at midnight!\n\nThis week focuses on types of data visualizations and the tools available for generating visualizations. The objective is understanding what type of visualization to use for the types of data that you are most likely to encounter and what tools are best for each type of visualization.\n\nReadings\n\nWilke - Chapter 5. This provides a good overview of which types of graphs to use for which type of data. The following chapters go into depth on each individual topic, so that you can use this book as a reference (if you need to plot amounts, go to chapter 6, distributions, chapter 7, etc.)\nStorytelling with Data - Chapter 2. This is a very good practical guide to the most common types of charts with tips on how to make them best, as well as a list of charts to avoid.\nWilliam Cleveland: Graphical Perception Theory. This is one of the foundational (review) papers in research on visualization. If you want to know the “why” for the advice given in this class, much of it has origin in the research of Cleveland and his group.\nThe Data Visualization Catalogue\nA Data Practitioner’s Guide - Slides 8-11\n\n\n\nMeetup\nSlides: Meetup 2 - Graphical Perception Theory (PDF)\nIn this meetup we go through the basics of research on the principles behind perceptual decision making. We go through the perceptual ladder and discuss the practical implications for making visualizations.\nSpring 2025 recording",
+    "crumbs": [
+      "Topics",
+      "2 - The Data Visualization Catalogue"
+    ]
+  },
+  {
+    "objectID": "modules/module4.html",
+    "href": "modules/module4.html",
+    "title": "Module 4 - Plotting Associations and Time Series",
+    "section": "",
+    "text": "Overview and Deliverables\n\n9/21: Attend the course meetup at 8:00PM Eastern\nStory 2 is due at the end of this week (Sunday 9/27)\n\nWe each have had, or will have, the experience of arriving to make a presentation or having submitted a report to discover that the materials prepared do not tell the story that the audience is prepared to “hear”. From these experiences we derive what should be a mantra of storytelling with data: “Know Your Audience and The Context of the Requested Story”.\n\nReadings\n\nWilke - Chapters 12 and 13\n\n\n\nMeetup\nSlides: Meetup 4 - Visualizing Associations and Time Series (PDF)\nIn this meetup we discuss how to improve your visualizations of scatterplots and time series. We go over how to plot two quantitative variables with differing numbers of categorical variables using colors and shapes, and when to use facets. We discuss hues and bubble plots for 3 categorical variables, and pair plots for even more combinations. Then we show how to annotate scatterplots and discuss techniques for plotting time series, including season plots and polar plots.\nSpring 2025 recording",
+    "crumbs": [
+      "Topics",
+      "4 - Associations and Time Series"
+    ]
+  },
+  {
+    "objectID": "modules/module6.html",
+    "href": "modules/module6.html",
+    "title": "Module 6 - Storytelling",
+    "section": "",
+    "text": "Overview and Deliverables\n\n10/5: Attend the course meetup at 8:00PM Eastern\nStory 3 is due at the end of this week (Sunday 10/11)\n\nThe goal of this week is to learn about different narrative structures and how to incorporate these structures into your data visualizations.\n\nReadings\n\nStorytelling with Data - Chapter 7: Lessons in Storytelling\nWilke - Chapter 29: Telling a story and making a point\n\n\n\nMeetup\nSlides: Meetup 6 - Narrative Structures (PDF)\nIn this meetup we describe several commonly used story arcs and apply them to data analysis and visualization. Common pitfalls that arise when trying to present data to non-data-scientist audiences are presented.\nSpring 2025 recording\nA sample data story is also available: Electricity and Carbon Over Time (PDF)",
+    "crumbs": [
+      "Topics",
+      "6 - Storytelling"
+    ]
+  },
+  {
+    "objectID": "modules/module8.html",
+    "href": "modules/module8.html",
+    "title": "Module 8 - Distributions and Histograms",
+    "section": "",
+    "text": "Overview and Deliverables\n\n10/19: Attend the course meetup at 8:00PM Eastern\nStory 4 is due at the end of this week (Sunday 10/25)\n\nThere are two primary goals for this week:\n\nRead Chapters 7-9 in Fundamentals of Data Visualization\nFinish Data Story 4 and turn it in (Sunday by midnight)\n\n\nReadings\n\nWilke - Chapters 7-9\n\n\n\nMeetup\nSlides: Meetup 8 - Visualizing Distributions (PDF)\nIn this meetup we go over techniques for visualizing distributions. This starts with tips and tricks to optimize your histograms, frequency-polygons, and density plots. We then move on to visualizing cumulative distribution functions and show how to generate the empirical CDF and how that leads to qq-plots. Finally, we introduce tools for working with multiple distributions, such as ridge plots.\nSpring 2025 recording",
+    "crumbs": [
+      "Topics",
+      "8 - Distributions and Histograms"
+    ]
+  }
+]

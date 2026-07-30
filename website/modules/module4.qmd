@@ -1,0 +1,23 @@
+---
+title: "Module 4 - Plotting Associations and Time Series"
+editor: source
+---
+
+# Overview and Deliverables
+
+* 9/21: Attend the course meetup at 8:00PM Eastern
+* [Story 2](../assignments/stories/story2.qmd) is due at the end of this week (Sunday 9/27)
+
+We each have had, or will have, the experience of arriving to make a presentation or having submitted a report to discover that the materials prepared do not tell the story that the audience is prepared to "hear". From these experiences we derive what should be a mantra of storytelling with data: **"Know Your Audience and The Context of the Requested Story"**.
+
+### Readings
+
+* __Wilke__ - Chapters 12 and 13
+
+### Meetup
+
+Slides: [Meetup 4 - Visualizing Associations and Time Series (PDF)](../meetups/meetup-4/meetup-4-slides.pdf)
+
+In this meetup we discuss how to improve your visualizations of scatterplots and time series. We go over how to plot two quantitative variables with differing numbers of categorical variables using colors and shapes, and when to use facets. We discuss hues and bubble plots for 3 categorical variables, and pair plots for even more combinations. Then we show how to annotate scatterplots and discuss techniques for plotting time series, including season plots and polar plots.
+
+[Spring 2025 recording](https://youtu.be/Xd8QSTPuB0E)

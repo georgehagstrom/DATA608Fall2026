@@ -1,0 +1,12 @@
+---
+title: "DATA 608 - Knowledge and Visual Analytics"
+---
+
+This course is about the creation of high quality data visualizations - diagrams, graphs/plots, maps, tables, and interactive
+applications - that tell the story or stories hidden in the underlying data. You will learn the skills, techniques, and the art
+of "Storytelling with Data". You will gain the knowledge and experience necessary to source data and use the tools available to
+you as a data practitioner to build high quality data visualizations that tell a story, conveying the information that your
+audience needs to know and wants to hear. Along the way we will study the theory of graphical perception, the quality features
+that distinguish excellent visualizations, how to visualize associations, time series, geospatial data, distributions, models
+and uncertainty, and how to use unsupervised learning techniques like dimension reduction and clustering to find structure in
+complex datasets. The course culminates with building interactive visualizations and dashboards using Shiny.

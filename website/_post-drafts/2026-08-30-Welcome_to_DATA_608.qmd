@@ -1,0 +1,28 @@
+---
+title: "Welcome to DATA 608"
+author: "George I. Hagstrom"
+date: 2026-08-30
+draft: false
+description: "Important information on how to get started with this course. Click this post now for instructions on getting started."
+image: "../images/course_logo.png"
+image-height: "300px"
+
+---
+
+<!-- Draft: move into posts/ (and update the Slack invite link) when the
+     semester starts. -->
+
+Welcome to DATA 608, Knowledge and Visual Analytics.
+
+Click this post now to get started!
+
+Here are the first steps:
+
+* Read the [syllabus](../course/syllabus.qmd).
+* Go through the course overview materials, and complete the [week 1 readings](../modules/module1.qmd).
+* [Make sure you have a good visualization toolkit set up](../course/software.qmd)
+* Introduce yourself on the course discussion forum on Brightspace.
+* Join the course Slack workspace (invite link to be posted).
+* Attend the first meetup on Monday August 31 at 8:00PM Eastern at the [Zoom link on the schedule page](../course/schedule.qmd).
+
+I'm looking forward to working with all of you this semester!

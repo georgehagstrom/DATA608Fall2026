@@ -1,0 +1,24 @@
+---
+title: "Module 14 - Interactive Visualizations"
+editor: source
+---
+
+# Overview and Deliverables
+
+* 12/7: Attend the course meetup at 8:00PM Eastern
+* Complete work on [Story 7](../assignments/stories/story7.qmd), which is due this weekend, Sunday 12/13 at midnight
+
+### Readings
+
+* Chapter 6 of [Mastering Shiny](https://mastering-shiny.org/action-layout.html), which covers the basics of controlling the layout of a shiny app
+* [Exploration and Explanation in Data-Driven Storytelling (PDF)](readings/exploration-and-explanation-storytelling.pdf), a research perspective paper on how to use interactive elements to further your data story
+
+For those of you who want to go deeper into interactive visualizations, the most famous resources (not sure if they are universally good) are Stephen Few's *Information Dashboard Design* and Wexler, Shaffer, and Cotgreave's *The Big Book of Dashboards*. I think the writing on this topic is generally poor and has many gaps.
+
+### Meetup
+
+Slides: the quarto deck for this meetup is in the [course repository](https://github.com/georgehagstrom/DATA608Fall2026/tree/main/website/meetups/meetup-14) (no PDF rendering was in the export).
+
+In this meetup we continue to further learn Shiny. We discuss themes and both single and multi-page layouts. We also discuss some of the differences between static and dynamic visualizations.
+
+[Spring 2025 recording](https://youtu.be/9bFYeSOHeE0)

@@ -1,0 +1,24 @@
+---
+title: "Module 10 - Dimension Reduction and PCA"
+editor: source
+---
+
+# Overview and Deliverables
+
+* 11/2: Attend the course meetup at 8:00PM Eastern
+* Finish working on [Story 5](../assignments/stories/story5.qmd), due at the end of this week (Sunday 11/8)
+
+### Readings
+
+* __Wilke__ - [Section 12.3: Dimension reduction](https://clauswilke.com/dataviz/visualizing-associations.html#dimension-reduction)
+* A short visual explanation of PCA can be found here: [https://setosa.io/ev/principal-component-analysis/](https://setosa.io/ev/principal-component-analysis/)
+* A very in depth mathematical tutorial (optional) can be found here: [https://arxiv.org/pdf/1404.1100](https://arxiv.org/pdf/1404.1100)
+* There are some excellent youtube videos which focus on the technique - I like the shorter videos by [Steve Brunton](https://www.youtube.com/watch?v=fkf4IBRSeEc) but ymmv
+
+### Meetup
+
+Slides: [Meetup 10 - Working With High Dimensional Data (PDF)](../meetups/meetup-10/meetup-10-slides.pdf)
+
+In this meetup we talk about how to use principal component analysis to visualize patterns and structures in high dimensional datasets. We show how to choose the number of principal components using the "elbow" of the variance explained curve, how to tidy PCA models in R, how to interpret principal components, and how to visualize clusters using components.
+
+[Spring 2025 recording](https://youtu.be/WnnwtQah2K0)

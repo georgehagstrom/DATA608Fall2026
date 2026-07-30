@@ -1,0 +1,34 @@
+---
+title: "Software"
+---
+
+Homework assignments in this course are presentations or reports created using [quarto](https://quarto.org/), which supports a number of different frameworks for creating visualizations. `R` or `python` are the recommended languages for creating visualizations, but it is also possible to use other languages including `julia` or `javascript`.
+
+## Getting set up
+
+- [quarto](https://quarto.org/docs/get-started/) is what you will use to author your assignments. Install it if you have not already.
+- [positron](https://positron.posit.co/) is a full featured IDE for both `python` and `R` that is tuned for data science. It is based on VS Code and is the environment that I recommend you use for this course. [RStudio](https://posit.co/download/rstudio-desktop/) is also an excellent choice, especially if you plan to work primarily in `R`.
+- [R installation](https://cran.r-project.org/) if you plan to work in `R`.
+- [Python 3 installation](https://www.anaconda.com/) if you plan to work in `python`. There are many places to install python from; I recommend using `anaconda` (or the faster `mamba`).
+- [posit.cloud](https://posit.cloud) If you have insufficient computing resources, contact me about setting up an account with my course posit.cloud instance.
+
+## Guide to Key Packages
+
+### R
+
+- [ggplot2](https://ggplot2.tidyverse.org/) is the workhorse plotting library for this course and implements the grammar of graphics.
+- [tidyverse](https://www.tidyverse.org/) collection of packages for wrangling and visualizing data.
+- [sf](https://r-spatial.github.io/sf/) for working with geospatial data.
+- [plotly for R](https://plotly.com/r/) for interactive graphics.
+- [shiny](https://shiny.posit.co/) for building interactive applications and dashboards.
+- [patchwork](https://patchwork.data-imaginist.com/) for composing multiple figures.
+
+### Python
+
+- [matplotlib](https://matplotlib.org/) is a powerful plotting library in python.
+- [seaborn](https://seaborn.pydata.org/) is another powerful plotting library, technically powered by `matplotlib`.
+- [plotly](https://plotly.com/python/) for interactive graphics.
+- [pandas](https://pandas.pydata.org/) standard python package for wrangling data.
+- [geopandas](https://geopandas.org/) for working with geospatial data.
+- [shiny for python](https://shiny.posit.co/py/) for building interactive applications and dashboards.
+- [scikit-learn](https://scikit-learn.org/stable/) for the dimension reduction and clustering portions of the course.

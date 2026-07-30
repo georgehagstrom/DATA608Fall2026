@@ -1,0 +1,227 @@
+---
+title: "Electricity and Carbon Over Time"
+author: "George I. Hagstrom"
+format: revealjs
+---
+
+## We are changing the planet
+
+```{r}
+#| label: load-packages
+#| warning: false
+#| message: false
+
+library(tidyverse)
+library(lubridate)
+library(scales)
+library(patchwork)
+library(ggthemes)
+library(ggrepel)
+library(DT)
+
+
+knitr::opts_chunk$set(warning=FALSE, message=FALSE)
+
+energy_data = read_csv("/home/georgehagstrom/work/Teaching/DATA608/Meetup5/owid-energy-data.csv")
+
+co2_data = read_csv("/home/georgehagstrom/work/Teaching/DATA608/Meetup5/owid-co2-data.csv")
+
+mauna_data = read_csv("/home/georgehagstrom/work/Teaching/DATA608/Meetup5/mauna_kea.csv")
+
+
+p1 = co2_data |> filter(country=="World") |> filter(year>1900) |> 
+    ggplot(aes(x=year,y=co2)) + geom_line(color="blue") +
+  theme_clean(base_size = 16) +
+  labs(title = "Electricity Emissions are Rising Each Year", subtitle = "Source: OWID") +
+  ylab("MTon CO2") +
+  theme(axis.line.x = element_blank(),
+         plot.background = element_rect(color = NA)) +
+  coord_cartesian(xlim = c(1900,2024))
+
+p2 = mauna_data |> ggplot(aes(x=year,y=mean)) +
+  geom_line(color="blue") +
+  geom_hline(aes(yintercept = 280), color="red") +
+  geom_text(aes(1920,250,label = "Preindustrial CO2")) +
+  geom_text(aes(1970,350),label = "Modern CO2",color="blue") +
+  theme_clean(base_size=16) +
+  labs(title = "Emissions Cause Atmospheric CO2 to Rise",subtitle = "CO2 Measured at Mauna Kea") +
+  ylab("pCO2") + 
+  coord_cartesian(xlim = c(1900,2024),ylim = c(200,430)) +
+  theme(
+    axis.line.x = element_blank(),
+    plot.background = element_rect(color = NA)
+       ) 
+  
+p1/p2
+
+```
+
+
+## Inequality Suggests Emissions Rise
+
+- In an equitable world emissions will be more equal
+
+
+```{r}
+library(rnaturalearth)
+library(gapminder)
+library(sf)
+country_map = ne_countries(returnclass = "sf")
+
+p1 = co2_data |> filter(year == 2022) |> right_join(country_map,by=c("iso_code"="iso_a3")) |> ggplot(aes(fill = co2_per_capita)) +
+  geom_sf(aes(geometry=geometry,fill = co2_per_capita)) +  
+  coord_sf(crs = st_crs("ESRI:54008")) +
+  scale_fill_viridis_c(name = " ",option="magma",
+                       limits = c(0,20)) +
+  theme_void(base_size=16) +
+  theme(panel.grid = element_line(color = "transparent")) +
+  labs(title = "Some parts of the world pollute more than others",
+       subtitle = "2022 Per Capita CO2 emissions")  
+
+p2 = co2_data |> filter(year == 2022) |> 
+  ggplot(aes(x=gdp,y=co2)) +
+  geom_point() +
+  scale_y_log10() +
+  scale_x_log10() +
+  theme_minimal(base_size=16) +
+  labs(title = "GDP Drives Emissions",
+       subtitle = " 2022 Emissions and GDP data. In the modern world, narrowing inequality will make\n emissions rise more.") +
+  xlab("GDP") +
+  ylab("CO2 Emissions") +
+  theme( axis.line.x = element_blank(),
+    plot.background = element_rect(color = NA))
+
+p1 
+
+```
+
+## Humankind's Challenge: Reduce Emissions While Allowing Growth
+
+```{r}
+p2
+
+```
+
+
+## Hope? Emissions Intensity Falling!
+
+```{r}
+#| label: CarbonIntensity
+#| message: false
+
+countries_included = c("USA","GBR","FRA","SWE","CHN")
+
+
+plot2 = energy_data |> 
+  filter(iso_code %in% countries_included, year > 1980) |> 
+  group_by(iso_code,country) |> 
+  select(iso_code,
+         country,
+         year,
+         low_carbon_share_elec,
+         coal_share_elec,
+         carbon_intensity_elec
+  ) |>
+  ggplot(aes(x=low_carbon_share_elec,y=coal_share_elec,color=carbon_intensity_elec)) +
+  scale_color_viridis_c() +
+  geom_point(na.rm = TRUE,size = 3) +
+  theme_bw(base_size = 14) +
+  labs(title = "Controls on Carbon Intensity",
+       color = "Carbon Intensity",
+       x = "Low Carbon Electricity Share",
+       y = "Coal Electricity Share")
+
+co2_final = energy_data |> filter(year == 2023, iso_code %in% countries_included) |> 
+  group_by(iso_code,country) |> 
+  select(iso_code,
+         country,
+         year,
+         carbon_intensity_elec
+  )
+
+plot3 = energy_data |> 
+  filter(iso_code %in% countries_included, year > 1980) |> 
+  group_by(iso_code,country) |> 
+  select(iso_code,
+         country,
+         year,
+         carbon_intensity_elec
+  ) |>
+  ggplot(aes(x=year,y=carbon_intensity_elec,color=country)) +
+  geom_line(show.legend = FALSE) +
+  geom_text_repel(data = co2_final,aes(x=year+2,y=carbon_intensity_elec,label=country,color=country),show.legend = FALSE,label.size=16/.pt)+
+  theme_clean(base_size = 16) +
+  ylab("Carbon Intensity of Electricity Production") +
+  xlab("Year") +
+  labs(title = "Carbon Intensity Is Dropping in Several Countries",
+       subtitle = "Carbon Intensity of Electricity Production",
+       x = "Year",
+       y = "Carbon Intensity of Electricity (CO2e / kWhr)") +
+  scale_x_continuous(
+    ,
+  limits = c(1990,2025)) +
+  theme(  plot.background = element_rect(color = NA))
+
+
+plot3;
+```
+
+## How? Adoption of Clean Energy
+
+```{r}
+
+
+plot1 = energy_data |> 
+  filter(iso_code %in% countries_included, year > 1980) |> 
+  group_by(iso_code,country) |> 
+  select(iso_code,
+         year,
+         hydro_share_elec,
+         wind_share_elec,
+         solar_share_elec,
+         coal_share_elec,
+         gas_share_elec,
+         nuclear_share_elec) |>
+  pivot_longer(
+    cols = c("hydro_share_elec",
+             "wind_share_elec",
+             "solar_share_elec",
+             "coal_share_elec",
+             "gas_share_elec",
+             "nuclear_share_elec"),
+    names_to = "GeneratorType",
+    values_to = "Electricity_Per_Capita"
+  ) |> 
+  ggplot(aes(x=year,y=Electricity_Per_Capita,color=country)) +
+  geom_line() +
+  facet_wrap(~ GeneratorType,nrow=2) +
+ theme_clean(base_size = 16) +
+  ylab("Share of Electricity from Different Sources") +
+  xlab("Year") +
+  labs(title = "Clean Energy is Displacing Dirty Energy",
+       subtitle = "Hydro and Nuclear enabled decarbonized electricity in the 1970s, gas is diplacing coal,\n and wind and solar are growing fast",
+       color = "Country") +
+  theme( plot.background = element_rect(color = NA))
+
+plot1 
+```
+
+
+## Net Zero Won't Be Easy
+
+```{r}
+p1 = co2_data |> filter(country=="World") |> filter(year>1900) |> 
+    ggplot(aes(x=year,y=co2)) + geom_line(color="blue") +
+  theme_clean(base_size = 16) +
+  labs(title = "Emissions growth slowed recently but remains sky high") +
+  ylab("MTon CO2") +
+  theme(axis.line.x = element_blank(),
+         plot.background = element_rect(color = NA)) +
+  coord_cartesian(xlim = c(2000,2024))
+
+p1
+
+
+
+
+```

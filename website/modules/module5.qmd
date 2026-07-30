@@ -1,0 +1,26 @@
+---
+title: "Module 5 - Visualizing Geospatial Data"
+editor: source
+---
+
+# Overview and Deliverables
+
+* 9/28: Attend the course meetup at 8:00PM Eastern
+* [Story 3](../assignments/stories/story3.qmd) is assigned this week and due Sunday 10/11 (end of week 6)
+
+During this week we will learn about how to make visualizations of geospatial data.
+
+### Readings
+
+1. __Wilke__ - [Chapter 15: Visualizing geospatial data](https://clauswilke.com/dataviz/geospatial-data.html), which teaches some general principles of geospatial data visualization
+2. ["Lying With Maps"](https://geo.libretexts.org/Bookshelves/Geography_(Physical)/Book%3A_Mapping_Society_and_Technology_(Manson)/07%3A_Lying_With_Maps), a chapter from a geography textbook. In particular focus on the section on the ecological fallacy.
+3. If you use R: [Chapter 7 of Kieran Healy's book](https://socviz.co/maps.html) (for the R user, but actually useful in general)
+4. If you use Python: ["Around the World in 80 days: An Introduction to Working With Geodata and Cartopy"](https://github.com/scitools-classroom/scipy-2018-cartopy-tutorial), a tutorial for the python/matplotlib user
+
+### Meetup
+
+Slides: [Meetup 5 - Visualizing Geospatial Data (PDF)](../meetups/meetup-5/meetup-5-slides.pdf)
+
+In this meetup we discuss how to make a quarto slideshow, and how to visualize geospatial data. We go over common issues that arise when making maps, including the ecological fallacy/Modifiable Areal Unit Problem. We explore the simple features library and show how it and other tools in R can make different types of geospatial visualizations.
+
+[Spring 2025 recording](https://youtu.be/t81u3G0LvVs) | [Bonus video](https://youtu.be/nSNibFttWsQ)

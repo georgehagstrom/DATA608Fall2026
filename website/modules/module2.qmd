@@ -1,0 +1,27 @@
+---
+title: "Module 2 - The Data Visualization Catalogue"
+editor: source
+---
+
+# Overview and Deliverables
+
+* 9/7: Attend the course meetup at 8:00PM Eastern
+* [Story 1](../assignments/stories/story1.qmd) is due this Sunday 9/13 at midnight!
+
+This week focuses on types of data visualizations and the tools available for generating visualizations. The objective is understanding what type of visualization to use for the types of data that you are most likely to encounter and what tools are best for each type of visualization.
+
+### Readings
+
+1. __Wilke__ - Chapter 5. This provides a good overview of which types of graphs to use for which type of data. The following chapters go into depth on each individual topic, so that you can use this book as a reference (if you need to plot amounts, go to chapter 6, distributions, chapter 7, etc.)
+2. __Storytelling with Data__ - Chapter 2. This is a very good practical guide to the most common types of charts with tips on how to make them best, as well as a list of charts to avoid.
+3. William Cleveland: [Graphical Perception Theory](readings/cleveland-graphical-perception-1984.pdf). This is one of the foundational (review) papers in research on visualization. If you want to know the "why" for the advice given in this class, much of it has origin in the research of Cleveland and his group.
+4. [The Data Visualization Catalogue](https://datavizcatalogue.com/resources.html)
+5. [A Data Practitioner's Guide](readings/data-practitioners-guide.pdf) - Slides 8-11
+
+### Meetup
+
+Slides: [Meetup 2 - Graphical Perception Theory (PDF)](../meetups/meetup-2/meetup-2-slides.pdf)
+
+In this meetup we go through the basics of research on the principles behind perceptual decision making. We go through the perceptual ladder and discuss the practical implications for making visualizations.
+
+[Spring 2025 recording](https://youtu.be/HjS8PuOMFwI)

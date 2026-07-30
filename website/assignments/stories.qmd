@@ -1,0 +1,22 @@
+---
+title: "Data Stories"
+---
+
+The major assignments in this course are seven "Data Stories", due respectively at the end of weeks 2, 4, 6, 8, 10, 12, and 14 (Sundays at midnight Eastern).
+Each assignment requires that you source and wrangle data, perform analysis, and build data visualizations that tell a story. The assignments are in the form of story requests.
+
+I recommend composing each story as a reproducible quarto report or presentation, using either `R` or `python` for the visualizations, and submitting your `qmd` file
+along with a rendered PDF or HTML file. Stories should be submitted on Brightspace.
+
+1. [Story 1: Infrastructure Investment and Jobs Act Funding Allocation](stories/story1.qmd) — due Sunday, September 13
+2. [Story 2: Can the FED Control Inflation and Maintain Full Employment?](stories/story2.qmd) — due Sunday, September 27
+3. [Story 3: Do Stricter Gun Laws Reduce Firearm Gun Deaths?](stories/story3.qmd) — due Sunday, October 11
+4. [Story 4: High Revenue Airbnbs in NYC](stories/story4.qmd) — due Sunday, October 25
+5. [Story 5: What Factors Determine Housing Prices in Ames, Iowa?](stories/story5.qmd) — due Sunday, November 8
+6. [Story 6: Customer Segmentation at Instacart](stories/story6.qmd) — due Sunday, November 22
+7. [Story 7: Telling a Data Story with Shiny](stories/story7.qmd) — due Sunday, December 13
+
+## Sample Data Story
+
+To see an example of what a finished data story looks like, see this sample: [Electricity and Carbon Over Time (PDF)](stories/sample-data-story/electricity-and-carbon-over-time.pdf)
+([quarto source](https://github.com/georgehagstrom/DATA608Fall2026/raw/main/website/assignments/stories/sample-data-story/decarb_data_story.qmd)).

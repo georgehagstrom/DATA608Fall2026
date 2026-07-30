@@ -1,0 +1,26 @@
+---
+title: "Module 7 - Emphasis: Effective Use of Color and Fonts"
+editor: source
+---
+
+# Overview and Deliverables
+
+* 10/12: Attend the course meetup at 8:00PM Eastern
+* [Story 4](../assignments/stories/story4.qmd) is assigned this week and due Sunday 10/25 (end of week 8)
+
+This week's learning objectives focus on how to selectively use color and choice of fonts to add emphasis to salient elements of your data visualization.
+
+### Readings
+
+* __Storytelling with Data__ - Chapter 4
+* __Wilke__ - Chapter 4, and review Chapter 19 if you need
+* Okabe and Ito on [Color Universal Design](https://jfly.uni-koeln.de/color/)
+* [Choosing Colors (PDF)](readings/choosing_colors.pdf)
+
+### Meetup
+
+Slides: [Meetup 7 - Using Color (PDF)](../meetups/meetup-7/meetup-7-slides.pdf)
+
+In this meetup we go through the basics of color vision in humans and how it influences color perception. We discuss how to use color for differentiating categories and for accenting or drawing attention to aspects of your visualization. We explore different packages for controlling color in R.
+
+[Spring 2025 recording](https://youtu.be/H7QB1sIhuow)

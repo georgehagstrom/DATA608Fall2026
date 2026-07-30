@@ -1,0 +1,13 @@
+---
+title: "Module 15 - Wrap-Up"
+editor: source
+---
+
+# Overview and Deliverables
+
+* 12/14: Attend the final course meetup at 8:00PM Eastern
+
+<!-- The Week 15 module in the Brightspace export contained only LMS template
+     placeholder text - fill in the wrap-up content for Fall 2026 here. -->
+
+Content for the wrap-up week will be posted here.

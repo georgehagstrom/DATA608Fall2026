@@ -1,0 +1,90 @@
+---
+title: "Syllabus"
+---
+
+**Instructor:** George Hagstrom, Ph.D.
+**Class Meetup:** Mondays (see [schedule](schedule.qmd))
+**Office Hours:** By appointment
+**Email:** <a href="mailto:george.hagstrom@cuny.edu">george.hagstrom@cuny.edu</a>
+
+**Degree Program:** M.S. in Data Science
+**Credits:** 3 graduate credits
+**Prerequisites:** DATA 602; DATA 607
+**Type of Course:** Required Course
+
+### Description
+
+This course is about the creation of high quality data visualizations - diagrams, graphs/plots, maps/geographic visualizations, tables, and interactive applications - that tell the story or stories hidden in the underlying data. You will learn the skills, techniques and the art of "Storytelling with Data". You will gain the knowledge and experience necessary to source data and use the tools available to you as a data practitioner to build high quality data visualizations that tell a story, conveying the information that your audience needs to know and wants to hear.
+
+### Course Learning Outcomes
+
+By the end of the course, as a data practitioner you will:
+
+- Be able to create high quality data graphics using various libraries (Python, R and/or JavaScript), web applications, and/or desktop applications.
+- Understand the quality factors that distinguish high quality data graphics.
+- Have developed a "Critical Eye", the ability to discern poor quality and misleading data visualizations as differentiated from those of high quality.
+- Be cognizant of the data story process and your role as a data practitioner in identifying the story audience and the required story content, determining the context of the story, and the iterative process of developing high quality data visualizations and accompanying text.
+
+### Program Learning Outcomes addressed by the course
+
+- __Business Understanding.__ Learn when analytical and/or probabilistic techniques apply to certain categories of business problems, and be able to build data stories that guide business decisions.
+- __Foundational Data Visualization Skills.__ Explore and analyze data, build probabilistic and statistical models, and create meaningful data stories using the craft of data visualization.
+- __Presentation.__ Complete and submit assignments using techniques from the course.
+
+### Grading
+
+* [Data Story Assignments](../assignments/stories.qmd) (80%)
+* Final Data Story/Project (20%)
+
+#### Grade Distribution
+
+Quality of Performance                     | Letter Grade | Range %   | GPA  |
+-------------------------------------------|:------------:|:---------:|:----:|
+Excellent - work is of exceptional quality |      A       | 93 - 100  |  4   |
+Excellent                                  |      A-      | 90 - 92.9 | 3.7  |
+Good - work is above average               |      B+      | 87 - 89.9 | 3.3  |
+Satisfactory                               |      B       | 83 - 86.9 |  3   |
+Below Average                              |      B-      | 80 - 82.9 | 2.7  |
+Poor                                       |      C+      | 77 - 79.9 | 2.3  |
+Poor                                       |      C       | 70 - 76.9 |  2   |
+Failure                                    |      F       |   < 70    |  0   |
+
+### How This Course Works
+
+This course is conducted entirely online. Each week, you will have various resources made available, including weekly readings from the textbooks and occasionally additional readings provided by the instructor. The major assignments in this course are a series of data story assignments; see the [schedule](schedule.qmd) and the [Data Stories page](../assignments/stories.qmd) for details. You are expected to complete all assignments by their due dates.
+
+**You are expected to attend or watch every Meetup.** I highly recommend attending the Meetups live if possible but understand that may not be possible for everyone. Recordings will be made available by the next morning on the [Schedule page](schedule.qmd). In addition to highlighting key concepts from each learning module, some topics will be discussed that are not in the textbook. Moreover, we regularly make announcements in the Meetups that will be important to being successful in this course.
+
+### Textbooks and Course Materials
+
+This course makes use of several textbooks and other resources. I have attempted when possible to choose resources which are freely available.
+
+1. Claus Wilke. [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
+
+2. Cole Nussbaumer Knaflic. *Storytelling with Data*
+
+See the [Textbooks page](textbooks.qmd) for additional texts and resources.
+
+### Relevant Software, Hardware, or Other Tools
+
+Homework assignments will be presentations or reports created using quarto, which supports a number of different frameworks for creating visualizations. R or python are the recommended languages for creating visualizations, but it is also possible to use other languages including julia or javascript. See the [Software page](software.qmd) for details.
+
+### Accessibility and Accommodations
+
+The CUNY School of Professional Studies is firmly committed to making higher education accessible to students with disabilities by removing architectural barriers and providing programs and support services necessary for them to benefit from the instruction and resources of the University. Early planning is essential for many of the resources and accommodations provided. Please see: [Disability Services on the CUNY SPS Website](https://sps.cuny.edu/student-services/disability-services)
+
+### Online Etiquette and Anti-Harassment Policy
+
+The University strictly prohibits the use of University online resources or facilities, including Brightspace, for the purpose of harassment of any individual or for the posting of any material that is scandalous, libelous, offensive or otherwise against the University's policies. Please see: ["Netiquette in an Online Academic Setting: A Guide for CUNY School of Professional Studies Students"](http://catalog.sps.cuny.edu/content.php?catoid=2&navoid=205)
+
+### Academic Integrity
+
+Academic dishonesty is unacceptable and will not be tolerated. Cheating, forgery, plagiarism and collusion in dishonest acts undermine the educational mission of the City University of New York and the students' personal and intellectual growth. Please see: [Academic Integrity on the CUNY SPS Website](https://sps.cuny.edu/about/dean/policies/academic-and-student-policies/academic-integrity)
+
+### Student Support Services
+
+If you need any additional help, please visit [Student Support Services](https://sps.cuny.edu/student-services)
+
+### IT Support
+
+<helpdesk@sps.cuny.edu>

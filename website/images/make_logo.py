@@ -27,7 +27,7 @@ df = df[(df.year >= 1979) & (df.year <= 2024)]
 # SCALE_MAX is the extent (10^6 sq km) that maps to R_OUTER; a value below
 # the data max pushes the traces outward so the ring fills the hex.
 R_OUTER = 0.78
-SCALE_MAX = 14.0
+SCALE_MAX = 13.0
 
 def radius(extent):
     return extent / SCALE_MAX * R_OUTER

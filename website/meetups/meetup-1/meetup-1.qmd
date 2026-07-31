@@ -98,8 +98,9 @@ library(DT)
 :::: {.columns}
 ::: {.column width="50%"}
 - Course slack channel for messaging and rapid communications
-- [https://data608-spring-2025.slack.com](https://data608-spring-2025.slack.com)
-- [Invite Link](https://join.slack.com/t/data-608-spring-2025/shared_invite/zt-2xuiwne04-iF4qyXLhhgLfnemxKJgmxA)
+<!-- TODO: swap in the Fall 2026 Slack workspace + invite link -->
+- [https://cuny-msds.slack.com](https://cuny-msds.slack.com)
+- Invite Link: to be posted
 
 :::
 

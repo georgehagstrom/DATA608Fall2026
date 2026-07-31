@@ -6,15 +6,19 @@ format: revealjs
 
 ## Week Summary
 
-- Spring Break Next Week!
-- Data Story 6 is available due week after spring break
+- Data Story 6 is available, due Sunday November 22
 - Last Data Story will be on Shiny Apps
 - Talking about clustering today
+
+<!-- TODO Fall 2026: Spring 2025 event announcement - swap in a current
+     event card before the meetup.
 
 ## NY Open Statistical Computing Meetup {.stretch}
 
 
   ![](April_2025_Meetup_Card.png)
+-->
+
 
 
 
@@ -310,6 +314,8 @@ ruspini_clusters |> augment(ruspini_tibble) |> ggplot(aes(x=x,y=y,color=.cluster
 
 ```{r}
 kvec = seq(2:10)
+
+
 
 wcss = map(kvec,.f = function(k) {
     kmeans(ruspini, centers = k, nstart = 5)$tot.withinss

@@ -27,12 +27,17 @@ options(ggplot2.discrete.colour = okabeito)
 - Reading is Section 12.3 of Fundamentals of Data Visualization
 - What to do when the data has too many variables to visualize?
 
+<!-- TODO Fall 2026: Spring 2025 event announcement - swap in a current
+     event card before the meetup.
+
 ## NY Open Statistical Computing Meetup
 
 - April 8th 6:30-8:30+
 - Great Networking/Learning Opportunity
 
 ![](April_2025_Meetup_Card.png)
+-->
+
 
 ## Many variables?
 
@@ -74,7 +79,7 @@ ais |> select(-sex,-sport) |>  ggpairs() +
 - There will be no pair-plots
 
 ```{r}
-oc_data = read_csv("DATA/ovariancancer_obs.csv")
+oc_data = read_csv("ovariancancer_obs.csv")
 oc_data
 
 
@@ -94,7 +99,7 @@ oc_data
 - Using a tool called Principal Component Analysis, can separate the groups neatly
 
 ```{r}
-oc_group = read_csv("/home/georgehagstrom/work/Teaching/DATA608/Meetup10/DATA/ovariancancer_grp.csv")
+oc_group = read_csv("ovariancancer_grp.csv")
 pca_fit = oc_data |> 
   select(where(is.numeric))  |>  
   prcomp(scale = TRUE)

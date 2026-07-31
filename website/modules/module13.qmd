@@ -20,5 +20,6 @@ In this meetup we go through the basics of Shiny, which is a tool for creating i
 
 [Spring 2025 recording](https://youtu.be/KrLUrA8DoLI)
 
-<!-- No slide deck for meetup 13 was in the Brightspace export (the old
-     "Meetup Slides" page also had a blank entry for it). -->
+<!-- The meetup 13 deck (recovered from ~/work/Teaching/DATA608/Meetup13) uses
+     `server: shiny`, so it needs a Shiny runtime and is not rendered as part
+     of the static site; source is in website/meetups/meetup-13/. -->

@@ -44,9 +44,14 @@ library(ggokabeito)
 5. [For Python: Seaborn Clustermap](https://seaborn.pydata.org/generated/seaborn.clustermap.html)
 6. [For Python: Scipy Clusters](https://docs.scipy.org/doc/scipy/reference/cluster.html)
 
+<!-- TODO Fall 2026: Spring 2025 event announcement - swap in a current
+     event card before the meetup.
+
 ## May 9th Meetup!
 
 ![](May_2025_Meetup_Card.png)
+-->
+
 
 
 ## Tree of Life

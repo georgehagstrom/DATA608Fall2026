@@ -32,9 +32,9 @@ neighborhood_df = nyc_bnb |> group_by(neighborhood,borough) |> summarise(num_lis
 
 
 library(TTR)
-gdp = read_csv("../Meetup4/GDPC1.csv")
+gdp = read_csv("GDPC1.csv")
 gdp = gdp |> mutate(growth = 100*(GDPC1/lag(GDPC1,4)-1)) 
-unemp = read_csv("../Meetup4/UNRATE.csv")
+unemp = read_csv("UNRATE.csv")
 gdp = gdp |> filter(!is.na(growth))
 gdp = gdp |> left_join(unemp)
 

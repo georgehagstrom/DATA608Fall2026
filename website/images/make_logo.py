@@ -95,7 +95,7 @@ ax.add_patch(
 lato = font_manager.FontProperties(family="Lato", weight="black")
 ax.text(
     0.06, 0, "DATA 608", ha="center", va="center",
-    fontproperties=lato, fontsize=51, color="#0072B2", zorder=2,
+    fontproperties=lato, fontsize=56, color="#0072B2", zorder=2,
     path_effects=[pe.withStroke(linewidth=9, foreground=HEX_BG)],
 )
 

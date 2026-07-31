@@ -9,9 +9,9 @@ from matplotlib.path import Path
 from matplotlib.patches import PathPatch
 from matplotlib import font_manager, cm
 
-HEX_BG = "#0072B2"      # Okabe-Ito blue
+HEX_BG = "#FFFFFF"      # white face; hex shape carried by the border
 HEX_BORDER = "#E69F00"  # Okabe-Ito orange
-CMAP_LO, CMAP_HI = 0.32, 1.0   # trim viridis dark end (invisible on blue)
+CMAP_LO, CMAP_HI = 0.0, 1.0   # full viridis; dark end reads well on white
 
 df = pd.read_csv(
     __import__("os").path.join(__import__("os").path.dirname(__file__), "../meetups/meetup-4/sea_ice.csv"),
@@ -70,7 +70,7 @@ for y in years:
     DY = -0.05  # drop the ring slightly so the hole centers on the wordmark
     (line,) = ax.plot(
         r * np.cos(theta), r * np.sin(theta) + DY,
-        color=colors[y], lw=1.3, alpha=0.88, zorder=1,
+        color=colors[y], lw=1.9, alpha=0.88, zorder=1,
         solid_capstyle="round",
     )
     line.set_clip_path(clip)
@@ -84,7 +84,7 @@ ax.add_patch(
 lato = font_manager.FontProperties(family="Lato", weight="black")
 ax.text(
     0, 0, "DATA 608", ha="center", va="center",
-    fontproperties=lato, fontsize=50, color="white", zorder=2,
+    fontproperties=lato, fontsize=50, color="#0072B2", zorder=2,
 )
 
 out = __import__("os").path.join(__import__("os").path.dirname(__file__), "course_logo.png")

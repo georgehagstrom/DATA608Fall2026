@@ -9,6 +9,9 @@ project:
     # The sample data story executes R code; students download it rather than
     # view it as a page (the rendered PDF is linked from stories.qmd).
     - "!assignments/stories/sample-data-story/"
+    # Unreleased assignments: everything links to stories/tbd.qmd until a
+    # story is released (see the release checklist in assignments/stories.qmd).
+    - "!assignments/stories/story*.qmd"
 
 website:
   page-navigation: true
@@ -29,10 +32,14 @@ website:
     left:
     - text: "License"
       href: license.qmd
-    background: "#FFD700"
+    # Okabe-Ito sky blue - the site palette is a callback to the course's
+    # colorblind-friendly color module (logo: #0072B2 fill, #E69F00 elements)
+    background: "#56B4E9"
 
   sidebar:
-    background: "#FFD700"
+    # Okabe-Ito sky blue - the site palette is a callback to the course's
+    # colorblind-friendly color module (logo: #0072B2 fill, #E69F00 elements)
+    background: "#56B4E9"
     logo: "images/course_logo.png"
     pinned: true
     align: center

@@ -8,13 +8,35 @@ Each assignment requires that you source and wrangle data, perform analysis, and
 I recommend composing each story as a reproducible quarto report or presentation, using either `R` or `python` for the visualizations, and submitting your `qmd` file
 along with a rendered PDF or HTML file. Stories should be submitted on Brightspace.
 
-1. [Story 1: Infrastructure Investment and Jobs Act Funding Allocation](stories/story1.qmd) — due Sunday, September 13
-2. [Story 2: Can the FED Control Inflation and Maintain Full Employment?](stories/story2.qmd) — due Sunday, September 27
-3. [Story 3: Do Stricter Gun Laws Reduce Firearm Gun Deaths?](stories/story3.qmd) — due Sunday, October 11
-4. [Story 4: High Revenue Airbnbs in NYC](stories/story4.qmd) — due Sunday, October 25
-5. [Story 5: What Factors Determine Housing Prices in Ames, Iowa?](stories/story5.qmd) — due Sunday, November 8
-6. [Story 6: Customer Segmentation at Instacart](stories/story6.qmd) — due Sunday, November 22
-7. [Story 7: Telling a Data Story with Shiny](stories/story7.qmd) — due Sunday, December 13
+Each story is released the week it is assigned; until then its link goes to a placeholder page.
+
+<!--
+TO RELEASE A STORY, e.g. Story 1:
+
+  1. swap this line
+         1. [Story 1: ...](stories/tbd.qmd)
+     for
+         1. [Story 1: ...](stories/story1.qmd)
+  2. repoint the other pages that mention that story. To find them all:
+         grep -rn 'stories/tbd.qmd' --include='*.qmd' .
+     Each story appears in course/schedule.qmd (assigned + due rows) and in
+     two module pages (assigned week and due week).
+  3. re-enable it in _quarto.yml (remove or narrow the
+     "!assignments/stories/story*.qmd" render exclusion) and render:
+         quarto render assignments/stories/story1.qmd
+
+The story source files are already in assignments/stories/ -- they are simply
+not linked or rendered until you release them. Their datasets are in
+assignments/stories/data/.
+-->
+
+1. [Story 1: Infrastructure Investment and Jobs Act Funding Allocation](stories/tbd.qmd) — due Sunday, September 13
+2. [Story 2: Can the FED Control Inflation and Maintain Full Employment?](stories/tbd.qmd) — due Sunday, September 27
+3. [Story 3: Do Stricter Gun Laws Reduce Firearm Gun Deaths?](stories/tbd.qmd) — due Sunday, October 11
+4. [Story 4: High Revenue Airbnbs in NYC](stories/tbd.qmd) — due Sunday, October 25
+5. [Story 5: What Factors Determine Housing Prices in Ames, Iowa?](stories/tbd.qmd) — due Sunday, November 8
+6. [Story 6: Customer Segmentation at Instacart](stories/tbd.qmd) — due Sunday, November 22
+7. [Story 7: Telling a Data Story with Shiny](stories/tbd.qmd) — due Sunday, December 13
 
 ## Sample Data Story
 

@@ -6,7 +6,7 @@ editor: source
 # Overview and Deliverables
 
 * 12/7: Attend the course meetup at 8:00PM Eastern
-* Complete work on [Story 7](../assignments/stories/story7.qmd), which is due this weekend, Sunday 12/13 at midnight
+* Complete work on [Story 7](../assignments/stories/tbd.qmd), which is due this weekend, Sunday 12/13 at midnight
 
 ### Readings
 

@@ -113,7 +113,7 @@
     "href": "course/schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Click Here to Join the Meetups on Zoom\nMeetups are Mondays at 8:00PM Eastern. We meet every Monday of the semester except the Monday after Thanksgiving.\n\n\nCourse Schedule\n\n\nDate\nModule\nSlides\nVideo\nMain Deliverables\n\n\n\n\nAug 31\nDeveloping a Critical Eye\nPDF\nSP25\nStory 1 assigned\n\n\nSep 7\nThe Data Visualization Catalogue\nPDF\nSP25\nStory 1 due Sun Sep 13\n\n\nSep 14\nVisualization Quality Features\nPDF\nSP25\nStory 2 assigned\n\n\nSep 21\nAssociations and Time Series\nPDF\nSP25\nStory 2 due Sun Sep 27\n\n\nSep 28\nVisualizing Geospatial Data\nPDF\nSP25, bonus\nStory 3 assigned\n\n\nOct 5\nStorytelling\nPDF\nSP25\nStory 3 due Sun Oct 11\n\n\nOct 12\nEffective Use of Color and Fonts\nPDF\nSP25\nStory 4 assigned\n\n\nOct 19\nDistributions and Histograms\nPDF\nSP25\nStory 4 due Sun Oct 25\n\n\nOct 26\nModels and Uncertainty\nPDF\nSP25\nStory 5 assigned\n\n\nNov 2\nDimension Reduction and PCA\nPDF\nSP25\nStory 5 due Sun Nov 8\n\n\nNov 9\nClustering\nPDF\nSP25\nStory 6 assigned\n\n\nNov 16\nHierarchical Clustering\nPDF\nSP25\nStory 6 due Sun Nov 22\n\n\nNov 23\nIntroduction to Shiny Apps\n\nSP25\nStory 7 assigned\n\n\nNov 30\nNo Meetup — Thanksgiving\n\n\n\n\n\nDec 7\nInteractive Visualizations\n\nSP25\nStory 7 due Sun Dec 13\n\n\nDec 14\nWrap-Up\n\n\n\n\n\n\nSlides and recordings are posted here after each meetup.",
+    "text": "Click Here to Join the Meetups on Zoom\nMeetups are Mondays at 8:00PM Eastern. We meet every Monday of the semester except the Monday after Thanksgiving.\n\nCourse Schedule\n\n\nDate\nModule\nSlides\nVideo\nMain Deliverables\n\n\n\n\nAug 31\nDeveloping a Critical Eye\nPDF\n\nStory 1 assigned\n\n\nSep 7\nThe Data Visualization Catalogue\nPDF\n\nStory 1 due Sun Sep 13\n\n\nSep 14\nVisualization Quality Features\nPDF\n\nStory 2 assigned\n\n\nSep 21\nAssociations and Time Series\nPDF\n\nStory 2 due Sun Sep 27\n\n\nSep 28\nVisualizing Geospatial Data\nPDF\n\nStory 3 assigned\n\n\nOct 5\nStorytelling\nPDF\n\nStory 3 due Sun Oct 11\n\n\nOct 12\nEffective Use of Color and Fonts\nPDF\n\nStory 4 assigned\n\n\nOct 19\nDistributions and Histograms\nPDF\n\nStory 4 due Sun Oct 25\n\n\nOct 26\nModels and Uncertainty\nPDF\n\nStory 5 assigned\n\n\nNov 2\nDimension Reduction and PCA\nPDF\n\nStory 5 due Sun Nov 8\n\n\nNov 9\nClustering\nPDF\n\nStory 6 assigned\n\n\nNov 16\nHierarchical Clustering\nPDF\n\nStory 6 due Sun Nov 22\n\n\nNov 23\nIntroduction to Shiny Apps\n\n\nStory 7 assigned\n\n\nNov 30\nNo Meetup — Thanksgiving\n\n\n\n\n\nDec 7\nInteractive Visualizations\n\n\nStory 7 due Sun Dec 13\n\n\nDec 14\nWrap-Up\n\n\n\n\n\n\nSlides and recordings are posted here after each meetup.",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -124,7 +124,7 @@
     "href": "course/schedule.html#meetup-link",
     "title": "Schedule",
     "section": "",
-    "text": "Click Here to Join the Meetups on Zoom\nMeetups are Mondays at 8:00PM Eastern. We meet every Monday of the semester except the Monday after Thanksgiving.\n\n\nCourse Schedule\n\n\nDate\nModule\nSlides\nVideo\nMain Deliverables\n\n\n\n\nAug 31\nDeveloping a Critical Eye\nPDF\nSP25\nStory 1 assigned\n\n\nSep 7\nThe Data Visualization Catalogue\nPDF\nSP25\nStory 1 due Sun Sep 13\n\n\nSep 14\nVisualization Quality Features\nPDF\nSP25\nStory 2 assigned\n\n\nSep 21\nAssociations and Time Series\nPDF\nSP25\nStory 2 due Sun Sep 27\n\n\nSep 28\nVisualizing Geospatial Data\nPDF\nSP25, bonus\nStory 3 assigned\n\n\nOct 5\nStorytelling\nPDF\nSP25\nStory 3 due Sun Oct 11\n\n\nOct 12\nEffective Use of Color and Fonts\nPDF\nSP25\nStory 4 assigned\n\n\nOct 19\nDistributions and Histograms\nPDF\nSP25\nStory 4 due Sun Oct 25\n\n\nOct 26\nModels and Uncertainty\nPDF\nSP25\nStory 5 assigned\n\n\nNov 2\nDimension Reduction and PCA\nPDF\nSP25\nStory 5 due Sun Nov 8\n\n\nNov 9\nClustering\nPDF\nSP25\nStory 6 assigned\n\n\nNov 16\nHierarchical Clustering\nPDF\nSP25\nStory 6 due Sun Nov 22\n\n\nNov 23\nIntroduction to Shiny Apps\n\nSP25\nStory 7 assigned\n\n\nNov 30\nNo Meetup — Thanksgiving\n\n\n\n\n\nDec 7\nInteractive Visualizations\n\nSP25\nStory 7 due Sun Dec 13\n\n\nDec 14\nWrap-Up\n\n\n\n\n\n\nSlides and recordings are posted here after each meetup.",
+    "text": "Click Here to Join the Meetups on Zoom\nMeetups are Mondays at 8:00PM Eastern. We meet every Monday of the semester except the Monday after Thanksgiving.\n\nCourse Schedule\n\n\nDate\nModule\nSlides\nVideo\nMain Deliverables\n\n\n\n\nAug 31\nDeveloping a Critical Eye\nPDF\n\nStory 1 assigned\n\n\nSep 7\nThe Data Visualization Catalogue\nPDF\n\nStory 1 due Sun Sep 13\n\n\nSep 14\nVisualization Quality Features\nPDF\n\nStory 2 assigned\n\n\nSep 21\nAssociations and Time Series\nPDF\n\nStory 2 due Sun Sep 27\n\n\nSep 28\nVisualizing Geospatial Data\nPDF\n\nStory 3 assigned\n\n\nOct 5\nStorytelling\nPDF\n\nStory 3 due Sun Oct 11\n\n\nOct 12\nEffective Use of Color and Fonts\nPDF\n\nStory 4 assigned\n\n\nOct 19\nDistributions and Histograms\nPDF\n\nStory 4 due Sun Oct 25\n\n\nOct 26\nModels and Uncertainty\nPDF\n\nStory 5 assigned\n\n\nNov 2\nDimension Reduction and PCA\nPDF\n\nStory 5 due Sun Nov 8\n\n\nNov 9\nClustering\nPDF\n\nStory 6 assigned\n\n\nNov 16\nHierarchical Clustering\nPDF\n\nStory 6 due Sun Nov 22\n\n\nNov 23\nIntroduction to Shiny Apps\n\n\nStory 7 assigned\n\n\nNov 30\nNo Meetup — Thanksgiving\n\n\n\n\n\nDec 7\nInteractive Visualizations\n\n\nStory 7 due Sun Dec 13\n\n\nDec 14\nWrap-Up\n\n\n\n\n\n\nSlides and recordings are posted here after each meetup.",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -142,32 +142,11 @@
     ]
   },
   {
-    "objectID": "assignments/stories/story6.html",
-    "href": "assignments/stories/story6.html",
-    "title": "Story 6: Customer Segmentation at Instacart",
-    "section": "",
-    "text": "Assigned: Week 11 | Due: Sunday, November 22 at midnight Eastern | Points: 100\nThis assignment involves using dimensionality reduction, clustering, and other tools to tell a story about the types of customers at Instacart. See the assignment pdf below for details.\n\nAssignment and Data\n\nData Story 6 Assignment PDF\n\n\n\nInstacart data archive: link to be posted"
-  },
-  {
-    "objectID": "assignments/stories/story4.html",
-    "href": "assignments/stories/story4.html",
-    "title": "Story 4: High Revenue Airbnbs in NYC",
-    "section": "",
-    "text": "Assigned: Week 7 | Due: Sunday, October 25 at midnight Eastern | Points: 100\nThe data story for this week has a little bit of a richer dataset and as a result is more open ended. Basically you are tasked with looking at airbnb listings in NYC, trying to understand what drives their revenue/lack thereof, and making a short slideshow suggesting a strategy to either invest in airbnbs with unrealized profit potential, give advice to underperforming hosts, or target potential hosts and convince them to list their property on airbnb. This data involves a very crude estimation of revenue and occupancy rate, so don’t invest money based on your findings, but it should be approximately accurate.\n\nAssignment and Data\n\nData Story 4 Assignment PDF\nNYC Airbnb Listings Data\nNYC Neighbourhoods GeoJSON"
-  },
-  {
-    "objectID": "assignments/stories/story2.html",
-    "href": "assignments/stories/story2.html",
-    "title": "Story 2: Can the FED Control Inflation and Maintain Full Employment?",
-    "section": "",
-    "text": "Assigned: Week 3 | Due: Sunday, September 27 at midnight Eastern | Points: 100\nThe Federal Reserve’s mandate from Congress is to control inflation and to maintain low unemployment. You can read about it here: Dual Mandate. These seem to be contradictory objectives - see this wikipedia article on the Phillips Curve. Another good but short news article which focuses on the specific context of recessions is here: Soft Landing.\nFor this story you will need to source the following data for the last 25 years:\n\nThe Consumer Price Index (CPI) (Bureau of Labor Statistics) - note that there are numerous ways to define a CPI, and you can create a custom definition on the BLS page. If you want the standard CPI it is the CPI for all Urban Consumers, or CPI-U. You can find this and other BLS datasets here: https://data.bls.gov/toppicks?survey=bls\nThe FED Funds Rate (FRED) (Federal Reserve Board) - This can be found here: https://fred.stlouisfed.org/series/FEDFUNDS\nUnemployment Rate (Bureau of Labor Statistics). I recommend using the seasonally adjusted rate.\n\nYour data visualizations should be designed to answer the question “Has the FED been able to fulfill the mandate given to it by Congress?”\nNotes:\n\nI recommend using quarto to compose your report with either R or python for the visualizations, though you may use something different if you choose.\nRemember, the FED raises rates after reviewing the CPI and other data, and unemployment (layoffs) occurs after company operating costs go up.\nThis assignment is due at the end of week four of the semester."
-  },
-  {
     "objectID": "assignments/stories.html",
     "href": "assignments/stories.html",
     "title": "Data Stories",
     "section": "",
-    "text": "The major assignments in this course are seven “Data Stories”, due respectively at the end of weeks 2, 4, 6, 8, 10, 12, and 14 (Sundays at midnight Eastern). Each assignment requires that you source and wrangle data, perform analysis, and build data visualizations that tell a story. The assignments are in the form of story requests.\nI recommend composing each story as a reproducible quarto report or presentation, using either R or python for the visualizations, and submitting your qmd file along with a rendered PDF or HTML file. Stories should be submitted on Brightspace.",
+    "text": "The major assignments in this course are seven “Data Stories”, due respectively at the end of weeks 2, 4, 6, 8, 10, 12, and 14 (Sundays at midnight Eastern). Each assignment requires that you source and wrangle data, perform analysis, and build data visualizations that tell a story. The assignments are in the form of story requests.\nI recommend composing each story as a reproducible quarto report or presentation, using either R or python for the visualizations, and submitting your qmd file along with a rendered PDF or HTML file. Stories should be submitted on Brightspace.\nEach story is released the week it is assigned; until then its link goes to a placeholder page.",
     "crumbs": [
       "Assignments",
       "Data Stories"
@@ -195,32 +174,11 @@
     ]
   },
   {
-    "objectID": "assignments/stories/story1.html",
-    "href": "assignments/stories/story1.html",
-    "title": "Story 1: Infrastructure Investment and Jobs Act Funding Allocation",
+    "objectID": "assignments/stories/tbd.html",
+    "href": "assignments/stories/tbd.html",
+    "title": "Data Story TBD",
     "section": "",
-    "text": "Assigned: Week 1 | Due: Sunday, September 13 at midnight Eastern | Points: 100\nThe Excel file linked below contains data on the present allocation of the Infrastructure Investment and Jobs Act funding by State and Territory.\nSource data on the current (or estimated) population of each state and territory listed in the Excel spreadsheet file, and on the official results of the presidential election. Your assignment is to use this data to create visualizations that answer the following two questions:\n\nIs the allocation equitable based on the population of each of the States and Territories, or is bias apparent?\nDoes the allocation favor the political interests of the Biden administration?\n\nTo frame your data story, use the storyboard/3-minute story/big idea framework from Chapter 1 of Storytelling with Data. Submit your storyboard (it can be a short, sequential list of phrases), a one-paragraph 3-minute story, and a one sentence big-idea summary of your story. Then create one or more visualizations using the data in order to tell your story.\nYou may select which software you use to create your presentation. I recommend using R or python and submitting a reproducible quarto presentation. Your submission should be in the form of a report (document) or a presentation.\n\nData\n\nIIJA Funding as of March 2023 (xlsx)"
-  },
-  {
-    "objectID": "assignments/stories/story3.html",
-    "href": "assignments/stories/story3.html",
-    "title": "Story 3: Do Stricter Gun Laws Reduce Firearm Gun Deaths?",
-    "section": "",
-    "text": "Assigned: Week 5 | Due: Sunday, October 11 at midnight Eastern | Points: 100\nThe rate of firearm mortality varies tremendously between states. Several factors have been proposed to explain this public health disparity, from regulations in the given state, socioeconomic conditions like poverty, or cultural factors surrounding gun ownership. Your task in this data story is to make visualizations that investigate these potential explanations, and try to answer the question: “To what extent do gun laws versus other factors explain the differences in firearm mortality between states?”\nFor this assignment I have provided several datasets, each of which you can choose to use as it suits your needs.\n\nThe first is a firearm mortality dataset from the CDC, which reports total firearm mortality for each state per 100,000 persons: CDC Firearm Mortality in 2022\nThe second is a dataset describing the presence or absence of 157 different types of firearm laws in each state. The data was compiled by the Institute for Social Research at the University of Michigan, who tracked the data from 1991 to 2019. I am just uploading a dataset with the information in 2019: Firearm Laws in 2019. If you want to read a description of the variables, you can find it in this codebook\nThe third is a dataset breaking down the fraction of gun deaths from homicide, suicide, or other, also from the CDC: Firearm Death Breakdown\nThe fourth is a survey based estimate of household firearm ownership rates per state, estimated from a variety of polling sources: Gun Ownership By State\nThe fifth looks at burglary rates per state, from the FBI UCR database: State Burglary Rates per 100k\n\nFor this assignment you will need to:\n\nCreate a combination of maps and other visualizations, using the techniques discussed during weeks 5 and 6 as well as prior modules, to tell a story about the causes of disparities in firearm mortality.\n\nNotes:\n\nI recommend submitting your visualizations as a quarto presentation or report, using either python or R to create the visualizations and submitting your qmd file to guarantee reproducibility.\nIf you use color in your visuals you must use an accessible color palette.\nThis assignment is due at the end of week six of the semester."
-  },
-  {
-    "objectID": "assignments/stories/story5.html",
-    "href": "assignments/stories/story5.html",
-    "title": "Story 5: What Factors Determine Housing Prices in Ames, Iowa?",
-    "section": "",
-    "text": "Assigned: Week 9 | Due: Sunday, November 8 at midnight Eastern | Points: 100\nIn week 9 we learn to visualize models, and in week 10 we learn about dimensionality reduction techniques. A good dataset to practice these tools on is the Ames housing price dataset, which is a sort of “model organism” for machine learning practice. The emphasis of this assignment (described in the pdf) is on building a model or models of the factors determining housing prices and using visualizations to explain their meaning and implications.\n\nThis assignment is due at the end of week ten of the semester.\nAssemble your visualizations using quarto while using python, R, or another language to create the visualizations. Submit your qmd along with your final submission.\n\n\nAssignment and Data\n\nData Story 5 Assignment PDF\nAmes Housing Data (train.csv)\nData Dictionary"
-  },
-  {
-    "objectID": "assignments/stories/story7.html",
-    "href": "assignments/stories/story7.html",
-    "title": "Story 7: Telling a Data Story with Shiny",
-    "section": "",
-    "text": "Assigned: Week 13 | Due: Sunday, December 13 at midnight Eastern | Points: 100\nFor this assignment, take one of your data stories and convert it into an interactive dashboard using Shiny. You should submit your shiny app as an app.R file, and you may choose to also deploy it for free on shinyapps.io.\nYour app should go beyond just replicating some of the visualizations in your original data story; you should include interactive inputs that enhance the depth of insight generated from your visualizations."
+    "text": "Check back later\nThis assignment is not available to view yet. Please check back closer to the assignment due date/week of the module this assignment is based on."
   },
   {
     "objectID": "course/overview.html",

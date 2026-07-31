@@ -6,7 +6,7 @@ editor: source
 # Overview and Deliverables
 
 * 11/16: Attend the course meetup at 8:00PM Eastern
-* Continue working on [Story 6](../assignments/stories/story6.qmd), due at the end of this week (Sunday 11/22)
+* Continue working on [Story 6](../assignments/stories/tbd.qmd), due at the end of this week (Sunday 11/22)
 
 ### Readings
 

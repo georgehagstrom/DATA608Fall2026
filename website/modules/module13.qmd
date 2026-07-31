@@ -6,7 +6,7 @@ editor: source
 # Overview and Deliverables
 
 * 11/23: Attend the course meetup at 8:00PM Eastern
-* [Story 7](../assignments/stories/story7.qmd) is assigned this week and due Sunday 12/13 (end of week 14). You will create an interactive shiny app based on one of your data stories.
+* [Story 7](../assignments/stories/tbd.qmd) is assigned this week and due Sunday 12/13 (end of week 14). You will create an interactive shiny app based on one of your data stories.
 
 The goal this week is to learn the basics of building an interactive data visualization using the shiny app framework.
 

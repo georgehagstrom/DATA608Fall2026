@@ -7,7 +7,7 @@ editor: source
 
 * 8/31: Attend the initial course meetup at 8:00PM Eastern
 * Introduce yourself on the course Slack and in the Brightspace discussion forum
-* [Story 1](../assignments/stories/story1.qmd) is assigned this week and due Sunday 9/13 (end of week 2)
+* [Story 1](../assignments/stories/tbd.qmd) is assigned this week and due Sunday 9/13 (end of week 2)
 * Make sure your software toolkit is set up (see the [software page](../course/software.qmd))
 
 ### Learning Objectives

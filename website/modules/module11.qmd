@@ -6,7 +6,7 @@ editor: source
 # Overview and Deliverables
 
 * 11/9: Attend the course meetup at 8:00PM Eastern
-* [Story 6](../assignments/stories/story6.qmd) is assigned this week and due Sunday 11/22 (end of week 12). It consists of a customer segmentation analysis of Instacart data.
+* [Story 6](../assignments/stories/tbd.qmd) is assigned this week and due Sunday 11/22 (end of week 12). It consists of a customer segmentation analysis of Instacart data.
 
 During this week we will learn how to use clustering to enhance our data stories.
 

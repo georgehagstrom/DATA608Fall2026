@@ -6,7 +6,7 @@ editor: source
 # Overview and Deliverables
 
 * 9/28: Attend the course meetup at 8:00PM Eastern
-* [Story 3](../assignments/stories/story3.qmd) is assigned this week and due Sunday 10/11 (end of week 6)
+* [Story 3](../assignments/stories/tbd.qmd) is assigned this week and due Sunday 10/11 (end of week 6)
 
 During this week we will learn about how to make visualizations of geospatial data.
 

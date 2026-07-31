@@ -6,7 +6,7 @@ editor: source
 # Overview and Deliverables
 
 * 10/19: Attend the course meetup at 8:00PM Eastern
-* [Story 4](../assignments/stories/story4.qmd) is due at the end of this week (Sunday 10/25)
+* [Story 4](../assignments/stories/tbd.qmd) is due at the end of this week (Sunday 10/25)
 
 There are two primary goals for this week:
 

@@ -343,14 +343,34 @@ ul.task-list li input[type="checkbox"] {
 
 <p>The major assignments in this course are seven “Data Stories”, due respectively at the end of weeks 2, 4, 6, 8, 10, 12, and 14 (Sundays at midnight Eastern). Each assignment requires that you source and wrangle data, perform analysis, and build data visualizations that tell a story. The assignments are in the form of story requests.</p>
 <p>I recommend composing each story as a reproducible quarto report or presentation, using either <code>R</code> or <code>python</code> for the visualizations, and submitting your <code>qmd</code> file along with a rendered PDF or HTML file. Stories should be submitted on Brightspace.</p>
+<p>Each story is released the week it is assigned; until then its link goes to a placeholder page.</p>
+<!--
+TO RELEASE A STORY, e.g. Story 1:
+
+  1. swap this line
+         1. [Story 1: ...](stories/tbd.qmd)
+     for
+         1. [Story 1: ...](stories/story1.qmd)
+  2. repoint the other pages that mention that story. To find them all:
+         grep -rn 'stories/tbd.qmd' --include='*.qmd' .
+     Each story appears in course/schedule.qmd (assigned + due rows) and in
+     two module pages (assigned week and due week).
+  3. re-enable it in _quarto.yml (remove or narrow the
+     "!assignments/stories/story*.qmd" render exclusion) and render:
+         quarto render assignments/stories/story1.qmd
+
+The story source files are already in assignments/stories/ -- they are simply
+not linked or rendered until you release them. Their datasets are in
+assignments/stories/data/.
+-->
 <ol type="1">
-<li><a href="../assignments/stories/story1.html">Story 1: Infrastructure Investment and Jobs Act Funding Allocation</a> — due Sunday, September 13</li>
-<li><a href="../assignments/stories/story2.html">Story 2: Can the FED Control Inflation and Maintain Full Employment?</a> — due Sunday, September 27</li>
-<li><a href="../assignments/stories/story3.html">Story 3: Do Stricter Gun Laws Reduce Firearm Gun Deaths?</a> — due Sunday, October 11</li>
-<li><a href="../assignments/stories/story4.html">Story 4: High Revenue Airbnbs in NYC</a> — due Sunday, October 25</li>
-<li><a href="../assignments/stories/story5.html">Story 5: What Factors Determine Housing Prices in Ames, Iowa?</a> — due Sunday, November 8</li>
-<li><a href="../assignments/stories/story6.html">Story 6: Customer Segmentation at Instacart</a> — due Sunday, November 22</li>
-<li><a href="../assignments/stories/story7.html">Story 7: Telling a Data Story with Shiny</a> — due Sunday, December 13</li>
+<li><a href="../assignments/stories/tbd.html">Story 1: Infrastructure Investment and Jobs Act Funding Allocation</a> — due Sunday, September 13</li>
+<li><a href="../assignments/stories/tbd.html">Story 2: Can the FED Control Inflation and Maintain Full Employment?</a> — due Sunday, September 27</li>
+<li><a href="../assignments/stories/tbd.html">Story 3: Do Stricter Gun Laws Reduce Firearm Gun Deaths?</a> — due Sunday, October 11</li>
+<li><a href="../assignments/stories/tbd.html">Story 4: High Revenue Airbnbs in NYC</a> — due Sunday, October 25</li>
+<li><a href="../assignments/stories/tbd.html">Story 5: What Factors Determine Housing Prices in Ames, Iowa?</a> — due Sunday, November 8</li>
+<li><a href="../assignments/stories/tbd.html">Story 6: Customer Segmentation at Instacart</a> — due Sunday, November 22</li>
+<li><a href="../assignments/stories/tbd.html">Story 7: Telling a Data Story with Shiny</a> — due Sunday, December 13</li>
 </ol>
 <section id="sample-data-story" class="level2">
 <h2 class="anchored" data-anchor-id="sample-data-story">Sample Data Story</h2>

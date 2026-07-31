@@ -6,7 +6,7 @@ editor: source
 # Overview and Deliverables
 
 * 10/26: Attend the course meetup at 8:00PM Eastern
-* [Story 5](../assignments/stories/story5.qmd) is assigned this week and due Sunday 11/8 (end of week 10). You will be making models of the (in)famous Ames housing price dataset.
+* [Story 5](../assignments/stories/tbd.qmd) is assigned this week and due Sunday 11/8 (end of week 10). You will be making models of the (in)famous Ames housing price dataset.
 
 ### Readings
 

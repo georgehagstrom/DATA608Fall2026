@@ -6,7 +6,7 @@ editor: source
 # Overview and Deliverables
 
 * 9/14: Attend the course meetup at 8:00PM Eastern
-* [Story 2](../assignments/stories/story2.qmd) is assigned this week and due Sunday 9/27 (end of week 4)
+* [Story 2](../assignments/stories/tbd.qmd) is assigned this week and due Sunday 9/27 (end of week 4)
 
 This week we will focus on distinguishing the bad and the ugly from a high quality data visualization.
 

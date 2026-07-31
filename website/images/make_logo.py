@@ -8,6 +8,7 @@ import matplotlib.pyplot as plt
 from matplotlib.path import Path
 from matplotlib.patches import PathPatch
 from matplotlib import font_manager, cm
+import matplotlib.patheffects as pe
 
 HEX_BG = "#FFFFFF"      # white face; hex shape carried by the border
 HEX_BORDER = "#E69F00"  # Okabe-Ito orange
@@ -21,12 +22,13 @@ df["year"] = df.date.dt.year
 df["doy"] = df.date.dt.dayofyear
 df = df[(df.year >= 1979) & (df.year <= 2024)]
 
-# radial mapping: leave a central hole for the wordmark
-R_HOLE, R_OUTER = 0.42, 0.83
-e_lo, e_hi = df.Extent.min(), df.Extent.max()
+# radius proportional to extent (true zero) so the seasonal amplitude,
+# especially the September minimum, keeps its real proportions
+R_OUTER = 0.84
+e_hi = df.Extent.max()
 
 def radius(extent):
-    return R_HOLE + (extent - e_lo) / (e_hi - e_lo) * (R_OUTER - R_HOLE)
+    return extent / e_hi * R_OUTER
 
 years = sorted(df.year.unique())
 viridis = cm.get_cmap("viridis")
@@ -50,6 +52,14 @@ ax.axis("off")
 
 ax.add_patch(PathPatch(hex_path, facecolor=HEX_BG, edgecolor="none", zorder=0))
 
+# center the ring's bounding box in the hexagon (the September pinch
+# otherwise pushes the whole loop toward the upper right)
+_th = np.pi / 2 - 2 * np.pi * (df.doy - 1) / 366.0
+_r = radius(df.Extent.values)
+_x, _y = _r * np.cos(_th), _r * np.sin(_th)
+XOFF = -(_x.max() + _x.min()) / 2
+YOFF = -(_y.max() + _y.min()) / 2
+
 # sea ice rings, clipped to the hexagon; angle 0 (Jan 1) at top, clockwise
 clip = PathPatch(hex_path, transform=ax.transData, facecolor="none", edgecolor="none")
 ax.add_patch(clip)
@@ -64,12 +74,11 @@ for y in years:
     gaps = np.where(np.diff(doy) > 6)[0]
     doy = np.insert(doy, gaps + 1, np.nan)
     ext = np.insert(ext, gaps + 1, np.nan)
-    ROT = np.deg2rad(72.8)  # puts the Sept minimum at the bottom
-    theta = np.pi / 2 - 2 * np.pi * (doy - 1) / 366.0 + ROT
+    # gg_season orientation: Jan 1 at 12 o'clock, clockwise
+    theta = np.pi / 2 - 2 * np.pi * (doy - 1) / 366.0
     r = radius(ext)
-    DY = -0.05  # drop the ring slightly so the hole centers on the wordmark
     (line,) = ax.plot(
-        r * np.cos(theta), r * np.sin(theta) + DY,
+        r * np.cos(theta) + XOFF, r * np.sin(theta) + YOFF,
         color=colors[y], lw=1.9, alpha=0.88, zorder=1,
         solid_capstyle="round",
     )
@@ -84,7 +93,8 @@ ax.add_patch(
 lato = font_manager.FontProperties(family="Lato", weight="black")
 ax.text(
     0, 0, "DATA 608", ha="center", va="center",
-    fontproperties=lato, fontsize=50, color="#0072B2", zorder=2,
+    fontproperties=lato, fontsize=46, color="#0072B2", zorder=2,
+    path_effects=[pe.withStroke(linewidth=9, foreground=HEX_BG)],
 )
 
 out = __import__("os").path.join(__import__("os").path.dirname(__file__), "course_logo.png")

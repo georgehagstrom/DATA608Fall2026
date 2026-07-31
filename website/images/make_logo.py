@@ -24,7 +24,7 @@ df = df[(df.year >= 1979) & (df.year <= 2024)]
 
 # radius proportional to extent (true zero) so the seasonal amplitude,
 # especially the September minimum, keeps its real proportions
-R_OUTER = 0.84
+R_OUTER = 0.78
 e_hi = df.Extent.max()
 
 def radius(extent):
@@ -92,8 +92,8 @@ ax.add_patch(
 
 lato = font_manager.FontProperties(family="Lato", weight="black")
 ax.text(
-    0, 0, "DATA 608", ha="center", va="center",
-    fontproperties=lato, fontsize=46, color="#0072B2", zorder=2,
+    0.06, 0, "DATA 608", ha="center", va="center",
+    fontproperties=lato, fontsize=51, color="#0072B2", zorder=2,
     path_effects=[pe.withStroke(linewidth=9, foreground=HEX_BG)],
 )
 

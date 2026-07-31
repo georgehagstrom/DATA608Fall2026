@@ -10,7 +10,7 @@ from matplotlib.patches import PathPatch
 from matplotlib import font_manager, cm
 import matplotlib.patheffects as pe
 
-HEX_BG = "#FFFFFF"      # white face; hex shape carried by the border
+HEX_BG = "#FCF3E0"      # border orange at ~12% over white - warm cream face
 HEX_BORDER = "#E69F00"  # Okabe-Ito orange
 CMAP_LO, CMAP_HI = 0.0, 1.0   # full viridis; dark end reads well on white
 

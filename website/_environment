@@ -1,0 +1,4 @@
+# Use system R (4.5.1, packages in ~/R/x86_64-pc-linux-gnu-library/4.5).
+# The miniforge R (4.4.3) that shadows it on PATH cannot load the installed
+# packages (built under 4.5.1) and fails with e.g. "R_getVarEx" errors.
+QUARTO_R=/usr/bin

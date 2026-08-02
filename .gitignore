@@ -26,3 +26,8 @@ __MACOSX/
 
 # Student submissions stay out of the public course repo
 /StudentWork/
+
+# Editor swap/backup files
+.*.swp
+.*.swo
+*~

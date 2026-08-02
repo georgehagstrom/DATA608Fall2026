@@ -19,7 +19,7 @@ There are two primary goals for this week:
 
 ### Meetup
 
-Slides: [Meetup 8 - Visualizing Distributions (PDF)](../meetups/meetup-8/meetup-8-slides.pdf)
+Slides: [Meetup 8 - Visualizing Distributions](../meetups/meetup-8/meetup-8.qmd)
 
 In this meetup we go over techniques for visualizing distributions. This starts with tips and tricks to optimize your histograms, frequency-polygons, and density plots. We then move on to visualizing cumulative distribution functions and show how to generate the empirical CDF and how that leads to qq-plots. Finally, we introduce tools for working with multiple distributions, such as ridge plots.
 

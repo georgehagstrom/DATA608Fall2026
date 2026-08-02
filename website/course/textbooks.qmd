@@ -8,23 +8,32 @@ This course makes use of several textbooks and other resources. I have attempted
 
 1. Claus Wilke. [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
 
-This book is a comprehensive and highly readable guide to making visualizations that accurately reflect the data, tell a story, and look professional. It is freely available online and forms the backbone of the weekly readings.
+This book is a comprehensive and highly readable guide to making visualizations that accurately reflect the data, tell a story, and look professional. It is freely available online and forms the backbone of the weekly readings. The book does not have any instructions on programming, but the github page of the book is freely available and shows you exactly how to make each visualization using 'ggplot2' in 'R'.
 
-2. Cole Nussbaumer Knaflic. *Storytelling with Data: A Data Visualization Guide for Business Professionals*
+2. Kieran Healy. [Data Visualization: A Practical Introduction](https://socviz.co/)
 
-This book teaches the fundamentals of communicating effectively with data: choosing an appropriate visual, eliminating clutter, focusing attention, and building a narrative.
+A hands-on introduction to making visualizations with 'ggplot2' in 'R', this book was recently updated and is also an excellent introduction to data visualization that manages to cover some different ground to
+Wilke. It has value even if you are not using 'R' for the course
+
+3. Nicolas Rougier. [Scientific Visualization: Python + Matplotlib](https://inria.hal.science/hal-03427242/document)
+
+This book is a guide to 'matplotlib' which has become the industry standard python library for making visualizations. Many easier to use packages, such as 'seaborn', are based on it. 'matplotlib' can seem complex and this book helps to demystify it and explain its design principles. Rougier also writes well about principles that make a good figure.
 
 ### Other Important Texts
 
-1. Kieran Healy. [Data Visualization: A Practical Introduction](https://socviz.co/)
 
-A hands-on introduction to making visualizations with `ggplot2` in R, freely available online.
+1. Cole Nussbaumer Knaflic. *Storytelling with Data: A Data Visualization Guide for Business Professionals*
+
+This book teaches the fundamentals of communicating effectively with data: choosing an appropriate visual, eliminating clutter, focusing attention, and building a narrative. Unfortunately it is not freely 
+available. 
 
 2. William Cleveland. *The Elements of Graphing Data.* Hobart Press, 1994
 
 A classic text on graphical perception theory from one of the pioneers of statistical graphics.
 
-3. Rafe Donahue. [Fundamental Statistical Concepts in Presenting Data](https://biostat.app.vumc.org/wiki/pub/Main/RafeDonahue/fscipdpfcbg_currentversion.pdf)
+3. Rafe Donahue. [Fundamental Statistical Concepts in Presenting Data](../modules/readings/donohue-visualization.pdf)
+
+Really nice monograph that links stats to data visualization. 
 
 ### Data Visualization Resources
 

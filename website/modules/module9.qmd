@@ -17,7 +17,7 @@ editor: source
 
 ### Meetup
 
-Slides: [Meetup 9 - Models and Uncertainty (PDF)](../meetups/meetup-9/meetup-9-slides.pdf)
+Slides: [Meetup 9 - Models and Uncertainty](../meetups/meetup-9/meetup-9.qmd)
 
 In this meetup we talk about tools to visualize and interpret models. The emphasis is on using plots of model predictions, counterfactual comparisons, and slopes to show the implications of models instead of focusing on the values of coefficients, which we argue are hard to interpret. We go through how to work with model objects using the broom package in R, how to make large numbers of models using purrr and broom, and how to make the most important model visualizations using the marginaleffects package.
 

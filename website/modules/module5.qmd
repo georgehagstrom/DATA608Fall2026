@@ -19,7 +19,7 @@ During this week we will learn about how to make visualizations of geospatial da
 
 ### Meetup
 
-Slides: [Meetup 5 - Visualizing Geospatial Data (PDF)](../meetups/meetup-5/meetup-5-slides.pdf)
+Slides: [Meetup 5 - Visualizing Geospatial Data](../meetups/meetup-5/meetup-5.qmd)
 
 In this meetup we discuss how to make a quarto slideshow, and how to visualize geospatial data. We go over common issues that arise when making maps, including the ecological fallacy/Modifiable Areal Unit Problem. We explore the simple features library and show how it and other tools in R can make different types of geospatial visualizations.
 

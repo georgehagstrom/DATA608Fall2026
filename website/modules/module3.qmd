@@ -1,5 +1,5 @@
 ---
-title: "Module 3 - Data Visualization Quality Features"
+title: "Module 3 - Visualization Quality and Graphic Design"
 editor: source
 ---
 
@@ -8,19 +8,18 @@ editor: source
 * 9/14: Attend the course meetup at 8:00PM Eastern
 * [Story 2](../assignments/stories/tbd.qmd) is assigned this week and due Sunday 9/27 (end of week 4)
 
-This week we will focus on distinguishing the bad and the ugly from a high quality data visualization.
+This week we will focus on distinguishing the bad and the ugly from a high quality data visualization. We will also learn some basic graphic design principles and learn about the differences between
+different image formats.
 
 ### Readings
 
-1. [A Data Practitioner's Guide](readings/data-practitioners-guide.pdf) - Slides 8, 12-20
-2. __Wilke__ - Chapters 17-26 - there will be some reinforcement of the research principles we discussed last week
-3. __Storytelling with Data__ - Chapter 3
-4. I will be covering a python visualization package called [plotnine](https://plotnine.org/tutorials/). If you want, you can read about the package and go through some of the tutorials.
+1. __Wilke__ - Chapters 17-26 - there will be some reinforcement of the research principles we discussed last week
+2. [__Contrast, Repetition, Alignment, Proximity__ - Chapter 6 of Presentation Zen by Garr Reynolds](readings/Chapter6-spread.pdf)
+3. [Guide to File Formats](https://theglowstudio.com/file-formats-explained/)
 
 ### Meetup
 
-Slides: [Meetup 3 - Visualization Quality Features (PDF)](../meetups/meetup-3/meetup-3-slides.pdf)
+Slides: [Meetup 3 - Visualization Quality and Graphic Design](../meetups/meetup-3/meetup-3-slides.qmd)
 
 In this meetup we go into a bit of detail on several principles that Edward Tufte articulated and discuss how to implement them in real visualizations. We talk about the principle of proportional ink and the data-ink ratio, and why minimalist graphs don't always work.
 
-[Spring 2025 recording](https://youtu.be/UogSmyGGRmc)

@@ -17,7 +17,7 @@ For those of you who want to go deeper into interactive visualizations, the most
 
 ### Meetup
 
-Slides: the quarto deck for this meetup is in the [course repository](https://github.com/georgehagstrom/DATA608Fall2026/tree/main/website/meetups/meetup-14) (no PDF rendering was in the export).
+Slides: [Meetup 14 - Exploring Data with Shiny](../meetups/meetup-14/meetup-14.qmd)
 
 In this meetup we continue to further learn Shiny. We discuss themes and both single and multi-page layouts. We also discuss some of the differences between static and dynamic visualizations.
 

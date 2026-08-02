@@ -18,7 +18,7 @@ editor: source
 
 ### Meetup
 
-Slides: [Meetup 12 - Hierarchical Clustering (PDF)](../meetups/meetup-12/meetup-12-slides.pdf)
+Slides: [Meetup 12 - Hierarchical Clustering](../meetups/meetup-12/meetup-12.qmd)
 
 In this meetup we talk about hierarchical clustering, which is an alternative to traditional clustering methods. We discuss the neighbor-joining algorithm for building trees and show how to calculate them in R and visualize them using the ggdendro package. The clustered heatmap is introduced and we show how to customize them using the tidyheatmaps package. Pros and cons of the hierarchical approach are explored.
 

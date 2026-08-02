@@ -16,7 +16,7 @@ We each have had, or will have, the experience of arriving to make a presentatio
 
 ### Meetup
 
-Slides: [Meetup 4 - Visualizing Associations and Time Series (PDF)](../meetups/meetup-4/meetup-4-slides.pdf)
+Slides: [Meetup 4 - Visualizing Associations and Time Series](../meetups/meetup-4/meetup-4.qmd)
 
 In this meetup we discuss how to improve your visualizations of scatterplots and time series. We go over how to plot two quantitative variables with differing numbers of categorical variables using colors and shapes, and when to use facets. We discuss hues and bubble plots for 3 categorical variables, and pair plots for even more combinations. Then we show how to annotate scatterplots and discuss techniques for plotting time series, including season plots and polar plots.
 

@@ -11,21 +11,21 @@ Meetups are Mondays at 8:00PM Eastern. We meet every Monday of the semester exce
 
 | Date | Module | Slides | Video | Main Deliverables |
 |------|--------|--------|-------|-------------------|
-| Aug 31 | [Developing a Critical Eye](../modules/module1.qmd) | [PDF](../meetups/meetup-1/meetup-1-slides.pdf) | | [Story 1 assigned](../assignments/stories/tbd.qmd) |
-| Sep 7 | [The Data Visualization Catalogue](../modules/module2.qmd) | [PDF](../meetups/meetup-2/meetup-2-slides.pdf) | | [Story 1](../assignments/stories/tbd.qmd) due Sun Sep 13 |
-| Sep 14 | [Visualization Quality Features](../modules/module3.qmd) | [PDF](../meetups/meetup-3/meetup-3-slides.pdf) | | [Story 2 assigned](../assignments/stories/tbd.qmd) |
-| Sep 21 | [Associations and Time Series](../modules/module4.qmd) | [PDF](../meetups/meetup-4/meetup-4-slides.pdf) | | [Story 2](../assignments/stories/tbd.qmd) due Sun Sep 27 |
-| Sep 28 | [Visualizing Geospatial Data](../modules/module5.qmd) | [PDF](../meetups/meetup-5/meetup-5-slides.pdf) | | [Story 3 assigned](../assignments/stories/tbd.qmd) |
-| Oct 5 | [Storytelling](../modules/module6.qmd) | [PDF](../meetups/meetup-6/meetup-6-slides.pdf) | | [Story 3](../assignments/stories/tbd.qmd) due Sun Oct 11 |
-| Oct 12 | [Effective Use of Color and Fonts](../modules/module7.qmd) | [PDF](../meetups/meetup-7/meetup-7-slides.pdf) | | [Story 4 assigned](../assignments/stories/tbd.qmd) |
-| Oct 19 | [Distributions and Histograms](../modules/module8.qmd) | [PDF](../meetups/meetup-8/meetup-8-slides.pdf) | | [Story 4](../assignments/stories/tbd.qmd) due Sun Oct 25 |
-| Oct 26 | [Models and Uncertainty](../modules/module9.qmd) | [PDF](../meetups/meetup-9/meetup-9-slides.pdf) | | [Story 5 assigned](../assignments/stories/tbd.qmd) |
-| Nov 2 | [Dimension Reduction and PCA](../modules/module10.qmd) | [PDF](../meetups/meetup-10/meetup-10-slides.pdf) | | [Story 5](../assignments/stories/tbd.qmd) due Sun Nov 8 |
-| Nov 9 | [Clustering](../modules/module11.qmd) | [PDF](../meetups/meetup-11/meetup-11-slides.pdf) | | [Story 6 assigned](../assignments/stories/tbd.qmd) |
-| Nov 16 | [Hierarchical Clustering](../modules/module12.qmd) | [PDF](../meetups/meetup-12/meetup-12-slides.pdf) | | [Story 6](../assignments/stories/tbd.qmd) due Sun Nov 22 |
+| Aug 31 | [Developing a Critical Eye](../modules/module1.qmd) | [Slides](../meetups/meetup-1/meetup-1.qmd) | | [Story 1 assigned](../assignments/stories/tbd.qmd) |
+| Sep 7 | [The Data Visualization Catalogue](../modules/module2.qmd) | [Slides](../meetups/meetup-2/meetup-2.qmd) | | [Story 1](../assignments/stories/tbd.qmd) due Sun Sep 13 |
+| Sep 14 | [Visualization Quality Features](../modules/module3.qmd) | [Slides](../meetups/meetup-3/meetup-3.qmd) | | [Story 2 assigned](../assignments/stories/tbd.qmd) |
+| Sep 21 | [Associations and Time Series](../modules/module4.qmd) | [Slides](../meetups/meetup-4/meetup-4.qmd) | | [Story 2](../assignments/stories/tbd.qmd) due Sun Sep 27 |
+| Sep 28 | [Visualizing Geospatial Data](../modules/module5.qmd) | [Slides](../meetups/meetup-5/meetup-5.qmd) | | [Story 3 assigned](../assignments/stories/tbd.qmd) |
+| Oct 5 | [Storytelling](../modules/module6.qmd) | [Slides](../meetups/meetup-6/meetup-6.qmd) | | [Story 3](../assignments/stories/tbd.qmd) due Sun Oct 11 |
+| Oct 12 | [Effective Use of Color and Fonts](../modules/module7.qmd) | [Slides](../meetups/meetup-7/meetup-7.qmd) | | [Story 4 assigned](../assignments/stories/tbd.qmd) |
+| Oct 19 | [Distributions and Histograms](../modules/module8.qmd) | [Slides](../meetups/meetup-8/meetup-8.qmd) | | [Story 4](../assignments/stories/tbd.qmd) due Sun Oct 25 |
+| Oct 26 | [Models and Uncertainty](../modules/module9.qmd) | [Slides](../meetups/meetup-9/meetup-9.qmd) | | [Story 5 assigned](../assignments/stories/tbd.qmd) |
+| Nov 2 | [Dimension Reduction and PCA](../modules/module10.qmd) | [Slides](../meetups/meetup-10/meetup-10.qmd) | | [Story 5](../assignments/stories/tbd.qmd) due Sun Nov 8 |
+| Nov 9 | [Clustering](../modules/module11.qmd) | [Slides](../meetups/meetup-11/meetup-11.qmd) | | [Story 6 assigned](../assignments/stories/tbd.qmd) |
+| Nov 16 | [Hierarchical Clustering](../modules/module12.qmd) | [Slides](../meetups/meetup-12/meetup-12.qmd) | | [Story 6](../assignments/stories/tbd.qmd) due Sun Nov 22 |
 | Nov 23 | [Introduction to Shiny Apps](../modules/module13.qmd) | | | [Story 7 assigned](../assignments/stories/tbd.qmd) |
 | Nov 30 | *No Meetup — Thanksgiving* | | | |
-| Dec 7 | [Interactive Visualizations](../modules/module14.qmd) | | | [Story 7](../assignments/stories/tbd.qmd) due Sun Dec 13 |
+| Dec 7 | [Interactive Visualizations](../modules/module14.qmd) | [Slides](../meetups/meetup-14/meetup-14.qmd) | | [Story 7](../assignments/stories/tbd.qmd) due Sun Dec 13 |
 | Dec 14 | [Wrap-Up](../modules/module15.qmd) | | | |
 
 : Course Schedule {.striped .hover}

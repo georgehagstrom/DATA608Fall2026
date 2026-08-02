@@ -3,9 +3,9 @@ project:
   output-dir: "../docs/"
   render:
     - "**/*.qmd"
-    # The meetup decks recovered from Brightspace are missing some images and
-    # use R packages; re-enable them here one at a time as you fix them up.
-    - "!meetups/"
+    # meetup-13 uses `server: shiny` and needs a Shiny runtime - it cannot be
+    # rendered as a static page (present it with `quarto preview` instead).
+    - "!meetups/meetup-13/"
     # The sample data story executes R code; students download it rather than
     # view it as a page (the rendered PDF is linked from stories.qmd).
     - "!assignments/stories/sample-data-story/"

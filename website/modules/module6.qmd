@@ -17,7 +17,7 @@ The goal of this week is to learn about different narrative structures and how t
 
 ### Meetup
 
-Slides: [Meetup 6 - Narrative Structures (PDF)](../meetups/meetup-6/meetup-6-slides.pdf)
+Slides: [Meetup 6 - Narrative Structures](../meetups/meetup-6/meetup-6.qmd)
 
 In this meetup we describe several commonly used story arcs and apply them to data analysis and visualization. Common pitfalls that arise when trying to present data to non-data-scientist audiences are presented.
 

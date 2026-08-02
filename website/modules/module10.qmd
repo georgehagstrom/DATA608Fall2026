@@ -17,7 +17,7 @@ editor: source
 
 ### Meetup
 
-Slides: [Meetup 10 - Working With High Dimensional Data (PDF)](../meetups/meetup-10/meetup-10-slides.pdf)
+Slides: [Meetup 10 - Working With High Dimensional Data](../meetups/meetup-10/meetup-10.qmd)
 
 In this meetup we talk about how to use principal component analysis to visualize patterns and structures in high dimensional datasets. We show how to choose the number of principal components using the "elbow" of the variance explained curve, how to tidy PCA models in R, how to interpret principal components, and how to visualize clusters using components.
 

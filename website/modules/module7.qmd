@@ -19,7 +19,7 @@ This week's learning objectives focus on how to selectively use color and choice
 
 ### Meetup
 
-Slides: [Meetup 7 - Using Color (PDF)](../meetups/meetup-7/meetup-7-slides.pdf)
+Slides: [Meetup 7 - Using Color](../meetups/meetup-7/meetup-7.qmd)
 
 In this meetup we go through the basics of color vision in humans and how it influences color perception. We discuss how to use color for differentiating categories and for accenting or drawing attention to aspects of your visualization. We explore different packages for controlling color in R.
 

@@ -25,7 +25,7 @@ Some other interesting resources are:
 
 ### Meetup
 
-Slides: [Meetup 11 - Visualizing Clusters (PDF)](../meetups/meetup-11/meetup-11-slides.pdf)
+Slides: [Meetup 11 - Visualizing Clusters](../meetups/meetup-11/meetup-11.qmd)
 
 In this meetup we talk about how to use clustering algorithms to improve data visualizations. We go through the k-means algorithm, which is the most commonly used and most basic clustering method, and explain how to work with kmeans model fits in the tidyverse. Then we go over criteria for justifying how many clusters you should select and how to interpret the meaning of clusters. Finally, we discuss common pitfalls of the k-means algorithm and mention alternatives.
 

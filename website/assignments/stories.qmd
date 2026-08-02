@@ -30,8 +30,8 @@ not linked or rendered until you release them. Their datasets are in
 assignments/stories/data/.
 -->
 
-1. [Story 1: Infrastructure Investment and Jobs Act Funding Allocation](stories/tbd.qmd) — due Sunday, September 13
-2. [Story 2: Can the FED Control Inflation and Maintain Full Employment?](stories/tbd.qmd) — due Sunday, September 27
+1. [Story 1: Infrastructure Investment and Jobs Act Funding Allocation](stories/story1.qmd) — due Sunday, September 13
+2. [Story 2: Can the FED Control Inflation and Maintain Full Employment?](stories/story2.qmd) — due Sunday, September 27
 3. [Story 3: Do Stricter Gun Laws Reduce Firearm Gun Deaths?](stories/tbd.qmd) — due Sunday, October 11
 4. [Story 4: High Revenue Airbnbs in NYC](stories/tbd.qmd) — due Sunday, October 25
 5. [Story 5: What Factors Determine Housing Prices in Ames, Iowa?](stories/tbd.qmd) — due Sunday, November 8

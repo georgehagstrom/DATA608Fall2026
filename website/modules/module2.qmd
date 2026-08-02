@@ -6,7 +6,7 @@ editor: source
 # Overview and Deliverables
 
 * 9/7: Attend the course meetup at 8:00PM Eastern
-* [Story 1](../assignments/stories/tbd.qmd) is due this Sunday 9/13 at midnight!
+* [Story 1](../assignments/stories/story1.qmd) is due this Sunday 9/13 at midnight!
 
 This week focuses on types of data visualizations and the tools available for generating visualizations. The objective is understanding what type of visualization to use for the types of data that you are most likely to encounter and what tools are best for each type of visualization.
 

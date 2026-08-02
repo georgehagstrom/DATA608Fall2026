@@ -2119,6 +2119,13 @@
     ]
   },
   {
+    "objectID": "assignments/stories/story2.html",
+    "href": "assignments/stories/story2.html",
+    "title": "Story 2: Can the FED Control Inflation and Maintain Full Employment?",
+    "section": "",
+    "text": "Assigned: Week 3 | Due: Sunday, September 27 at midnight Eastern | Points: 100\nThe Federal Reserve’s mandate from Congress is to control inflation and to maintain low unemployment. You can read about it here: Dual Mandate. These seem to be contradictory objectives - see this wikipedia article on the Phillips Curve. Another good but short news article which focuses on the specific context of recessions is here: Soft Landing.\nFor this story you will need to source the following data for the last 25 years:\n\nThe Consumer Price Index (CPI) (Bureau of Labor Statistics) - note that there are numerous ways to define a CPI, and you can create a custom definition on the BLS page. If you want the standard CPI it is the CPI for all Urban Consumers, or CPI-U. You can find this and other BLS datasets here: https://data.bls.gov/toppicks?survey=bls\nThe FED Funds Rate (FRED) (Federal Reserve Board) - This can be found here: https://fred.stlouisfed.org/series/FEDFUNDS\nUnemployment Rate (Bureau of Labor Statistics). I recommend using the seasonally adjusted rate.\n\nYour data visualizations should be designed to answer the question “Has the FED been able to fulfill the mandate given to it by Congress?”\nNotes:\n\nI recommend using quarto to compose your report with either R or python for the visualizations, though you may use something different if you choose.\nRemember, the FED raises rates after reviewing the CPI and other data, and unemployment (layoffs) occurs after company operating costs go up.\nThis assignment is due at the end of week four of the semester."
+  },
+  {
     "objectID": "assignments/stories.html",
     "href": "assignments/stories.html",
     "title": "Data Stories",
@@ -2149,6 +2156,13 @@
     "crumbs": [
       "Acknowledgements"
     ]
+  },
+  {
+    "objectID": "assignments/stories/story1.html",
+    "href": "assignments/stories/story1.html",
+    "title": "Story 1: Infrastructure Investment and Jobs Act Funding Allocation",
+    "section": "",
+    "text": "Assigned: Week 1 | Due: Sunday, September 13 at midnight Eastern | Points: 100\nThe Excel file linked below contains data on the present allocation of the Infrastructure Investment and Jobs Act funding by State and Territory.\nSource data on the current (or estimated) population of each state and territory listed in the Excel spreadsheet file, and on the official results of the presidential election. Your assignment is to use this data to create visualizations that answer the following two questions:\n\nIs the allocation equitable based on the population of each of the States and Territories, or is bias apparent?\nDoes the allocation favor the political interests of the Biden administration?\n\nTo frame your data story, use the storyboard/3-minute story/big idea framework from Chapter 1 of Storytelling with Data. Submit your storyboard (it can be a short, sequential list of phrases), a one-paragraph 3-minute story, and a one sentence big-idea summary of your story. Then create one or more visualizations using the data in order to tell your story.\nYou may select which software you use to create your presentation. I recommend using R or python and submitting a reproducible quarto presentation. Your submission should be in the form of a report (document) or a presentation.\n\nData\n\nIIJA Funding as of March 2023 (xlsx)"
   },
   {
     "objectID": "assignments/stories/tbd.html",

@@ -11,7 +11,7 @@ project:
     - "!assignments/stories/sample-data-story/"
     # Unreleased assignments: everything links to stories/tbd.qmd until a
     # story is released (see the release checklist in assignments/stories.qmd).
-    - "!assignments/stories/story*.qmd"
+    - "!assignments/stories/story[3-7].qmd"
 
 website:
   page-navigation: true

@@ -11,10 +11,10 @@ Meetups are Mondays at 8:00PM Eastern. We meet every Monday of the semester exce
 
 | Date | Module | Slides | Video | Main Deliverables |
 |------|--------|--------|-------|-------------------|
-| Aug 31 | [Developing a Critical Eye](../modules/module1.qmd) | [Slides](../meetups/meetup-1/meetup-1.qmd) | | [Story 1 assigned](../assignments/stories/tbd.qmd) |
-| Sep 7 | [The Data Visualization Catalogue](../modules/module2.qmd) | [Slides](../meetups/meetup-2/meetup-2.qmd) | | [Story 1](../assignments/stories/tbd.qmd) due Sun Sep 13 |
-| Sep 14 | [Visualization Quality Features](../modules/module3.qmd) | [Slides](../meetups/meetup-3/meetup-3.qmd) | | [Story 2 assigned](../assignments/stories/tbd.qmd) |
-| Sep 21 | [Associations and Time Series](../modules/module4.qmd) | [Slides](../meetups/meetup-4/meetup-4.qmd) | | [Story 2](../assignments/stories/tbd.qmd) due Sun Sep 27 |
+| Aug 31 | [Developing a Critical Eye](../modules/module1.qmd) | [Slides](../meetups/meetup-1/meetup-1.qmd) | | [Story 1 assigned](../assignments/stories/story1.qmd) |
+| Sep 7 | [The Data Visualization Catalogue](../modules/module2.qmd) | [Slides](../meetups/meetup-2/meetup-2.qmd) | | [Story 1](../assignments/stories/story1.qmd) due Sun Sep 13 |
+| Sep 14 | [Visualization Quality Features](../modules/module3.qmd) | [Slides](../meetups/meetup-3/meetup-3.qmd) | | [Story 2 assigned](../assignments/stories/story2.qmd) |
+| Sep 21 | [Associations and Time Series](../modules/module4.qmd) | [Slides](../meetups/meetup-4/meetup-4.qmd) | | [Story 2](../assignments/stories/story2.qmd) due Sun Sep 27 |
 | Sep 28 | [Visualizing Geospatial Data](../modules/module5.qmd) | [Slides](../meetups/meetup-5/meetup-5.qmd) | | [Story 3 assigned](../assignments/stories/tbd.qmd) |
 | Oct 5 | [Storytelling](../modules/module6.qmd) | [Slides](../meetups/meetup-6/meetup-6.qmd) | | [Story 3](../assignments/stories/tbd.qmd) due Sun Oct 11 |
 | Oct 12 | [Effective Use of Color and Fonts](../modules/module7.qmd) | [Slides](../meetups/meetup-7/meetup-7.qmd) | | [Story 4 assigned](../assignments/stories/tbd.qmd) |

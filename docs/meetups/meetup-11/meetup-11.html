@@ -661,31 +661,31 @@ George I. Hagstrom
 <span id="cb1-5"><a></a></span>
 <span id="cb1-6"><a></a>wine_clusters</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>K-means clustering with 3 clusters of sizes 51, 62, 65
+<pre><code>K-means clustering with 3 clusters of sizes 65, 62, 51
 
 Cluster means:
    .fittedPC1 .fittedPC2   .fittedPC3  .fittedPC4  .fittedPC5  .fittedPC6
-1  2.71238444 -1.1224849 -0.238420685  0.06228125 -0.07346875  0.09964414
+1  0.03685265  1.7672542  0.185615130  0.08001400 -0.07067870  0.12944063
 2 -2.26979079 -0.9294322  0.001523733 -0.13511700  0.13453261 -0.21766922
-3  0.03685265  1.7672542  0.185615130  0.08001400 -0.07067870  0.12944063
+3  2.71238444 -1.1224849 -0.238420685  0.06228125 -0.07346875  0.09964414
     .fittedPC7   .fittedPC8  .fittedPC9 .fittedPC10  .fittedPC11  .fittedPC12
-1 -0.060213318 -0.007367207 -0.01997059  0.06129547  0.008093155  0.003445464
+1 -0.002320739 -0.017964647 -0.03216049  0.02293882  0.013900922  0.004371673
 2  0.051963343  0.024894027  0.05014407 -0.07446923 -0.021230820 -0.007417378
-3 -0.002320739 -0.017964647 -0.03216049  0.02293882  0.013900922  0.004371673
+3 -0.060213318 -0.007367207 -0.01997059  0.06129547  0.008093155  0.003445464
    .fittedPC13
-1  0.050408713
+1  0.008595707
 2 -0.050476861
-3  0.008595707
+3  0.050408713
 
 Clustering vector:
   [1] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
- [38] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 3 1 3 3 3 3 3 3 3 3 3 3 3 2
- [75] 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
-[112] 3 3 3 3 3 3 3 1 3 3 2 3 3 3 3 3 3 3 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-[149] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ [38] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 3 1 1 1 1 1 1 1 1 1 1 1 2
+ [75] 1 1 1 1 1 1 1 1 1 3 1 1 1 1 1 1 1 1 1 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[112] 1 1 1 1 1 1 1 3 1 1 2 1 1 1 1 1 1 1 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+[149] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
 
 Within cluster sum of squares by cluster:
-[1] 326.3537 385.6983 558.6971
+[1] 558.6971 385.6983 326.3537
  (between_SS / total_SS =  44.8 %)
 
 Available components:
@@ -713,10 +713,10 @@ Available components:
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>wine_clusters<span class="sc">$</span>cluster </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  [1] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
- [38] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 3 1 3 3 3 3 3 3 3 3 3 3 3 2
- [75] 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
-[112] 3 3 3 3 3 3 3 1 3 3 2 3 3 3 3 3 3 3 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-[149] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1</code></pre>
+ [38] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 3 1 1 1 1 1 1 1 1 1 1 1 2
+ [75] 1 1 1 1 1 1 1 1 1 3 1 1 1 1 1 1 1 1 1 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+[112] 1 1 1 1 1 1 1 3 1 1 2 1 1 1 1 1 1 1 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3
+[149] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3</code></pre>
 </div>
 </div>
 </section>
@@ -729,17 +729,17 @@ Available components:
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>wine_clusters<span class="sc">$</span>centers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   .fittedPC1 .fittedPC2   .fittedPC3  .fittedPC4  .fittedPC5  .fittedPC6
-1  2.71238444 -1.1224849 -0.238420685  0.06228125 -0.07346875  0.09964414
+1  0.03685265  1.7672542  0.185615130  0.08001400 -0.07067870  0.12944063
 2 -2.26979079 -0.9294322  0.001523733 -0.13511700  0.13453261 -0.21766922
-3  0.03685265  1.7672542  0.185615130  0.08001400 -0.07067870  0.12944063
+3  2.71238444 -1.1224849 -0.238420685  0.06228125 -0.07346875  0.09964414
     .fittedPC7   .fittedPC8  .fittedPC9 .fittedPC10  .fittedPC11  .fittedPC12
-1 -0.060213318 -0.007367207 -0.01997059  0.06129547  0.008093155  0.003445464
+1 -0.002320739 -0.017964647 -0.03216049  0.02293882  0.013900922  0.004371673
 2  0.051963343  0.024894027  0.05014407 -0.07446923 -0.021230820 -0.007417378
-3 -0.002320739 -0.017964647 -0.03216049  0.02293882  0.013900922  0.004371673
+3 -0.060213318 -0.007367207 -0.01997059  0.06129547  0.008093155  0.003445464
    .fittedPC13
-1  0.050408713
+1  0.008595707
 2 -0.050476861
-3  0.008595707</code></pre>
+3  0.050408713</code></pre>
 </div>
 </div>
 </section>
@@ -752,17 +752,17 @@ Available components:
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>wine_clusters<span class="sc">$</span>centers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   .fittedPC1 .fittedPC2   .fittedPC3  .fittedPC4  .fittedPC5  .fittedPC6
-1  2.71238444 -1.1224849 -0.238420685  0.06228125 -0.07346875  0.09964414
+1  0.03685265  1.7672542  0.185615130  0.08001400 -0.07067870  0.12944063
 2 -2.26979079 -0.9294322  0.001523733 -0.13511700  0.13453261 -0.21766922
-3  0.03685265  1.7672542  0.185615130  0.08001400 -0.07067870  0.12944063
+3  2.71238444 -1.1224849 -0.238420685  0.06228125 -0.07346875  0.09964414
     .fittedPC7   .fittedPC8  .fittedPC9 .fittedPC10  .fittedPC11  .fittedPC12
-1 -0.060213318 -0.007367207 -0.01997059  0.06129547  0.008093155  0.003445464
+1 -0.002320739 -0.017964647 -0.03216049  0.02293882  0.013900922  0.004371673
 2  0.051963343  0.024894027  0.05014407 -0.07446923 -0.021230820 -0.007417378
-3 -0.002320739 -0.017964647 -0.03216049  0.02293882  0.013900922  0.004371673
+3 -0.060213318 -0.007367207 -0.01997059  0.06129547  0.008093155  0.003445464
    .fittedPC13
-1  0.050408713
+1  0.008595707
 2 -0.050476861
-3  0.008595707</code></pre>
+3  0.050408713</code></pre>
 </div>
 </div>
 </section>
@@ -779,7 +779,7 @@ Available components:
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>wine_clusters<span class="sc">$</span>withinss</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 326.3537 385.6983 558.6971</code></pre>
+<pre><code>[1] 558.6971 385.6983 326.3537</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>wine_clusters<span class="sc">$</span>totss</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">

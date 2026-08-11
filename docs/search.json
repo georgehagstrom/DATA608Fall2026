@@ -1320,7 +1320,7 @@
     "href": "meetups/meetup-11/meetup-11.html#implementing-k-means-in-r",
     "title": "DATA 608 Meetup 11: Clustering",
     "section": "Implementing k-means in R",
-    "text": "Implementing k-means in R\n\nkmeans in stats package\n\n\nwine_clusters = pca_fit|&gt; \n    augment(wine_df) |&gt; select(-Type) |&gt; \n  select(.fittedPC1:.fittedPC13) |&gt; \n  kmeans(centers=3,nstart = 10) \n\nwine_clusters\n\nK-means clustering with 3 clusters of sizes 51, 62, 65\n\nCluster means:\n   .fittedPC1 .fittedPC2   .fittedPC3  .fittedPC4  .fittedPC5  .fittedPC6\n1  2.71238444 -1.1224849 -0.238420685  0.06228125 -0.07346875  0.09964414\n2 -2.26979079 -0.9294322  0.001523733 -0.13511700  0.13453261 -0.21766922\n3  0.03685265  1.7672542  0.185615130  0.08001400 -0.07067870  0.12944063\n    .fittedPC7   .fittedPC8  .fittedPC9 .fittedPC10  .fittedPC11  .fittedPC12\n1 -0.060213318 -0.007367207 -0.01997059  0.06129547  0.008093155  0.003445464\n2  0.051963343  0.024894027  0.05014407 -0.07446923 -0.021230820 -0.007417378\n3 -0.002320739 -0.017964647 -0.03216049  0.02293882  0.013900922  0.004371673\n   .fittedPC13\n1  0.050408713\n2 -0.050476861\n3  0.008595707\n\nClustering vector:\n  [1] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2\n [38] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 3 1 3 3 3 3 3 3 3 3 3 3 3 2\n [75] 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3\n[112] 3 3 3 3 3 3 3 1 3 3 2 3 3 3 3 3 3 3 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n[149] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n\nWithin cluster sum of squares by cluster:\n[1] 326.3537 385.6983 558.6971\n (between_SS / total_SS =  44.8 %)\n\nAvailable components:\n\n[1] \"cluster\"      \"centers\"      \"totss\"        \"withinss\"     \"tot.withinss\"\n[6] \"betweenss\"    \"size\"         \"iter\"         \"ifault\""
+    "text": "Implementing k-means in R\n\nkmeans in stats package\n\n\nwine_clusters = pca_fit|&gt; \n    augment(wine_df) |&gt; select(-Type) |&gt; \n  select(.fittedPC1:.fittedPC13) |&gt; \n  kmeans(centers=3,nstart = 10) \n\nwine_clusters\n\nK-means clustering with 3 clusters of sizes 65, 62, 51\n\nCluster means:\n   .fittedPC1 .fittedPC2   .fittedPC3  .fittedPC4  .fittedPC5  .fittedPC6\n1  0.03685265  1.7672542  0.185615130  0.08001400 -0.07067870  0.12944063\n2 -2.26979079 -0.9294322  0.001523733 -0.13511700  0.13453261 -0.21766922\n3  2.71238444 -1.1224849 -0.238420685  0.06228125 -0.07346875  0.09964414\n    .fittedPC7   .fittedPC8  .fittedPC9 .fittedPC10  .fittedPC11  .fittedPC12\n1 -0.002320739 -0.017964647 -0.03216049  0.02293882  0.013900922  0.004371673\n2  0.051963343  0.024894027  0.05014407 -0.07446923 -0.021230820 -0.007417378\n3 -0.060213318 -0.007367207 -0.01997059  0.06129547  0.008093155  0.003445464\n   .fittedPC13\n1  0.008595707\n2 -0.050476861\n3  0.050408713\n\nClustering vector:\n  [1] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2\n [38] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 3 1 1 1 1 1 1 1 1 1 1 1 2\n [75] 1 1 1 1 1 1 1 1 1 3 1 1 1 1 1 1 1 1 1 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n[112] 1 1 1 1 1 1 1 3 1 1 2 1 1 1 1 1 1 1 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3\n[149] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3\n\nWithin cluster sum of squares by cluster:\n[1] 558.6971 385.6983 326.3537\n (between_SS / total_SS =  44.8 %)\n\nAvailable components:\n\n[1] \"cluster\"      \"centers\"      \"totss\"        \"withinss\"     \"tot.withinss\"\n[6] \"betweenss\"    \"size\"         \"iter\"         \"ifault\""
   },
   {
     "objectID": "meetups/meetup-11/meetup-11.html#key-arguments",
@@ -1334,28 +1334,28 @@
     "href": "meetups/meetup-11/meetup-11.html#key-outputs",
     "title": "DATA 608 Meetup 11: Clustering",
     "section": "Key Outputs",
-    "text": "Key Outputs\n\nClustering Vector: Identifies each point by cluster. Is attached to original data frame by augmnet\n\n\nwine_clusters$cluster \n\n  [1] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2\n [38] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 3 1 3 3 3 3 3 3 3 3 3 3 3 2\n [75] 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3\n[112] 3 3 3 3 3 3 3 1 3 3 2 3 3 3 3 3 3 3 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n[149] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1"
+    "text": "Key Outputs\n\nClustering Vector: Identifies each point by cluster. Is attached to original data frame by augmnet\n\n\nwine_clusters$cluster \n\n  [1] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2\n [38] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 1 1 3 1 1 1 1 1 1 1 1 1 1 1 2\n [75] 1 1 1 1 1 1 1 1 1 3 1 1 1 1 1 1 1 1 1 1 1 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n[112] 1 1 1 1 1 1 1 3 1 1 2 1 1 1 1 1 1 1 1 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3\n[149] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3"
   },
   {
     "objectID": "meetups/meetup-11/meetup-11.html#key-outputs-1",
     "href": "meetups/meetup-11/meetup-11.html#key-outputs-1",
     "title": "DATA 608 Meetup 11: Clustering",
     "section": "Key Outputs",
-    "text": "Key Outputs\n\nCluster Means: These are the cluster centers\n\n\nwine_clusters$centers\n\n   .fittedPC1 .fittedPC2   .fittedPC3  .fittedPC4  .fittedPC5  .fittedPC6\n1  2.71238444 -1.1224849 -0.238420685  0.06228125 -0.07346875  0.09964414\n2 -2.26979079 -0.9294322  0.001523733 -0.13511700  0.13453261 -0.21766922\n3  0.03685265  1.7672542  0.185615130  0.08001400 -0.07067870  0.12944063\n    .fittedPC7   .fittedPC8  .fittedPC9 .fittedPC10  .fittedPC11  .fittedPC12\n1 -0.060213318 -0.007367207 -0.01997059  0.06129547  0.008093155  0.003445464\n2  0.051963343  0.024894027  0.05014407 -0.07446923 -0.021230820 -0.007417378\n3 -0.002320739 -0.017964647 -0.03216049  0.02293882  0.013900922  0.004371673\n   .fittedPC13\n1  0.050408713\n2 -0.050476861\n3  0.008595707"
+    "text": "Key Outputs\n\nCluster Means: These are the cluster centers\n\n\nwine_clusters$centers\n\n   .fittedPC1 .fittedPC2   .fittedPC3  .fittedPC4  .fittedPC5  .fittedPC6\n1  0.03685265  1.7672542  0.185615130  0.08001400 -0.07067870  0.12944063\n2 -2.26979079 -0.9294322  0.001523733 -0.13511700  0.13453261 -0.21766922\n3  2.71238444 -1.1224849 -0.238420685  0.06228125 -0.07346875  0.09964414\n    .fittedPC7   .fittedPC8  .fittedPC9 .fittedPC10  .fittedPC11  .fittedPC12\n1 -0.002320739 -0.017964647 -0.03216049  0.02293882  0.013900922  0.004371673\n2  0.051963343  0.024894027  0.05014407 -0.07446923 -0.021230820 -0.007417378\n3 -0.060213318 -0.007367207 -0.01997059  0.06129547  0.008093155  0.003445464\n   .fittedPC13\n1  0.008595707\n2 -0.050476861\n3  0.050408713"
   },
   {
     "objectID": "meetups/meetup-11/meetup-11.html#key-outputs-2",
     "href": "meetups/meetup-11/meetup-11.html#key-outputs-2",
     "title": "DATA 608 Meetup 11: Clustering",
     "section": "Key Outputs",
-    "text": "Key Outputs\n\nCluster Means: These are the cluster centers\n\n\nwine_clusters$centers\n\n   .fittedPC1 .fittedPC2   .fittedPC3  .fittedPC4  .fittedPC5  .fittedPC6\n1  2.71238444 -1.1224849 -0.238420685  0.06228125 -0.07346875  0.09964414\n2 -2.26979079 -0.9294322  0.001523733 -0.13511700  0.13453261 -0.21766922\n3  0.03685265  1.7672542  0.185615130  0.08001400 -0.07067870  0.12944063\n    .fittedPC7   .fittedPC8  .fittedPC9 .fittedPC10  .fittedPC11  .fittedPC12\n1 -0.060213318 -0.007367207 -0.01997059  0.06129547  0.008093155  0.003445464\n2  0.051963343  0.024894027  0.05014407 -0.07446923 -0.021230820 -0.007417378\n3 -0.002320739 -0.017964647 -0.03216049  0.02293882  0.013900922  0.004371673\n   .fittedPC13\n1  0.050408713\n2 -0.050476861\n3  0.008595707"
+    "text": "Key Outputs\n\nCluster Means: These are the cluster centers\n\n\nwine_clusters$centers\n\n   .fittedPC1 .fittedPC2   .fittedPC3  .fittedPC4  .fittedPC5  .fittedPC6\n1  0.03685265  1.7672542  0.185615130  0.08001400 -0.07067870  0.12944063\n2 -2.26979079 -0.9294322  0.001523733 -0.13511700  0.13453261 -0.21766922\n3  2.71238444 -1.1224849 -0.238420685  0.06228125 -0.07346875  0.09964414\n    .fittedPC7   .fittedPC8  .fittedPC9 .fittedPC10  .fittedPC11  .fittedPC12\n1 -0.002320739 -0.017964647 -0.03216049  0.02293882  0.013900922  0.004371673\n2  0.051963343  0.024894027  0.05014407 -0.07446923 -0.021230820 -0.007417378\n3 -0.060213318 -0.007367207 -0.01997059  0.06129547  0.008093155  0.003445464\n   .fittedPC13\n1  0.008595707\n2 -0.050476861\n3  0.050408713"
   },
   {
     "objectID": "meetups/meetup-11/meetup-11.html#key-outputs-3",
     "href": "meetups/meetup-11/meetup-11.html#key-outputs-3",
     "title": "DATA 608 Meetup 11: Clustering",
     "section": "Key Outputs",
-    "text": "Key Outputs\n\nError Measurements\n\nwithinss sum of squares within clusters\nbetweenss between cluster sum of squares\ntot.withinss/totss measure of how much clusters explain variance\n\n\n\nwine_clusters$withinss\n\n[1] 326.3537 385.6983 558.6971\n\nwine_clusters$totss\n\n[1] 2301\n\nwine_clusters$tot.withinss/wine_clusters$totss\n\n[1] 0.5522595"
+    "text": "Key Outputs\n\nError Measurements\n\nwithinss sum of squares within clusters\nbetweenss between cluster sum of squares\ntot.withinss/totss measure of how much clusters explain variance\n\n\n\nwine_clusters$withinss\n\n[1] 558.6971 385.6983 326.3537\n\nwine_clusters$totss\n\n[1] 2301\n\nwine_clusters$tot.withinss/wine_clusters$totss\n\n[1] 0.5522595"
   },
   {
     "objectID": "meetups/meetup-11/meetup-11.html#how-many-clusters",
@@ -1789,42 +1789,42 @@
     "href": "meetups/meetup-1/meetup-1.html#textbooks",
     "title": "Meetup 1: Developing a Critical Eye",
     "section": "Textbooks",
-    "text": "Textbooks\n\n\nTwo most important textbooks:\n\nFundamentals of Data Visualization\nStorytelling with data"
+    "text": "Textbooks\n\n\nTwo most important textbooks:\n\nFundamentals of Data Visualization\nData Visualization: A Practical Introduction"
   },
   {
     "objectID": "meetups/meetup-1/meetup-1.html#textbooks-1",
     "href": "meetups/meetup-1/meetup-1.html#textbooks-1",
     "title": "Meetup 1: Developing a Critical Eye",
     "section": "Textbooks",
-    "text": "Textbooks\n\n\nTwo most important textbooks:\n\nFundamentals of Data Visualization\nStorytelling with data"
+    "text": "Textbooks\n\n\nTwo most important textbooks:\n\nFundamentals of Data Visualization\nData Visualization: A Practical Introduction"
   },
   {
     "objectID": "meetups/meetup-1/meetup-1.html#assignments",
     "href": "meetups/meetup-1/meetup-1.html#assignments",
     "title": "Meetup 1: Developing a Critical Eye",
     "section": "Assignments",
-    "text": "Assignments\n\n8 Lab Assignments (80%)\n\nSubmit a quarto slideshow and rendered slides to brightspace\nLanguage freedom, R or python recommended\n\nParticipation/Discussions (20%)\n\nUsually one per week"
+    "text": "Assignments\n\n6 Lab Assignments (60%)\n\nSubmit a qmd source and rendered slides to brightspace\n‘R’ or ‘python’ choice\n\n6 Figure Corrections (18%)\n\nOpportunity to correct figures from lab assignment\n\nShort Interactive Project (22%)\n\nShiny App on dataset of your choosing"
   },
   {
     "objectID": "meetups/meetup-1/meetup-1.html#week-plan-readings",
     "href": "meetups/meetup-1/meetup-1.html#week-plan-readings",
     "title": "Meetup 1: Developing a Critical Eye",
     "section": "Week Plan: Readings",
-    "text": "Week Plan: Readings\n\nChapter 1 of Storytelling\nChapters 1 and 2 of Fundamentals of Dataviz\nFirst 11 slides of Data Practitioner’s Guide to Storytelling with Data\nFor fun: Two sets of History of Dataviz slides"
+    "text": "Week Plan: Readings\n\nChapters 1 and 2 of Fundamentals of Dataviz\nPreface and part of Chapter 1 of Healy’s Data Visualization:\n\nWhy look at data?\nWhat makes figures look bad?\nProblems of honesty and judgement"
   },
   {
     "objectID": "meetups/meetup-1/meetup-1.html#week-plan-assignments",
     "href": "meetups/meetup-1/meetup-1.html#week-plan-assignments",
     "title": "Meetup 1: Developing a Critical Eye",
     "section": "Week Plan: Assignments",
-    "text": "Week Plan: Assignments\n\nElevator Pitch Intro\nBad Figure (Critical Eye) Discussion\n\nBy Friday to give classmates a chance to vote on the worst figure\n\nDue in two weeks: Data Story 1"
+    "text": "Week Plan: Assignments\n\nDue in two weeks: Data Story 1"
   },
   {
     "objectID": "meetups/meetup-1/meetup-1.html#week-plan-key-concepts",
     "href": "meetups/meetup-1/meetup-1.html#week-plan-key-concepts",
     "title": "Meetup 1: Developing a Critical Eye",
     "section": "Week Plan: Key Concepts",
-    "text": "Week Plan: Key Concepts\n\nMethods for creating a story (Storytelling)\nWhat makes a quality figure (Wilke, Practioner’s Guide)"
+    "text": "Week Plan: Key Concepts\n\nMethods for creating a story (Storytelling)\nWhat makes a quality figure (Wilke, Healy)"
   },
   {
     "objectID": "meetups/meetup-1/meetup-1.html#context-purposes-of-visualizations",
@@ -2245,7 +2245,7 @@
     "href": "modules/module1.html",
     "title": "Module 1 - Developing a Critical Eye",
     "section": "",
-    "text": "Overview and Deliverables\n\n8/31: Attend the initial course meetup at 8:00PM Eastern\nIntroduce yourself on the course Slack\nStory 1 is assigned this week and due Sunday 9/13 (end of week 2)\nMake sure your software toolkit is set up (see the software page)\n\n\nLearning Objectives\n\nUnderstand a data practitioner’s role as a storyteller\nUnderstand the importance of each of the “Who”, “What”, “Why”, “When”, and “How” of a data visualization story\nBegin developing a “Critical Eye”: the ability to discern poor quality and misleading visualizations from those of high quality\n\n\n\nReadings\n\nStorytelling with Data: Chapter 1\nFundamentals of Data Visualization (Wilke): Chapters 1 and 2\nA Data Practitioner’s Guide to Telling Stories with Data Visualizations: Slides 1-11 (everything up to Tufte’s Principles)\n\n\n\nMeetup\nSlides: Meetup 1 - Developing a Critical Eye\nIn this meetup we show a case study of how a visualization can tell a more powerful message when improved, talk about the course structure, list considerations and tools to use to craft a data story, introduce the neuroscience behind why storytelling is effective, and talk about quality issues for figures.",
+    "text": "Overview and Deliverables\n\n8/31: Attend the initial course meetup at 8:00PM Eastern\nIntroduce yourself on the course Slack\nStory 1 is assigned this week and due Sunday 9/13 (end of week 2)\nMake sure your software toolkit is set up (see the software page)\n\n\nLearning Objectives\n\nUnderstand a data practitioner’s role as a storyteller\nUnderstand the importance of each of the “Who”, “What”, “Why”, “When”, and “How” of a data visualization story\nBegin developing a “Critical Eye”: the ability to discern poor quality and misleading visualizations from those of high quality\n\n\n\nReadings\n\nFundamentals of Data Visualization (Wilke): Chapters 1 and 2\nData visualization (Healy): Preface and Chapter 1 up to\n\n\n\nAdditional Readings\n\nStorytelling with Data: Chapter 1\n\n\n\nMeetup\nSlides: Meetup 1 - Developing a Critical Eye\nIn this meetup we show a case study of how a visualization can tell a more powerful message when improved, talk about the course structure, list considerations and tools to use to craft a data story, introduce the neuroscience behind why storytelling is effective, and talk about quality issues for figures.",
     "crumbs": [
       "Topics",
       "1 - Developing a Critical Eye"
@@ -4105,5 +4105,33 @@
     "title": "DATA 608 Meetup 7: Working With Color",
     "section": "Thanks!",
     "text": "Thanks!"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#textbooks-2",
+    "href": "meetups/meetup-1/meetup-1.html#textbooks-2",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Textbooks",
+    "text": "Textbooks\n\n\n\n\nFor pythonistas\n\n\nScientific Visualization: Python + Matplotlib\n\n\n\n\nAssignments\n\n6 Lab Assignments (60%)\n\nSubmit a qmd source and rendered slides to brightspace\n‘R’ or ‘python’ choice\n\n6 Figure Corrections (18%)\n\nOpportunity to correct figures from lab assignment\n\nShort Interactive Project (22%)\n\nShiny App on dataset of your choosing\n\n\n\nWeek Plan: Readings\n\nChapters 1 and 2 of Fundamentals of Dataviz\nPreface and part of Chapter 1 of Healy’s Data Visualization:\n\nWhy look at data?\nWhat makes figures look bad?\nProblems of honesty and judgement\n\n\n\nWeek Plan: Assignments\n\nDue in two weeks: Data Story 1\n\n\nWeek Plan: Key Concepts\n\nMethods for creating a story (Storytelling)\nWhat makes a quality figure (Wilke, Healy)\n\n\nContext: Purposes of Visualizations\n\n\n\nExploratory\nExplanatory\nInferential\n\n\n\n\n\nContext: Purposes of Visualizations\n\n\n\nExploratory\nExplanatory\nInferential\n\n\n\n\n\nIPCC SPM1 Special Report on 1.5C\n\n\n\n\nContext: Purposes of Visualizations\n\n\n\nExploratory\nExplanatory\nInferential\n\n\n\n\n\nContext: Who, What, and How\nBefore you begin, start with three questions\n\nWho will see your figure?\n\nYou would make different choices presenting to experts, decision makers/stakeholders, your supervisor, or the general public\n\n\n\nContext: Who, What, and How\n\nFigure for Decision Makers (IPCC SPM):\n\n\n\nContext: Who, What, and How\n\nFigure for other scientists (IPCC)\n\n\n\nContext: Who, What, and How\n\nFigure for other scientists (IPCC)\n\n\n\nContext: Who, What, and How\nBefore you begin, start with three questions\n\nWhat do you want your audience to know or do?\n\nThere needs to be a point or story beyond “this is interesting”\n\n\n\nContext: Who, What, and How\n\nConsider the Mechanism\nMore details in written comms than presentations\n\n\nStorytelling\nContext: Who, What, and How\nBefore you begin, start with three questions\n\nHow?\n\nWhat data will you use to accomplish this?\n\nDon’t hide non-supporting data\n\nTrust is built over time but destroyed in an instant\nBuilding trust is key for convincing people to take action on your recommendations, in all sorts of settings\n\n\n\nThe Elevator Pitch and Big Idea\n\nIf you had just 3 minutes to tell your audience what they need to know, what would you say?\n\nWhat is the overall topic/problem (get into it fast)\nWhy is it important (bring emotion into it)\nTry to find a good punchline to complete the narrative\n\n\n\nBig Idea: Single Sentence Summary\n\nConvey your unique point of view\nMust convey what is at stake\n\n\n\nThe Storyboard\n\nStoryboard is like a visual outline of the story you want to tell\nArose in TV, film, and other narrative media\nSketch out the narrative and visual elements of your data story.\n2-6 elements\nProblem, Research Question, Data, Insights, Recommendation/Conclusion\n\n\nThe Storyboard\n\n\nWhy Stories?\n\nHumans are wired to hear and tell stories, it is how we relate\nNeuroscience research backs this up\nGood stories create synchrony across multiple brain regions between storyteller and listener\n\n\n\nWhy Stories?\n\nHumans are wired to hear and tell stories, it is how we relate\nNeuroscience research backs this up\nGood stories create synchrony across multiple brain regions between storyteller and listener\n\n\n\nBad, Ugly, and Wrong Figures\n\n\nWhat Makes Bad Figures Bad\n\nHealy: Aesthetic, Substantive, Perceptual\nNext weeks will address these specifically\n\n\nWhat About Great Figures?\n\nThere are no principles/rules for going from good to great\nPerfect the good first, then your creativity can help you make something great\n\n\n\nWhat About Great Figures?\n\nThere are no principles/rules for going from good to great\nPerfect the good first, then your creativity can help you make something great\n\n\n\nAdvert\n\nOnce per month (Tuesday, Wedneday, Thursday) “field trips” to New York Open Statistical Computing Meetup\nSend me a DM I’ll add you to the email list\nnyhackr.org \n\n\nThanks!\n\n\n\n\nDATA 608"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#what-makes-bad-figures-bad",
+    "href": "meetups/meetup-1/meetup-1.html#what-makes-bad-figures-bad",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "What Makes Bad Figures Bad",
+    "text": "What Makes Bad Figures Bad\n\nHealy: Aesthetic, Substantive, Perceptual\nNext weeks will address these specifically"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#what-about-great-figures",
+    "href": "meetups/meetup-1/meetup-1.html#what-about-great-figures",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "What About Great Figures?",
+    "text": "What About Great Figures?\n\nThere are no principles/rules for going from good to great\nPerfect the good first, then your creativity can help you make something great"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#what-about-great-figures-1",
+    "href": "meetups/meetup-1/meetup-1.html#what-about-great-figures-1",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "What About Great Figures?",
+    "text": "What About Great Figures?\n\nThere are no principles/rules for going from good to great\nPerfect the good first, then your creativity can help you make something great"
   }
 ]

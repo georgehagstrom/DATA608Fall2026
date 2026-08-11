@@ -3,8 +3,11 @@
 /website/_site/
 /website/_freeze/
 
-# Rendered previews sitting next to sources
-**/*_files/
+# Rendered previews sitting next to sources. Deliberately scoped: docs/ is the
+# published site and its *_files figure directories MUST be committed -- a
+# bare "**/*_files/" here once broke every generated figure on the live site.
+/website/**/*_files/
+/planning/**/*_files/
 
 # Python / Jupyter
 __pycache__/
@@ -31,3 +34,4 @@ __MACOSX/
 .*.swp
 .*.swo
 *~
+.Rproj.user

@@ -117,7 +117,7 @@ Two most important textbooks:
 
 1. [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
 
-2. [Storytelling with data](https://github.com/Saurav6789/Books-/blob/master/storytelling-with-data-cole-nussbaumer-knaflic.pdf)
+2. [Data Visualization: A Practical Introduction](https://socviz.co/)
 :::
 
 ::: {.column width="50%"}
@@ -136,44 +136,75 @@ Two most important textbooks:
 
 1. [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)
 
-2. [Storytelling with data](https://github.com/Saurav6789/Books-/blob/master/storytelling-with-data-cole-nussbaumer-knaflic.pdf)
+2. [Data Visualization: A Practical Introduction](https://socviz.co/)
 :::
 
 ::: {.column width="50%"}
 
-![](storytelling.png)
+![](dv-cover-2e.png)
 :::
 
 ::::
 
+
+## Textbooks
+
+:::: {.columns}
+
+
+:::: {.columns}
+::: {.column width="50%"}
+
+- For _pythonistas_
+
+1. [Scientific Visualization: Python + Matplotlib](https://inria.hal.science/hal-03427242/document)
+
+:::
+
+::: {.column width="50%"}
+
+![](rougier.png)
+
+:::
+
+::::
+
+
+
+
+
+
+
 ## Assignments
 
-- 8 Lab Assignments (80\%)
-  - Submit a quarto slideshow and rendered slides to brightspace
-  - Language freedom, R or python recommended
-- Participation/Discussions (20\%)
-  - Usually one per week
+- 6 Lab Assignments (60\%)
+  - Submit a qmd source and rendered slides to brightspace
+  - 'R' or 'python' choice
+- 6 Figure Corrections (18\%)
+  - Opportunity to correct figures from lab assignment
+- Short Interactive Project (22\%)
+  - Shiny App on dataset of your choosing
 
 
 
 ## Week Plan: Readings
 
-- Chapter 1 of Storytelling
 - Chapters 1 and 2 of Fundamentals of Dataviz
-- First 11 slides of Data Practitioner's Guide to Storytelling with Data
-- For fun: Two sets of History of Dataviz slides
-  
+- Preface and part of Chapter 1 of Healy's Data Visualization:
+  - Why look at data?
+  - What makes figures look bad?
+  - Problems of honesty and judgement
+
+
+
 ## Week Plan: Assignments
   
-- Elevator Pitch Intro 
-- Bad Figure (Critical Eye) Discussion
-  - By Friday to give classmates a chance to vote on the worst figure
 - Due in two weeks: Data Story 1
 
 ## Week Plan: Key Concepts
 
 - Methods for creating a story (Storytelling)
-- What makes a quality figure (Wilke, Practioner's Guide)
+- What makes a quality figure (Wilke, Healy)
 
 ## Context: Purposes of Visualizations
 
@@ -378,30 +409,31 @@ bad = penguins |> ggplot(aes(x=species)) +
 
 ```
 
+## What Makes Bad Figures Bad
+
+- Healy: _Aesthetic_, _Substantive_, _Perceptual_
+- Next weeks will address these specifically
 
 
-## Visualization Quality Features {.smaller}
 
-1. __Fidelity__: Should be a faithful representation of the underlying data, nothing added or hidden
-2. __Simplicity__: As simples as possible but no simpler. No irrelevant embellishments
+## What About Great Figures?
 
-![](IPCC_SPM_fig.png){width=70%}
+- There are no principles/rules for going from good to great 
+- Perfect the good first, then your creativity can help you make something great
 
-## Visualization Quality Features {.smaller}
-
-3. __Utility__: Fit for purpose as defined by the viewers needs. No extraneous information
-4. __Saliency__: Focuses attention on the most important facts and conclusions
-
-![](IPCC_SPM_fig.png){width=70%}
+![](hr-diagram.jpg)
 
 
-## Visualization Quality Features {.smaller}
 
-5. __Efficacy__: Accomplishes the purpose for which it was designed, in context
-6. __Uniformity__: Adheres to a predetermined presentation theme
-7. __Amity__: User friendly, takes minimal effort to grasp the main message
+## What About Great Figures?
 
-![](IPCC_SPM_fig.png){width=70%}
+- There are no principles/rules for going from good to great 
+- Perfect the good first, then your creativity can help you make something great
+
+![](fig-ch-01-minard.png)
+
+
+
 
 
 ## Advert

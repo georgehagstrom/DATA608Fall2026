@@ -18,9 +18,15 @@ editor: source
 
 ### Readings
 
-* __Storytelling with Data__: Chapter 1
 * __Fundamentals of Data Visualization__ ([Wilke](https://clauswilke.com/dataviz/)): Chapters 1 and 2
-* [A Data Practitioner's Guide to Telling Stories with Data Visualizations](readings/data-practitioners-guide.pdf): Slides 1-11 (everything up to Tufte's Principles)
+* __Data visualization__ ([Healy](https://socviz.co/01-look-at-data.html)): Preface and Chapter 1 (Why look at data? and What Makes Figures Bad?) 
+
+
+### Additional Readings
+
+
+* __Storytelling with Data__: Chapter 1
+
 
 ### Meetup
 

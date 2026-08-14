@@ -1,0 +1,37 @@
+---
+title: "ZORI Data Dictionary"
+format: html
+---
+
+## Data Dictionary for 'zori_lab1.csv'
+
+### Data Provenance:
+
+Most data originates from the following file on 'zillow': [Metro_zori_uc_sfrcondomfr_sm_sa_month.csv](https://files.zillowstatic.com/research/public_csvs/zori/Metro_zori_uc_sfrcondomfr_sm_sa_month.csv)
+
+You can visit the [zillow research portal](https://www.zillow.com/research/data/) and 
+the [methodology page for the Zillow Observed Rent Index](https://www.zillow.com/research/methodology-zori-repeat-rent-27092/) to read the details
+of the data from zillow.
+
+Some basic processing has been done to make this file work with our demographic data. Specifically,
+instead of the 'RegionID' variable that 'zillow' uses to identify Metropolitan Statistical Areas,
+we use the 'cbsa' ID, which stands for [Core-Based-Statistical-Area](https://en.wikipedia.org/wiki/Core-based_statistical_area). Note that the geographic definitions of 'cbsa' undergo small changes periodically, and the 'zillow' 
+definitions in some cases do not correspond perfectly. If you are ever interested in using this data or these analyses in the future you can find information on the definitions at [the census website](https://www.census.gov/geographies/reference-files/time-series/demo/metro-micro/delineation-files.html).
+
+## Variables
+
+
+1. 'cbsa' : 'char' data type. Core-Based-Statistical-Area. Ranges from 10000 to 49999
+2. 'Region': 'char' data type. Name for the metropolitan statistical area, is generally the principal city and state of the MSA (note the city may not be in the state).
+3. 'SizeRank': 'dbl' data type. Population rank of the region assigned by 'zillow' in descending order.
+4. 'City': 'char' data type. Name of the largest principal city in the corresponding MSA.
+5. 'State': 'char' data type. Principal state in the Metro Area (defined by 'Zillow')
+6. 'date': 'date' data type. Date of measurement. Measurements are published on monthly intervals.
+7. 'zori': 'dbl' data type. 'zori' stands for _Zillow Observed Rent Index_. 'zori' is a measure
+constructed by zillow in order to measure the long term rent change in different geographic areas
+over time. It is designed to be robust to random biases in the types of properties being listed
+on zillow at any given moment and also to biases in the types of buildings that rent on zillow versus the overall rental stock of a given city. The units of 'zori' are nominal dollars. If you
+want to interpret 'zori', it is modeled as the mean of the 35-65\% percentile asking rent within
+a given market.
+
+

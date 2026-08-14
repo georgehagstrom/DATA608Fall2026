@@ -1,0 +1,40 @@
+---
+title: "MSA Permits and Demographics Lab 1 Dictionary"
+format: html
+---
+
+
+## Data Dictionary for 'MSA_permits_demography.csv'
+
+### Data Provenance:
+
+This data file consists of data compiled from several different sources. Overall, the file describes the demographics (population, international and domestic migration) and the number of
+building permits granted for single family homes, multi-family buildings with two to four units, and apartments with greater than 5 units. 
+
+The population and migration data for metropolitan statistical areas originated from the US Census.
+[The population estimate page](https://www.census.gov/programs-surveys/popest.html) describes 
+the population and estimated migration from metropolitan statistical areas. It can be downloaded
+from [cbsa-est2025-alldata.csv]( https://www2.census.gov/programs-surveys/popest/datasets/2020-2025/metro/totals/cbsa-est2025-alldata.csv).
+
+Building Permits data comes from the annual census _Building Permits Survey_. This survey is described at [BPS description page](https://www.census.gov/construction/bps/current.html). The links to the survey are:
+
+1. [bps_msa_2021.xls](https://www.census.gov/construction/bps/xls/msaannual_202199.xls)
+2. [bps_msa_2022.xls](https://www.census.gov/construction/bps/xls/msaannual_202299.xls)
+3. [bps_msa_2023.xls](https://www.census.gov/construction/bps/xls/msaannual_202399.xls)
+4. [bps_msa_2024.xls](https://www.census.gov/construction/bps/xls/cbsaannual_202499.xls)
+5. [bps_msa_2025.xls](https://www.census.gov/construction/bps/xls/cbsaannual_202599.xls)
+
+## Variables
+
+1. 'cbsa': 'char' data type. [Core-Based-Statistical-Area](https://en.wikipedia.org/wiki/Core-based_statistical_area). Ranges from 10000 to 49999. This is the key that lets you join with the 'zori' data.
+2. 'Region': 'char' data type. data type. Name for the metropolitan statistical area, is generally a combination of names of major cities and states corresponding to the defined area. These are not identical to those found in the 'zori' data,  is generally a combination of names of major cities and states corresponding to the defined area.
+3. 'State': 'char' data type. Two letter code for the principal state of the CBSA.
+4. 'region': 'char' data type. Regional location of MSA (values are 'Midwest', 'Mountain West', 'Northeast', 'Pacific', 'Southeast', 'Texas & South Central')
+5. 'year': 'dbl' data type. Year corresponding to data.
+6. 'population': 'dbl' data type. Population of MSA as estimated by the census. 
+7. 'units_total': 'dbl' data type. Total number of units permitted in the MSA during the year according to the 'bps'
+8. 'units_1': 'dbl' data type. Total number of single family units permitted.
+9. 'units_2_4': 'dbl' data type. Total number of units permitted within multi-family structures containing two to four units (this is the number of units, not the number of buildings).
+10. 'units_5plus': 'dbl' data type. Total number of units permitted in apartment buildings consisting of 5 or more units (this is the number of units, not the number of buildings). 
+11. 'n_structs': 'dbl' data type. Total number of large apartment buildings permitted consisting of 5 of more units.
+12. 'migration': 'dbl' data type. Net migration to/from the 'MSA'. Positive stands for people arriving.

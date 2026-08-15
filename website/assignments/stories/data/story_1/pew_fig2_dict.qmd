@@ -1,0 +1,20 @@
+---
+title: "Pew Figure 2 Data Dictionary"
+format: html
+---
+
+## Data Dictionary for pew_fig2_class_rent_change.csv
+
+### Data provenance
+
+This data orignates from an article published by the Pew Charitable Trusts: ["New Housing Slows Rent Growth Most for Older, More Afforable Units"](https://www.pew.org/en/research-and-analysis/articles/2025/07/31/new-housing-slows-rent-growth-most-for-older-more-affordable-units). In particular, the data from figure 2 was scraped. 
+According to the caption for figure 2, this data originated from [RealPage Data Explorer](https://www.realpage.com/explore/), which is a provider of real estate data. I had wanted to find additional data (or at least find the original data) on this page, but was unable to do so (if you are interested in this subject and have time maybe you will have more luck).
+
+The methodology for the rent change values is described here: [New Housing Article Methodology](file:///home/georgehagstrom/Downloads/Methodology%20Appendix%20New%20Housing%20Slows%20Rent%20Growth%20Most%20for%20Older%20More%20Affordable%20Units.pdf). 
+
+## Variables
+
+1. 'metro': 'chr' data type. Name of metro area. These metro areas are the 11 largest metro areas with unit growth over 10\% during the period from 2017-2023 according to the American Community Survey.
+2. 'class_a': Estimated average rent change year over year (2023-2024) for _Class A_ buildings. Nominal (not adjusted for inflation). Class A buildings are defined in the Caption of Figure 2, and correspond to newer buildings with more amenities.
+3. 'class_b': Estimated average rent change year over year (2023-2024) for _Class B_ buildings. Nominal (not adjusted for inflation). Class B buildings are defined in the Caption of Figure 2, defined as mid-range buildings that are well maintained, in desirable areas, and have some amenities.
+4. 'class_c': Estimated average rent change year over year (2023-2024) for _Class C_ buildings. Nominal (not adjusted for inflation). Class C buildings are defined in the Caption of Figure 2, and consist of older buildings that may have outdated features, deferred maintenance, or a location in a less desirable area.

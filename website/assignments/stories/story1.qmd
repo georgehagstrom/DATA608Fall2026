@@ -2,6 +2,21 @@
 title: "Story 1: Housing Policy and Affordability"
 ---
 
+```{r}
+#| echo: FALSE
+
+library(tidyverse)
+library(ggpattern)
+library(ggplot2)
+library(readxl)
+library(scales)
+library(ggrepel)
+library(patchwork)
+
+
+```
+
+
 ## Overview
 
 
@@ -32,17 +47,79 @@ Consider Figure 2 from _New Housing Slows Rent Growth Most for Older, More Affor
 (a) This figure allows you to make two types of comparisons: (1) differences in rent changes across
 different building classes within the same city and (2) differences in rent changes across different cities. Which perceptual visualization tasks might you use when making these comparisons using Figure 2?
 
-(b) The data is available to you in the file 'pew_rent_change_class.csv'. Visualize this data in two different ways: (1) using a Cleveland dot plot and (2) splitting the bar-plots onto multiple axes (see [UCRs dot-plot page](https://uc-r.github.io/cleveland-dot-plots) or [Wilke chapter 6](https://clauswilke.com/dataviz/visualizing-amounts.html) ). Compare these two images to the original Figure 2, what are the pros and cons of each?
+(b) The data is available to you in the file [pew_fig2_rent_change_class.csv](https://raw.githubusercontent.com/georgehagstrom/DATA608Fall2026/main/website/assignments/stories/data/story_1/pew_fig2_class_rent_change.csv), with [pew_fig2_dict.qmd](https://raw.githubusercontent.com/georgehagstrom/DATA608Fall2026/main/website/assignments/stories/data/story_1/pew_fig2_dict.qmd) describing the data source and variables. Visualize this data in two different ways: (1) using a Cleveland dot plot and (2) splitting the bar-plots onto multiple axes (see [UCRs dot-plot page](https://uc-r.github.io/cleveland-dot-plots) or [Wilke chapter 6](https://clauswilke.com/dataviz/visualizing-amounts.html) ). Compare these two images to the original Figure 2, what are the pros and cons of each?
 
 
 
 ## Problem 2: Fixing a Bad Figure
 
 
-(a)
+(a) _Analyze the problems with a bad figure_. Your predecessor on the data team had been working on a presentation about permiting reform
+and left you the following figure. There are a number of problems with the figure, and it has a surprising conclusion given the recent research. Take a close look at the figure and code and list all of the ways that the figure is bad/ugly/wrong.
 
-Your predecessor on the data team had been working on a presentation about permiting reform
-and left you the following figure. There are a number of problems with the figure, and it has a surprising 
+```{r}
+
+msa = read_csv("https://raw.githubusercontent.com/georgehagstrom/DATA608Fall2026/main/website/assignments/stories/data/story_1/MSA_permits_demography.csv")
+zori = read_csv("https://raw.githubusercontent.com/georgehagstrom/DATA608Fall2026/main/website/assignments/stories/data/story_1/zori_lab1.csv")
+
+# Lets make a bad figure
+
+zori
+
+raw <- zori |>  
+  mutate(year = year(date)) |> 
+  group_by(cbsa,Region,year) |> 
+  summarise(zori = mean(zori,na.rm=TRUE),.groups="drop") 
+raw
+
+raw |> 
+  ggplot(aes(year,zori)) +
+  geom_col(aes(fill=year)) +
+  facet_wrap(~Region)
+  
 
 
+p1 = msa |> filter(year == 2025,
+              population > 100000) |> 
+  arrange(units_total) |> rename(RegionName = Region) |> left_join(raw,by=c('cbsa','year')) |> head(10) |> 
+  ggplot(aes(RegionName,zori)) +
+  geom_col_pattern(pattern = "image",
+                   pattern_filename = "/home/georgehagstrom/work/Teaching/2026_Fall/DATA608Fall2026/website/assignments/stories/data/story_1/skyscraper.png",
+                   pattern_type = 'tile') +
+  labs(title = "Low Permit Metros") +
+  coord_cartesian(ylim = c(750, 3500)) +
+  theme(axis.text.y = element_blank()) +
+  theme(axis.text.x = element_blank()) +
+  theme(text = element_text(family = "Lobster Two", size = 20),
+        plot.title = element_text(family = "Lobster Two", size = 30, colour = "#1A9850"),
+        panel.grid.major = element_line(colour = "#1A9850"),
+        panel.border = element_rect(colour = "#1A9850", fill = NA, linewidth = 1.5))
+  
 
+p2 = msa |> filter(year == 2025,
+              population > 100000) |> 
+  arrange(desc(units_total)) |> rename(RegionName = Region) |> left_join(raw,by=c('cbsa','year')) |> head(10) |> 
+  ggplot(aes(RegionName,zori)) +
+  geom_col_pattern(pattern = "image",
+                   pattern_filename =  "/home/georgehagstrom/work/Teaching/2026_Fall/DATA608Fall2026/website/assignments/stories/data/story_1/skyscraper.png",
+                   pattern_type = 'tile') +
+  labs(title="High Permit Metros") +
+  coord_cartesian(ylim = c(750, 3500)) +
+  theme(axis.text.y = element_blank()) +
+  theme(axis.text.x = element_blank()) +
+  theme(text = element_text(family = "Roboto Condensed", size = 20),
+        plot.title = element_text(family = "Roboto Condensed", face="bold", size = 30, colour = "#A50026"),
+  panel.grid.major = element_line(colour = "#A50026"),
+  panel.border = element_rect(colour = "#A50026", fill = NA, linewidth = 1.5))
+
+p1 + p2
+
+
+```
+::: {.callout-note appearance="simple" icon=false}
+Figure compares the average rent in 2025 as measured by the Zillow Observed Rent Index of the metropolitan statistical areas with the lowest number of permitted units (left) and the highest number of permitted units (right) in 2025. The metros that permitted the highest number of units had the highest rents, suggesting that permitting fewer units is the best policy.
+:::
+
+
+(b) _Create a data story about this data_. You have been given datasets with information about 
+rent, building permits, and demographics (population and net-migration) in metropolitan statistical areas, covering a period from 2015 to 2026 (rents) and 2021 to 2025 (permits and demographics). You should create several figures (2-3) to explain whether or not building permits policy can help reduce rents. Assume that your audience is the city government at a large city in the United States (e.g. New York City). Your story must be entirely told by your figures, though you may use text sparingly in the title/subtitle and annotations to enhance your story. Provide a one to two paragraph explanation of the choices you made for your figure. Do not include exploratory figures/discussion. 

@@ -341,31 +341,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>The major assignments in this course are seven “Data Stories”, due respectively at the end of weeks 2, 4, 6, 8, 10, 12, and 14 (Sundays at midnight Eastern). Each assignment requires that you source and wrangle data, perform analysis, and build data visualizations that tell a story. The assignments are in the form of story requests.</p>
-<p>I recommend composing each story as a reproducible quarto report or presentation, using either <code>R</code> or <code>python</code> for the visualizations, and submitting your <code>qmd</code> file along with a rendered PDF or HTML file. Stories should be submitted on Brightspace.</p>
-<p>Each story is released the week it is assigned; until then its link goes to a placeholder page.</p>
-<!--
-TO RELEASE A STORY, e.g. Story 1:
-
-  1. swap this line
-         1. [Story 1: ...](stories/tbd.qmd)
-     for
-         1. [Story 1: ...](stories/story1.qmd)
-  2. repoint the other pages that mention that story. To find them all:
-         grep -rn 'stories/tbd.qmd' --include='*.qmd' .
-     Each story appears in course/schedule.qmd (assigned + due rows) and in
-     two module pages (assigned week and due week).
-  3. re-enable it in _quarto.yml (remove or narrow the
-     "!assignments/stories/story*.qmd" render exclusion) and render:
-         quarto render assignments/stories/story1.qmd
-
-The story source files are already in assignments/stories/ -- they are simply
-not linked or rendered until you release them. Their datasets are in
-assignments/stories/data/.
--->
+<p>The homework assignments in this class are six data stories and one project. The data stories are due every two weeks, Sunday at midnight Eastern time. The data stories involve developing a series of visualizations with the aim of communicating specific insights about a given dataset. The data stories may also have a few questions related to your visualizations and the data.</p>
+<p>The data stories should be submitted in the form of a reproducible quarto report or presentation, accompanied with a rendered PDF file or a link to a rendered html file (do not submit html files to brightspace). You may write code for your visualizations in either ‘R’ or ‘python’.</p>
+<p>The last story involves finding your own dataset, creating your own data story using it, and publishing this story as an interactive shiny app on ‘posit.cloud’/‘shinyapps.io’. The 6 data stories are collectively worth 80% of your grade, and the final project is worth 20%. You may resubmit your data stories one time each to receive additional/partial credit in response to suggested corrections or improvements.</p>
 <ol type="1">
 <li><a href="../assignments/stories/story1.html">Story 1: Infrastructure Investment and Jobs Act Funding Allocation</a> — due Sunday, September 13</li>
-<li><a href="../assignments/stories/story2.html">Story 2: Can the FED Control Inflation and Maintain Full Employment?</a> — due Sunday, September 27</li>
+<li><a href="../assignments/stories/tbd.html">Story 2: Can the FED Control Inflation and Maintain Full Employment?</a> — due Sunday, September 27</li>
 <li><a href="../assignments/stories/tbd.html">Story 3: Do Stricter Gun Laws Reduce Firearm Gun Deaths?</a> — due Sunday, October 11</li>
 <li><a href="../assignments/stories/tbd.html">Story 4: High Revenue Airbnbs in NYC</a> — due Sunday, October 25</li>
 <li><a href="../assignments/stories/tbd.html">Story 5: What Factors Determine Housing Prices in Ames, Iowa?</a> — due Sunday, November 8</li>

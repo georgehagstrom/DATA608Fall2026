@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.5.54">
+
+  <meta name="author" content="George I. Hagstrom">
+  <title>DATA 608 Fall 2026 – DATA 608 Meetup 10: Dimensionality Reduction</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <link href="../../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+  <script src="../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+  <script src="../../site_libs/plotly-binding-4.11.0/plotly.js"></script>
+  <script src="../../site_libs/typedarray-0.1/typedarray.min.js"></script>
+  <script src="../../site_libs/jquery-3.5.1/jquery.min.js"></script>
+  <link href="../../site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+  <script src="../../site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+  <link href="../../site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+  <script src="../../site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+<meta property="og:title" content="DATA 608 Meetup 10: Dimensionality Reduction – DATA 608 Fall 2026">
+<meta property="og:site_name" content="DATA 608 Fall 2026">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">DATA 608 Meetup 10: Dimensionality Reduction</h1>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+George I. Hagstrom 
+</div>
+</div>
+</div>
+
+</section>
+<section id="week-summary" class="slide level2">
+<h2>Week Summary</h2>
+<ul>
+<li>Data Story 5 is Due this Sunday at Midnight</li>
+<li>Reading is Section 12.3 of Fundamentals of Data Visualization</li>
+<li>What to do when the data has too many variables to visualize?</li>
+</ul>
+<!-- TODO Fall 2026: Spring 2025 event announcement - swap in a current
+     event card before the meetup.
+
+## NY Open Statistical Computing Meetup
+
+- April 8th 6:30-8:30+
+- Great Networking/Learning Opportunity
+
+![](April_2025_Meetup_Card.png)
+-->
+</section>
+<section id="many-variables" class="slide level2">
+<h2>Many variables?</h2>
+<ul>
+<li>Pair Plot?</li>
+</ul>
+
+<img data-src="meetup-10_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+<section id="pair-plots-are-limited" class="slide level2">
+<h2>Pair Plots are Limited</h2>
+<ul>
+<li>Data is physiological properties of Australian Olympians</li>
+<li>Takes time to read</li>
+<li>Other options like correlograms also somewhat limited</li>
+<li>We could use an alternative even though these techniques are useful</li>
+</ul>
+</section>
+<section id="hopeless-when-data-increases-more" class="slide level2">
+<h2>Hopeless when data increases more</h2>
+<ul>
+<li>Here is a dataset of biomarker measurements from both ovarian cancer patients and healthy controls</li>
+<li>There are 4000 variables</li>
+<li>There will be no pair-plots</li>
+</ul>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 215 × 4,000
+   `0.063915` `0.033242` `0.018484` `0.0086177` `0.035629` `0.037925` `0.028865`
+        &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;
+ 1     0.0254     0.0511    0.0563      0.0217      0.0274     0.0149    0.0225 
+ 2     0.0255     0.0361    0.0542      0.00974     0.0275     0.0523    0.0428 
+ 3     0.0128     0.0297    0.0793      0.0507      0.0397     0.0577    0.0445 
+ 4     0.0198    -0.0106   -0.00750     0.0190      0.0688     0.0618    0.0390 
+ 5     0.0390     0.0394    0.00134     0.0262      0.0441     0.0440    0.0396 
+ 6     0.0232     0.0538    0.0370      0.0216      0.0388     0.0389    0.0516 
+ 7     0.0270     0.0101    0.0177      0.0112      0.0367     0.0160    0.00668
+ 8     0.0394     0.0389    0.0316      0.0196      0.0209     0.0300    0.0293 
+ 9     0.0134     0.0165    0.0158      0.00492     0.0126     0.0322    0.0182 
+10     0.0337     0.0417    0.0326      0.0290      0.0285     0.0499    0.0502 
+# ℹ 205 more rows
+# ℹ 3,993 more variables: `0.061731` &lt;dbl&gt;, `0.0631` &lt;dbl&gt;, `0.024787` &lt;dbl&gt;,
+#   `0.034473` &lt;dbl&gt;, `0.033539` &lt;dbl&gt;, `0.01043` &lt;dbl&gt;, `0.018585` &lt;dbl&gt;,
+#   `0.051385` &lt;dbl&gt;, `0.045839` &lt;dbl&gt;, `0.02908` &lt;dbl&gt;, `0.079736` &lt;dbl&gt;,
+#   `0.089912` &lt;dbl&gt;, `0.06538` &lt;dbl&gt;, `0.048052` &lt;dbl&gt;, `0.017063` &lt;dbl&gt;,
+#   `0.016695` &lt;dbl&gt;, `0.013443` &lt;dbl&gt;, `0.016502` &lt;dbl&gt;, `0.061453` &lt;dbl&gt;,
+#   `0.085336` &lt;dbl&gt;, `0.069497` &lt;dbl&gt;, `0.063938` &lt;dbl&gt;, `0.045307` &lt;dbl&gt;, …</code></pre>
+</div>
+</div>
+</section>
+<section id="dimensionality-reduction" class="slide level2">
+<h2>Dimensionality Reduction</h2>
+<ul>
+<li>Many datasets have a large number of variables</li>
+<li>We often have intuition that the data follows simpler patterns</li>
+<li>Otherwise we couldn’t understand it</li>
+<li>This motivates a search for simpler representations, which can be powerful visualization tools</li>
+</ul>
+</section>
+<section id="low-d-representation" class="slide level2">
+<h2>Low-D Representation</h2>
+<ul>
+<li>Using a tool called Principal Component Analysis, can separate the groups neatly</li>
+</ul>
+
+<img data-src="meetup-10_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<section id="d-representation" class="slide level2">
+<h2>3D Representation</h2>
+<ul>
+<li>3D Neatly separates them</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-6c369836f724405ac7f2" style="width:768px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-6c369836f724405ac7f2">{"x":{"visdat":{"38001543565f4":["function () ","plotlyVisDat"]},"cur_data":"38001543565f4","attrs":{"38001543565f4":{"x":{},"y":{},"z":{},"color":{},"size":2,"colors":["#D55E00","#0072B2"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d","mode":"markers","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":"PC1"},"yaxis":{"title":"PC2"},"zaxis":{"title":"PC3"}},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[-25.941544639546358,-29.691176801614787,-32.802781119839544,-37.296314773163978,-28.348197901874872,25.896993076790082,18.614772755726044,-2.4529319754249057,-0.38403364312826882,-25.321608328561911,-35.063330781956843,-15.954817047029241,29.525422746075133,23.060527223493452,-4.4012426220004786,-1.6289080006173688,-23.07950963879691,-12.569757102764507,-29.056779435257081,29.318044938596962,-10.048505014158128,25.680429569626028,-21.032752893633234,4.2691344771614883,1.6917751769470855,-15.448485599143277,-8.0836181364506494,31.674528244475717,16.965585340198626,19.60325639838274,-5.0004080986594124,-26.065785264816569,5.0346834308708708,7.5484168244165186,-1.1042985786087867,-3.231064844320267,-26.352773173303351,-52.119515887485512,-34.023079004206991,13.013485332012335,15.242553542828755,-14.192315019468273,-4.0328028135833289,5.6403522427466601,-10.817875366222907,-62.011653600505248,-15.15780578775338,27.249779033615884,-30.818570196445602,24.801674230434855,10.574939839643799,7.1260482735069646,4.9900869571320188,8.8971578203067523,33.063634511800764,21.069462005360222,27.795445675777994,-7.5616481620370006,14.081461813567399,-15.890629897945747,29.41269878980864,1.3239945428799293,3.3056916737745388,6.7002176167950296,6.4101350624073534,-7.2888427942670839,24.330182271770639,44.864824034853449,11.001720451974078,22.139819186484182,24.602093114398908,-23.636833106732396,0.55994456773374357,-33.797878327274169,24.108399581010346,-32.351796536247733,14.593233182744722,17.751207237071061,-26.358723467785495,-70.264116949276627,-72.357573304231849,-76.97593922024403,10.994277204456386,8.3411077879587818,-37.884269950174392,-38.497303406858833,-68.465795853136711,16.303381226995675,7.8621301380601203,-32.98990614757335,-36.639458788336484,-49.365301321448982,-43.711759932955118,13.903164993683387,-13.895068755667134,-9.2770956375569096,-29.155478165305059,-22.733602910299414,11.75597509930334,24.906068898616095,-6.6950950768379789,-20.485846104374808,-35.531030595659111,-61.780599272700719,7.9736126816492696,-85.521112131194286,-5.6466163075119429,-31.784615437544851,-22.925574516484293,-22.519551691612804,-41.43326727515884,-12.956883996498352,-37.830163956374847,-17.855211146830527,-25.983080214548213,-102.39391496109403,4.6364120835663005,-4.3428839597113544,-2.9044420723656752,-15.393548943675546],"y":[-3.5955634316227481,-18.454902385065633,-2.2762042277845782,-22.988055285511653,-17.049404438145107,5.4367982422100924,-2.4575534554864644,-28.905047051923471,-29.714133550684558,-42.194399641114359,-28.784930796636726,-31.711753004886926,2.6126640065207871,-4.9823230625042871,-26.345861932474723,-37.190874143682485,-8.910420181859493,-33.34374093616394,-38.897311514680496,7.3689305605667252,-22.834144903678531,-5.7422526720491094,-10.69621554450223,-19.861362880529022,-43.679510982042714,-15.385088401874569,-2.4390984462524665,-7.3510848922776963,-13.830093225645978,-13.900258331458076,-37.802339851419227,-16.724157542256297,-22.815792018062378,0.52229768895062001,-2.4793246304743826,-13.97186396151073,-10.967033624533277,-36.308280377162014,-23.126274199928069,-6.8265805134160882,-15.324999764798754,-5.9601316259587174,-11.321058429865072,-21.805975153930479,-20.750916982367315,-15.097949079190482,12.777576750323156,5.6112583402930021,11.146882586374231,-6.2895663198423977,-3.8675919238973675,7.2289843525602144,1.0946618463391895,6.4584853944447076,4.1011965615048709,2.181550784233258,-10.220070766111489,6.9060464757610793,-8.2350274778196582,-8.9963167534846971,-3.5754153220697109,4.1737835792679965,-4.1076590156732928,-4.2935416741130927,-9.900460538596894,-9.7619597414821957,1.7423620306954803,-8.9481316173422485,-34.831062643936662,-16.136970256625656,-20.961182795688373,-12.78235028956238,-24.758834102092496,-35.164363163545538,5.9070687397584036,-2.4982195483807423,7.4877748802991917,-6.3258140125276112,-11.061258100511438,-5.009463700349384,0.15280141128043312,-15.972655079375413,0.76359111412383995,-5.1363752765049107,-11.605766815515979,-0.89425161600638303,7.8332489852057448,10.181272816427972,-7.0897280356372239,-10.196596897017219,-5.6946941768972401,-7.2375163011914365,-18.285890906291208,3.8468281073730921,-7.9435274891843486,-19.835587323951369,-12.993700187293665,-9.8777615484767267,9.3684066240849706,-9.0562758334554214,-23.639367622870957,-26.128725386630094,-10.386334008625155,-11.741556359997773,0.15839405428580927,4.1134998805633156,-4.110355772192416,-3.7905097161647099,-16.014218151081145,-16.254439742863717,-3.0195283297016782,-19.77507179154059,-20.987553211055161,-13.152392860386728,-10.821346468190468,56.592355808639439,2.6414583349846192,-7.7803234904832443,-4.8786512086210427,-5.7674148317643699],"z":[9.552155921371682,30.134904397985906,5.8458470548211627,9.0916299245509453,13.762935802907878,4.3365658899546533,-2.6542624786244486,30.076658962956369,12.42100957350797,56.299688921095758,18.69287535535662,-3.0899121032028218,-8.8897743582114845,-4.082014995773692,22.744393372909421,45.397646136295791,11.774696119315111,9.7412800602724285,8.3050293458811932,2.8998000552839907,28.625771329576068,-0.44729574801295485,9.8242757564706622,-9.475506338336471,21.006606385801195,3.7623346571735996,8.738976083393025,9.7501933083755752,-9.2318614413778164,-1.3410265385812139,20.588076699645839,-4.5672483565265063,-18.323898438206463,6.6988656607678632,2.4957317742644451,15.061191892943715,9.9329934924727521,21.927823925609488,18.888271482099736,12.623918512900275,6.094391670630416,-1.0199034056479424,-3.1304120014383727,4.0970834172202819,11.095666132478678,9.7996503763025284,13.354540317721131,-3.3672409374951373,4.87278924532266,-5.1285306596756364,1.211063092408394,-6.8426795459805536,-6.2204424114514358,-1.9757295657532619,-4.2010549647915285,-5.3243851059286982,-2.2835114243146544,-9.4020167149344136,-18.527975372329308,13.053998737282322,-6.838200904491341,-9.3471401674434755,-8.2271545738497327,-8.2101853481377169,-4.1465382968777567,4.0161126277112853,-13.546207284846957,-15.626058806517076,9.5595040146521697,9.754139933972148,-5.6508364152339619,-7.5095003854633777,-9.9232031571888655,6.8858244832178874,-5.1173616363476659,-5.0423155889151872,-4.0047732012797415,-8.4945105204678253,-16.258614331679169,-11.210805877127259,-24.16380044823573,16.495746207290125,0.49807892174108936,4.2851596351840868,-20.120449058801945,-28.983723576319974,-12.978825619001306,-1.7767947004951241,1.9329682394086058,-2.3017533102964287,-23.118774028923013,5.0001546306185674,1.5674664873472228,-2.4389717050033144,-16.551788577411561,-12.668869342124077,-32.057529058290314,-25.871216674855159,3.8866644675897906,-0.55395895375002624,7.479410732666004,-23.215433963644191,-25.146916791366912,-65.368138283739157,-1.0491677073652159,-5.3864656617232614,-14.362063679995337,-9.8309738314224084,-31.975261560871111,-14.781116793678022,-23.605320484149875,-21.113061553104895,-16.583622245991684,-11.925790662734352,-16.826476582088183,12.992494855101654,-0.11428128033672981,-12.944256622313199,-7.1800799827503914,1.5732485170204491],"type":"scatter3d","mode":"markers","name":"Cancer","marker":{"color":"rgba(213,94,0,1)","size":[55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55],"sizemode":"area","line":{"color":"rgba(213,94,0,1)"}},"textfont":{"color":"rgba(213,94,0,1)","size":55},"error_y":{"color":"rgba(213,94,0,1)","width":55},"error_x":{"color":"rgba(213,94,0,1)","width":55},"line":{"color":"rgba(213,94,0,1)","width":55},"frame":null},{"x":[7.0436237009028213,27.107728078838186,-6.6338348151104132,5.6026501078608826,0.6659742694746219,9.1055572195273911,-3.295230304681843,2.5530828673970634,-29.155224165803613,9.0462680056273825,50.277539652062337,3.6808374916347408,-4.8112806422945518,32.473247334427086,-51.151832979540785,-0.92222095564601292,-6.8010970987808514,21.520123422550203,17.214319543851655,-6.3385161598594424,21.445112159342976,-105.14895670214993,-7.7640945277618227,24.303587044040476,15.110224992610004,13.889869777766496,6.7666906084121949,-34.936750086162782,17.901344444084057,26.50740612901587,-44.972127856621825,-87.908032691139823,5.5173511176238001,-10.129190148461273,-34.013023399282254,-10.472647456709632,-7.0351545954105683,24.553217120849425,12.068282730146894,20.984059654120831,14.755229907512708,23.836466430694614,-28.035597981722368,-6.6482218887861277,-73.076554449244682,-10.872221198743038,35.28547348441699,3.754753514938963,11.766433774726154,3.2807537243065759,39.389101916449626,21.318669448424991,31.446688881917453,22.398203803816266,25.013283378388007,49.331931135115568,44.795305258894587,26.715844113257699,23.030824901434226,3.0797923792007063,29.84861999350678,28.382947651993724,43.96054930633003,28.213347899846379,15.13475032523735,19.695534238408879,17.162918104272965,15.907874263700563,36.158208449336847,22.791934994031042,27.172002414163963,7.3963043258578773,7.3780960801893469,33.07584314925662,14.933774794718602,25.163202468313948,19.094011301520457,36.251520939601129,39.278203983919376,39.582731452349705,50.004679196243309,40.591131111031963,35.293864005699945,20.125232744641526,36.033686882008972,10.845760323372211,25.293443560099696,59.804522921851763,46.950331807486961,20.612841077678318,38.312330712913543,18.093030453372346,25.665702847711632,28.037458669189359,9.7453246047776467],"y":[11.392939923254398,12.793767798401863,-2.6463754375667725,-12.776764434450387,-1.2607275823460773,3.6963383845382944,17.930217706734254,19.762134770611159,28.611389450149257,-2.878089785954788,1.7077026475849204,14.39361380292293,11.001176685582283,1.3581969126646918,47.034516078696583,19.228933073133806,20.852331374054298,0.93445591336028611,8.3878680380400485,-9.1804578907550241,6.5789745231796939,76.796399166183235,11.852019995095141,7.8132331222460278,5.5285882733538143,5.2256673832520439,7.4351733944624296,38.646682411877279,12.919975301081552,2.3857905235165533,43.460934742761516,47.309234809550176,-0.10170333428618061,8.7051277001915572,48.553386991593989,12.406977357248376,33.295757599794996,15.131867171840753,16.077254287732377,11.632685020534668,22.810384075704913,11.453369696861351,21.00795863377154,22.95757290137982,45.234117232289897,25.985593414547278,-1.4649459895903925,34.02075539915068,24.834709536773641,24.627523453997327,8.9548164203216736,22.860651485033451,7.4175631206644805,14.121502300872461,26.438460471141408,10.261855300502537,11.103477498866543,14.672948700458655,17.768078739076913,6.5201880644684334,9.8924640155581098,21.673530534276448,11.07564774010468,12.325944834115736,18.40144669614924,19.08782970194402,26.295392791821911,26.746000392896711,3.5463356463322837,22.404689824672595,19.020775745519483,22.592791862800834,8.3148290975400396,24.291707528517485,28.184424420099891,19.395766584605123,13.408256392365013,3.33340825989352,11.361536097761016,7.6805184286355574,-1.5476097719696629,-1.5511334689745957,-8.4056565503114715,2.2997429773890308,-1.7186576068465658,-29.023786884794045,-17.942782886983338,5.1150317619000294,-0.099581539229439422,3.3225957407849802,-12.207174565507136,-10.465746717280929,-18.298493413828862,-15.179514617757883,-2.7268400573980944],"z":[7.9649364890700127,2.6542955507450632,3.037081307912068,-3.4987405187492393,-0.26744003162289648,-7.2222358478826667,-5.2006365776753531,-3.1567069204692508,6.9934117588266327,1.6671732894078279,-1.2197565466353995,3.5027402483755812,-1.8406269454570787,-3.9719838852872646,5.9751350227802122,4.9587009204982566,7.2785124092954945,2.9712152189557854,-2.1204162366111516,4.8159664583342563,1.3776395372834624,8.5486184331849699,3.3147177517657131,-2.7028058391200966,8.4627764072584544,1.575026992975725,0.0078276959408443893,10.891665160852186,4.2138082270614277,2.995978838873484,5.0073556714835021,14.123505269358755,4.455886946097511,6.7324922934149098,6.0883992704086394,7.5363601689358291,6.7054746189386139,-1.6956687993563839,-2.725978927769388,0.9397102642594094,2.2890553485828806,3.82364880212186,5.6598604404477193,6.4178018515003696,5.3763948596635771,3.7595867641314764,0.97091821452617555,2.8007332680525803,4.0511965405881778,2.490882284565632,2.781891489019233,1.246937806366883,-0.11914475319750806,-0.73963899224145246,4.9674045682966224,2.5360670926055775,1.163343512969863,0.50359915263802935,1.8515808826042157,5.5254201873888382,-0.19063486572983285,1.6861620218751285,2.4461904047560021,2.9580937897952673,0.71478704633121859,-0.93253411995532531,8.2227444490659902,5.1692145301887011,2.1155659126286279,3.4764459802705878,1.6468790140876683,2.2051747954473311,1.7102836010884404,6.2958802649587211,2.5273644042999717,3.1888376362152702,4.1627127733567537,1.1507742244964232,-0.9076964414839449,-0.16941026831651204,-4.0527269419519234,-1.1694824344747667,-2.2751806972346635,-5.9766523031633199,-9.4553847157067192,-0.95694396868991416,-30.432702229133625,-0.53078196928211907,0.70731605016176435,0.96745899393986889,-2.8083505588892783,4.3073648992784372,-7.3585032360789286,-5.121142179727558,-6.685410784316784],"type":"scatter3d","mode":"markers","name":"Normal","marker":{"color":"rgba(0,114,178,1)","size":[55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55],"sizemode":"area","line":{"color":"rgba(0,114,178,1)"}},"textfont":{"color":"rgba(0,114,178,1)","size":55},"error_y":{"color":"rgba(0,114,178,1)","width":55},"error_x":{"color":"rgba(0,114,178,1)","width":55},"line":{"color":"rgba(0,114,178,1)","width":55},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="principal-component-analysis-pca" class="slide level2">
+<h2>Principal Component Analysis (PCA)</h2>
+<ul>
+<li>PCA finds a new coordinate system</li>
+<li>New directions called <code>Principal Components</code></li>
+<li>Each PC is a combination/rotation of other ones</li>
+<li>PCs ordered based variability of the data</li>
+</ul>
+</section>
+<section id="simple-pca-example" class="slide level2">
+<h2>Simple PCA example</h2>
+<ul>
+<li>Make a “1D” dataset in two dimensions</li>
+<li>Data lies along a straight line with some noise</li>
+</ul>
+
+<img data-src="meetup-10_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<section id="simple-pca-example-1" class="slide level2">
+<h2>Simple PCA Example</h2>
+<ul>
+<li>PCA looks for vectors along which the “variance” is maximized</li>
+</ul>
+
+<img data-src="meetup-10_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
+<section id="simple-pca-example-2" class="slide level2">
+<h2>Simple PCA Example</h2>
+<ul>
+<li>Project data points onto component</li>
+</ul>
+
+<img data-src="meetup-10_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<section id="find-the-variance" class="slide level2">
+<h2>Find the Variance</h2>
+<ul>
+<li>Project data points onto component</li>
+</ul>
+
+<img data-src="meetup-10_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
+<section id="looking-at-multiple-projections" class="slide level2">
+<h2>Looking at Multiple Projections</h2>
+<ul>
+<li>Any projection is possible</li>
+</ul>
+
+<img data-src="meetup-10_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
+<section id="first-principal-component" class="slide level2">
+<h2>First Principal Component</h2>
+<ul>
+<li>PC1 maximizes variance</li>
+</ul>
+
+<img data-src="meetup-10_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
+<section id="subsequent-projections-repeat-process" class="slide level2">
+<h2>Subsequent Projections Repeat Process</h2>
+<ul>
+<li>PC1 is the direction with the most variance</li>
+<li>PC2 is perpendicular to PC1, most variance</li>
+<li>PC3 is perpendicular to PC1 and PC2, most variance</li>
+<li><span class="math inline">\(N\)</span> dimensional dataset has <span class="math inline">\(N\)</span> PCs</li>
+</ul>
+</section>
+<section id="why-is-it-dim.-reduction" class="slide level2">
+<h2>Why is it Dim. Reduction?</h2>
+<ul>
+<li>Each PC is a variable</li>
+<li>You can discard low variance PCs</li>
+</ul>
+
+<img data-src="meetup-10_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
+<section id="picking-a-dimension" class="slide level2">
+<h2>Picking a Dimension</h2>
+<ul>
+<li>You can discard low variance PCs</li>
+<li>Use “Elbow” of plot to pick cutoff</li>
+</ul>
+
+<img data-src="meetup-10_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section>
+<section id="australian-atheletes-example" class="slide level2">
+<h2>Australian Atheletes Example</h2>
+
+<img data-src="meetup-10_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section>
+<section id="athletes-pcs" class="slide level2">
+<h2>Athletes PCs</h2>
+
+<img data-src="meetup-10_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section>
+<section id="pca-clusters" class="slide level2">
+<h2>PCA Clusters</h2>
+
+<img data-src="meetup-10_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section>
+<section id="pc-clusters" class="slide level2">
+<h2>PC Clusters</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>PC1: +Size, -Leanness (Sex)</li>
+<li>PC2: +Size, -Red Blood Cells</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="meetup-10_files/figure-revealjs/unnamed-chunk-17-1.png" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="sports" class="slide level2">
+<h2>Sports</h2>
+
+<img data-src="meetup-10_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch"></section>
+<section id="sports-clusters" class="slide level2">
+<h2>Sports Clusters</h2>
+<ul>
+<li>400m, gymnasts, tennis players have low PC2</li>
+<li>Netball, Field have high PC2</li>
+<li>Rowers, Sprinters, Swimmers, Water Polo in the middle</li>
+</ul>
+</section>
+<section id="higher-pcs-contrast" class="slide level2">
+<h2>Higher PCs Contrast</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>PC3: +Body Fat, RBCs, -Height</li>
+<li>PC4: +Height, Fat, RBCs, -BMI</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="meetup-10_files/figure-revealjs/unnamed-chunk-19-1.png" width="576"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="sport-clusters-2" class="slide level2">
+<h2>Sport Clusters 2</h2>
+
+<img data-src="meetup-10_files/figure-revealjs/unnamed-chunk-20-1.png" width="960" class="r-stretch"></section>
+<section id="how-to-make-these-plots-in-r" class="slide level2">
+<h2>How to make these plots in R</h2>
+<ul>
+<li><code>prcomp</code> and <code>scale</code></li>
+<li><code>retx</code> keyword calcualtes embeddings</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>aus_fit <span class="ot">=</span> aus_athletes <span class="sc">|&gt;</span> </span>
+<span id="cb2-2"><a></a>  <span class="fu">select</span>(<span class="fu">where</span>(is.numeric))  <span class="sc">|&gt;</span>  </span>
+<span id="cb2-3"><a></a>  <span class="fu">prcomp</span>(<span class="at">scale =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb2-4"><a></a></span>
+<span id="cb2-5"><a></a><span class="co"># or</span></span>
+<span id="cb2-6"><a></a><span class="co"># gets rid of mean and rescales variance</span></span>
+<span id="cb2-7"><a></a></span>
+<span id="cb2-8"><a></a>aus_fit <span class="ot">=</span> aus_athletes <span class="sc">|&gt;</span> </span>
+<span id="cb2-9"><a></a>  <span class="fu">select</span>(<span class="fu">where</span>(is.numeric))  <span class="sc">|&gt;</span>  </span>
+<span id="cb2-10"><a></a>  <span class="fu">scale</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb2-11"><a></a>  <span class="fu">prcomp</span>(<span class="at">retx =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="contents-of-fit-object" class="slide level2">
+<h2>Contents of fit object</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>aus_fit</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Standard deviations (1, .., p=11):
+ [1] 2.23404856 1.59923950 1.07582851 0.94294793 0.89180307 0.65872338
+ [7] 0.32428594 0.20232605 0.15228831 0.07279582 0.03293771
+
+Rotation (n x k) = (11 x 11):
+               PC1         PC2         PC3          PC4         PC5         PC6
+rcc     0.37449926 -0.15896859  0.23456267 -0.217592671  0.23113528  0.24042584
+wcc     0.07607989  0.14643132  0.63731981 -0.193874709 -0.71219980 -0.14657450
+hc      0.38921924 -0.16930334  0.22299174 -0.204335027  0.21329896  0.14848437
+hg      0.39398646 -0.14839419  0.21826369 -0.126293900  0.24631047  0.04743775
+ferr    0.18096941  0.04022641  0.27331307  0.888524055 -0.03510540  0.31464529
+bmi     0.25688861  0.42398703  0.06970089  0.112465801  0.25980634 -0.56325123
+ssf    -0.17658747  0.52587398  0.17904388 -0.116159628  0.22401028  0.28597833
+pcBfat -0.23764689  0.47350512  0.19029580 -0.139708577  0.22171662  0.28202541
+lbm     0.39995499  0.18525045 -0.26453397  0.053428020 -0.13093113 -0.18218609
+ht      0.29428652  0.19800646 -0.42823892 -0.139098319 -0.38179742  0.52599617
+wt      0.33804701  0.38333328 -0.20061209  0.005007978 -0.04690227 -0.09473171
+                 PC7          PC8          PC9          PC10          PC11
+rcc    -0.7566898361 -0.199201778 -0.092406080  9.108309e-03 -0.0015062443
+wcc     0.0008324697 -0.016739036 -0.002971962 -1.514497e-03  0.0010625852
+hc      0.2464133051  0.745988263  0.208183403 -1.621396e-02 -0.0011660217
+hg      0.5886349450 -0.574708220 -0.139182502 -8.034653e-03  0.0053383594
+ferr   -0.0064610391  0.030403090 -0.016020513  9.893463e-05 -0.0002621549
+bmi    -0.0741855614  0.068435637 -0.076440484  5.747325e-01  0.0750846540
+ssf     0.0166623190 -0.193117005  0.689708155 -1.666579e-02  0.0348216670
+pcBfat  0.0712499174  0.171474610 -0.652105583 -1.868302e-01  0.2006538802
+lbm    -0.0507006292 -0.021952556  0.107081317 -4.884631e-01  0.6553134316
+ht      0.0791128182 -0.008239715 -0.077125160  4.837802e-01  0.0518888717
+wt     -0.0219172451  0.019877608 -0.065472528 -4.018049e-01 -0.7216136734</code></pre>
+</div>
+</div>
+</section>
+<section id="contents-of-fit-object-1" class="slide level2">
+<h2>Contents of fit object</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">str</span>(aus_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>List of 5
+ $ sdev    : num [1:11] 2.234 1.599 1.076 0.943 0.892 ...
+ $ rotation: num [1:11, 1:11] 0.3745 0.0761 0.3892 0.394 0.181 ...
+  ..- attr(*, "dimnames")=List of 2
+  .. ..$ : chr [1:11] "rcc" "wcc" "hc" "hg" ...
+  .. ..$ : chr [1:11] "PC1" "PC2" "PC3" "PC4" ...
+ $ center  : Named num [1:11] -3.77e-16 -5.22e-17 3.53e-17 -3.40e-16 -5.74e-17 ...
+  ..- attr(*, "names")= chr [1:11] "rcc" "wcc" "hc" "hg" ...
+ $ scale   : Named num [1:11] 1 1 1 1 1 1 1 1 1 1 ...
+  ..- attr(*, "names")= chr [1:11] "rcc" "wcc" "hc" "hg" ...
+ $ x       : num [1:202, 1:11] -2.07 -1.9 -3.38 -2.68 -1.8 ...
+  ..- attr(*, "dimnames")=List of 2
+  .. ..$ : NULL
+  .. ..$ : chr [1:11] "PC1" "PC2" "PC3" "PC4" ...
+ - attr(*, "class")= chr "prcomp"</code></pre>
+</div>
+</div>
+</section>
+<section id="meaning-of-components" class="slide level2">
+<h2>Meaning of Components</h2>
+<ul>
+<li><code>sdev</code> is “standard deviation” of components
+<ul>
+<li>square to get “variance”,</li>
+<li>divide by number of variables to convert to percentage</li>
+</ul></li>
+<li><code>rotation</code> is matrix where rows are Principal Components</li>
+<li><code>x</code> is matrix that contains embeddings of each data point</li>
+</ul>
+</section>
+<section id="tidy-pca" class="slide level2">
+<h2>Tidy PCA</h2>
+<ul>
+<li>Use <code>augment</code> from <code>broom</code> to make objects tidy</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>aus_fit  <span class="sc">|&gt;</span> </span>
+<span id="cb7-2"><a></a>  <span class="fu">augment</span>(aus_athletes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 202 × 25
+   .rownames   rcc   wcc    hc    hg  ferr   bmi   ssf pcBfat   lbm    ht    wt
+   &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+ 1 1          3.96   7.5  37.5  12.3    60  20.6 109.    19.8  63.3  196.  78.9
+ 2 2          4.41   8.3  38.2  12.7    68  20.7 103.    21.3  58.6  190.  74.4
+ 3 3          4.14   5    36.4  11.6    21  21.9 105.    19.9  55.4  178.  69.1
+ 4 4          4.11   5.3  37.3  12.6    69  21.9 126.    23.7  57.2  185   74.9
+ 5 5          4.45   6.8  41.5  14      29  19.0  80.3   17.6  53.2  185.  64.6
+ 6 6          4.1    4.4  37.4  12.5    42  21.0  75.2   15.6  53.8  174   63.7
+ 7 7          4.31   5.3  39.6  12.8    73  21.7  87.2   20.0  60.2  186.  75.2
+ 8 8          4.42   5.7  39.9  13.2    44  20.6  97.9   22.4  48.3  174.  62.3
+ 9 9          4.3    8.9  41.1  13.5    41  22.6  75.1   18.0  54.6  171.  66.5
+10 10         4.51   4.4  41.6  12.7    44  19.4  65.1   15.1  53.4  180.  62.9
+# ℹ 192 more rows
+# ℹ 13 more variables: sex &lt;fct&gt;, sport &lt;fct&gt;, .fittedPC1 &lt;dbl&gt;,
+#   .fittedPC2 &lt;dbl&gt;, .fittedPC3 &lt;dbl&gt;, .fittedPC4 &lt;dbl&gt;, .fittedPC5 &lt;dbl&gt;,
+#   .fittedPC6 &lt;dbl&gt;, .fittedPC7 &lt;dbl&gt;, .fittedPC8 &lt;dbl&gt;, .fittedPC9 &lt;dbl&gt;,
+#   .fittedPC10 &lt;dbl&gt;, .fittedPC11 &lt;dbl&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="plotting-embeddings" class="slide level2">
+<h2>Plotting Embeddings</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>aus_fit  <span class="sc">|&gt;</span> </span>
+<span id="cb9-2"><a></a>  <span class="fu">augment</span>(aus_athletes) <span class="sc">%&gt;%</span></span>
+<span id="cb9-3"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(.fittedPC1, .fittedPC2,<span class="at">color=</span>sex)) <span class="sc">+</span></span>
+<span id="cb9-4"><a></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="fl">1.5</span>) <span class="sc">+</span></span>
+<span id="cb9-5"><a></a>  <span class="fu">scale_color_manual</span>(</span>
+<span id="cb9-6"><a></a>    <span class="at">values =</span> <span class="fu">c</span>(<span class="at">m =</span> <span class="st">"#D55E00"</span>, <span class="at">f =</span> <span class="st">"#0072B2"</span>)</span>
+<span id="cb9-7"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb9-8"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size=</span><span class="dv">16</span>) <span class="sc">+</span></span>
+<span id="cb9-9"><a></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"PCA Coordinates for Australian Athletes"</span>,</span>
+<span id="cb9-10"><a></a>       <span class="at">x =</span> <span class="st">"PC 1"</span>, <span class="at">y=</span> <span class="st">"PC 2"</span>,<span class="at">subtitle =</span> <span class="st">"Color shows sex"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="plotting-embeddings-1" class="slide level2">
+<h2>Plotting Embeddings</h2>
+
+<img data-src="meetup-10_files/figure-revealjs/unnamed-chunk-26-1.png" width="960" class="r-stretch"></section>
+<section id="drawing-clusters" class="slide level2">
+<h2>Drawing Clusters</h2>
+
+<img data-src="meetup-10_files/figure-revealjs/unnamed-chunk-27-1.png" width="672" class="r-stretch"></section>
+<section id="drawing-clusters-1" class="slide level2">
+<h2>Drawing Clusters</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>arrow_style <span class="ot">&lt;-</span> <span class="fu">arrow</span>(</span>
+<span id="cb10-2"><a></a>  <span class="at">angle =</span> <span class="dv">20</span>, <span class="at">length =</span> grid<span class="sc">::</span><span class="fu">unit</span>(<span class="dv">8</span>, <span class="st">"pt"</span>),</span>
+<span id="cb10-3"><a></a>  <span class="at">ends =</span> <span class="st">"first"</span>, <span class="at">type =</span> <span class="st">"closed"</span></span>
+<span id="cb10-4"><a></a>)</span>
+<span id="cb10-5"><a></a>aus_fit <span class="sc">%&gt;%</span></span>
+<span id="cb10-6"><a></a>  <span class="fu">tidy</span>(<span class="at">matrix =</span> <span class="st">"rotation"</span>)  <span class="sc">|&gt;</span> </span>
+<span id="cb10-7"><a></a>  <span class="fu">pivot_wider</span>(</span>
+<span id="cb10-8"><a></a>    <span class="at">names_from =</span> <span class="st">"PC"</span>, <span class="at">values_from =</span> <span class="st">"value"</span>,</span>
+<span id="cb10-9"><a></a>    <span class="at">names_prefix =</span> <span class="st">"PC"</span></span>
+<span id="cb10-10"><a></a>  )  <span class="sc">|&gt;</span> </span>
+<span id="cb10-11"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(PC1, PC2)) <span class="sc">+</span></span>
+<span id="cb10-12"><a></a>  <span class="fu">geom_segment</span>(</span>
+<span id="cb10-13"><a></a>    <span class="at">xend =</span> <span class="dv">0</span>, <span class="at">yend =</span> <span class="dv">0</span>,</span>
+<span id="cb10-14"><a></a>    <span class="at">arrow =</span> arrow_style</span>
+<span id="cb10-15"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb10-16"><a></a>  <span class="fu">geom_text_repel</span>(<span class="fu">aes</span>(<span class="at">label =</span> column), <span class="at">hjust =</span> <span class="dv">1</span>,<span class="at">vjust=</span><span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb10-17"><a></a>  <span class="fu">xlim</span>(<span class="sc">-</span><span class="fl">0.5</span>, <span class="fl">0.5</span>) <span class="sc">+</span> <span class="fu">ylim</span>(<span class="sc">-</span><span class="fl">0.25</span>, <span class="fl">0.75</span>) <span class="sc">+</span> </span>
+<span id="cb10-18"><a></a>  <span class="fu">coord_fixed</span>() <span class="sc">+</span></span>
+<span id="cb10-19"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span><span class="dv">16</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="d-plot-using-plotly" class="slide level2">
+<h2>3D Plot Using Plotly</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">library</span>(plotly)</span>
+<span id="cb11-2"><a></a></span>
+<span id="cb11-3"><a></a>fig <span class="ot">=</span> pca_fit <span class="sc">|&gt;</span> </span>
+<span id="cb11-4"><a></a> <span class="fu">augment</span>(oc_data)  <span class="sc">|&gt;</span> </span>
+<span id="cb11-5"><a></a>  <span class="fu">bind_cols</span>(oc_group) <span class="sc">|&gt;</span> <span class="fu">plot_ly</span>(</span>
+<span id="cb11-6"><a></a>    <span class="at">x=</span><span class="sc">~</span>.fittedPC1, <span class="at">y=</span><span class="sc">~</span>.fittedPC2, <span class="at">z=</span><span class="sc">~</span>.fittedPC3, <span class="at">color =</span> <span class="sc">~</span>Cancer, <span class="at">colors =</span> <span class="fu">c</span>(<span class="st">"#D55E00"</span>, <span class="st">"#0072B2"</span>),<span class="at">size=</span><span class="dv">2</span>)</span>
+<span id="cb11-7"><a></a>fig <span class="ot">&lt;-</span> fig <span class="sc">|&gt;</span>  <span class="fu">add_markers</span>()</span>
+<span id="cb11-8"><a></a>fig <span class="ot">&lt;-</span> fig <span class="sc">|&gt;</span> <span class="fu">layout</span>(<span class="at">scene =</span> <span class="fu">list</span>(<span class="at">xaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">"PC1"</span>),</span>
+<span id="cb11-9"><a></a>                     <span class="at">yaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">'PC2'</span>),</span>
+<span id="cb11-10"><a></a>                     <span class="at">zaxis =</span> <span class="fu">list</span>(<span class="at">title =</span> <span class="st">'PC3'</span>))</span>
+<span id="cb11-11"><a></a>                     )</span>
+<span id="cb11-12"><a></a></span>
+<span id="cb11-13"><a></a>fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="d-plot-using-plotly-1" class="slide level2">
+<h2>3D Plot Using Plotly</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-63f351748ce81f68c825" style="width:960px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-63f351748ce81f68c825">{"x":{"visdat":{"3800163a211d5":["function () ","plotlyVisDat"]},"cur_data":"3800163a211d5","attrs":{"3800163a211d5":{"x":{},"y":{},"z":{},"color":{},"size":2,"colors":["#D55E00","#0072B2"],"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"type":"scatter3d","mode":"markers","inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"scene":{"xaxis":{"title":"PC1"},"yaxis":{"title":"PC2"},"zaxis":{"title":"PC3"}},"hovermode":"closest","showlegend":true},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"x":[-25.941544639546358,-29.691176801614787,-32.802781119839544,-37.296314773163978,-28.348197901874872,25.896993076790082,18.614772755726044,-2.4529319754249057,-0.38403364312826882,-25.321608328561911,-35.063330781956843,-15.954817047029241,29.525422746075133,23.060527223493452,-4.4012426220004786,-1.6289080006173688,-23.07950963879691,-12.569757102764507,-29.056779435257081,29.318044938596962,-10.048505014158128,25.680429569626028,-21.032752893633234,4.2691344771614883,1.6917751769470855,-15.448485599143277,-8.0836181364506494,31.674528244475717,16.965585340198626,19.60325639838274,-5.0004080986594124,-26.065785264816569,5.0346834308708708,7.5484168244165186,-1.1042985786087867,-3.231064844320267,-26.352773173303351,-52.119515887485512,-34.023079004206991,13.013485332012335,15.242553542828755,-14.192315019468273,-4.0328028135833289,5.6403522427466601,-10.817875366222907,-62.011653600505248,-15.15780578775338,27.249779033615884,-30.818570196445602,24.801674230434855,10.574939839643799,7.1260482735069646,4.9900869571320188,8.8971578203067523,33.063634511800764,21.069462005360222,27.795445675777994,-7.5616481620370006,14.081461813567399,-15.890629897945747,29.41269878980864,1.3239945428799293,3.3056916737745388,6.7002176167950296,6.4101350624073534,-7.2888427942670839,24.330182271770639,44.864824034853449,11.001720451974078,22.139819186484182,24.602093114398908,-23.636833106732396,0.55994456773374357,-33.797878327274169,24.108399581010346,-32.351796536247733,14.593233182744722,17.751207237071061,-26.358723467785495,-70.264116949276627,-72.357573304231849,-76.97593922024403,10.994277204456386,8.3411077879587818,-37.884269950174392,-38.497303406858833,-68.465795853136711,16.303381226995675,7.8621301380601203,-32.98990614757335,-36.639458788336484,-49.365301321448982,-43.711759932955118,13.903164993683387,-13.895068755667134,-9.2770956375569096,-29.155478165305059,-22.733602910299414,11.75597509930334,24.906068898616095,-6.6950950768379789,-20.485846104374808,-35.531030595659111,-61.780599272700719,7.9736126816492696,-85.521112131194286,-5.6466163075119429,-31.784615437544851,-22.925574516484293,-22.519551691612804,-41.43326727515884,-12.956883996498352,-37.830163956374847,-17.855211146830527,-25.983080214548213,-102.39391496109403,4.6364120835663005,-4.3428839597113544,-2.9044420723656752,-15.393548943675546],"y":[-3.5955634316227481,-18.454902385065633,-2.2762042277845782,-22.988055285511653,-17.049404438145107,5.4367982422100924,-2.4575534554864644,-28.905047051923471,-29.714133550684558,-42.194399641114359,-28.784930796636726,-31.711753004886926,2.6126640065207871,-4.9823230625042871,-26.345861932474723,-37.190874143682485,-8.910420181859493,-33.34374093616394,-38.897311514680496,7.3689305605667252,-22.834144903678531,-5.7422526720491094,-10.69621554450223,-19.861362880529022,-43.679510982042714,-15.385088401874569,-2.4390984462524665,-7.3510848922776963,-13.830093225645978,-13.900258331458076,-37.802339851419227,-16.724157542256297,-22.815792018062378,0.52229768895062001,-2.4793246304743826,-13.97186396151073,-10.967033624533277,-36.308280377162014,-23.126274199928069,-6.8265805134160882,-15.324999764798754,-5.9601316259587174,-11.321058429865072,-21.805975153930479,-20.750916982367315,-15.097949079190482,12.777576750323156,5.6112583402930021,11.146882586374231,-6.2895663198423977,-3.8675919238973675,7.2289843525602144,1.0946618463391895,6.4584853944447076,4.1011965615048709,2.181550784233258,-10.220070766111489,6.9060464757610793,-8.2350274778196582,-8.9963167534846971,-3.5754153220697109,4.1737835792679965,-4.1076590156732928,-4.2935416741130927,-9.900460538596894,-9.7619597414821957,1.7423620306954803,-8.9481316173422485,-34.831062643936662,-16.136970256625656,-20.961182795688373,-12.78235028956238,-24.758834102092496,-35.164363163545538,5.9070687397584036,-2.4982195483807423,7.4877748802991917,-6.3258140125276112,-11.061258100511438,-5.009463700349384,0.15280141128043312,-15.972655079375413,0.76359111412383995,-5.1363752765049107,-11.605766815515979,-0.89425161600638303,7.8332489852057448,10.181272816427972,-7.0897280356372239,-10.196596897017219,-5.6946941768972401,-7.2375163011914365,-18.285890906291208,3.8468281073730921,-7.9435274891843486,-19.835587323951369,-12.993700187293665,-9.8777615484767267,9.3684066240849706,-9.0562758334554214,-23.639367622870957,-26.128725386630094,-10.386334008625155,-11.741556359997773,0.15839405428580927,4.1134998805633156,-4.110355772192416,-3.7905097161647099,-16.014218151081145,-16.254439742863717,-3.0195283297016782,-19.77507179154059,-20.987553211055161,-13.152392860386728,-10.821346468190468,56.592355808639439,2.6414583349846192,-7.7803234904832443,-4.8786512086210427,-5.7674148317643699],"z":[9.552155921371682,30.134904397985906,5.8458470548211627,9.0916299245509453,13.762935802907878,4.3365658899546533,-2.6542624786244486,30.076658962956369,12.42100957350797,56.299688921095758,18.69287535535662,-3.0899121032028218,-8.8897743582114845,-4.082014995773692,22.744393372909421,45.397646136295791,11.774696119315111,9.7412800602724285,8.3050293458811932,2.8998000552839907,28.625771329576068,-0.44729574801295485,9.8242757564706622,-9.475506338336471,21.006606385801195,3.7623346571735996,8.738976083393025,9.7501933083755752,-9.2318614413778164,-1.3410265385812139,20.588076699645839,-4.5672483565265063,-18.323898438206463,6.6988656607678632,2.4957317742644451,15.061191892943715,9.9329934924727521,21.927823925609488,18.888271482099736,12.623918512900275,6.094391670630416,-1.0199034056479424,-3.1304120014383727,4.0970834172202819,11.095666132478678,9.7996503763025284,13.354540317721131,-3.3672409374951373,4.87278924532266,-5.1285306596756364,1.211063092408394,-6.8426795459805536,-6.2204424114514358,-1.9757295657532619,-4.2010549647915285,-5.3243851059286982,-2.2835114243146544,-9.4020167149344136,-18.527975372329308,13.053998737282322,-6.838200904491341,-9.3471401674434755,-8.2271545738497327,-8.2101853481377169,-4.1465382968777567,4.0161126277112853,-13.546207284846957,-15.626058806517076,9.5595040146521697,9.754139933972148,-5.6508364152339619,-7.5095003854633777,-9.9232031571888655,6.8858244832178874,-5.1173616363476659,-5.0423155889151872,-4.0047732012797415,-8.4945105204678253,-16.258614331679169,-11.210805877127259,-24.16380044823573,16.495746207290125,0.49807892174108936,4.2851596351840868,-20.120449058801945,-28.983723576319974,-12.978825619001306,-1.7767947004951241,1.9329682394086058,-2.3017533102964287,-23.118774028923013,5.0001546306185674,1.5674664873472228,-2.4389717050033144,-16.551788577411561,-12.668869342124077,-32.057529058290314,-25.871216674855159,3.8866644675897906,-0.55395895375002624,7.479410732666004,-23.215433963644191,-25.146916791366912,-65.368138283739157,-1.0491677073652159,-5.3864656617232614,-14.362063679995337,-9.8309738314224084,-31.975261560871111,-14.781116793678022,-23.605320484149875,-21.113061553104895,-16.583622245991684,-11.925790662734352,-16.826476582088183,12.992494855101654,-0.11428128033672981,-12.944256622313199,-7.1800799827503914,1.5732485170204491],"type":"scatter3d","mode":"markers","name":"Cancer","marker":{"color":"rgba(213,94,0,1)","size":[55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55],"sizemode":"area","line":{"color":"rgba(213,94,0,1)"}},"textfont":{"color":"rgba(213,94,0,1)","size":55},"error_y":{"color":"rgba(213,94,0,1)","width":55},"error_x":{"color":"rgba(213,94,0,1)","width":55},"line":{"color":"rgba(213,94,0,1)","width":55},"frame":null},{"x":[7.0436237009028213,27.107728078838186,-6.6338348151104132,5.6026501078608826,0.6659742694746219,9.1055572195273911,-3.295230304681843,2.5530828673970634,-29.155224165803613,9.0462680056273825,50.277539652062337,3.6808374916347408,-4.8112806422945518,32.473247334427086,-51.151832979540785,-0.92222095564601292,-6.8010970987808514,21.520123422550203,17.214319543851655,-6.3385161598594424,21.445112159342976,-105.14895670214993,-7.7640945277618227,24.303587044040476,15.110224992610004,13.889869777766496,6.7666906084121949,-34.936750086162782,17.901344444084057,26.50740612901587,-44.972127856621825,-87.908032691139823,5.5173511176238001,-10.129190148461273,-34.013023399282254,-10.472647456709632,-7.0351545954105683,24.553217120849425,12.068282730146894,20.984059654120831,14.755229907512708,23.836466430694614,-28.035597981722368,-6.6482218887861277,-73.076554449244682,-10.872221198743038,35.28547348441699,3.754753514938963,11.766433774726154,3.2807537243065759,39.389101916449626,21.318669448424991,31.446688881917453,22.398203803816266,25.013283378388007,49.331931135115568,44.795305258894587,26.715844113257699,23.030824901434226,3.0797923792007063,29.84861999350678,28.382947651993724,43.96054930633003,28.213347899846379,15.13475032523735,19.695534238408879,17.162918104272965,15.907874263700563,36.158208449336847,22.791934994031042,27.172002414163963,7.3963043258578773,7.3780960801893469,33.07584314925662,14.933774794718602,25.163202468313948,19.094011301520457,36.251520939601129,39.278203983919376,39.582731452349705,50.004679196243309,40.591131111031963,35.293864005699945,20.125232744641526,36.033686882008972,10.845760323372211,25.293443560099696,59.804522921851763,46.950331807486961,20.612841077678318,38.312330712913543,18.093030453372346,25.665702847711632,28.037458669189359,9.7453246047776467],"y":[11.392939923254398,12.793767798401863,-2.6463754375667725,-12.776764434450387,-1.2607275823460773,3.6963383845382944,17.930217706734254,19.762134770611159,28.611389450149257,-2.878089785954788,1.7077026475849204,14.39361380292293,11.001176685582283,1.3581969126646918,47.034516078696583,19.228933073133806,20.852331374054298,0.93445591336028611,8.3878680380400485,-9.1804578907550241,6.5789745231796939,76.796399166183235,11.852019995095141,7.8132331222460278,5.5285882733538143,5.2256673832520439,7.4351733944624296,38.646682411877279,12.919975301081552,2.3857905235165533,43.460934742761516,47.309234809550176,-0.10170333428618061,8.7051277001915572,48.553386991593989,12.406977357248376,33.295757599794996,15.131867171840753,16.077254287732377,11.632685020534668,22.810384075704913,11.453369696861351,21.00795863377154,22.95757290137982,45.234117232289897,25.985593414547278,-1.4649459895903925,34.02075539915068,24.834709536773641,24.627523453997327,8.9548164203216736,22.860651485033451,7.4175631206644805,14.121502300872461,26.438460471141408,10.261855300502537,11.103477498866543,14.672948700458655,17.768078739076913,6.5201880644684334,9.8924640155581098,21.673530534276448,11.07564774010468,12.325944834115736,18.40144669614924,19.08782970194402,26.295392791821911,26.746000392896711,3.5463356463322837,22.404689824672595,19.020775745519483,22.592791862800834,8.3148290975400396,24.291707528517485,28.184424420099891,19.395766584605123,13.408256392365013,3.33340825989352,11.361536097761016,7.6805184286355574,-1.5476097719696629,-1.5511334689745957,-8.4056565503114715,2.2997429773890308,-1.7186576068465658,-29.023786884794045,-17.942782886983338,5.1150317619000294,-0.099581539229439422,3.3225957407849802,-12.207174565507136,-10.465746717280929,-18.298493413828862,-15.179514617757883,-2.7268400573980944],"z":[7.9649364890700127,2.6542955507450632,3.037081307912068,-3.4987405187492393,-0.26744003162289648,-7.2222358478826667,-5.2006365776753531,-3.1567069204692508,6.9934117588266327,1.6671732894078279,-1.2197565466353995,3.5027402483755812,-1.8406269454570787,-3.9719838852872646,5.9751350227802122,4.9587009204982566,7.2785124092954945,2.9712152189557854,-2.1204162366111516,4.8159664583342563,1.3776395372834624,8.5486184331849699,3.3147177517657131,-2.7028058391200966,8.4627764072584544,1.575026992975725,0.0078276959408443893,10.891665160852186,4.2138082270614277,2.995978838873484,5.0073556714835021,14.123505269358755,4.455886946097511,6.7324922934149098,6.0883992704086394,7.5363601689358291,6.7054746189386139,-1.6956687993563839,-2.725978927769388,0.9397102642594094,2.2890553485828806,3.82364880212186,5.6598604404477193,6.4178018515003696,5.3763948596635771,3.7595867641314764,0.97091821452617555,2.8007332680525803,4.0511965405881778,2.490882284565632,2.781891489019233,1.246937806366883,-0.11914475319750806,-0.73963899224145246,4.9674045682966224,2.5360670926055775,1.163343512969863,0.50359915263802935,1.8515808826042157,5.5254201873888382,-0.19063486572983285,1.6861620218751285,2.4461904047560021,2.9580937897952673,0.71478704633121859,-0.93253411995532531,8.2227444490659902,5.1692145301887011,2.1155659126286279,3.4764459802705878,1.6468790140876683,2.2051747954473311,1.7102836010884404,6.2958802649587211,2.5273644042999717,3.1888376362152702,4.1627127733567537,1.1507742244964232,-0.9076964414839449,-0.16941026831651204,-4.0527269419519234,-1.1694824344747667,-2.2751806972346635,-5.9766523031633199,-9.4553847157067192,-0.95694396868991416,-30.432702229133625,-0.53078196928211907,0.70731605016176435,0.96745899393986889,-2.8083505588892783,4.3073648992784372,-7.3585032360789286,-5.121142179727558,-6.685410784316784],"type":"scatter3d","mode":"markers","name":"Normal","marker":{"color":"rgba(0,114,178,1)","size":[55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55,55],"sizemode":"area","line":{"color":"rgba(0,114,178,1)"}},"textfont":{"color":"rgba(0,114,178,1)","size":55},"error_y":{"color":"rgba(0,114,178,1)","width":55},"error_x":{"color":"rgba(0,114,178,1)","width":55},"line":{"color":"rgba(0,114,178,1)","width":55},"frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="downsides-of-pca" class="slide level2">
+<h2>Downsides of PCA</h2>
+<ul>
+<li>PCA learns a linear representation
+<ul>
+<li>Tons of other methods exist for nonlinear structures <img data-src="diffusion_maps.png" alt="Coifman et al"></li>
+</ul></li>
+</ul>
+</section>
+<section id="downsides-of-pca-1" class="slide level2">
+<h2>Downsides of PCA</h2>
+<ul>
+<li>Prone to overinterpretation</li>
+</ul>
+
+<img data-src="pca_interp.png" class="r-stretch quarto-figure-center"><p class="caption">Shalizi/November</p></section>
+<section id="downsides-of-pca-2" class="slide level2">
+<h2>Downsides of PCA</h2>
+<ul>
+<li>Prone to overinterpretation</li>
+</ul>
+
+<img data-src="pca_interp2.png" class="r-stretch quarto-figure-center"><p class="caption">Shalizi/November</p></section>
+<section id="downsides-of-pca-3" class="slide level2">
+<h2>Downsides of PCA</h2>
+<ul>
+<li>Sensitive to outliers
+<ul>
+<li>If your measurement process is not robust….</li>
+<li>Using PCA could be very misleading!</li>
+</ul></li>
+<li>There is an algorithm called robust PCA which is great these cases</li>
+</ul>
+
+<div class="quarto-auto-generated-content">
+<div class="footer footer-default">
+
+</div>
+</div>
+</section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: false,
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("https:\/\/georgehagstrom\.github\.io\/DATA608Fall2026\/");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

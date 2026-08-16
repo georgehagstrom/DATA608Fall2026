@@ -1,0 +1,37 @@
+# Quarto build artifacts
+/website/.quarto/
+/website/_site/
+/website/_freeze/
+
+# Rendered previews sitting next to sources. Deliberately scoped: docs/ is the
+# published site and its *_files figure directories MUST be committed -- a
+# bare "**/*_files/" here once broke every generated figure on the live site.
+/website/**/*_files/
+/planning/**/*_files/
+
+# Python / Jupyter
+__pycache__/
+.ipynb_checkpoints/
+.venv/
+venv/
+*.pyc
+
+# OS cruft
+.DS_Store
+__MACOSX/
+.Rhistory
+
+# Archives - notably the Brightspace course export sitting in the repo root
+# (D2LExport_*.zip, ~345MB). Keep it locally as the source of record; don't push it.
+*.zip
+*.tar
+*.tgz
+
+# Student submissions stay out of the public course repo
+/StudentWork/
+
+# Editor swap/backup files
+.*.swp
+.*.swo
+*~
+.Rproj.user

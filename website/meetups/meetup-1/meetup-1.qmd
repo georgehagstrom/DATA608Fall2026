@@ -1,6 +1,6 @@
 ---
 title: "Meetup 1: Developing a Critical Eye"
-author: "George Hagstrom"
+author: "George I. Hagstrom"
 format: revealjs
 logo: ../../images/CUNY_SPS_Logo_Wide.png
 footer: "DATA 608"
@@ -98,9 +98,8 @@ library(DT)
 :::: {.columns}
 ::: {.column width="50%"}
 - Course slack channel for messaging and rapid communications
-<!-- TODO: swap in the Fall 2026 Slack workspace + invite link -->
-- [https://cuny-msds.slack.com](https://cuny-msds.slack.com)
-- Invite Link: to be posted
+  - [https://cuny-msds.slack.com](https://cuny-msds.slack.com)
+  - [Invite Link](https://join.slack.com/t/cuny-msds/shared_invite/zt-3ans1b3dz-5HhIols06wNraCMUhZ~jXw)
 
 :::
 
@@ -171,8 +170,39 @@ Two most important textbooks:
 
 
 
+## Textbooks
 
 
+:::: {.columns}
+::: {.column width="50%"}
+
+Useful for the story/business framing
+
+4. Storytelling with data
+  - Available free online at library [Storytelling](https://onlinelibrary-wiley-com.remote.baruch.cuny.edu/doi/book/10.1002/9781119055259)
+:::
+
+::: {.column width="50%"}
+![](storytelling.png)
+:::
+
+
+## Textbooks
+
+
+:::: {.columns}
+::: {.column width="50%"}
+
+Useful for the story/business framing
+
+4. Storytelling with data
+  - Available free online at library [Storytelling](https://onlinelibrary-wiley-com.remote.baruch.cuny.edu/doi/book/10.1002/9781119055259)
+:::
+
+::: {.column width="50%"}
+![](welcome_slides/baruch_library.png)
+:::
+::::
 
 
 ## Assignments

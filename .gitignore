@@ -3,9 +3,12 @@
 /website/_site/
 /website/_freeze/
 
-# Rendered previews sitting next to sources. Deliberately scoped: docs/ is the
-# published site and its *_files figure directories MUST be committed -- a
-# bare "**/*_files/" here once broke every generated figure on the live site.
+# Local render output. The live site is published to the gh-pages branch by
+# `quarto publish gh-pages` (Pages serves that branch, not main/docs), so the
+# docs/ output-dir is just a local preview and stays untracked.
+/docs/
+
+# Rendered previews sitting next to sources
 /website/**/*_files/
 /planning/**/*_files/
 

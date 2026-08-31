@@ -3,7 +3,7 @@ title: "Story 1: Housing Policy and Affordability"
 ---
 
 ```{r}
-#| echo: FALSE
+#| include: false
 
 library(tidyverse)
 library(ggpattern)
@@ -58,25 +58,19 @@ different building classes within the same city and (2) differences in rent chan
 and left you the following figure. There are a number of problems with the figure, and it has a surprising conclusion given the recent research. Take a close look at the figure and code and list all of the ways that the figure is bad/ugly/wrong.
 
 ```{r}
+#| include: false
 
 msa = read_csv("https://raw.githubusercontent.com/georgehagstrom/DATA608Fall2026/main/website/assignments/stories/data/story_1/MSA_permits_demography.csv")
 zori = read_csv("https://raw.githubusercontent.com/georgehagstrom/DATA608Fall2026/main/website/assignments/stories/data/story_1/zori_lab1.csv")
 
 # Lets make a bad figure
 
-zori
 
 raw <- zori |>  
   mutate(year = year(date)) |> 
   group_by(cbsa,Region,year) |> 
   summarise(zori = mean(zori,na.rm=TRUE),.groups="drop") 
-raw
 
-raw |> 
-  ggplot(aes(year,zori)) +
-  geom_col(aes(fill=year)) +
-  facet_wrap(~Region)
-  
 
 
 p1 = msa |> filter(year == 2025,
@@ -84,7 +78,7 @@ p1 = msa |> filter(year == 2025,
   arrange(units_total) |> rename(RegionName = Region) |> left_join(raw,by=c('cbsa','year')) |> head(10) |> 
   ggplot(aes(RegionName,zori)) +
   geom_col_pattern(pattern = "image",
-                   pattern_filename = "/home/georgehagstrom/work/Teaching/2026_Fall/DATA608Fall2026/website/assignments/stories/data/story_1/skyscraper.png",
+                   pattern_filename="https://raw.githubusercontent.com/georgehagstrom/DATA608Fall2026/main/website/assignments/stories/data/story_1/skyscraper.png",
                    pattern_type = 'tile') +
   labs(title = "Low Permit Metros") +
   coord_cartesian(ylim = c(750, 3500)) +
@@ -101,7 +95,7 @@ p2 = msa |> filter(year == 2025,
   arrange(desc(units_total)) |> rename(RegionName = Region) |> left_join(raw,by=c('cbsa','year')) |> head(10) |> 
   ggplot(aes(RegionName,zori)) +
   geom_col_pattern(pattern = "image",
-                   pattern_filename =  "/home/georgehagstrom/work/Teaching/2026_Fall/DATA608Fall2026/website/assignments/stories/data/story_1/skyscraper.png",
+                   pattern_filename="https://raw.githubusercontent.com/georgehagstrom/DATA608Fall2026/main/website/assignments/stories/data/story_1/skyscraper.png",
                    pattern_type = 'tile') +
   labs(title="High Permit Metros") +
   coord_cartesian(ylim = c(750, 3500)) +
@@ -111,6 +105,11 @@ p2 = msa |> filter(year == 2025,
         plot.title = element_text(family = "Roboto Condensed", face="bold", size = 30, colour = "#A50026"),
   panel.grid.major = element_line(colour = "#A50026"),
   panel.border = element_rect(colour = "#A50026", fill = NA, linewidth = 1.5))
+
+
+```
+
+```{r}
 
 p1 + p2
 

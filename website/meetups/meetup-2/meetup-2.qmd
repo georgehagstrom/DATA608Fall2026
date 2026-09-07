@@ -4,6 +4,7 @@ author: "George Hagstrom"
 format: revealjs
 logo: ../../images/CUNY_SPS_Logo_Wide.png
 footer: "DATA 608"
+date: "09/07/2026"
 ---
 
 ```{r}
@@ -35,9 +36,10 @@ library(DT)
 
 ## What to do this week
 
-1. Readings: Chapter 2 of "Storytelling" and Chapter 5 of "Fundamentals"
-2. Bonus Reading: Cleveland et al 1984 Perceptual Visualization Paper
-3. Discussion: Favorite Graph
+1. Readings: Chapter 5 and 6 of "Fundamentals", Section
+1.4 of "Healy"
+2. Chapter 6 of Rougier (10 Simple Rules, helpful if you are struggling with your HW)
+3. Bonus Reading: Cleveland et al 1984 Perceptual Visualization Paper
 4. First HW due Sunday at midnight
 
 ## What Makes a Graph Good

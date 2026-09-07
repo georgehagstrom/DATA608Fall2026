@@ -58,10 +58,10 @@ different building classes within the same city and (2) differences in rent chan
 and left you the following figure. There are a number of problems with the figure, and it has a surprising conclusion given the recent research. Take a close look at the figure and code and list all of the ways that the figure is bad/ugly/wrong.
 
 ```{r}
+#| message: false
 
-
-msa = read_csv("https://raw.githubusercontent.com/georgehagstrom/DATA608Fall2026/main/website/assignments/stories/data/story_1/MSA_permits_demography.csv");
-zori = read_csv("https://raw.githubusercontent.com/georgehagstrom/DATA608Fall2026/main/website/assignments/stories/data/story_1/zori_lab1.csv");
+msa = read_csv("https://raw.githubusercontent.com/georgehagstrom/DATA608Fall2026/main/website/assignments/stories/data/story_1/MSA_permits_demography.csv")
+zori = read_csv("https://raw.githubusercontent.com/georgehagstrom/DATA608Fall2026/main/website/assignments/stories/data/story_1/zori_lab1.csv")
 
 # Lets make a bad figure
 

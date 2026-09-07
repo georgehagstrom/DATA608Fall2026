@@ -1463,291 +1463,571 @@
     "text": "Thanks!"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#week-summary",
-    "href": "meetups/meetup-6/meetup-6.html#week-summary",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Week Summary",
-    "text": "Week Summary\n\nGoal of this week: think more concretely about stories\nRead: Chapter 29 of Fundamentals, Chapter 7 of Storytelling\nHW: Data Story 3 Due on Sunday\nDiscussion: Put week 1 story in story arc format"
+    "objectID": "vignettes/dot-vignette-r.html",
+    "href": "vignettes/dot-vignette-r.html",
+    "title": "Meetup 2 Vignette (R)",
+    "section": "",
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.2.1     ✔ readr     2.1.5\n✔ forcats   1.0.1     ✔ stringr   1.5.2\n✔ ggplot2   4.0.3     ✔ tibble    3.3.0\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.1.0     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(readxl)\nlibrary(nycflights13)\nlibrary(ggthemes)\nlibrary(lattice)\n\n\nsupermarket &lt;- read_excel(\"data/supermarket.xlsx\", sheet = \"Data\")\n\ncity_rev &lt;- supermarket %&gt;%\n        group_by(City) %&gt;%\n        summarise(Revenue = sum(Revenue, na.rm = TRUE)) %&gt;%\n        arrange(Revenue) %&gt;%\n        mutate(City = factor(City, levels = .$City))\n\n\nggplot(city_rev, aes(City, Revenue)) +\n        geom_bar(stat = \"identity\") +\n        coord_flip()\n\n\n\n\n\n\n\n\n\nggplot(city_rev, aes(Revenue, City)) +\n        geom_point()\n\n\n\n\n\n\n\n\n\ncity_gender_rev &lt;- supermarket %&gt;%\n        group_by(City, Gender) %&gt;%\n        summarise(Revenue = sum(Revenue, na.rm = TRUE)) %&gt;%\n        ungroup() %&gt;%\n        mutate(City = factor(City, levels = city_rev$City))\n\n`summarise()` has regrouped the output.\nℹ Summaries were computed grouped by City and Gender.\nℹ Output is grouped by City.\nℹ Use `summarise(.groups = \"drop_last\")` to silence this message.\nℹ Use `summarise(.by = c(City, Gender))` for per-operation grouping\n  (`?dplyr::dplyr_by`) instead.\n\n\n\nggplot(city_gender_rev, aes(City, Revenue, fill = Gender)) +\n        geom_bar(stat = \"identity\", position = \"dodge\") +\n        coord_flip()\n\n\n\n\n\n\n\n\n\nggplot(city_gender_rev, aes(Revenue, City)) +\n        geom_line(aes(group = City)) +\n        geom_point(aes(color = Gender))\n\n\n\n\n\n\n\n\n\npie(flights |&gt; count(carrier) |&gt; pull(n), labels = flights |&gt; count(carrier) |&gt; pull(carrier), title = \"Fraction of flights from NYC By Carrier\")\n\nWarning in text.default(1.1 * P$x, 1.1 * P$y, labels[i], xpd = TRUE, adj =\nifelse(P$x &lt; : \"title\" is not a graphical parameter\nWarning in text.default(1.1 * P$x, 1.1 * P$y, labels[i], xpd = TRUE, adj =\nifelse(P$x &lt; : \"title\" is not a graphical parameter\nWarning in text.default(1.1 * P$x, 1.1 * P$y, labels[i], xpd = TRUE, adj =\nifelse(P$x &lt; : \"title\" is not a graphical parameter\nWarning in text.default(1.1 * P$x, 1.1 * P$y, labels[i], xpd = TRUE, adj =\nifelse(P$x &lt; : \"title\" is not a graphical parameter\nWarning in text.default(1.1 * P$x, 1.1 * P$y, labels[i], xpd = TRUE, adj =\nifelse(P$x &lt; : \"title\" is not a graphical parameter\nWarning in text.default(1.1 * P$x, 1.1 * P$y, labels[i], xpd = TRUE, adj =\nifelse(P$x &lt; : \"title\" is not a graphical parameter\nWarning in text.default(1.1 * P$x, 1.1 * P$y, labels[i], xpd = TRUE, adj =\nifelse(P$x &lt; : \"title\" is not a graphical parameter\nWarning in text.default(1.1 * P$x, 1.1 * P$y, labels[i], xpd = TRUE, adj =\nifelse(P$x &lt; : \"title\" is not a graphical parameter\nWarning in text.default(1.1 * P$x, 1.1 * P$y, labels[i], xpd = TRUE, adj =\nifelse(P$x &lt; : \"title\" is not a graphical parameter\nWarning in text.default(1.1 * P$x, 1.1 * P$y, labels[i], xpd = TRUE, adj =\nifelse(P$x &lt; : \"title\" is not a graphical parameter\nWarning in text.default(1.1 * P$x, 1.1 * P$y, labels[i], xpd = TRUE, adj =\nifelse(P$x &lt; : \"title\" is not a graphical parameter\nWarning in text.default(1.1 * P$x, 1.1 * P$y, labels[i], xpd = TRUE, adj =\nifelse(P$x &lt; : \"title\" is not a graphical parameter\nWarning in text.default(1.1 * P$x, 1.1 * P$y, labels[i], xpd = TRUE, adj =\nifelse(P$x &lt; : \"title\" is not a graphical parameter\nWarning in text.default(1.1 * P$x, 1.1 * P$y, labels[i], xpd = TRUE, adj =\nifelse(P$x &lt; : \"title\" is not a graphical parameter\nWarning in text.default(1.1 * P$x, 1.1 * P$y, labels[i], xpd = TRUE, adj =\nifelse(P$x &lt; : \"title\" is not a graphical parameter\nWarning in text.default(1.1 * P$x, 1.1 * P$y, labels[i], xpd = TRUE, adj =\nifelse(P$x &lt; : \"title\" is not a graphical parameter\n\n\nWarning in title(main = main, ...): \"title\" is not a graphical parameter\n\n\n\n\n\n\n\n\n\n\nflights |&gt; count(carrier) |&gt; arrange(desc(n)) |&gt; \n  ggplot(aes(as_factor(carrier),n)) + \n  geom_bar(stat=\"identity\") +\n  theme_bw(base_size = 20) +\n  xlab(\"Carrier\") +\n  ylab(\"Flights\") \n\n\n\n\n\n\n\n\n\nflights |&gt; count(carrier) |&gt; arrange((n)) |&gt; \n  ggplot(aes(x=n,y=as_factor(carrier),label = carrier)) + \n  geom_point(size=3) +\n  theme_bw(base_size = 20) +\n  xlab(\"Flights\") +\n  ylab(\"Carrier\") \n\n\n\n\n\n\n\n\n\nmpg |&gt; ggplot(aes(displ,hwy,shape = drv,color = drv)) +\n  geom_point(size=5) +\n  theme_clean(base_size = 18)\n\nWarning: The `size` argument of `element_line()` is deprecated as of ggplot2 3.4.0.\nℹ Please use the `linewidth` argument instead.\nℹ The deprecated feature was likely used in the ggthemes package.\n  Please report the issue at &lt;https://github.com/jrnold/ggthemes/issues&gt;.\n\n\n\n\n\n\n\n\n\n\nbarley |&gt; \n  ggplot(aes(x=yield,y=variety,color=year)) +\n  geom_point(size=2.5) +\n  facet_wrap(~site,nrow = 3) +\n  theme_bw(base_size = 14)"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#what-is-a-story",
-    "href": "meetups/meetup-6/meetup-6.html#what-is-a-story",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "What is a story?",
-    "text": "What is a story?\n\nFrom Fundamentals:\n\n\nA story is a set of observations, facts, or events, true or invented, that are presented in a specific order such that they create an emotional reaction in the audience."
+    "objectID": "meetups/meetup-2/meetup-2.html#why-are-pie-charts-terrible",
+    "href": "meetups/meetup-2/meetup-2.html#why-are-pie-charts-terrible",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Why Are Pie-Charts Terrible?",
+    "text": "Why Are Pie-Charts Terrible?\n\n“Pie Charts are Evil”\n\nChapter 2 Storytelling with Data"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#why-emotion",
-    "href": "meetups/meetup-6/meetup-6.html#why-emotion",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Why emotion?",
-    "text": "Why emotion?\n\nQuantitative culture: dismissive of stories, emotion\n\nDeemed “squishy”\n\nThis is a bad mistake\n\nEmotional response is key to how we communicate\n\nYou can tell stories while objectively presenting the truth"
+    "objectID": "meetups/meetup-2/meetup-2.html#why-are-pie-charts-terrible-1",
+    "href": "meetups/meetup-2/meetup-2.html#why-are-pie-charts-terrible-1",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Why Are Pie-Charts Terrible?",
+    "text": "Why Are Pie-Charts Terrible?\n\n\nLots of graphics advice is presented as rules\nAre there principles behind these rules?"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#how-do-stories-create-an-emotional-response",
-    "href": "meetups/meetup-6/meetup-6.html#how-do-stories-create-an-emotional-response",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "How do stories create an emotional response?",
-    "text": "How do stories create an emotional response?\n\nInitial build up of conflict and tension\nRelease of tension at the conclusion of story"
+    "objectID": "meetups/meetup-2/meetup-2.html#what-to-do-this-week",
+    "href": "meetups/meetup-2/meetup-2.html#what-to-do-this-week",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "What to do this week",
+    "text": "What to do this week\n\nReadings: Chapter 5 and 6 of “Fundamentals”, Section 1.4 of “Healy”\nChapter 6 of Rougier (10 Simple Rules, helpful if you are struggling with your HW)\nBonus Reading: Cleveland et al 1984 Perceptual Visualization Paper\nFirst HW due Sunday at midnight"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#example-where-are-the-cancers",
-    "href": "meetups/meetup-6/meetup-6.html#example-where-are-the-cancers",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Example: Where are the Cancers?",
-    "text": "Example: Where are the Cancers?\n\nGelman Hill Teaching Stats\nLowest counties all rural"
+    "objectID": "meetups/meetup-2/meetup-2.html#what-makes-a-graph-good",
+    "href": "meetups/meetup-2/meetup-2.html#what-makes-a-graph-good",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "What Makes a Graph Good",
+    "text": "What Makes a Graph Good\n\nWe use graphs to communicate quantitative data\nA graph is good if it successfully conveys quantitative data to the reader\nCan we break down visualizations into a series of elementary perceptual tasks and then test how good humans are at completing each one?\nResearch program led by many, William Cleveland most prominent"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#why-lowest-cancer-in-rural-areas",
-    "href": "meetups/meetup-6/meetup-6.html#why-lowest-cancer-in-rural-areas",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Why Lowest Cancer in Rural Areas?",
-    "text": "Why Lowest Cancer in Rural Areas?\n\nMaybe rural counties have lower pollution?"
+    "objectID": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks",
+    "href": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Elementary Perceptual Tasks",
+    "text": "Elementary Perceptual Tasks\n\n\n\nPosition along a common scale\nPosition along non-aligned scales\nLength\nDirection\nAngle\nArea\nVolume\nCurvature\nShading\nHue/Saturation"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#why-lowest-cancer-in-rural-areas-1",
-    "href": "meetups/meetup-6/meetup-6.html#why-lowest-cancer-in-rural-areas-1",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Why Lowest Cancer in Rural Areas?",
-    "text": "Why Lowest Cancer in Rural Areas?\n\nMaybe rural counties have lower pollution?\nHealthier, fresher food?"
+    "objectID": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-1",
+    "href": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-1",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Elementary Perceptual Tasks",
+    "text": "Elementary Perceptual Tasks\n\n\n\nPosition along a common scale\nPosition along non-aligned scales\nLength\nDirection\nAngle\nArea\nVolume\nCurvature\nShading\nHue/Saturation"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#why-lowest-cancer-in-rural-areas-2",
-    "href": "meetups/meetup-6/meetup-6.html#why-lowest-cancer-in-rural-areas-2",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Why Lowest Cancer in Rural Areas?",
-    "text": "Why Lowest Cancer in Rural Areas?\n\nMaybe rural counties have lower pollution?\nHealthier, fresher food?\nLow stress, active lifestyle?"
+    "objectID": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-2",
+    "href": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-2",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Elementary Perceptual Tasks",
+    "text": "Elementary Perceptual Tasks\n\n\n\nPosition along a common scale\nPosition along non-aligned scales\nLength\nDirection\nAngle\nArea\nVolume\nCurvature\nShading\nHue/Saturation"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#why-lowest-cancer-in-rural-areas-3",
-    "href": "meetups/meetup-6/meetup-6.html#why-lowest-cancer-in-rural-areas-3",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Why Lowest Cancer in Rural Areas?",
-    "text": "Why Lowest Cancer in Rural Areas?\n\nMaybe rural counties have lower pollution?\nHealthier, fresher food?\nLow stress, active lifestyle?\n\nShall we fund a big study to investigate???"
+    "objectID": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-3",
+    "href": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-3",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Elementary Perceptual Tasks",
+    "text": "Elementary Perceptual Tasks\n\n\n\nPosition along a common scale\nPosition along non-aligned scales\nLength\nDirection\nAngle\nArea\nVolume\nCurvature\nShading\nHue/Saturation"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#plot-twist",
-    "href": "meetups/meetup-6/meetup-6.html#plot-twist",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Plot Twist",
-    "text": "Plot Twist\n\nGelman Hill Bag of Tricks\nRural counties also have the highest death rates!"
+    "objectID": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-4",
+    "href": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-4",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Elementary Perceptual Tasks",
+    "text": "Elementary Perceptual Tasks\n\n\n\nPosition along a common scale\nPosition along non-aligned scales\nLength\nDirection\nAngle\nArea\nVolume\nCurvature\nShading\nHue/Saturation"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#thought-experiment-consider-a-small-county",
-    "href": "meetups/meetup-6/meetup-6.html#thought-experiment-consider-a-small-county",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Thought Experiment: Consider a small county",
-    "text": "Thought Experiment: Consider a small county\n\nThe county has 100 people\nIf it has 1 kidney cancer death in the decade, it’s rate will be by far the highest in the country\nIf it has 0 deaths, it’s rate will be the lowest in the country"
+    "objectID": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-5",
+    "href": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-5",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Elementary Perceptual Tasks",
+    "text": "Elementary Perceptual Tasks\n\n\n\nPosition along a common scale\nPosition along non-aligned scales\nLength\nDirection\nAngle\nArea\nVolume\nCurvature\nShading\nHue/Saturation"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#variance-of-a-binomial-distribution",
-    "href": "meetups/meetup-6/meetup-6.html#variance-of-a-binomial-distribution",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Variance of a binomial distribution",
-    "text": "Variance of a binomial distribution\n\nprobability \\(p\\) of dying from kidney cancer\nrate \\(\\hat{r}=\\frac{m}{n}\\) observed deaths divided by population \\[\n\\mathrm{var}(\\hat{r}) = \\frac{p(1-p)}{n}\n\\]\nBig \\(n\\) close to mean\nExpect small counties to dominate the extremes"
+    "objectID": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-6",
+    "href": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-6",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Elementary Perceptual Tasks",
+    "text": "Elementary Perceptual Tasks\n\n\n\nPosition along a common scale\nPosition along non-aligned scales\nLength\nDirection\nAngle\nArea\nVolume\nCurvature\nShading\nHue/Saturation"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#be-skeptical-of-maps",
-    "href": "meetups/meetup-6/meetup-6.html#be-skeptical-of-maps",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Be skeptical of maps",
-    "text": "Be skeptical of maps\n\nThis phenomenon isn’t unique to this variable\nSee this funnel shape all the time!"
+    "objectID": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-7",
+    "href": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-7",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Elementary Perceptual Tasks",
+    "text": "Elementary Perceptual Tasks\n\n\n\nPosition along a common scale\nPosition along non-aligned scales\nLength\nDirection\nAngle\nArea\nVolume\nCurvature\nShading\nHue/Saturation"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#aside",
-    "href": "meetups/meetup-6/meetup-6.html#aside",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Aside",
-    "text": "Aside\n\nFunnel plot also good for showing bias in research studies\nEffect size gets small when study is bigger"
+    "objectID": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-8",
+    "href": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-8",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Elementary Perceptual Tasks",
+    "text": "Elementary Perceptual Tasks\n\n\n\nPosition along a common scale\nPosition along non-aligned scales\nLength\nDirection\nAngle\nArea\nVolume\nCurvature\nShading\nHue/Saturation"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#story-arc",
-    "href": "meetups/meetup-6/meetup-6.html#story-arc",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Story Arc",
-    "text": "Story Arc\n\nOpening: Why are Cancer rates lowest in rural counties?\nChallenge: They are also highest in rural counties!\nAction: Use stats, binomial variance formula\nResolution: Be wary when comparing unequally sized groups"
+    "objectID": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-9",
+    "href": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-9",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Elementary Perceptual Tasks",
+    "text": "Elementary Perceptual Tasks\n\n\n\nPosition along a common scale\nPosition along non-aligned scales\nLength\nDirection\nAngle\nArea\nVolume\nCurvature\nShading\nHue/Saturation"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#story-arcs",
-    "href": "meetups/meetup-6/meetup-6.html#story-arcs",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Story Arcs",
-    "text": "Story Arcs\n\nA story arc is a pattern which a story takes\nIt is designed to build and then resolve conflict\nThere are several different structures for arcs"
+    "objectID": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-10",
+    "href": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-10",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Elementary Perceptual Tasks",
+    "text": "Elementary Perceptual Tasks\n\n\n\nPosition along a common scale\nPosition along non-aligned scales\nLength\nDirection\nAngle\nArea\nVolume\nCurvature\nShading\nHue/Saturation"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#arc-1",
-    "href": "meetups/meetup-6/meetup-6.html#arc-1",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Arc 1",
-    "text": "Arc 1\n\nOpening\nChallenge\nAction\nResolution"
+    "objectID": "meetups/meetup-2/meetup-2.html#some-perceptual-tasks-are-easier",
+    "href": "meetups/meetup-2/meetup-2.html#some-perceptual-tasks-are-easier",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Some Perceptual Tasks are Easier",
+    "text": "Some Perceptual Tasks are Easier\n\nPosition along a common axis is the best\nPercentage of major errors:"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#arc-2",
-    "href": "meetups/meetup-6/meetup-6.html#arc-2",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Arc 2",
-    "text": "Arc 2\n\nLead: Give away main point\nDevelopment: Introduction and details\nResolution: Return to main point and moral"
+    "objectID": "meetups/meetup-2/meetup-2.html#some-perceptual-tasks-are-easier-1",
+    "href": "meetups/meetup-2/meetup-2.html#some-perceptual-tasks-are-easier-1",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Some Perceptual Tasks are Easier",
+    "text": "Some Perceptual Tasks are Easier\n\nPosition along a common axis is the best\nError"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#arc-2-applied",
-    "href": "meetups/meetup-6/meetup-6.html#arc-2-applied",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Arc 2 applied",
-    "text": "Arc 2 applied\n\nLead: Maps are biased because of population heterogeneities\nDevelopment: You can draw contradictory conclusions from maps. They can show that rural living both prevents and causes Kidney Cancer. This is because rural counties have high variance\nResolution: This issue plays a role whenever you compare groups of different sizes. Always consider standard errors!"
+    "objectID": "meetups/meetup-2/meetup-2.html#overall-ranking",
+    "href": "meetups/meetup-2/meetup-2.html#overall-ranking",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Overall Ranking",
+    "text": "Overall Ranking\n\n\n\nPosition along a common axis\nPosition along an uncommon axis\nLength, Direction, Angle\nArea\nShading, Color Saturation\nVolume, Curvature\n\n\n\n\n\nMunzner 2014"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#arc-2-applied-alt",
-    "href": "meetups/meetup-6/meetup-6.html#arc-2-applied-alt",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Arc 2 applied (alt)",
-    "text": "Arc 2 applied (alt)\n\nLead: All maps lie to you\nDevelopment: You can draw contradictory conclusions from maps. They can show that rural living both prevents and causes Kidney Cancer. This is because rural counties have high variance\nResolution: This issue plays a role whenever you compare groups of different sizes. Always consider standard errors!"
+    "objectID": "meetups/meetup-2/meetup-2.html#implications",
+    "href": "meetups/meetup-2/meetup-2.html#implications",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Implications",
+    "text": "Implications\n\nPlot the comparisons you want to make on the same axis\nPosition can usually substitute length, direction, and angle\nAvoid 3D\nBe cautious with area\nShading and color saturation are very imprecise"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#arc-3",
-    "href": "meetups/meetup-6/meetup-6.html#arc-3",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Arc 3",
-    "text": "Arc 3\n\nAction\nBackground\nDevelopment\nClimax\nEnding"
+    "objectID": "meetups/meetup-2/meetup-2.html#dot-plots-for-1d-comparisons",
+    "href": "meetups/meetup-2/meetup-2.html#dot-plots-for-1d-comparisons",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Dot-Plots for 1D Comparisons",
+    "text": "Dot-Plots for 1D Comparisons\n\nFlights from each carrier leaving NYC in 2013"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#arc-3-1",
-    "href": "meetups/meetup-6/meetup-6.html#arc-3-1",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Arc 3",
-    "text": "Arc 3\n\nAction: Show both figures together to get into conflict immediately\nBackground: Present other examples of this and the challenges they caused\nDevelopment: Connect with population size\nClimax: Variance Formula, least squares techniques\nEnding: Highlight importance across areas"
+    "objectID": "meetups/meetup-2/meetup-2.html#dot-plots-for-comparisons",
+    "href": "meetups/meetup-2/meetup-2.html#dot-plots-for-comparisons",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Dot-Plots for Comparisons",
+    "text": "Dot-Plots for Comparisons\n\nFlights from each carrier leaving NYC in 2013"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#translating-to-figures",
-    "href": "meetups/meetup-6/meetup-6.html#translating-to-figures",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Translating to Figures",
-    "text": "Translating to Figures\n\nMap your figures to story arc\n(usually) need multiple figures"
+    "objectID": "meetups/meetup-2/meetup-2.html#dot-plots-for-comparisons-1",
+    "href": "meetups/meetup-2/meetup-2.html#dot-plots-for-comparisons-1",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Dot-Plots for Comparisons",
+    "text": "Dot-Plots for Comparisons\n\nFlights from each carrier leaving NYC in 2013"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#example-opening",
-    "href": "meetups/meetup-6/meetup-6.html#example-opening",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Example: Opening",
-    "text": "Example: Opening"
+    "objectID": "meetups/meetup-2/meetup-2.html#show-differences-directly",
+    "href": "meetups/meetup-2/meetup-2.html#show-differences-directly",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Show Differences Directly",
+    "text": "Show Differences Directly\n\nPosition is much easier to judge than length"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#example-challenge",
-    "href": "meetups/meetup-6/meetup-6.html#example-challenge",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Example: Challenge",
-    "text": "Example: Challenge"
+    "objectID": "meetups/meetup-2/meetup-2.html#show-differences-directly-1",
+    "href": "meetups/meetup-2/meetup-2.html#show-differences-directly-1",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Show Differences Directly",
+    "text": "Show Differences Directly\n\nPosition is much easier to judge than length\nThese curves have a constant height difference"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#example-action",
-    "href": "meetups/meetup-6/meetup-6.html#example-action",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Example: Action",
-    "text": "Example: Action"
+    "objectID": "meetups/meetup-2/meetup-2.html#show-differences-directly-2",
+    "href": "meetups/meetup-2/meetup-2.html#show-differences-directly-2",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Show Differences Directly",
+    "text": "Show Differences Directly\n\nAdjacent Bars Versus Dots on the same Axis\n\n\nUCR Bus. Analytics"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#example-action-1",
-    "href": "meetups/meetup-6/meetup-6.html#example-action-1",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Example: Action",
-    "text": "Example: Action"
+    "objectID": "meetups/meetup-2/meetup-2.html#show-differences-directly-3",
+    "href": "meetups/meetup-2/meetup-2.html#show-differences-directly-3",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Show Differences Directly",
+    "text": "Show Differences Directly\n\nAdjacent Bars Versus Dots on the same Axis\n\n\nUCR Bus. Analytics"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#example-resolution",
-    "href": "meetups/meetup-6/meetup-6.html#example-resolution",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Example: Resolution",
-    "text": "Example: Resolution"
+    "objectID": "meetups/meetup-2/meetup-2.html#what-to-do-about-color",
+    "href": "meetups/meetup-2/meetup-2.html#what-to-do-about-color",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "What to do About Color?",
+    "text": "What to do About Color?\n\nColor is a poor choice for precise numerical comparisons\nConsider whether you need to use it at all\nIt is very helpful for illustrating geographic patterns"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#example-resolution-1",
-    "href": "meetups/meetup-6/meetup-6.html#example-resolution-1",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Example: Resolution",
-    "text": "Example: Resolution"
+    "objectID": "meetups/meetup-2/meetup-2.html#perceptually-uniform-colormaps",
+    "href": "meetups/meetup-2/meetup-2.html#perceptually-uniform-colormaps",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Perceptually Uniform Colormaps",
+    "text": "Perceptually Uniform Colormaps\n\nColormaps attach color to number\nVisual complexity makes it easy for the colormap to create features that aren’t there or to hide features"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#example-ending",
-    "href": "meetups/meetup-6/meetup-6.html#example-ending",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Example: Ending",
-    "text": "Example: Ending"
+    "objectID": "meetups/meetup-2/meetup-2.html#colormap-example",
+    "href": "meetups/meetup-2/meetup-2.html#colormap-example",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Colormap Example",
+    "text": "Colormap Example\n\nWhich colormap renders the surface height better?\n\n\ncolorcet"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#making-figures-for-busy-people",
-    "href": "meetups/meetup-6/meetup-6.html#making-figures-for-busy-people",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Making Figures for Busy People",
-    "text": "Making Figures for Busy People\n\nMake your figure as simple as possible, but no simpler!\nThey shouldn’t need 30 minutes to decipher all the details"
+    "objectID": "meetups/meetup-2/meetup-2.html#colormap-types-sequentialperceptually-uniform",
+    "href": "meetups/meetup-2/meetup-2.html#colormap-types-sequentialperceptually-uniform",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Colormap Types: Sequential/Perceptually Uniform",
+    "text": "Colormap Types: Sequential/Perceptually Uniform\n\nMatplotlib Website"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#complexity-hid-the-story",
-    "href": "meetups/meetup-6/meetup-6.html#complexity-hid-the-story",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Complexity Hid the Story?",
-    "text": "Complexity Hid the Story?"
+    "objectID": "meetups/meetup-2/meetup-2.html#colormap-types-sequential",
+    "href": "meetups/meetup-2/meetup-2.html#colormap-types-sequential",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Colormap Types: Sequential",
+    "text": "Colormap Types: Sequential"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#build-up-to-complexity",
-    "href": "meetups/meetup-6/meetup-6.html#build-up-to-complexity",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Build up to complexity",
-    "text": "Build up to complexity\n\nSometimes a complex plot is required\nDon’t lead with complexity\n\nInstead show something simpler first\nPrimes your audience to understand the complex figure"
+    "objectID": "meetups/meetup-2/meetup-2.html#colormap-types-diverging",
+    "href": "meetups/meetup-2/meetup-2.html#colormap-types-diverging",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Colormap Types: Diverging",
+    "text": "Colormap Types: Diverging"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#start-simple",
-    "href": "meetups/meetup-6/meetup-6.html#start-simple",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Start Simple",
-    "text": "Start Simple\n\nHere show a single panel first (or aggregate over all carriers)"
+    "objectID": "meetups/meetup-2/meetup-2.html#colormap-types-qualitative",
+    "href": "meetups/meetup-2/meetup-2.html#colormap-types-qualitative",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Colormap Types: Qualitative",
+    "text": "Colormap Types: Qualitative"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#then-go-complex",
-    "href": "meetups/meetup-6/meetup-6.html#then-go-complex",
-    "title": "Meetup 6: Narrative Structure",
-    "section": "Then go Complex",
-    "text": "Then go Complex"
+    "objectID": "meetups/meetup-2/meetup-2.html#do-you-need-a-map",
+    "href": "meetups/meetup-2/meetup-2.html#do-you-need-a-map",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Do you need a map?",
+    "text": "Do you need a map?\n\nGelman 2004: All Maps of Parameter Estimates are Misleading"
   },
   {
-    "objectID": "meetups/meetup-6/meetup-6.html#thanks",
-    "href": "meetups/meetup-6/meetup-6.html#thanks",
-    "title": "Meetup 6: Narrative Structure",
+    "objectID": "meetups/meetup-2/meetup-2.html#categoriesqualitative-features",
+    "href": "meetups/meetup-2/meetup-2.html#categoriesqualitative-features",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Categories/Qualitative Features",
+    "text": "Categories/Qualitative Features\n\nHue/Color and Shape are good for differentiating categories\nCategory limit 5 or 6"
+  },
+  {
+    "objectID": "meetups/meetup-2/meetup-2.html#small-multiples-for-categories",
+    "href": "meetups/meetup-2/meetup-2.html#small-multiples-for-categories",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Small Multiples for Categories",
+    "text": "Small Multiples for Categories\n\nSuppose we want to show a relationship between many variables\nMake repeated plots with same axis that correspond to different categorical or numerical dimensions\nFacets, Trellis plots, small multiples plots, etc"
+  },
+  {
+    "objectID": "meetups/meetup-2/meetup-2.html#small-multiples-for-categories-1",
+    "href": "meetups/meetup-2/meetup-2.html#small-multiples-for-categories-1",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Small Multiples for Categories",
+    "text": "Small Multiples for Categories\n\nSuppose we want to show a relationship between many variables\nMake repeated plots with same axis that correspond to different categorical or numerical dimensions\nFacets, Trellis plots, small multiples plots, etc"
+  },
+  {
+    "objectID": "meetups/meetup-2/meetup-2.html#small-multiples-example",
+    "href": "meetups/meetup-2/meetup-2.html#small-multiples-example",
+    "title": "Meetup 2: Graphical Perception Theory",
+    "section": "Small Multiples Example",
+    "text": "Small Multiples Example"
+  },
+  {
+    "objectID": "meetups/meetup-2/meetup-2.html#thanks",
+    "href": "meetups/meetup-2/meetup-2.html#thanks",
+    "title": "Meetup 2: Graphical Perception Theory",
     "section": "Thanks!",
-    "text": "Thanks!"
+    "text": "Thanks!\n\n\n\n\nDATA 608"
   },
   {
-    "objectID": "assignments/stories/story1.html",
-    "href": "assignments/stories/story1.html",
-    "title": "Story 1: Housing Policy and Affordability",
-    "section": "",
-    "text": "For this assignment, you are assuming the role for a data scientist working for a city government and you have been tasked with providing technical advice to the mayor and city council about whether or not permitting reform could help address housing affordability. You have access to a dataset which which provides demographic and economic information at a number of different organizational levels across the country. The assignment will consist of parts where you will answer questions about visualizations that are presented to you, and other parts where you improve upon them to make them more informative or so that they tell a better story."
+    "objectID": "meetups/meetup-1/meetup-1.html#events-upcoming",
+    "href": "meetups/meetup-1/meetup-1.html#events-upcoming",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Events Upcoming",
+    "text": "Events Upcoming\n\nOnce per month (Tuesday, Wedneday, Thursday) “field trips” to New York Open Statistical Computing Meetup\nnyhackr.org"
   },
   {
-    "objectID": "assignments/stories/story1.html#overview",
-    "href": "assignments/stories/story1.html#overview",
-    "title": "Story 1: Housing Policy and Affordability",
-    "section": "",
-    "text": "For this assignment, you are assuming the role for a data scientist working for a city government and you have been tasked with providing technical advice to the mayor and city council about whether or not permitting reform could help address housing affordability. You have access to a dataset which which provides demographic and economic information at a number of different organizational levels across the country. The assignment will consist of parts where you will answer questions about visualizations that are presented to you, and other parts where you improve upon them to make them more informative or so that they tell a better story."
+    "objectID": "meetups/meetup-1/meetup-1.html#events-upcoming-1",
+    "href": "meetups/meetup-1/meetup-1.html#events-upcoming-1",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Events Upcoming!",
+    "text": "Events Upcoming!\n\nnyhackr.org"
   },
   {
-    "objectID": "assignments/stories/story1.html#background",
-    "href": "assignments/stories/story1.html#background",
-    "title": "Story 1: Housing Policy and Affordability",
-    "section": "Background",
-    "text": "Background\nIn recent years, many parts of the United States have experienced an increase in housing costs. The Harvard University Joint Center for Housing Studies published a report on the State of the Nation’s Housing in 2026. Amongst the 10 takeaways from that report include a major decline in residual income for renters earning under $30,000 dollars per year, record high median homeownership costs, and an increase in price of the cheapest rental units. High housing prices have been implicated as a cause of homelessness and other major problems in large metro areas, according to a report by the Pew Foundation.\nMany different policies have been proposed to address this issue, including permitting reform. Recent data suggests that increased permitting slows or reverses increases in housing prices, with rent declines in fast-growing sun-belt cities such as Austin being held up as exemplars of this policy, see for example Austin’s Surge of New Housing Construction Drives Down Rents, which describes the issue in Austin primarily, and New Housing Slows Rent Growth Most for Older, More Affordable Units. However, this is still an area of active research where there is much debate about the causal factors of housing costs. If you want to learn more about the nuances here are some references:\n\nE. Glaeser and J. Gyourko. The Economic Implications of Housing Supply. JEP (2018). 32:1\nV. Been, I. Gould Ellen, and K. O’Reagan. _Supply Skepticism Revisited. Housing Policy Debate. (2025). 35.1\nA. Damiano. Supply Skepticism or Supply Realism?. Housing Policy Debate. (2025). 35.1"
+    "objectID": "meetups/meetup-1/meetup-1.html#events-upcoming-2",
+    "href": "meetups/meetup-1/meetup-1.html#events-upcoming-2",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Events Upcoming!",
+    "text": "Events Upcoming!\n\nnyhackr.org"
   },
   {
-    "objectID": "assignments/stories/story1.html#problem-1-bars-and-dots",
-    "href": "assignments/stories/story1.html#problem-1-bars-and-dots",
-    "title": "Story 1: Housing Policy and Affordability",
-    "section": "Problem 1: Bars and Dots",
-    "text": "Problem 1: Bars and Dots\nConsider Figure 2 from New Housing Slows Rent Growth Most for Older, More Affordable Units:\n\n\nThis figure allows you to make two types of comparisons: (1) differences in rent changes across different building classes within the same city and (2) differences in rent changes across different cities. Which perceptual visualization tasks might you use when making these comparisons using Figure 2?\nThe data is available to you in the file pew_fig2_rent_change_class.csv, with pew_fig2_dict.qmd describing the data source and variables. Visualize this data in two different ways: (1) using a Cleveland dot plot and (2) splitting the bar-plots onto multiple axes (see UCRs dot-plot page or Wilke chapter 6 ). Compare these two images to the original Figure 2, what are the pros and cons of each?"
+    "objectID": "meetups/meetup-1/meetup-1.html#why-visualizations-matter",
+    "href": "meetups/meetup-1/meetup-1.html#why-visualizations-matter",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Why Visualizations Matter",
+    "text": "Why Visualizations Matter\n\nGraphs are the main way we communicate data\nYour visualizations are how people will remember your analysis, can make or break your recommendations to decision makers.\nTwo goals of the class:\n\nLearn how to tell stories with graphs\nLearn to make good visualizations"
   },
   {
-    "objectID": "assignments/stories/story1.html#problem-2-fixing-a-bad-figure",
-    "href": "assignments/stories/story1.html#problem-2-fixing-a-bad-figure",
-    "title": "Story 1: Housing Policy and Affordability",
-    "section": "Problem 2: Fixing a Bad Figure",
-    "text": "Problem 2: Fixing a Bad Figure\n\nAnalyze the problems with a bad figure. Your predecessor on the data team had been working on a presentation about permiting reform and left you the following figure. There are a number of problems with the figure, and it has a surprising conclusion given the recent research. Take a close look at the figure and code and list all of the ways that the figure is bad/ugly/wrong.\n\n\np1 + p2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure compares the average rent in 2025 as measured by the Zillow Observed Rent Index of the metropolitan statistical areas with the lowest number of permitted units (left) and the highest number of permitted units (right) in 2025. The metros that permitted the highest number of units had the highest rents, suggesting that permitting fewer units is the best policy.\n\n\n\n\nCreate a data story about this data. You have been given datasets with information about rent, building permits, and demographics (population and net-migration) in metropolitan statistical areas, covering a period from 2015 to 2026 (rents) and 2021 to 2025 (permits and demographics). You should create several figures (2-3) to explain whether or not building permits policy can help reduce rents. Assume that your audience is the city government at a large city in the United States (e.g. New York City). Your story must be entirely told by your figures, though you may use text sparingly in the title/subtitle and annotations to enhance your story. Provide a one to two paragraph explanation of the choices you made for your figure. Do not include exploratory figures/discussion."
+    "objectID": "meetups/meetup-1/meetup-1.html#why-do-we-need-a-class-on-this",
+    "href": "meetups/meetup-1/meetup-1.html#why-do-we-need-a-class-on-this",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Why do we need a class on this?",
+    "text": "Why do we need a class on this?\n\nPeople are not naturally good at telling stories using data"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#why-do-we-need-a-class-on-this-1",
+    "href": "meetups/meetup-1/meetup-1.html#why-do-we-need-a-class-on-this-1",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Why do we need a class on this?",
+    "text": "Why do we need a class on this?\n\nThe world is full of awful visualizations"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#why-do-we-need-a-class-on-this-2",
+    "href": "meetups/meetup-1/meetup-1.html#why-do-we-need-a-class-on-this-2",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Why do we need a class on this?",
+    "text": "Why do we need a class on this?\n\nThe world is full of awful visualizations"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#why-do-we-need-a-class-on-this-3",
+    "href": "meetups/meetup-1/meetup-1.html#why-do-we-need-a-class-on-this-3",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Why do we need a class on this?",
+    "text": "Why do we need a class on this?\n\nThe world is full of awful visualizations"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#why-do-we-need-a-class-on-this-4",
+    "href": "meetups/meetup-1/meetup-1.html#why-do-we-need-a-class-on-this-4",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Why do we need a class on this?",
+    "text": "Why do we need a class on this?\n\nThe world is full of awful visualizations"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#case-study",
+    "href": "meetups/meetup-1/meetup-1.html#case-study",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Case Study",
+    "text": "Case Study\n\nYour firm had two employees leave in May\nThis caused a backlog of work"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#case-study-1",
+    "href": "meetups/meetup-1/meetup-1.html#case-study-1",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Case Study",
+    "text": "Case Study\n\nHighlight the key features to tell a story\n\n\nStorytelling 0.3"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#course-website-and-meetup",
+    "href": "meetups/meetup-1/meetup-1.html#course-website-and-meetup",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Course Website and Meetup",
+    "text": "Course Website and Meetup\n\n\n\nBrightspace to submit homework\nCourse Meetup: Monday 8:00-9:00PM\nZoom Link"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#slack-channel",
+    "href": "meetups/meetup-1/meetup-1.html#slack-channel",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Slack Channel",
+    "text": "Slack Channel\n\n\n\nCourse slack channel for messaging and rapid communications\n\nhttps://cuny-msds.slack.com\nInvite Link"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#textbooks",
+    "href": "meetups/meetup-1/meetup-1.html#textbooks",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Textbooks",
+    "text": "Textbooks\n\n\nTwo most important textbooks:\n\nFundamentals of Data Visualization\nData Visualization: A Practical Introduction"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#textbooks-1",
+    "href": "meetups/meetup-1/meetup-1.html#textbooks-1",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Textbooks",
+    "text": "Textbooks\n\n\nTwo most important textbooks:\n\nFundamentals of Data Visualization\nData Visualization: A Practical Introduction"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#textbooks-2",
+    "href": "meetups/meetup-1/meetup-1.html#textbooks-2",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Textbooks",
+    "text": "Textbooks\n\n\n\nFor pythonistas\n\n\nScientific Visualization: Python + Matplotlib"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#textbooks-3",
+    "href": "meetups/meetup-1/meetup-1.html#textbooks-3",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Textbooks",
+    "text": "Textbooks\n\n\nUseful for the story/business framing\n\nStorytelling with data\n\n\nAvailable free online at library Storytelling"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#textbooks-4",
+    "href": "meetups/meetup-1/meetup-1.html#textbooks-4",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Textbooks",
+    "text": "Textbooks\n\n\nUseful for the story/business framing\n\nStorytelling with data\n\n\nAvailable free online at library Storytelling"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#assignments",
+    "href": "meetups/meetup-1/meetup-1.html#assignments",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Assignments",
+    "text": "Assignments\n\n6 Lab Assignments (60%)\n\nSubmit a qmd source and rendered slides to brightspace\n‘R’ or ‘python’ choice\n\n6 Figure Corrections (18%)\n\nOpportunity to correct figures from lab assignment\n\nShort Interactive Project (22%)\n\nShiny App on dataset of your choosing"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#week-plan-readings",
+    "href": "meetups/meetup-1/meetup-1.html#week-plan-readings",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Week Plan: Readings",
+    "text": "Week Plan: Readings\n\nChapters 1 and 2 of Fundamentals of Dataviz\nPreface and part of Chapter 1 of Healy’s Data Visualization:\n\nWhy look at data?\nWhat makes figures look bad?\nProblems of honesty and judgement"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#week-plan-assignments",
+    "href": "meetups/meetup-1/meetup-1.html#week-plan-assignments",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Week Plan: Assignments",
+    "text": "Week Plan: Assignments\n\nDue in two weeks: Data Story 1"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#week-plan-key-concepts",
+    "href": "meetups/meetup-1/meetup-1.html#week-plan-key-concepts",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Week Plan: Key Concepts",
+    "text": "Week Plan: Key Concepts\n\nMethods for creating a story (Storytelling)\nWhat makes a quality figure (Wilke, Healy)"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#context-purposes-of-visualizations",
+    "href": "meetups/meetup-1/meetup-1.html#context-purposes-of-visualizations",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Context: Purposes of Visualizations",
+    "text": "Context: Purposes of Visualizations\n\n\n\nExploratory\nExplanatory\nInferential"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#context-purposes-of-visualizations-1",
+    "href": "meetups/meetup-1/meetup-1.html#context-purposes-of-visualizations-1",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Context: Purposes of Visualizations",
+    "text": "Context: Purposes of Visualizations\n\n\n\nExploratory\nExplanatory\nInferential\n\n\n\n\n\nIPCC SPM1 Special Report on 1.5C"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#context-purposes-of-visualizations-2",
+    "href": "meetups/meetup-1/meetup-1.html#context-purposes-of-visualizations-2",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Context: Purposes of Visualizations",
+    "text": "Context: Purposes of Visualizations\n\n\n\nExploratory\nExplanatory\nInferential"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#context-who-what-and-how",
+    "href": "meetups/meetup-1/meetup-1.html#context-who-what-and-how",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Context: Who, What, and How",
+    "text": "Context: Who, What, and How\nBefore you begin, start with three questions\n\nWho will see your figure?\n\nYou would make different choices presenting to experts, decision makers/stakeholders, your supervisor, or the general public"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#context-who-what-and-how-1",
+    "href": "meetups/meetup-1/meetup-1.html#context-who-what-and-how-1",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Context: Who, What, and How",
+    "text": "Context: Who, What, and How\n\nFigure for Decision Makers (IPCC SPM):"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#context-who-what-and-how-2",
+    "href": "meetups/meetup-1/meetup-1.html#context-who-what-and-how-2",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Context: Who, What, and How",
+    "text": "Context: Who, What, and How\n\nFigure for other scientists (IPCC)"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#context-who-what-and-how-3",
+    "href": "meetups/meetup-1/meetup-1.html#context-who-what-and-how-3",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Context: Who, What, and How",
+    "text": "Context: Who, What, and How\n\nFigure for other scientists (IPCC)"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#context-who-what-and-how-4",
+    "href": "meetups/meetup-1/meetup-1.html#context-who-what-and-how-4",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Context: Who, What, and How",
+    "text": "Context: Who, What, and How\nBefore you begin, start with three questions\n\nWhat do you want your audience to know or do?\n\nThere needs to be a point or story beyond “this is interesting”"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#context-who-what-and-how-5",
+    "href": "meetups/meetup-1/meetup-1.html#context-who-what-and-how-5",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Context: Who, What, and How",
+    "text": "Context: Who, What, and How\n\nConsider the Mechanism\nMore details in written comms than presentations\n\n\nStorytelling"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#context-who-what-and-how-6",
+    "href": "meetups/meetup-1/meetup-1.html#context-who-what-and-how-6",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Context: Who, What, and How",
+    "text": "Context: Who, What, and How\nBefore you begin, start with three questions\n\nHow?\n\nWhat data will you use to accomplish this?\n\nDon’t hide non-supporting data\n\nTrust is built over time but destroyed in an instant\nBuilding trust is key for convincing people to take action on your recommendations, in all sorts of settings"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#the-elevator-pitch-and-big-idea",
+    "href": "meetups/meetup-1/meetup-1.html#the-elevator-pitch-and-big-idea",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "The Elevator Pitch and Big Idea",
+    "text": "The Elevator Pitch and Big Idea\n\nIf you had just 3 minutes to tell your audience what they need to know, what would you say?\n\nWhat is the overall topic/problem (get into it fast)\nWhy is it important (bring emotion into it)\nTry to find a good punchline to complete the narrative"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#big-idea-single-sentence-summary",
+    "href": "meetups/meetup-1/meetup-1.html#big-idea-single-sentence-summary",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Big Idea: Single Sentence Summary",
+    "text": "Big Idea: Single Sentence Summary\n\nConvey your unique point of view\nMust convey what is at stake"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#why-stories",
+    "href": "meetups/meetup-1/meetup-1.html#why-stories",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Why Stories?",
+    "text": "Why Stories?\n\nHumans are wired to hear and tell stories, it is how we relate\nNeuroscience research backs this up\nGood stories create synchrony across multiple brain regions between storyteller and listener"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#why-stories-1",
+    "href": "meetups/meetup-1/meetup-1.html#why-stories-1",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Why Stories?",
+    "text": "Why Stories?\n\nHumans are wired to hear and tell stories, it is how we relate\nNeuroscience research backs this up\nGood stories create synchrony across multiple brain regions between storyteller and listener"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#bad-ugly-and-wrong-figures",
+    "href": "meetups/meetup-1/meetup-1.html#bad-ugly-and-wrong-figures",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Bad, Ugly, and Wrong Figures",
+    "text": "Bad, Ugly, and Wrong Figures"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#what-makes-bad-figures-bad",
+    "href": "meetups/meetup-1/meetup-1.html#what-makes-bad-figures-bad",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "What Makes Bad Figures Bad",
+    "text": "What Makes Bad Figures Bad\n\nHealy: Aesthetic, Substantive, Perceptual\nNext weeks will address these specifically"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#what-about-great-figures",
+    "href": "meetups/meetup-1/meetup-1.html#what-about-great-figures",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "What About Great Figures?",
+    "text": "What About Great Figures?\n\nThere are no principles/rules for going from good to great\nPerfect the good first, then your creativity can help you make something great"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#what-about-great-figures-1",
+    "href": "meetups/meetup-1/meetup-1.html#what-about-great-figures-1",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "What About Great Figures?",
+    "text": "What About Great Figures?\n\nThere are no principles/rules for going from good to great\nPerfect the good first, then your creativity can help you make something great"
+  },
+  {
+    "objectID": "meetups/meetup-1/meetup-1.html#thanks",
+    "href": "meetups/meetup-1/meetup-1.html#thanks",
+    "title": "Meetup 1: Developing a Critical Eye",
+    "section": "Thanks!",
+    "text": "Thanks!\n\n\n\n\nDATA 608"
   },
   {
     "objectID": "posts/2026-08-31-Week-1-Critical-Eye.html",
@@ -1856,7 +2136,7 @@
     "href": "index.html",
     "title": "Announcements",
     "section": "",
-    "text": "Be sure to check this page regularly for updates. In addition to periodic updates about the course, slides and recordings of the weekly meetups will be posted here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 1: Developing a Critical Eye\n\n\n\n\n\nClick Here to Learn More About Week 1.\n\n\n\n\n\nAug 31, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to DATA 608\n\n\n\n\n\nImportant information on how to get started with this course. Click this post now for instructions on getting started.\n\n\n\n\n\nAug 30, 2026\n\n\n\n\n\n\nNo matching items",
+    "text": "Be sure to check this page regularly for updates. In addition to periodic updates about the course, slides and recordings of the weekly meetups will be posted here.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 2\n\n\n\n\n\nClick here for info on Week 2.\n\n\n\n\n\nSep 7, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nWeek 1: Developing a Critical Eye\n\n\n\n\n\nClick Here to Learn More About Week 1.\n\n\n\n\n\nAug 31, 2026\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to DATA 608\n\n\n\n\n\nImportant information on how to get started with this course. Click this post now for instructions on getting started.\n\n\n\n\n\nAug 30, 2026\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Announcements"
     ]
@@ -2212,7 +2492,7 @@
     "href": "modules/module2.html",
     "title": "Module 2 - Graphical Perception Theory",
     "section": "",
-    "text": "Overview and Deliverables\n\n9/7: Attend the course meetup at 8:00PM Eastern\nStory 1 is due this Sunday 9/13 at midnight!\n\nThis week focuses on types of data visualizations and the tools available for generating visualizations. The objective is understanding what type of visualization to use for the types of data that you are most likely to encounter and what tools are best for each type of visualization.\n\nReadings\n\nWilke - Chapter 5. This provides a good overview of which types of graphs to use for which type of data. The following chapters go into depth on each individual topic, so that you can use this book as a reference (if you need to plot amounts, go to chapter 6, distributions, chapter 7, etc.)\nWilliam Cleveland: Graphical Perception Theory. This is one of the foundational (review) papers in research on visualization. If you want to know the “why” for the advice given in this class, much of it has origin in the research of Cleveland and his group.\n\n\n\nMeetup\nSlides: Meetup 2 - Graphical Perception Theory\nIn this meetup we go through the basics of research on the principles behind perceptual decision making. We go through the perceptual ladder and discuss the practical implications for making visualizations.",
+    "text": "Overview and Deliverables\n\n9/7: Attend the course meetup at 8:00PM Eastern\nStory 1 is due this Sunday 9/13 at midnight!\n\nThis week focuses on types of data visualizations and the tools available for generating visualizations. The objective is understanding what type of visualization to use for the types of data that you are most likely to encounter and what tools are best for each type of visualization.\n\nReadings\n\nWilke - Chapter 5. This provides a good overview of which types of graphs to use for which type of data. The following chapters go into depth on each individual topic, so that you can use this book as a reference (if you need to plot amounts, go to chapter 6, distributions, chapter 7, etc.)\nHealy - Section 1.4. Visual Tasks and Decoding Graphs. This goes through the basics of graphical perception theory. Could be an alternative to Cleveland.\nRougier - Chapter 6: This presents 10 simple rules for figures. Helpful for your homework\nWilliam Cleveland: Graphical Perception Theory. This is one of the foundational (review) papers in research on visualization. If you want to know the “why” for the advice given in this class, much of it has origin in the research of Cleveland and his group.\n\n\n\nMeetup\nSlides: Meetup 2 - Graphical Perception Theory\nIn this meetup we go through the basics of research on the principles behind perceptual decision making. We go through the perceptual ladder and discuss the practical implications for making visualizations.",
     "crumbs": [
       "Topics",
       "2 - The Data Visualization Catalogue"
@@ -2259,564 +2539,298 @@
     "text": "Welcome to DATA 608, Knowledge and Visual Analytics.\nHere are the first steps:\n\nRead the syllabus.\nGo through the course overview materials, and complete the week 1 readings.\nMake sure you have a good visualization toolkit set up\nJoin the course Slack workspace and introduce yourself in the course slack channel (I will add you)\nAttend the first meetup on Monday August 31 at 8:00PM Eastern at the Zoom link on the schedule page.\n\nI’m looking forward to working with all of you this semester!"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#events-upcoming",
-    "href": "meetups/meetup-1/meetup-1.html#events-upcoming",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Events Upcoming",
-    "text": "Events Upcoming\n\nOnce per month (Tuesday, Wedneday, Thursday) “field trips” to New York Open Statistical Computing Meetup\nnyhackr.org"
+    "objectID": "posts/2026-09-07-Week-2.html",
+    "href": "posts/2026-09-07-Week-2.html",
+    "title": "Week 2",
+    "section": "",
+    "text": "Hello all,\nWeek 2 has arrived. After the overview and storytelling focus of Week 1, this week will focus on principles to help you make good individual visualizations. We will talk a little bit about the research behind accurate graphical perceptions, and discuss visualizations that achieve that (or don’t). I hope that you will learn some of the reasons behind some of the more common recommendations for making graphs. \nThe reading assignments are Chapter 2 of “Storytelling” and Chapters 5 and 6 of “Fundamentals”. The Scientific Visualization with Python book also has a good list of “rules” for figures that you can refer to, and section 1.4 on Healy has an alternative presentation of the material on visual perception theory.\nI also have included a research paper which discusses some of the basic principles if you want to delve deeper.\nYour first homework assignment is due next Sunday. If you have not yet looked at it, I recommend reading it to get a sense for how long it might take you.\nThanks,\nSincerely,\nGeorge"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#events-upcoming-1",
-    "href": "meetups/meetup-1/meetup-1.html#events-upcoming-1",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Events Upcoming!",
-    "text": "Events Upcoming!\n\nnyhackr.org"
+    "objectID": "assignments/stories/story1.html",
+    "href": "assignments/stories/story1.html",
+    "title": "Story 1: Housing Policy and Affordability",
+    "section": "",
+    "text": "For this assignment, you are assuming the role for a data scientist working for a city government and you have been tasked with providing technical advice to the mayor and city council about whether or not permitting reform could help address housing affordability. You have access to a dataset which which provides demographic and economic information at a number of different organizational levels across the country. The assignment will consist of parts where you will answer questions about visualizations that are presented to you, and other parts where you improve upon them to make them more informative or so that they tell a better story."
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#events-upcoming-2",
-    "href": "meetups/meetup-1/meetup-1.html#events-upcoming-2",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Events Upcoming!",
-    "text": "Events Upcoming!\n\nnyhackr.org"
+    "objectID": "assignments/stories/story1.html#overview",
+    "href": "assignments/stories/story1.html#overview",
+    "title": "Story 1: Housing Policy and Affordability",
+    "section": "",
+    "text": "For this assignment, you are assuming the role for a data scientist working for a city government and you have been tasked with providing technical advice to the mayor and city council about whether or not permitting reform could help address housing affordability. You have access to a dataset which which provides demographic and economic information at a number of different organizational levels across the country. The assignment will consist of parts where you will answer questions about visualizations that are presented to you, and other parts where you improve upon them to make them more informative or so that they tell a better story."
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#why-visualizations-matter",
-    "href": "meetups/meetup-1/meetup-1.html#why-visualizations-matter",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Why Visualizations Matter",
-    "text": "Why Visualizations Matter\n\nGraphs are the main way we communicate data\nYour visualizations are how people will remember your analysis, can make or break your recommendations to decision makers.\nTwo goals of the class:\n\nLearn how to tell stories with graphs\nLearn to make good visualizations"
+    "objectID": "assignments/stories/story1.html#background",
+    "href": "assignments/stories/story1.html#background",
+    "title": "Story 1: Housing Policy and Affordability",
+    "section": "Background",
+    "text": "Background\nIn recent years, many parts of the United States have experienced an increase in housing costs. The Harvard University Joint Center for Housing Studies published a report on the State of the Nation’s Housing in 2026. Amongst the 10 takeaways from that report include a major decline in residual income for renters earning under $30,000 dollars per year, record high median homeownership costs, and an increase in price of the cheapest rental units. High housing prices have been implicated as a cause of homelessness and other major problems in large metro areas, according to a report by the Pew Foundation.\nMany different policies have been proposed to address this issue, including permitting reform. Recent data suggests that increased permitting slows or reverses increases in housing prices, with rent declines in fast-growing sun-belt cities such as Austin being held up as exemplars of this policy, see for example Austin’s Surge of New Housing Construction Drives Down Rents, which describes the issue in Austin primarily, and New Housing Slows Rent Growth Most for Older, More Affordable Units. However, this is still an area of active research where there is much debate about the causal factors of housing costs. If you want to learn more about the nuances here are some references:\n\nE. Glaeser and J. Gyourko. The Economic Implications of Housing Supply. JEP (2018). 32:1\nV. Been, I. Gould Ellen, and K. O’Reagan. _Supply Skepticism Revisited. Housing Policy Debate. (2025). 35.1\nA. Damiano. Supply Skepticism or Supply Realism?. Housing Policy Debate. (2025). 35.1"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#why-do-we-need-a-class-on-this",
-    "href": "meetups/meetup-1/meetup-1.html#why-do-we-need-a-class-on-this",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Why do we need a class on this?",
-    "text": "Why do we need a class on this?\n\nPeople are not naturally good at telling stories using data"
+    "objectID": "assignments/stories/story1.html#problem-1-bars-and-dots",
+    "href": "assignments/stories/story1.html#problem-1-bars-and-dots",
+    "title": "Story 1: Housing Policy and Affordability",
+    "section": "Problem 1: Bars and Dots",
+    "text": "Problem 1: Bars and Dots\nConsider Figure 2 from New Housing Slows Rent Growth Most for Older, More Affordable Units:\n\n\nThis figure allows you to make two types of comparisons: (1) differences in rent changes across different building classes within the same city and (2) differences in rent changes across different cities. Which perceptual visualization tasks might you use when making these comparisons using Figure 2?\nThe data is available to you in the file pew_fig2_rent_change_class.csv, with pew_fig2_dict.qmd describing the data source and variables. Visualize this data in two different ways: (1) using a Cleveland dot plot and (2) splitting the bar-plots onto multiple axes (see UCRs dot-plot page or Wilke chapter 6 ). Compare these two images to the original Figure 2, what are the pros and cons of each?"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#why-do-we-need-a-class-on-this-1",
-    "href": "meetups/meetup-1/meetup-1.html#why-do-we-need-a-class-on-this-1",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Why do we need a class on this?",
-    "text": "Why do we need a class on this?\n\nThe world is full of awful visualizations"
+    "objectID": "assignments/stories/story1.html#problem-2-fixing-a-bad-figure",
+    "href": "assignments/stories/story1.html#problem-2-fixing-a-bad-figure",
+    "title": "Story 1: Housing Policy and Affordability",
+    "section": "Problem 2: Fixing a Bad Figure",
+    "text": "Problem 2: Fixing a Bad Figure\n\nAnalyze the problems with a bad figure. Your predecessor on the data team had been working on a presentation about permiting reform and left you the following figure. There are a number of problems with the figure, and it has a surprising conclusion given the recent research. Take a close look at the figure and code and list all of the ways that the figure is bad/ugly/wrong.\n\n\np1 + p2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure compares the average rent in 2025 as measured by the Zillow Observed Rent Index of the metropolitan statistical areas with the lowest number of permitted units (left) and the highest number of permitted units (right) in 2025. The metros that permitted the highest number of units had the highest rents, suggesting that permitting fewer units is the best policy.\n\n\n\n\nCreate a data story about this data. You have been given datasets with information about rent, building permits, and demographics (population and net-migration) in metropolitan statistical areas, covering a period from 2015 to 2026 (rents) and 2021 to 2025 (permits and demographics). You should create several figures (2-3) to explain whether or not building permits policy can help reduce rents. Assume that your audience is the city government at a large city in the United States (e.g. New York City). Your story must be entirely told by your figures, though you may use text sparingly in the title/subtitle and annotations to enhance your story. Provide a one to two paragraph explanation of the choices you made for your figure. Do not include exploratory figures/discussion."
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#why-do-we-need-a-class-on-this-2",
-    "href": "meetups/meetup-1/meetup-1.html#why-do-we-need-a-class-on-this-2",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Why do we need a class on this?",
-    "text": "Why do we need a class on this?\n\nThe world is full of awful visualizations"
+    "objectID": "meetups/meetup-6/meetup-6.html#week-summary",
+    "href": "meetups/meetup-6/meetup-6.html#week-summary",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Week Summary",
+    "text": "Week Summary\n\nGoal of this week: think more concretely about stories\nRead: Chapter 29 of Fundamentals, Chapter 7 of Storytelling\nHW: Data Story 3 Due on Sunday\nDiscussion: Put week 1 story in story arc format"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#why-do-we-need-a-class-on-this-3",
-    "href": "meetups/meetup-1/meetup-1.html#why-do-we-need-a-class-on-this-3",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Why do we need a class on this?",
-    "text": "Why do we need a class on this?\n\nThe world is full of awful visualizations"
+    "objectID": "meetups/meetup-6/meetup-6.html#what-is-a-story",
+    "href": "meetups/meetup-6/meetup-6.html#what-is-a-story",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "What is a story?",
+    "text": "What is a story?\n\nFrom Fundamentals:\n\n\nA story is a set of observations, facts, or events, true or invented, that are presented in a specific order such that they create an emotional reaction in the audience."
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#why-do-we-need-a-class-on-this-4",
-    "href": "meetups/meetup-1/meetup-1.html#why-do-we-need-a-class-on-this-4",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Why do we need a class on this?",
-    "text": "Why do we need a class on this?\n\nThe world is full of awful visualizations"
+    "objectID": "meetups/meetup-6/meetup-6.html#why-emotion",
+    "href": "meetups/meetup-6/meetup-6.html#why-emotion",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Why emotion?",
+    "text": "Why emotion?\n\nQuantitative culture: dismissive of stories, emotion\n\nDeemed “squishy”\n\nThis is a bad mistake\n\nEmotional response is key to how we communicate\n\nYou can tell stories while objectively presenting the truth"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#case-study",
-    "href": "meetups/meetup-1/meetup-1.html#case-study",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Case Study",
-    "text": "Case Study\n\nYour firm had two employees leave in May\nThis caused a backlog of work"
+    "objectID": "meetups/meetup-6/meetup-6.html#how-do-stories-create-an-emotional-response",
+    "href": "meetups/meetup-6/meetup-6.html#how-do-stories-create-an-emotional-response",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "How do stories create an emotional response?",
+    "text": "How do stories create an emotional response?\n\nInitial build up of conflict and tension\nRelease of tension at the conclusion of story"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#case-study-1",
-    "href": "meetups/meetup-1/meetup-1.html#case-study-1",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Case Study",
-    "text": "Case Study\n\nHighlight the key features to tell a story\n\n\nStorytelling 0.3"
+    "objectID": "meetups/meetup-6/meetup-6.html#example-where-are-the-cancers",
+    "href": "meetups/meetup-6/meetup-6.html#example-where-are-the-cancers",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Example: Where are the Cancers?",
+    "text": "Example: Where are the Cancers?\n\nGelman Hill Teaching Stats\nLowest counties all rural"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#course-website-and-meetup",
-    "href": "meetups/meetup-1/meetup-1.html#course-website-and-meetup",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Course Website and Meetup",
-    "text": "Course Website and Meetup\n\n\n\nBrightspace to submit homework\nCourse Meetup: Monday 8:00-9:00PM\nZoom Link"
+    "objectID": "meetups/meetup-6/meetup-6.html#why-lowest-cancer-in-rural-areas",
+    "href": "meetups/meetup-6/meetup-6.html#why-lowest-cancer-in-rural-areas",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Why Lowest Cancer in Rural Areas?",
+    "text": "Why Lowest Cancer in Rural Areas?\n\nMaybe rural counties have lower pollution?"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#slack-channel",
-    "href": "meetups/meetup-1/meetup-1.html#slack-channel",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Slack Channel",
-    "text": "Slack Channel\n\n\n\nCourse slack channel for messaging and rapid communications\n\nhttps://cuny-msds.slack.com\nInvite Link"
+    "objectID": "meetups/meetup-6/meetup-6.html#why-lowest-cancer-in-rural-areas-1",
+    "href": "meetups/meetup-6/meetup-6.html#why-lowest-cancer-in-rural-areas-1",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Why Lowest Cancer in Rural Areas?",
+    "text": "Why Lowest Cancer in Rural Areas?\n\nMaybe rural counties have lower pollution?\nHealthier, fresher food?"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#textbooks",
-    "href": "meetups/meetup-1/meetup-1.html#textbooks",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Textbooks",
-    "text": "Textbooks\n\n\nTwo most important textbooks:\n\nFundamentals of Data Visualization\nData Visualization: A Practical Introduction"
+    "objectID": "meetups/meetup-6/meetup-6.html#why-lowest-cancer-in-rural-areas-2",
+    "href": "meetups/meetup-6/meetup-6.html#why-lowest-cancer-in-rural-areas-2",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Why Lowest Cancer in Rural Areas?",
+    "text": "Why Lowest Cancer in Rural Areas?\n\nMaybe rural counties have lower pollution?\nHealthier, fresher food?\nLow stress, active lifestyle?"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#textbooks-1",
-    "href": "meetups/meetup-1/meetup-1.html#textbooks-1",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Textbooks",
-    "text": "Textbooks\n\n\nTwo most important textbooks:\n\nFundamentals of Data Visualization\nData Visualization: A Practical Introduction"
+    "objectID": "meetups/meetup-6/meetup-6.html#why-lowest-cancer-in-rural-areas-3",
+    "href": "meetups/meetup-6/meetup-6.html#why-lowest-cancer-in-rural-areas-3",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Why Lowest Cancer in Rural Areas?",
+    "text": "Why Lowest Cancer in Rural Areas?\n\nMaybe rural counties have lower pollution?\nHealthier, fresher food?\nLow stress, active lifestyle?\n\nShall we fund a big study to investigate???"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#textbooks-2",
-    "href": "meetups/meetup-1/meetup-1.html#textbooks-2",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Textbooks",
-    "text": "Textbooks\n\n\n\nFor pythonistas\n\n\nScientific Visualization: Python + Matplotlib"
+    "objectID": "meetups/meetup-6/meetup-6.html#plot-twist",
+    "href": "meetups/meetup-6/meetup-6.html#plot-twist",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Plot Twist",
+    "text": "Plot Twist\n\nGelman Hill Bag of Tricks\nRural counties also have the highest death rates!"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#textbooks-3",
-    "href": "meetups/meetup-1/meetup-1.html#textbooks-3",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Textbooks",
-    "text": "Textbooks\n\n\nUseful for the story/business framing\n\nStorytelling with data\n\n\nAvailable free online at library Storytelling"
+    "objectID": "meetups/meetup-6/meetup-6.html#thought-experiment-consider-a-small-county",
+    "href": "meetups/meetup-6/meetup-6.html#thought-experiment-consider-a-small-county",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Thought Experiment: Consider a small county",
+    "text": "Thought Experiment: Consider a small county\n\nThe county has 100 people\nIf it has 1 kidney cancer death in the decade, it’s rate will be by far the highest in the country\nIf it has 0 deaths, it’s rate will be the lowest in the country"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#textbooks-4",
-    "href": "meetups/meetup-1/meetup-1.html#textbooks-4",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Textbooks",
-    "text": "Textbooks\n\n\nUseful for the story/business framing\n\nStorytelling with data\n\n\nAvailable free online at library Storytelling"
+    "objectID": "meetups/meetup-6/meetup-6.html#variance-of-a-binomial-distribution",
+    "href": "meetups/meetup-6/meetup-6.html#variance-of-a-binomial-distribution",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Variance of a binomial distribution",
+    "text": "Variance of a binomial distribution\n\nprobability \\(p\\) of dying from kidney cancer\nrate \\(\\hat{r}=\\frac{m}{n}\\) observed deaths divided by population \\[\n\\mathrm{var}(\\hat{r}) = \\frac{p(1-p)}{n}\n\\]\nBig \\(n\\) close to mean\nExpect small counties to dominate the extremes"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#assignments",
-    "href": "meetups/meetup-1/meetup-1.html#assignments",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Assignments",
-    "text": "Assignments\n\n6 Lab Assignments (60%)\n\nSubmit a qmd source and rendered slides to brightspace\n‘R’ or ‘python’ choice\n\n6 Figure Corrections (18%)\n\nOpportunity to correct figures from lab assignment\n\nShort Interactive Project (22%)\n\nShiny App on dataset of your choosing"
+    "objectID": "meetups/meetup-6/meetup-6.html#be-skeptical-of-maps",
+    "href": "meetups/meetup-6/meetup-6.html#be-skeptical-of-maps",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Be skeptical of maps",
+    "text": "Be skeptical of maps\n\nThis phenomenon isn’t unique to this variable\nSee this funnel shape all the time!"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#week-plan-readings",
-    "href": "meetups/meetup-1/meetup-1.html#week-plan-readings",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Week Plan: Readings",
-    "text": "Week Plan: Readings\n\nChapters 1 and 2 of Fundamentals of Dataviz\nPreface and part of Chapter 1 of Healy’s Data Visualization:\n\nWhy look at data?\nWhat makes figures look bad?\nProblems of honesty and judgement"
+    "objectID": "meetups/meetup-6/meetup-6.html#aside",
+    "href": "meetups/meetup-6/meetup-6.html#aside",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Aside",
+    "text": "Aside\n\nFunnel plot also good for showing bias in research studies\nEffect size gets small when study is bigger"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#week-plan-assignments",
-    "href": "meetups/meetup-1/meetup-1.html#week-plan-assignments",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Week Plan: Assignments",
-    "text": "Week Plan: Assignments\n\nDue in two weeks: Data Story 1"
+    "objectID": "meetups/meetup-6/meetup-6.html#story-arc",
+    "href": "meetups/meetup-6/meetup-6.html#story-arc",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Story Arc",
+    "text": "Story Arc\n\nOpening: Why are Cancer rates lowest in rural counties?\nChallenge: They are also highest in rural counties!\nAction: Use stats, binomial variance formula\nResolution: Be wary when comparing unequally sized groups"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#week-plan-key-concepts",
-    "href": "meetups/meetup-1/meetup-1.html#week-plan-key-concepts",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Week Plan: Key Concepts",
-    "text": "Week Plan: Key Concepts\n\nMethods for creating a story (Storytelling)\nWhat makes a quality figure (Wilke, Healy)"
+    "objectID": "meetups/meetup-6/meetup-6.html#story-arcs",
+    "href": "meetups/meetup-6/meetup-6.html#story-arcs",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Story Arcs",
+    "text": "Story Arcs\n\nA story arc is a pattern which a story takes\nIt is designed to build and then resolve conflict\nThere are several different structures for arcs"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#context-purposes-of-visualizations",
-    "href": "meetups/meetup-1/meetup-1.html#context-purposes-of-visualizations",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Context: Purposes of Visualizations",
-    "text": "Context: Purposes of Visualizations\n\n\n\nExploratory\nExplanatory\nInferential"
+    "objectID": "meetups/meetup-6/meetup-6.html#arc-1",
+    "href": "meetups/meetup-6/meetup-6.html#arc-1",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Arc 1",
+    "text": "Arc 1\n\nOpening\nChallenge\nAction\nResolution"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#context-purposes-of-visualizations-1",
-    "href": "meetups/meetup-1/meetup-1.html#context-purposes-of-visualizations-1",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Context: Purposes of Visualizations",
-    "text": "Context: Purposes of Visualizations\n\n\n\nExploratory\nExplanatory\nInferential\n\n\n\n\n\nIPCC SPM1 Special Report on 1.5C"
+    "objectID": "meetups/meetup-6/meetup-6.html#arc-2",
+    "href": "meetups/meetup-6/meetup-6.html#arc-2",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Arc 2",
+    "text": "Arc 2\n\nLead: Give away main point\nDevelopment: Introduction and details\nResolution: Return to main point and moral"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#context-purposes-of-visualizations-2",
-    "href": "meetups/meetup-1/meetup-1.html#context-purposes-of-visualizations-2",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Context: Purposes of Visualizations",
-    "text": "Context: Purposes of Visualizations\n\n\n\nExploratory\nExplanatory\nInferential"
+    "objectID": "meetups/meetup-6/meetup-6.html#arc-2-applied",
+    "href": "meetups/meetup-6/meetup-6.html#arc-2-applied",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Arc 2 applied",
+    "text": "Arc 2 applied\n\nLead: Maps are biased because of population heterogeneities\nDevelopment: You can draw contradictory conclusions from maps. They can show that rural living both prevents and causes Kidney Cancer. This is because rural counties have high variance\nResolution: This issue plays a role whenever you compare groups of different sizes. Always consider standard errors!"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#context-who-what-and-how",
-    "href": "meetups/meetup-1/meetup-1.html#context-who-what-and-how",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Context: Who, What, and How",
-    "text": "Context: Who, What, and How\nBefore you begin, start with three questions\n\nWho will see your figure?\n\nYou would make different choices presenting to experts, decision makers/stakeholders, your supervisor, or the general public"
+    "objectID": "meetups/meetup-6/meetup-6.html#arc-2-applied-alt",
+    "href": "meetups/meetup-6/meetup-6.html#arc-2-applied-alt",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Arc 2 applied (alt)",
+    "text": "Arc 2 applied (alt)\n\nLead: All maps lie to you\nDevelopment: You can draw contradictory conclusions from maps. They can show that rural living both prevents and causes Kidney Cancer. This is because rural counties have high variance\nResolution: This issue plays a role whenever you compare groups of different sizes. Always consider standard errors!"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#context-who-what-and-how-1",
-    "href": "meetups/meetup-1/meetup-1.html#context-who-what-and-how-1",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Context: Who, What, and How",
-    "text": "Context: Who, What, and How\n\nFigure for Decision Makers (IPCC SPM):"
+    "objectID": "meetups/meetup-6/meetup-6.html#arc-3",
+    "href": "meetups/meetup-6/meetup-6.html#arc-3",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Arc 3",
+    "text": "Arc 3\n\nAction\nBackground\nDevelopment\nClimax\nEnding"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#context-who-what-and-how-2",
-    "href": "meetups/meetup-1/meetup-1.html#context-who-what-and-how-2",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Context: Who, What, and How",
-    "text": "Context: Who, What, and How\n\nFigure for other scientists (IPCC)"
+    "objectID": "meetups/meetup-6/meetup-6.html#arc-3-1",
+    "href": "meetups/meetup-6/meetup-6.html#arc-3-1",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Arc 3",
+    "text": "Arc 3\n\nAction: Show both figures together to get into conflict immediately\nBackground: Present other examples of this and the challenges they caused\nDevelopment: Connect with population size\nClimax: Variance Formula, least squares techniques\nEnding: Highlight importance across areas"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#context-who-what-and-how-3",
-    "href": "meetups/meetup-1/meetup-1.html#context-who-what-and-how-3",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Context: Who, What, and How",
-    "text": "Context: Who, What, and How\n\nFigure for other scientists (IPCC)"
+    "objectID": "meetups/meetup-6/meetup-6.html#translating-to-figures",
+    "href": "meetups/meetup-6/meetup-6.html#translating-to-figures",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Translating to Figures",
+    "text": "Translating to Figures\n\nMap your figures to story arc\n(usually) need multiple figures"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#context-who-what-and-how-4",
-    "href": "meetups/meetup-1/meetup-1.html#context-who-what-and-how-4",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Context: Who, What, and How",
-    "text": "Context: Who, What, and How\nBefore you begin, start with three questions\n\nWhat do you want your audience to know or do?\n\nThere needs to be a point or story beyond “this is interesting”"
+    "objectID": "meetups/meetup-6/meetup-6.html#example-opening",
+    "href": "meetups/meetup-6/meetup-6.html#example-opening",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Example: Opening",
+    "text": "Example: Opening"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#context-who-what-and-how-5",
-    "href": "meetups/meetup-1/meetup-1.html#context-who-what-and-how-5",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Context: Who, What, and How",
-    "text": "Context: Who, What, and How\n\nConsider the Mechanism\nMore details in written comms than presentations\n\n\nStorytelling"
+    "objectID": "meetups/meetup-6/meetup-6.html#example-challenge",
+    "href": "meetups/meetup-6/meetup-6.html#example-challenge",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Example: Challenge",
+    "text": "Example: Challenge"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#context-who-what-and-how-6",
-    "href": "meetups/meetup-1/meetup-1.html#context-who-what-and-how-6",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Context: Who, What, and How",
-    "text": "Context: Who, What, and How\nBefore you begin, start with three questions\n\nHow?\n\nWhat data will you use to accomplish this?\n\nDon’t hide non-supporting data\n\nTrust is built over time but destroyed in an instant\nBuilding trust is key for convincing people to take action on your recommendations, in all sorts of settings"
+    "objectID": "meetups/meetup-6/meetup-6.html#example-action",
+    "href": "meetups/meetup-6/meetup-6.html#example-action",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Example: Action",
+    "text": "Example: Action"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#the-elevator-pitch-and-big-idea",
-    "href": "meetups/meetup-1/meetup-1.html#the-elevator-pitch-and-big-idea",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "The Elevator Pitch and Big Idea",
-    "text": "The Elevator Pitch and Big Idea\n\nIf you had just 3 minutes to tell your audience what they need to know, what would you say?\n\nWhat is the overall topic/problem (get into it fast)\nWhy is it important (bring emotion into it)\nTry to find a good punchline to complete the narrative"
+    "objectID": "meetups/meetup-6/meetup-6.html#example-action-1",
+    "href": "meetups/meetup-6/meetup-6.html#example-action-1",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Example: Action",
+    "text": "Example: Action"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#big-idea-single-sentence-summary",
-    "href": "meetups/meetup-1/meetup-1.html#big-idea-single-sentence-summary",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Big Idea: Single Sentence Summary",
-    "text": "Big Idea: Single Sentence Summary\n\nConvey your unique point of view\nMust convey what is at stake"
+    "objectID": "meetups/meetup-6/meetup-6.html#example-resolution",
+    "href": "meetups/meetup-6/meetup-6.html#example-resolution",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Example: Resolution",
+    "text": "Example: Resolution"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#why-stories",
-    "href": "meetups/meetup-1/meetup-1.html#why-stories",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Why Stories?",
-    "text": "Why Stories?\n\nHumans are wired to hear and tell stories, it is how we relate\nNeuroscience research backs this up\nGood stories create synchrony across multiple brain regions between storyteller and listener"
+    "objectID": "meetups/meetup-6/meetup-6.html#example-resolution-1",
+    "href": "meetups/meetup-6/meetup-6.html#example-resolution-1",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Example: Resolution",
+    "text": "Example: Resolution"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#why-stories-1",
-    "href": "meetups/meetup-1/meetup-1.html#why-stories-1",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Why Stories?",
-    "text": "Why Stories?\n\nHumans are wired to hear and tell stories, it is how we relate\nNeuroscience research backs this up\nGood stories create synchrony across multiple brain regions between storyteller and listener"
+    "objectID": "meetups/meetup-6/meetup-6.html#example-ending",
+    "href": "meetups/meetup-6/meetup-6.html#example-ending",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Example: Ending",
+    "text": "Example: Ending"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#bad-ugly-and-wrong-figures",
-    "href": "meetups/meetup-1/meetup-1.html#bad-ugly-and-wrong-figures",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "Bad, Ugly, and Wrong Figures",
-    "text": "Bad, Ugly, and Wrong Figures"
+    "objectID": "meetups/meetup-6/meetup-6.html#making-figures-for-busy-people",
+    "href": "meetups/meetup-6/meetup-6.html#making-figures-for-busy-people",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Making Figures for Busy People",
+    "text": "Making Figures for Busy People\n\nMake your figure as simple as possible, but no simpler!\nThey shouldn’t need 30 minutes to decipher all the details"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#what-makes-bad-figures-bad",
-    "href": "meetups/meetup-1/meetup-1.html#what-makes-bad-figures-bad",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "What Makes Bad Figures Bad",
-    "text": "What Makes Bad Figures Bad\n\nHealy: Aesthetic, Substantive, Perceptual\nNext weeks will address these specifically"
+    "objectID": "meetups/meetup-6/meetup-6.html#complexity-hid-the-story",
+    "href": "meetups/meetup-6/meetup-6.html#complexity-hid-the-story",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Complexity Hid the Story?",
+    "text": "Complexity Hid the Story?"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#what-about-great-figures",
-    "href": "meetups/meetup-1/meetup-1.html#what-about-great-figures",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "What About Great Figures?",
-    "text": "What About Great Figures?\n\nThere are no principles/rules for going from good to great\nPerfect the good first, then your creativity can help you make something great"
+    "objectID": "meetups/meetup-6/meetup-6.html#build-up-to-complexity",
+    "href": "meetups/meetup-6/meetup-6.html#build-up-to-complexity",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Build up to complexity",
+    "text": "Build up to complexity\n\nSometimes a complex plot is required\nDon’t lead with complexity\n\nInstead show something simpler first\nPrimes your audience to understand the complex figure"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#what-about-great-figures-1",
-    "href": "meetups/meetup-1/meetup-1.html#what-about-great-figures-1",
-    "title": "Meetup 1: Developing a Critical Eye",
-    "section": "What About Great Figures?",
-    "text": "What About Great Figures?\n\nThere are no principles/rules for going from good to great\nPerfect the good first, then your creativity can help you make something great"
+    "objectID": "meetups/meetup-6/meetup-6.html#start-simple",
+    "href": "meetups/meetup-6/meetup-6.html#start-simple",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Start Simple",
+    "text": "Start Simple\n\nHere show a single panel first (or aggregate over all carriers)"
   },
   {
-    "objectID": "meetups/meetup-1/meetup-1.html#thanks",
-    "href": "meetups/meetup-1/meetup-1.html#thanks",
-    "title": "Meetup 1: Developing a Critical Eye",
+    "objectID": "meetups/meetup-6/meetup-6.html#then-go-complex",
+    "href": "meetups/meetup-6/meetup-6.html#then-go-complex",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Then go Complex",
+    "text": "Then go Complex"
+  },
+  {
+    "objectID": "meetups/meetup-6/meetup-6.html#thanks",
+    "href": "meetups/meetup-6/meetup-6.html#thanks",
+    "title": "Meetup 6: Narrative Structure",
     "section": "Thanks!",
-    "text": "Thanks!\n\n\n\n\nDATA 608"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#why-are-pie-charts-terrible",
-    "href": "meetups/meetup-2/meetup-2.html#why-are-pie-charts-terrible",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Why Are Pie-Charts Terrible?",
-    "text": "Why Are Pie-Charts Terrible?\n\n“Pie Charts are Evil”\n\nChapter 2 Storytelling with Data"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#why-are-pie-charts-terrible-1",
-    "href": "meetups/meetup-2/meetup-2.html#why-are-pie-charts-terrible-1",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Why Are Pie-Charts Terrible?",
-    "text": "Why Are Pie-Charts Terrible?\n\n\nLots of graphics advice is presented as rules\nAre there principles behind these rules?"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#what-to-do-this-week",
-    "href": "meetups/meetup-2/meetup-2.html#what-to-do-this-week",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "What to do this week",
-    "text": "What to do this week\n\nReadings: Chapter 2 of “Storytelling” and Chapter 5 of “Fundamentals”\nBonus Reading: Cleveland et al 1984 Perceptual Visualization Paper\nDiscussion: Favorite Graph\nFirst HW due Sunday at midnight"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#what-makes-a-graph-good",
-    "href": "meetups/meetup-2/meetup-2.html#what-makes-a-graph-good",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "What Makes a Graph Good",
-    "text": "What Makes a Graph Good\n\nWe use graphs to communicate quantitative data\nA graph is good if it successfully conveys quantitative data to the reader\nCan we break down visualizations into a series of elementary perceptual tasks and then test how good humans are at completing each one?\nResearch program led by many, William Cleveland most prominent"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks",
-    "href": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Elementary Perceptual Tasks",
-    "text": "Elementary Perceptual Tasks\n\n\n\nPosition along a common scale\nPosition along non-aligned scales\nLength\nDirection\nAngle\nArea\nVolume\nCurvature\nShading\nHue/Saturation"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-1",
-    "href": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-1",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Elementary Perceptual Tasks",
-    "text": "Elementary Perceptual Tasks\n\n\n\nPosition along a common scale\nPosition along non-aligned scales\nLength\nDirection\nAngle\nArea\nVolume\nCurvature\nShading\nHue/Saturation"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-2",
-    "href": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-2",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Elementary Perceptual Tasks",
-    "text": "Elementary Perceptual Tasks\n\n\n\nPosition along a common scale\nPosition along non-aligned scales\nLength\nDirection\nAngle\nArea\nVolume\nCurvature\nShading\nHue/Saturation"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-3",
-    "href": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-3",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Elementary Perceptual Tasks",
-    "text": "Elementary Perceptual Tasks\n\n\n\nPosition along a common scale\nPosition along non-aligned scales\nLength\nDirection\nAngle\nArea\nVolume\nCurvature\nShading\nHue/Saturation"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-4",
-    "href": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-4",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Elementary Perceptual Tasks",
-    "text": "Elementary Perceptual Tasks\n\n\n\nPosition along a common scale\nPosition along non-aligned scales\nLength\nDirection\nAngle\nArea\nVolume\nCurvature\nShading\nHue/Saturation"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-5",
-    "href": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-5",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Elementary Perceptual Tasks",
-    "text": "Elementary Perceptual Tasks\n\n\n\nPosition along a common scale\nPosition along non-aligned scales\nLength\nDirection\nAngle\nArea\nVolume\nCurvature\nShading\nHue/Saturation"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-6",
-    "href": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-6",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Elementary Perceptual Tasks",
-    "text": "Elementary Perceptual Tasks\n\n\n\nPosition along a common scale\nPosition along non-aligned scales\nLength\nDirection\nAngle\nArea\nVolume\nCurvature\nShading\nHue/Saturation"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-7",
-    "href": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-7",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Elementary Perceptual Tasks",
-    "text": "Elementary Perceptual Tasks\n\n\n\nPosition along a common scale\nPosition along non-aligned scales\nLength\nDirection\nAngle\nArea\nVolume\nCurvature\nShading\nHue/Saturation"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-8",
-    "href": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-8",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Elementary Perceptual Tasks",
-    "text": "Elementary Perceptual Tasks\n\n\n\nPosition along a common scale\nPosition along non-aligned scales\nLength\nDirection\nAngle\nArea\nVolume\nCurvature\nShading\nHue/Saturation"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-9",
-    "href": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-9",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Elementary Perceptual Tasks",
-    "text": "Elementary Perceptual Tasks\n\n\n\nPosition along a common scale\nPosition along non-aligned scales\nLength\nDirection\nAngle\nArea\nVolume\nCurvature\nShading\nHue/Saturation"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-10",
-    "href": "meetups/meetup-2/meetup-2.html#elementary-perceptual-tasks-10",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Elementary Perceptual Tasks",
-    "text": "Elementary Perceptual Tasks\n\n\n\nPosition along a common scale\nPosition along non-aligned scales\nLength\nDirection\nAngle\nArea\nVolume\nCurvature\nShading\nHue/Saturation"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#some-perceptual-tasks-are-easier",
-    "href": "meetups/meetup-2/meetup-2.html#some-perceptual-tasks-are-easier",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Some Perceptual Tasks are Easier",
-    "text": "Some Perceptual Tasks are Easier\n\nPosition along a common axis is the best\nPercentage of major errors:"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#some-perceptual-tasks-are-easier-1",
-    "href": "meetups/meetup-2/meetup-2.html#some-perceptual-tasks-are-easier-1",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Some Perceptual Tasks are Easier",
-    "text": "Some Perceptual Tasks are Easier\n\nPosition along a common axis is the best\nError"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#overall-ranking",
-    "href": "meetups/meetup-2/meetup-2.html#overall-ranking",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Overall Ranking",
-    "text": "Overall Ranking\n\n\n\nPosition along a common axis\nPosition along an uncommon axis\nLength, Direction, Angle\nArea\nShading, Color Saturation\nVolume, Curvature\n\n\n\n\n\nMunzner 2014"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#implications",
-    "href": "meetups/meetup-2/meetup-2.html#implications",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Implications",
-    "text": "Implications\n\nPlot the comparisons you want to make on the same axis\nPosition can usually substitute length, direction, and angle\nAvoid 3D\nBe cautious with area\nShading and color saturation are very imprecise"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#dot-plots-for-1d-comparisons",
-    "href": "meetups/meetup-2/meetup-2.html#dot-plots-for-1d-comparisons",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Dot-Plots for 1D Comparisons",
-    "text": "Dot-Plots for 1D Comparisons\n\nFlights from each carrier leaving NYC in 2013"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#dot-plots-for-comparisons",
-    "href": "meetups/meetup-2/meetup-2.html#dot-plots-for-comparisons",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Dot-Plots for Comparisons",
-    "text": "Dot-Plots for Comparisons\n\nFlights from each carrier leaving NYC in 2013"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#dot-plots-for-comparisons-1",
-    "href": "meetups/meetup-2/meetup-2.html#dot-plots-for-comparisons-1",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Dot-Plots for Comparisons",
-    "text": "Dot-Plots for Comparisons\n\nFlights from each carrier leaving NYC in 2013"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#show-differences-directly",
-    "href": "meetups/meetup-2/meetup-2.html#show-differences-directly",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Show Differences Directly",
-    "text": "Show Differences Directly\n\nPosition is much easier to judge than length"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#show-differences-directly-1",
-    "href": "meetups/meetup-2/meetup-2.html#show-differences-directly-1",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Show Differences Directly",
-    "text": "Show Differences Directly\n\nPosition is much easier to judge than length\nThese curves have a constant height difference"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#show-differences-directly-2",
-    "href": "meetups/meetup-2/meetup-2.html#show-differences-directly-2",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Show Differences Directly",
-    "text": "Show Differences Directly\n\nAdjacent Bars Versus Dots on the same Axis\n\n\nUCR Bus. Analytics"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#show-differences-directly-3",
-    "href": "meetups/meetup-2/meetup-2.html#show-differences-directly-3",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Show Differences Directly",
-    "text": "Show Differences Directly\n\nAdjacent Bars Versus Dots on the same Axis\n\n\nUCR Bus. Analytics"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#what-to-do-about-color",
-    "href": "meetups/meetup-2/meetup-2.html#what-to-do-about-color",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "What to do About Color?",
-    "text": "What to do About Color?\n\nColor is a poor choice for precise numerical comparisons\nConsider whether you need to use it at all\nIt is very helpful for illustrating geographic patterns"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#perceptually-uniform-colormaps",
-    "href": "meetups/meetup-2/meetup-2.html#perceptually-uniform-colormaps",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Perceptually Uniform Colormaps",
-    "text": "Perceptually Uniform Colormaps\n\nColormaps attach color to number\nVisual complexity makes it easy for the colormap to create features that aren’t there or to hide features"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#colormap-example",
-    "href": "meetups/meetup-2/meetup-2.html#colormap-example",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Colormap Example",
-    "text": "Colormap Example\n\nWhich colormap renders the surface height better?\n\n\ncolorcet"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#colormap-types-sequentialperceptually-uniform",
-    "href": "meetups/meetup-2/meetup-2.html#colormap-types-sequentialperceptually-uniform",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Colormap Types: Sequential/Perceptually Uniform",
-    "text": "Colormap Types: Sequential/Perceptually Uniform\n\nMatplotlib Website"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#colormap-types-sequential",
-    "href": "meetups/meetup-2/meetup-2.html#colormap-types-sequential",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Colormap Types: Sequential",
-    "text": "Colormap Types: Sequential"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#colormap-types-diverging",
-    "href": "meetups/meetup-2/meetup-2.html#colormap-types-diverging",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Colormap Types: Diverging",
-    "text": "Colormap Types: Diverging"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#colormap-types-qualitative",
-    "href": "meetups/meetup-2/meetup-2.html#colormap-types-qualitative",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Colormap Types: Qualitative",
-    "text": "Colormap Types: Qualitative"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#do-you-need-a-map",
-    "href": "meetups/meetup-2/meetup-2.html#do-you-need-a-map",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Do you need a map?",
-    "text": "Do you need a map?\n\nGelman 2004: All Maps of Parameter Estimates are Misleading"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#categoriesqualitative-features",
-    "href": "meetups/meetup-2/meetup-2.html#categoriesqualitative-features",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Categories/Qualitative Features",
-    "text": "Categories/Qualitative Features\n\nHue/Color and Shape are good for differentiating categories\nCategory limit 5 or 6"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#small-multiples-for-categories",
-    "href": "meetups/meetup-2/meetup-2.html#small-multiples-for-categories",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Small Multiples for Categories",
-    "text": "Small Multiples for Categories\n\nSuppose we want to show a relationship between many variables\nMake repeated plots with same axis that correspond to different categorical or numerical dimensions\nFacets, Trellis plots, small multiples plots, etc"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#small-multiples-for-categories-1",
-    "href": "meetups/meetup-2/meetup-2.html#small-multiples-for-categories-1",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Small Multiples for Categories",
-    "text": "Small Multiples for Categories\n\nSuppose we want to show a relationship between many variables\nMake repeated plots with same axis that correspond to different categorical or numerical dimensions\nFacets, Trellis plots, small multiples plots, etc"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#small-multiples-example",
-    "href": "meetups/meetup-2/meetup-2.html#small-multiples-example",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Small Multiples Example",
-    "text": "Small Multiples Example"
-  },
-  {
-    "objectID": "meetups/meetup-2/meetup-2.html#thanks",
-    "href": "meetups/meetup-2/meetup-2.html#thanks",
-    "title": "Meetup 2: Graphical Perception Theory",
-    "section": "Thanks!",
-    "text": "Thanks!\n\n\n\n\nDATA 608"
+    "text": "Thanks!"
   },
   {
     "objectID": "meetups/meetup-14/meetup-14.html#week-summary",

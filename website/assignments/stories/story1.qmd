@@ -60,8 +60,8 @@ and left you the following figure. There are a number of problems with the figur
 ```{r}
 
 
-msa = read_csv("https://raw.githubusercontent.com/georgehagstrom/DATA608Fall2026/main/website/assignments/stories/data/story_1/MSA_permits_demography.csv")
-zori = read_csv("https://raw.githubusercontent.com/georgehagstrom/DATA608Fall2026/main/website/assignments/stories/data/story_1/zori_lab1.csv")
+msa = read_csv("https://raw.githubusercontent.com/georgehagstrom/DATA608Fall2026/main/website/assignments/stories/data/story_1/MSA_permits_demography.csv");
+zori = read_csv("https://raw.githubusercontent.com/georgehagstrom/DATA608Fall2026/main/website/assignments/stories/data/story_1/zori_lab1.csv");
 
 # Lets make a bad figure
 

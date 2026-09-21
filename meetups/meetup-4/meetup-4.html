@@ -408,13 +408,57 @@ George Hagstrom
 <h2>Week 4 Summary</h2>
 <ul>
 <li>Data Story 2 due this Sunday</li>
-<li>Discussion post on</li>
 <li>This week is all about associations
 <ul>
 <li>Two variables</li>
 <li>Time Series</li>
 <li>Several to Many Variables</li>
 </ul></li>
+</ul>
+</section>
+<section id="reading" class="slide level2">
+<h2>Reading</h2>
+<ol type="1">
+<li>Fundamentals of Data Visualization (Wilke)</li>
+</ol>
+<ul>
+<li>Chapter 12 and 13</li>
+<li>Skip dimensionality reduction, we will return to it later</li>
+</ul>
+</section>
+<section id="event-reminder" class="slide level2">
+<h2>Event Reminder!</h2>
+
+<img data-src="../../images/Oct2026Seminar.png" class="r-stretch"><ul>
+<li><a href="https://us02web.zoom.us/j/83840080608?pwd=KwzeAIG66KJQ27QeAqBGkqkr5XsxmI.1&amp;jst=1">Click Here to sign up</a></li>
+</ul>
+</section>
+<section id="hw-1-review" class="slide level2">
+<h2>HW 1 Review</h2>
+<ul>
+<li>Corrected Figures: Return by Sunday Midnight</li>
+<li>If you need an extension please ask right away</li>
+</ul>
+</section>
+<section id="hw-1-review-1" class="slide level2">
+<h2>HW 1 Review</h2>
+<ol type="1">
+<li>Stories left some meat on the bone:</li>
+</ol>
+<ul>
+<li>Migration data/displacement</li>
+<li>Outliers in Rust Belt/Economically Depressed Areas</li>
+<li>Sensitivity to years chosen</li>
+</ul>
+</section>
+<section id="hw-1-review-2" class="slide level2">
+<h2>HW 1 Review</h2>
+<ol start="2" type="1">
+<li>More thought into what data is being used</li>
+</ol>
+<ul>
+<li>Articles specific that <em>permits</em> lead <em>rents</em></li>
+<li>Choice of years for everything matters</li>
 </ul>
 </section>
 <section id="scatterplots" class="slide level2">
@@ -856,6 +900,14 @@ George Hagstrom
 <li>Create second data-frame with the last values</li>
 <li>Add additional “axis” on right hand side</li>
 </ul>
+
+<img data-src="meetup-4_files/figure-revealjs/unnamed-chunk-38-1.png" width="960" class="r-stretch"></section>
+<section id="avoiding-the-legend-1" class="slide level2">
+<h2>Avoiding the Legend</h2>
+<ul>
+<li>Create second data-frame with the last values</li>
+<li>Add additional “axis” on right hand side</li>
+</ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>tech_stocks <span class="ot">=</span> <span class="fu">read_csv</span>(<span class="st">"tech_stocks.csv"</span>)</span>
 <span id="cb16-2"><a></a></span>
@@ -879,14 +931,14 @@ George Hagstrom
 <span id="cb16-20"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="avoiding-the-legend-1" class="slide level2">
+<section id="avoiding-the-legend-2" class="slide level2">
 <h2>Avoiding the Legend</h2>
 <ul>
 <li>Create second data-frame with the last values</li>
 </ul>
 
-<img data-src="meetup-4_files/figure-revealjs/unnamed-chunk-39-1.png" width="960" class="r-stretch"></section>
-<section id="avoiding-the-legend-2" class="slide level2">
+<img data-src="meetup-4_files/figure-revealjs/unnamed-chunk-40-1.png" width="960" class="r-stretch"></section>
+<section id="avoiding-the-legend-3" class="slide level2">
 <h2>Avoiding the Legend</h2>
 <ul>
 <li>Create second data-frame with the last values</li>
@@ -907,14 +959,14 @@ George Hagstrom
 <li>Plot against just month/day or in polar coordinates</li>
 </ul>
 
-<img data-src="meetup-4_files/figure-revealjs/unnamed-chunk-41-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-4_files/figure-revealjs/unnamed-chunk-42-1.png" width="960" class="r-stretch"></section>
 <section id="seasonal-and-polar-plots-1" class="slide level2">
 <h2>Seasonal and Polar Plots</h2>
 <ul>
 <li>use <code>feasts</code> package</li>
 </ul>
 
-<img data-src="meetup-4_files/figure-revealjs/unnamed-chunk-42-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-4_files/figure-revealjs/unnamed-chunk-43-1.png" width="960" class="r-stretch"></section>
 <section id="seasonal-and-polar-plots-2" class="slide level2">
 <h2>Seasonal and Polar Plots</h2>
 <ul>
@@ -957,7 +1009,7 @@ George Hagstrom
 <li>use <code>feasts</code> package</li>
 </ul>
 
-<img data-src="meetup-4_files/figure-revealjs/unnamed-chunk-45-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-4_files/figure-revealjs/unnamed-chunk-46-1.png" width="960" class="r-stretch"></section>
 <section id="seasonal-and-polar-plots-5" class="slide level2">
 <h2>Seasonal and Polar Plots</h2>
 <ul>
@@ -985,14 +1037,14 @@ George Hagstrom
 <li><code>geom_path</code></li>
 </ul>
 
-<img data-src="meetup-4_files/figure-revealjs/unnamed-chunk-47-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-4_files/figure-revealjs/unnamed-chunk-48-1.png" width="960" class="r-stretch"></section>
 <section id="connected-scatterplot-1" class="slide level2">
 <h2>Connected Scatterplot</h2>
 <ul>
 <li>Alternative way to show two time series together</li>
 </ul>
 
-<img data-src="meetup-4_files/figure-revealjs/unnamed-chunk-48-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-4_files/figure-revealjs/unnamed-chunk-49-1.png" width="960" class="r-stretch"></section>
 <section id="connected-scatterplot-2" class="slide level2">
 <h2>Connected Scatterplot</h2>
 <ul>
@@ -1015,6 +1067,78 @@ George Hagstrom
 <h2>Connected Scatterplot</h2>
 
 <img data-src="connected.png" class="r-stretch quarto-figure-center"><p class="caption">NY Times 2010</p></section>
+<section id="alternatives-overlay" class="slide level2">
+<h2>Alternatives: Overlay</h2>
+
+<img data-src="meetup-4_files/figure-revealjs/unnamed-chunk-51-1.png" width="960" class="r-stretch"></section>
+<section id="alternatives-overlay-1" class="slide level2">
+<h2>Alternatives: Overlay</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>hare_lynx_long <span class="ot">=</span> hare_lynx <span class="sc">|&gt;</span></span>
+<span id="cb22-2"><a></a>  <span class="fu">pivot_longer</span>(<span class="fu">c</span>(Hare, Lynx), <span class="at">names_to =</span> <span class="st">"Species"</span>, <span class="at">values_to =</span> <span class="st">"Trappings"</span>)</span>
+<span id="cb22-3"><a></a></span>
+<span id="cb22-4"><a></a>p_overlay <span class="ot">=</span> hare_lynx_long <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Year,<span class="at">y=</span>Trappings,<span class="at">color=</span>Species)) <span class="sc">+</span></span>
+<span id="cb22-5"><a></a>  <span class="fu">geom_line</span>(<span class="at">linewidth=</span><span class="fl">0.8</span>) <span class="sc">+</span></span>
+<span id="cb22-6"><a></a>  <span class="fu">geom_text_repel</span>(</span>
+<span id="cb22-7"><a></a>    <span class="at">data =</span> hare_lynx_long <span class="sc">|&gt;</span> <span class="fu">filter</span>(Year <span class="sc">==</span> <span class="fu">max</span>(Year)),</span>
+<span id="cb22-8"><a></a>    <span class="fu">aes</span>(<span class="at">label =</span> Species),</span>
+<span id="cb22-9"><a></a>    <span class="at">nudge_x =</span> <span class="dv">5</span>, <span class="at">size =</span> <span class="dv">5</span>) <span class="sc">+</span></span>
+<span id="cb22-10"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Hare"</span> <span class="ot">=</span> <span class="st">"blue"</span>, <span class="st">"Lynx"</span> <span class="ot">=</span> <span class="st">"darkorange"</span>)) <span class="sc">+</span></span>
+<span id="cb22-11"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
+<span id="cb22-12"><a></a>    <span class="fu">theme</span>( <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">color =</span> <span class="cn">NA</span>)) <span class="sc">+</span></span>
+<span id="cb22-13"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Oscillations of Lynx and Hare Populations"</span>) <span class="sc">+</span></span>
+<span id="cb22-14"><a></a>  <span class="fu">ylab</span>(<span class="st">"Trappings"</span>) <span class="sc">+</span></span>
+<span id="cb22-15"><a></a>  <span class="fu">guides</span>(<span class="at">color=</span><span class="st">"none"</span>)</span>
+<span id="cb22-16"><a></a></span>
+<span id="cb22-17"><a></a>p_overlay</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="alternatives-lag-shift" class="slide level2">
+<h2>Alternatives: Lag Shift</h2>
+
+<img data-src="meetup-4_files/figure-revealjs/unnamed-chunk-53-1.png" width="960" class="r-stretch"></section>
+<section id="alternatives-lag-shift-1" class="slide level2">
+<h2>Alternatives: Lag Shift</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>p_shift <span class="ot">=</span> hare_lynx <span class="sc">|&gt;</span></span>
+<span id="cb23-2"><a></a>  <span class="fu">mutate</span>(<span class="st">`</span><span class="at">Lynx (shifted 2 yr earlier)</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">lead</span>(Lynx, <span class="dv">2</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb23-3"><a></a>  <span class="fu">select</span>(<span class="sc">-</span>Lynx) <span class="sc">|&gt;</span></span>
+<span id="cb23-4"><a></a>  <span class="fu">pivot_longer</span>(<span class="sc">-</span>Year, <span class="at">names_to =</span> <span class="st">"Species"</span>, <span class="at">values_to =</span> <span class="st">"Trappings"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb23-5"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Year,<span class="at">y=</span>Trappings,<span class="at">color=</span>Species)) <span class="sc">+</span></span>
+<span id="cb23-6"><a></a>  <span class="fu">geom_line</span>(<span class="at">linewidth=</span><span class="fl">0.8</span>, <span class="at">na.rm=</span><span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb23-7"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"blue"</span>,<span class="st">"darkorange"</span>), <span class="at">name =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb23-8"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
+<span id="cb23-9"><a></a>    <span class="fu">theme</span>( <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">color =</span> <span class="cn">NA</span>),</span>
+<span id="cb23-10"><a></a>           <span class="at">legend.position =</span> <span class="st">"top"</span>) <span class="sc">+</span></span>
+<span id="cb23-11"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Lynx Shifted Back Two Years Tracks the Hare Cycle"</span>) <span class="sc">+</span></span>
+<span id="cb23-12"><a></a>  <span class="fu">ylab</span>(<span class="st">"Trappings (thousands)"</span>)</span>
+<span id="cb23-13"><a></a></span>
+<span id="cb23-14"><a></a>p_shift</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="alternatives-animation" class="slide level2">
+<h2>Alternatives: animation</h2>
+
+<img data-src="meetup-4_files/figure-revealjs/unnamed-chunk-55-1.gif" class="r-stretch"></section>
+<section id="alternatives-animation-1" class="slide level2">
+<h2>Alternatives: animation</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">library</span>(gganimate)</span>
+<span id="cb24-2"><a></a></span>
+<span id="cb24-3"><a></a>anim <span class="ot">=</span> hare_lynx <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Hare,<span class="at">y=</span>Lynx)) <span class="sc">+</span></span>
+<span id="cb24-4"><a></a>  <span class="fu">geom_path</span>(<span class="at">color=</span><span class="st">"blue"</span>) <span class="sc">+</span></span>
+<span id="cb24-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">size=</span><span class="dv">4</span>,<span class="at">color=</span><span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb24-6"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
+<span id="cb24-7"><a></a>    <span class="fu">theme</span>( <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">color =</span> <span class="cn">NA</span>)) <span class="sc">+</span></span>
+<span id="cb24-8"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Lynx vs Hare Phase Portrait: {as.integer(frame_along)}"</span>) <span class="sc">+</span></span>
+<span id="cb24-9"><a></a>  <span class="fu">xlab</span>(<span class="st">"Hare Trappings"</span>) <span class="sc">+</span></span>
+<span id="cb24-10"><a></a>  <span class="fu">ylab</span>(<span class="st">"Lynx Trappings"</span>) <span class="sc">+</span></span>
+<span id="cb24-11"><a></a>  <span class="fu">transition_reveal</span>(Year) <span class="sc">+</span></span>
+<span id="cb24-12"><a></a>  <span class="fu">shadow_wake</span>(<span class="at">wake_length =</span> <span class="fl">0.5</span>, <span class="at">alpha =</span> <span class="fl">0.8</span>, <span class="at">size =</span> <span class="fl">1.5</span>, <span class="at">wrap =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb24-13"><a></a></span>
+<span id="cb24-14"><a></a><span class="fu">animate</span>(anim, <span class="at">fps =</span> <span class="dv">10</span>, <span class="at">end_pause =</span> <span class="dv">25</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
 <section id="thanks" class="slide level2">
 <h2>Thanks</h2>
 

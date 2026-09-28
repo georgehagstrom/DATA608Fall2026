@@ -1,0 +1,47 @@
+# Data dictionaries for Data Story 3
+
+'fars_accidents_2023_2024.csv' has an official data dictionary called the [FARS Analytical User's Manual,
+1975–2024](https://crashstats.nhtsa.dot.gov/Api/Public/ViewPublication/813794)
+
+
+## 1. 'state_master_2024.csv'
+
+| Column | Meaning |
+|---|---|
+| 'state' | State name |
+| 'population' | Residents, 2024 |
+| 'vmt_millions' | Total miles driven in the state in 2024, in millions . |
+| 'deaths' | People killed in motor vehicle crashes, 2024. |
+| 'ped_n' | Pedestrians among those killed. |
+| 'ped_pct' | Pedestrian share of all crash deaths (%). |
+| 'occupant_n' | Killed occupants of cars, pickups/SUVs, and large trucks (excludes motorcyclists, pedestrians, bicyclists). |
+| 'bac08_pct' | Share of fatally injured passenger-vehicle drivers with blood alcohol ≥ 0.08% (%, estimated). |
+| 'observed_belt_use_pct' | Daytime front-seat belt use observed in roadside surveys (%). |
+| 'unrestrained_pct_of_occ_deaths' | Share of killed occupants who were not wearing a belt (%). |
+| 'speeding_pct' | Share of crash deaths where speeding contributed (%). |
+| 'rural_death_pct' | Share of crash deaths that occurred on rural roads (%). |
+| 'belt_law' | Adult seat belt law: 'primary' (police may stop for belt alone), 'secondary' (ticket only during another stop), or 'none' |
+| 'ems_mean_min' | Mean EMS response time to fatal crashes, minutes |
+| 'ems_rural_min' | Mean EMS response time to fatal crashes, rural |
+| 'ems_urban_min' | Mean EMS response time to fatal crashes, urban. |
+| 'ems_pct_reported' | Share of the state's fatal crashes with EMS times |
+| 'vmt_per_capita' | Miles driven per resident per year|
+| 'ped_deaths' | Pedestrian deaths per year |
+
+---
+
+## 2. 'ems_response_by_state_2023_2024.csv'
+
+| Column | Meaning |
+|---|---|
+| 'state' | State name |
+| 'fatal_crashes' | Fatal crashes, 2023 and 2024 |
+| 'deaths' | Total crash fatalities |
+| 'pct_rural_crashes' | Share of the fatal crashes on rural roads (%) |
+| 'n_with_ems_times' | Fatal crashes with usable EMS notification and arrival times |
+| 'pct_with_ems_times' | Fatal crashes as a share of all the state's fatal crashes (%) |
+| 'mean_response_min' | Mean EMS response time, minutes |
+| 'median_response_min' | Median EMS response time, minutes |
+| 'mean_response_rural_min' | Mean EMS response, rural |
+| 'mean_response_urban_min' | Mean EMS response, urban |
+

@@ -2269,7 +2269,7 @@
     "href": "course/schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Click Here to Join the Meetups on Zoom\nMeetups are Mondays at 8:00PM Eastern. We meet every Monday of the semester except the Monday after Thanksgiving.\n\nCourse Schedule\n\n\nDate\nModule\nSlides\nVideo\nMain Deliverables\n\n\n\n\nAug 31\nDeveloping a Critical Eye\nMeetup 1 Slides\nMeetup 1 Video\nStory 1 assigned\n\n\nSep 7\nThe Data Visualization Catalogue\nMeetup 2 Slides\nMeetup 2 Video\nStory 1 due Sun Sep 13\n\n\nSep 14\nVisualization Quality Features\nMeetup 3 Slides\nMeetup 3 Video\nStory 2 assigned\n\n\nSep 21\nAssociations and Time Series\nMeetup 4 Slides\nMeetup 4 Video\nStory 2 due Sun Sep 27\n\n\nSep 28\nVisualizing Geospatial Data\n\n\nStory 3 assigned\n\n\nOct 5\nStorytelling\n\n\nStory 3 due Sun Oct 11\n\n\nOct 12\nEffective Use of Color and Fonts\n\n\nStory 4 assigned\n\n\nOct 19\nDistributions and Histograms\n\n\nStory 4 due Sun Oct 25\n\n\nOct 26\nModels and Uncertainty\n\n\nStory 5 assigned\n\n\nNov 2\nDimension Reduction and PCA\n\n\nStory 5 due Sun Nov 8\n\n\nNov 9\nClustering\n\n\nStory 6 assigned\n\n\nNov 16\nHierarchical Clustering\n\n\nStory 6 due Sun Nov 22\n\n\nNov 23\nIntroduction to Shiny Apps\n\n\nStory 7 assigned\n\n\nNov 30\nNo Meetup — Thanksgiving\n\n\n\n\n\nDec 7\nInteractive Visualizations\nSlides\n\nStory 7 due Sun Dec 13\n\n\nDec 14\nWrap-Up\n\n\n\n\n\n\n\n\n\nWeek\nVideo Link\nAnnouncement Link\n\n\n\n\n2\nDot Plot Vignette\nDetails\n\n\n\nSlides and recordings are posted here after each meetup.",
+    "text": "Click Here to Join the Meetups on Zoom\nMeetups are Mondays at 8:00PM Eastern. We meet every Monday of the semester except the Monday after Thanksgiving.\n\nCourse Schedule\n\n\nDate\nModule\nSlides\nVideo\nMain Deliverables\n\n\n\n\nAug 31\nDeveloping a Critical Eye\nMeetup 1 Slides\nMeetup 1 Video\nStory 1 assigned\n\n\nSep 7\nThe Data Visualization Catalogue\nMeetup 2 Slides\nMeetup 2 Video\nStory 1 due Sun Sep 13\n\n\nSep 14\nVisualization Quality Features\nMeetup 3 Slides\nMeetup 3 Video\nStory 2 assigned\n\n\nSep 21\nAssociations and Time Series\nMeetup 4 Slides\nMeetup 4 Video\nStory 2 due Sun Sep 27\n\n\nSep 28\nVisualizing Geospatial Data\nMeetup 5 Slides\n\nStory 3 assigned\n\n\nOct 5\nStorytelling\n\n\nStory 3 due Sun Oct 11\n\n\nOct 12\nEffective Use of Color and Fonts\n\n\nStory 4 assigned\n\n\nOct 19\nDistributions and Histograms\n\n\nStory 4 due Sun Oct 25\n\n\nOct 26\nModels and Uncertainty\n\n\nStory 5 assigned\n\n\nNov 2\nDimension Reduction and PCA\n\n\nStory 5 due Sun Nov 8\n\n\nNov 9\nClustering\n\n\nStory 6 assigned\n\n\nNov 16\nHierarchical Clustering\n\n\nStory 6 due Sun Nov 22\n\n\nNov 23\nIntroduction to Shiny Apps\n\n\nStory 7 assigned\n\n\nNov 30\nNo Meetup — Thanksgiving\n\n\n\n\n\nDec 7\nInteractive Visualizations\nSlides\n\nStory 7 due Sun Dec 13\n\n\nDec 14\nWrap-Up\n\n\n\n\n\n\n\n\n\nWeek\nVideo Link\nAnnouncement Link\n\n\n\n\n2\nDot Plot Vignette\nDetails\n\n\n\nSlides and recordings are posted here after each meetup.",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -2280,7 +2280,7 @@
     "href": "course/schedule.html#meetup-link",
     "title": "Schedule",
     "section": "",
-    "text": "Click Here to Join the Meetups on Zoom\nMeetups are Mondays at 8:00PM Eastern. We meet every Monday of the semester except the Monday after Thanksgiving.\n\nCourse Schedule\n\n\nDate\nModule\nSlides\nVideo\nMain Deliverables\n\n\n\n\nAug 31\nDeveloping a Critical Eye\nMeetup 1 Slides\nMeetup 1 Video\nStory 1 assigned\n\n\nSep 7\nThe Data Visualization Catalogue\nMeetup 2 Slides\nMeetup 2 Video\nStory 1 due Sun Sep 13\n\n\nSep 14\nVisualization Quality Features\nMeetup 3 Slides\nMeetup 3 Video\nStory 2 assigned\n\n\nSep 21\nAssociations and Time Series\nMeetup 4 Slides\nMeetup 4 Video\nStory 2 due Sun Sep 27\n\n\nSep 28\nVisualizing Geospatial Data\n\n\nStory 3 assigned\n\n\nOct 5\nStorytelling\n\n\nStory 3 due Sun Oct 11\n\n\nOct 12\nEffective Use of Color and Fonts\n\n\nStory 4 assigned\n\n\nOct 19\nDistributions and Histograms\n\n\nStory 4 due Sun Oct 25\n\n\nOct 26\nModels and Uncertainty\n\n\nStory 5 assigned\n\n\nNov 2\nDimension Reduction and PCA\n\n\nStory 5 due Sun Nov 8\n\n\nNov 9\nClustering\n\n\nStory 6 assigned\n\n\nNov 16\nHierarchical Clustering\n\n\nStory 6 due Sun Nov 22\n\n\nNov 23\nIntroduction to Shiny Apps\n\n\nStory 7 assigned\n\n\nNov 30\nNo Meetup — Thanksgiving\n\n\n\n\n\nDec 7\nInteractive Visualizations\nSlides\n\nStory 7 due Sun Dec 13\n\n\nDec 14\nWrap-Up\n\n\n\n\n\n\n\n\n\nWeek\nVideo Link\nAnnouncement Link\n\n\n\n\n2\nDot Plot Vignette\nDetails\n\n\n\nSlides and recordings are posted here after each meetup.",
+    "text": "Click Here to Join the Meetups on Zoom\nMeetups are Mondays at 8:00PM Eastern. We meet every Monday of the semester except the Monday after Thanksgiving.\n\nCourse Schedule\n\n\nDate\nModule\nSlides\nVideo\nMain Deliverables\n\n\n\n\nAug 31\nDeveloping a Critical Eye\nMeetup 1 Slides\nMeetup 1 Video\nStory 1 assigned\n\n\nSep 7\nThe Data Visualization Catalogue\nMeetup 2 Slides\nMeetup 2 Video\nStory 1 due Sun Sep 13\n\n\nSep 14\nVisualization Quality Features\nMeetup 3 Slides\nMeetup 3 Video\nStory 2 assigned\n\n\nSep 21\nAssociations and Time Series\nMeetup 4 Slides\nMeetup 4 Video\nStory 2 due Sun Sep 27\n\n\nSep 28\nVisualizing Geospatial Data\nMeetup 5 Slides\n\nStory 3 assigned\n\n\nOct 5\nStorytelling\n\n\nStory 3 due Sun Oct 11\n\n\nOct 12\nEffective Use of Color and Fonts\n\n\nStory 4 assigned\n\n\nOct 19\nDistributions and Histograms\n\n\nStory 4 due Sun Oct 25\n\n\nOct 26\nModels and Uncertainty\n\n\nStory 5 assigned\n\n\nNov 2\nDimension Reduction and PCA\n\n\nStory 5 due Sun Nov 8\n\n\nNov 9\nClustering\n\n\nStory 6 assigned\n\n\nNov 16\nHierarchical Clustering\n\n\nStory 6 due Sun Nov 22\n\n\nNov 23\nIntroduction to Shiny Apps\n\n\nStory 7 assigned\n\n\nNov 30\nNo Meetup — Thanksgiving\n\n\n\n\n\nDec 7\nInteractive Visualizations\nSlides\n\nStory 7 due Sun Dec 13\n\n\nDec 14\nWrap-Up\n\n\n\n\n\n\n\n\n\nWeek\nVideo Link\nAnnouncement Link\n\n\n\n\n2\nDot Plot Vignette\nDetails\n\n\n\nSlides and recordings are posted here after each meetup.",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -3222,7 +3222,7 @@
     "href": "meetups/meetup-5/meetup-5.html#mapping-libraries",
     "title": "Meetup 5: Visualizing Geospatial Data",
     "section": "Mapping Libraries",
-    "text": "Mapping Libraries\n\nThere are several tools which are better at making maps:\n\nsf or simple features\ntmap or tidy maps\n\nThese bring full suit of GIS (Geographic Information Systems Tools)\nProjections,"
+    "text": "Mapping Libraries\n\nThere are several tools which are better at making maps:\n\nsf or simple features\ntmap or tidy maps\n\nThese bring full suit of GIS (Geographic Information Systems Tools)\nProjections"
   },
   {
     "objectID": "meetups/meetup-5/meetup-5.html#mapping-nyc",
@@ -3264,7 +3264,7 @@
     "href": "meetups/meetup-5/meetup-5.html#mapping-nyc-5",
     "title": "Meetup 5: Visualizing Geospatial Data",
     "section": "Mapping NYC",
-    "text": "Mapping NYC\n\nLet’s get some data\n\n\ntract_age = tract_acs_data |&gt; select(med_age_est,geoid)\n\nnyc_boundaries(geography = \"tract\") %&gt;% \n  left_join(tract_age, by = c(\"geoid\" = \"geoid\")) %&gt;% \n  ggplot() +\n  geom_sf(aes(fill = med_age_est)) +\n  scale_fill_viridis_c(name = \"Median Age (estimated)\") +\n  theme_void() +\n  theme(panel.grid = element_line(color = \"transparent\")) +\n  labs(title = \"How does age vary across NYC Neighborhoods?\")"
+    "text": "Mapping NYC\n\nLet’s get some data\n\n\ntract_age = tract_acs_data |&gt; select(med_age_est,geoid)\n\nnyc_boundaries(geography = \"tract\") %&gt;% \n  left_join(tract_age, by = c(\"geoid\" = \"geoid\")) %&gt;% \n  ggplot() +\n  geom_sf(aes(fill = med_age_est)) +\n  scale_fill_viridis_c(name = \"Median Age (estimated)\") +\n  theme_void() +\n  labs(title = \"How does age vary across NYC Neighborhoods?\")"
   },
   {
     "objectID": "meetups/meetup-5/meetup-5.html#projections",
@@ -3334,14 +3334,35 @@
     "href": "meetups/meetup-5/meetup-5.html#ecological-fallacy",
     "title": "Meetup 5: Visualizing Geospatial Data",
     "section": "Ecological Fallacy",
-    "text": "Ecological Fallacy\n\nProperties of individuals may not correspond to mean properties of the group\nModifiable Areal Units Problem\n\nDifferent areas may show different story"
+    "text": "Ecological Fallacy\n\nProperties of individuals may not correspond to mean properties of the group"
   },
   {
     "objectID": "meetups/meetup-5/meetup-5.html#ecological-fallacy-1",
     "href": "meetups/meetup-5/meetup-5.html#ecological-fallacy-1",
     "title": "Meetup 5: Visualizing Geospatial Data",
     "section": "Ecological Fallacy",
-    "text": "Ecological Fallacy\n\nGeographical disparities in cancer stage at diagnosis\n\n\nFontanet et al 2024"
+    "text": "Ecological Fallacy\n\nProperties of individuals may not correspond to mean properties of the group\nGroup level correlation may not apply at individual level\nNobel Laureates may not eat chocolate"
+  },
+  {
+    "objectID": "meetups/meetup-5/meetup-5.html#modifiable-areal-units-problem",
+    "href": "meetups/meetup-5/meetup-5.html#modifiable-areal-units-problem",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Modifiable Areal Units Problem",
+    "text": "Modifiable Areal Units Problem\n\nMaps version of ecological fallacy\n\nDifferent areas may show different story"
+  },
+  {
+    "objectID": "meetups/meetup-5/meetup-5.html#modifiable-areal-units-problem-1",
+    "href": "meetups/meetup-5/meetup-5.html#modifiable-areal-units-problem-1",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Modifiable Areal Units Problem",
+    "text": "Modifiable Areal Units Problem\n\nGeographical disparities in cancer stage at diagnosis\n\n\nFontanet et al 2024"
+  },
+  {
+    "objectID": "meetups/meetup-5/meetup-5.html#facing-the-maup",
+    "href": "meetups/meetup-5/meetup-5.html#facing-the-maup",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Facing the MAUP",
+    "text": "Facing the MAUP\n\nPlot data at different resolutions if you can\nCheck and see if the result changes\nChoose the resolution most appropriate to your question"
   },
   {
     "objectID": "meetups/meetup-5/meetup-5.html#cartogram",
@@ -3355,7 +3376,7 @@
     "href": "meetups/meetup-5/meetup-5.html#statebins-library",
     "title": "Meetup 5: Visualizing Geospatial Data",
     "section": "statebins library",
-    "text": "statebins library\n\ngeom_statebins\n\n\nlibrary(geofacet)\nlibrary(statebins)\nstate_unemp |&gt; as_tibble() |&gt; filter(year==2008) |&gt;\n  ggplot(aes(fill=rate,                                                 state=state)) + \n  geom_statebins(lbl_size = 6) +\n  scale_fill_gradient(low=\"white\",high=\"red\") +\n  theme_void(base_size=18) +\n  labs(title=\"State Unemployment\")"
+    "text": "statebins library\n\ngeom_statebins\n\n\nlibrary(geofacet)\nlibrary(statebins)\nstate_unemp |&gt; as_tibble() |&gt; filter(year==2008) |&gt;\n  ggplot(aes(fill=rate, state=state)) + \n  geom_statebins(lbl_size = 6) +\n  scale_fill_gradient(low=\"white\",high=\"red\") +\n  theme_void(base_size=18) +\n  labs(title=\"State Unemployment\")"
   },
   {
     "objectID": "meetups/meetup-5/meetup-5.html#time-series-in-each-bin",

@@ -444,7 +444,7 @@ George I. Hagstrom
 <section id="many-ways-to-map-the-same-data-6" class="slide level2">
 <h2>Many Ways to “Map” the Same Data</h2>
 
-<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
 <section id="several-differences" class="slide level2">
 <h2>Several Differences</h2>
 <ul>
@@ -506,7 +506,7 @@ George I. Hagstrom
 <span id="cb3-4"><a></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Counties of New York"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
 <section id="mapping-libraries" class="slide level2">
 <h2>Mapping Libraries</h2>
 <ul>
@@ -516,7 +516,7 @@ George I. Hagstrom
 <li><code>tmap</code> or <code>tidy maps</code></li>
 </ul></li>
 <li>These bring full suit of GIS (Geographic Information Systems Tools)</li>
-<li>Projections,</li>
+<li>Projections</li>
 </ul>
 </section>
 <section id="mapping-nyc" class="slide level2">
@@ -555,14 +555,14 @@ Bounding box:  xmin: 913180.2 ymin: 120131.4 xmax: 1067382 ymax: 272798.5</code>
 <section id="mapping-nyc-1" class="slide level2">
 <h2>Mapping NYC</h2>
 
-<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
 <section id="mapping-nyc-2" class="slide level2">
 <h2>Mapping NYC</h2>
 <ul>
 <li>Let’s get some data</li>
 </ul>
 
-<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
 <section id="mapping-nyc-3" class="slide level2">
 <h2>Mapping NYC</h2>
 <ul>
@@ -638,8 +638,7 @@ Bounding box:  xmin: 913180.2 ymin: 120131.4 xmax: 1067382 ymax: 272798.5</code>
 <span id="cb13-6"><a></a>  <span class="fu">geom_sf</span>(<span class="fu">aes</span>(<span class="at">fill =</span> med_age_est)) <span class="sc">+</span></span>
 <span id="cb13-7"><a></a>  <span class="fu">scale_fill_viridis_c</span>(<span class="at">name =</span> <span class="st">"Median Age (estimated)"</span>) <span class="sc">+</span></span>
 <span id="cb13-8"><a></a>  <span class="fu">theme_void</span>() <span class="sc">+</span></span>
-<span id="cb13-9"><a></a>  <span class="fu">theme</span>(<span class="at">panel.grid =</span> <span class="fu">element_line</span>(<span class="at">color =</span> <span class="st">"transparent"</span>)) <span class="sc">+</span></span>
-<span id="cb13-10"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"How does age vary across NYC Neighborhoods?"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-9"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"How does age vary across NYC Neighborhoods?"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="projections" class="slide level2">
@@ -649,7 +648,7 @@ Bounding box:  xmin: 913180.2 ymin: 120131.4 xmax: 1067382 ymax: 272798.5</code>
 <li>Many Choices</li>
 </ul>
 
-<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section>
 <section id="projections-1" class="slide level2">
 <h2>Projections</h2>
 <ul>
@@ -672,7 +671,7 @@ Bounding box:  xmin: 913180.2 ymin: 120131.4 xmax: 1067382 ymax: 272798.5</code>
 <li>Control with <code>coord_sf</code></li>
 </ul>
 
-<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section>
 <section id="projections-3" class="slide level2">
 <h2>Projections</h2>
 <ul>
@@ -680,28 +679,28 @@ Bounding box:  xmin: 913180.2 ymin: 120131.4 xmax: 1067382 ymax: 272798.5</code>
 <li>Control with <code>coord_sf</code></li>
 </ul>
 
-<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-17-1.png" width="960" class="r-stretch"></section>
 <section id="choropleth-maps" class="slide level2">
 <h2>Choropleth Maps</h2>
 <ul>
 <li>Maps that color regions based on data</li>
 </ul>
 
-<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-17-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch"></section>
 <section id="problems-with-choropleths" class="slide level2">
 <h2>Problems With Choropleths</h2>
 <ul>
 <li>Population distribution very heterogeneous</li>
 </ul>
 
-<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-19-1.png" width="960" class="r-stretch"></section>
 <section id="problems-with-choropleths-1" class="slide level2">
 <h2>Problems with Choropleths</h2>
 <ul>
 <li>Geographic definitions also heterogeneous</li>
 </ul>
 
-<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-19-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-20-1.png" width="960" class="r-stretch"></section>
 <section id="problems-with-choropleths-2" class="slide level2">
 <h2>Problems with Choropleths</h2>
 <ul>
@@ -724,31 +723,53 @@ Bounding box:  xmin: 913180.2 ymin: 120131.4 xmax: 1067382 ymax: 272798.5</code>
 <li>Geographic definitions also heterogeneous</li>
 </ul>
 
-<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-21-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-22-1.png" width="960" class="r-stretch"></section>
 <section id="ecological-fallacy" class="slide level2">
 <h2>Ecological Fallacy</h2>
 <ul>
 <li>Properties of individuals may not correspond to mean properties of the group</li>
-<li>Modifiable Areal Units Problem
+</ul>
+
+<img data-src="chocolate_countries_large.jpg" class="r-stretch"></section>
+<section id="ecological-fallacy-1" class="slide level2">
+<h2>Ecological Fallacy</h2>
+<ul>
+<li>Properties of individuals may not correspond to mean properties of the group</li>
+<li>Group level correlation may not apply at individual level</li>
+<li>Nobel Laureates may not eat chocolate</li>
+</ul>
+</section>
+<section id="modifiable-areal-units-problem" class="slide level2">
+<h2>Modifiable Areal Units Problem</h2>
+<ul>
+<li>Maps version of ecological fallacy
 <ul>
 <li>Different areas may show different story</li>
 </ul></li>
 </ul>
 </section>
-<section id="ecological-fallacy-1" class="slide level2">
-<h2>Ecological Fallacy</h2>
+<section id="modifiable-areal-units-problem-1" class="slide level2">
+<h2>Modifiable Areal Units Problem</h2>
 <ul>
 <li>Geographical disparities in cancer stage at diagnosis</li>
 </ul>
 
 <img data-src="muap.jpg" class="r-stretch quarto-figure-center"><p class="caption">Fontanet et al 2024</p></section>
+<section id="facing-the-maup" class="slide level2">
+<h2>Facing the MAUP</h2>
+<ol type="1">
+<li>Plot data at different resolutions if you can</li>
+<li>Check and see if the result changes</li>
+<li>Choose the resolution most appropriate to your question</li>
+</ol>
+</section>
 <section id="cartogram" class="slide level2">
 <h2>Cartogram</h2>
 <ul>
 <li>Equalize areas while retaining geography</li>
 </ul>
 
-<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-22-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-23-1.png" width="960" class="r-stretch"></section>
 <section id="statebins-library" class="slide level2">
 <h2><code>statebins</code> library</h2>
 <ul>
@@ -758,7 +779,7 @@ Bounding box:  xmin: 913180.2 ymin: 120131.4 xmax: 1067382 ymax: 272798.5</code>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">library</span>(geofacet)</span>
 <span id="cb16-2"><a></a><span class="fu">library</span>(statebins)</span>
 <span id="cb16-3"><a></a>state_unemp <span class="sc">|&gt;</span> <span class="fu">as_tibble</span>() <span class="sc">|&gt;</span> <span class="fu">filter</span>(year<span class="sc">==</span><span class="dv">2008</span>) <span class="sc">|&gt;</span></span>
-<span id="cb16-4"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">fill=</span>rate,                                                 <span class="at">state=</span>state)) <span class="sc">+</span> </span>
+<span id="cb16-4"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">fill=</span>rate, <span class="at">state=</span>state)) <span class="sc">+</span> </span>
 <span id="cb16-5"><a></a>  <span class="fu">geom_statebins</span>(<span class="at">lbl_size =</span> <span class="dv">6</span>) <span class="sc">+</span></span>
 <span id="cb16-6"><a></a>  <span class="fu">scale_fill_gradient</span>(<span class="at">low=</span><span class="st">"white"</span>,<span class="at">high=</span><span class="st">"red"</span>) <span class="sc">+</span></span>
 <span id="cb16-7"><a></a>  <span class="fu">theme_void</span>(<span class="at">base_size=</span><span class="dv">18</span>) <span class="sc">+</span></span>
@@ -768,7 +789,7 @@ Bounding box:  xmin: 913180.2 ymin: 120131.4 xmax: 1067382 ymax: 272798.5</code>
 <section id="time-series-in-each-bin" class="slide level2">
 <h2>Time Series in Each Bin</h2>
 
-<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-24-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-25-1.png" width="960" class="r-stretch"></section>
 <section id="time-series-in-each-bin-1" class="slide level2">
 <h2>Time Series in Each Bin</h2>
 <div class="cell">
@@ -802,7 +823,7 @@ Bounding box:  xmin: 913180.2 ymin: 120131.4 xmax: 1067382 ymax: 272798.5</code>
 <li>Facet by time</li>
 </ul>
 
-<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-26-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-27-1.png" width="960" class="r-stretch"></section>
 <section id="small-multiples-1" class="slide level2">
 <h2>Small Multiples</h2>
 <div class="cell">
@@ -832,7 +853,7 @@ Bounding box:  xmin: 913180.2 ymin: 120131.4 xmax: 1067382 ymax: 272798.5</code>
 <li>Direct numerical visualization more precise than colors</li>
 </ul>
 
-<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-28-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-29-1.png" width="960" class="r-stretch"></section>
 <section id="non-spatial-plots-1" class="slide level2">
 <h2>Non-Spatial Plots</h2>
 <ul>

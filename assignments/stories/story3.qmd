@@ -1,0 +1,40 @@
+---
+title: "Story 3: What is causing the deaths on your roads?"
+---
+
+Traffic accidents cause are a major cause of death in the United States, far exceeding those of peer countries (see [Why is the life expectancy in the US lower than in other rich countries?](https://ourworldindata.org/us-life-expectancy-low)) and accounting for part of the gap in life expectancy that we see in that data ([Fenelon et al. 2016](https://jamanetwork.com/journals/jama/fullarticle/2488300)). The burden
+of road mortality falls unequally on US states, where it is highest in rural states and the southeastern US and lowest in the Northeast. Furthermore, while traffic fatalities have been falling across the
+world over the past 40 years, the US has seen a steady increase in recent years. 
+
+To understand the causes and possible solutions to the traffic fatalaties, we untangle several complex, interrelated factors, including regulations in different states, the structure of the built environment,
+the capacity of emergency medical systems to respond to crashes, and even political priorities or socioeconomic factors. Your task in this data story is to make a visualization that investigates these 
+potential explanations, and to try to answer the question: "Why explains the differences in road deaths in different parts of the United States?".
+
+For this assignment I have provided several datasets, each of which you can choose to use as it suits your needs.
+
+1. The first dataset is a state level overview of factors impacting traffic mortality: including the [IIHS Fatality Facts 2024 Page](https://www.iihs.org/research-areas/fatality-statistics/detail/state-by-state )  [state_master_2024.csv](data/state_master_2024.csv)
+  - [IIHS Fatality Facts 2024 State Page](https://www.iihs.org/research-areas/fatality-statistics/detail/state-by-state)
+  - [IIHS Seat Belt and Child Seat Laws](https://www.iihs.org/research-areas/seat-belts/seat-belt-law-table)
+  - Summary stats from the Federal Accident Reporting System[FARS 2023 National CSV files](https://static.nhtsa.gov/nhtsa/downloads/FARS/2023/National/FARS2023NationalCSV.zip) and
+	[FARS 2024 National CSV files](https://static.nhtsa.gov/nhtsa/downloads/FARS/2024/National/FARS2024NationalCSV.zip). These are datasets containing information on every fatal accident in the US.
+2. The second dataset is a deeper state level view on the performance of EMS (Emergency Medical Services) during fatal traffic accidents. Notice that this isn't response to an average accident but response specifically to fatal accidents. I was unable to get better data than this. It is aggregated at the state level in [ems_response_by_state_2023_2024.csv](data/ems_response_by_state_2023_2024.csv).
+3. The third is the raw data from 2023 and 2024 FARS if you want to do a deeper dive: [fars_accidents_2023_2024.csv](https://github.com/georgehagstrom/DATA608Fall2026/raw/main/website/assignments/stories/data/fars_accidents_2023_2024.csv)
+
+A data dictionary for these files can be found at [data_dictionary_story_3.qmd](data/data_dictionary_story_3.qmd).
+
+Your overall task for this assignment is to:
+
+- Create a combination of maps and other visualizations, using the techniques discussed during weeks 5 and 6 as well as prior modules, to tell a story about the causes of disparities of traffic fatalaties. 
+
+If you want to read more about this issue, 'stateline', which is the state policy devision of the Pew foundation, has covered this topic extensively.
+
+- [As national death rate dips, some states did better than others](https://stateline.org/2026/07/23/as-national-death-rate-dips-some-states-did-better-than-others/)
+- [Pedestrian deaths saw largest recorded drop in early 2025](https://stateline.org/2026/03/30/pedestrian-deaths-saw-largest-recorded-drop-in-early-2025/)
+- [Dark highways, fast cars, few sidewalks — and more pedestrian deaths](https://stateline.org/2024/08/30/dark-highways-fast-cars-few-sidewalks-and-more-pedestrian-deaths/) (Aug 2024) —
+- [Less driving but more deaths: Spike in traffic fatalities puzzles lawmakers](https://stateline.org/2023/11/10/less-driving-but-more-deaths-spike-in-traffic-fatalities-puzzles-lawmakers/) (Nov 2023) —
+
+**Notes:**
+
+1. Submit your visualizations as a quarto presentation or report, using either python or R to create the visualizations and submitting your qmd file to guarantee reproducibility.
+2. If you use color in your visuals you must use an accessible color palette.
+3. This assignment is due at the end of week six of the semester.

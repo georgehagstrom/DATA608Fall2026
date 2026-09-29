@@ -404,6 +404,13 @@ George I. Hagstrom
 </div>
 
 </section>
+<section id="october-1st-meetup-postponed" class="slide level2">
+<h2>October 1st Meetup Postponed</h2>
+<ul>
+<li>Apologies</li>
+<li>Next meetup likely November 3rd stay tuned</li>
+</ul>
+</section>
 <section id="many-ways-to-map-the-same-data" class="slide level2">
 <h2>Many Ways to Map the Same Data</h2>
 <ul>
@@ -817,34 +824,52 @@ Bounding box:  xmin: 913180.2 ymin: 120131.4 xmax: 1067382 ymax: 272798.5</code>
 <span id="cb17-22"><a></a>  ) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
+<section id="time-series-in-each-bin-2" class="slide level2">
+<h2>Time Series in Each Bin</h2>
+<ul>
+<li>‘geofacet’ and ‘ggplot’ currently break</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">assignInNamespace</span>(<span class="st">"get_full_geo_grid"</span>, <span class="cf">function</span>(grid) {</span>
+<span id="cb18-2"><a></a>  grd <span class="ot">&lt;-</span> geofacet<span class="sc">:::</span><span class="fu">get_grid</span>(grid)</span>
+<span id="cb18-3"><a></a>  nr <span class="ot">&lt;-</span> <span class="fu">max</span>(grd<span class="sc">$</span>row); nc <span class="ot">&lt;-</span> <span class="fu">max</span>(grd<span class="sc">$</span>col)</span>
+<span id="cb18-4"><a></a>  gd <span class="ot">&lt;-</span> <span class="fu">expand.grid</span>(<span class="at">col =</span> <span class="fu">seq_len</span>(nc), <span class="at">row =</span> <span class="fu">seq_len</span>(nr))</span>
+<span id="cb18-5"><a></a>  grd <span class="ot">&lt;-</span> <span class="fu">merge</span>(grd, gd, <span class="at">all.y =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb18-6"><a></a>  grd <span class="ot">&lt;-</span> grd[<span class="fu">order</span>(grd<span class="sc">$</span>row, grd<span class="sc">$</span>col), ]</span>
+<span id="cb18-7"><a></a>  grd<span class="sc">$</span>panel <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"panel-"</span>, grd<span class="sc">$</span>col, <span class="st">"-"</span>, grd<span class="sc">$</span>row)</span>
+<span id="cb18-8"><a></a>  grd<span class="sc">$</span>strip <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">"strip-t-"</span>, grd<span class="sc">$</span>col, <span class="st">"-"</span>, grd<span class="sc">$</span>row)</span>
+<span id="cb18-9"><a></a>  grd</span>
+<span id="cb18-10"><a></a>}, <span class="at">ns =</span> <span class="st">"geofacet"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
 <section id="small-multiples" class="slide level2">
 <h2>Small Multiples</h2>
 <ul>
 <li>Facet by time</li>
 </ul>
 
-<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-27-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-28-1.png" width="960" class="r-stretch"></section>
 <section id="small-multiples-1" class="slide level2">
 <h2>Small Multiples</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>opiates<span class="sc">$</span>region <span class="ot">&lt;-</span> <span class="fu">tolower</span>(opiates<span class="sc">$</span>state)</span>
-<span id="cb18-2"><a></a>opiates_map <span class="ot">&lt;-</span> <span class="fu">left_join</span>(us_states, opiates)</span>
-<span id="cb18-3"><a></a></span>
-<span id="cb18-4"><a></a>p0 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> <span class="fu">subset</span>(opiates_map, year <span class="sc">&gt;</span> <span class="dv">1999</span>),</span>
-<span id="cb18-5"><a></a>             <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> long, <span class="at">y =</span> lat,</span>
-<span id="cb18-6"><a></a>                 <span class="at">group =</span> group,</span>
-<span id="cb18-7"><a></a>                 <span class="at">fill =</span> adjusted))</span>
-<span id="cb18-8"><a></a></span>
-<span id="cb18-9"><a></a>p1 <span class="ot">&lt;-</span> p0 <span class="sc">+</span> <span class="fu">geom_polygon</span>(<span class="at">color =</span> <span class="st">"gray90"</span>, <span class="at">size =</span> <span class="fl">0.05</span>) <span class="sc">+</span></span>
-<span id="cb18-10"><a></a>    <span class="fu">coord_map</span>(<span class="at">projection =</span> <span class="st">"albers"</span>, <span class="at">lat0 =</span> <span class="dv">39</span>, <span class="at">lat1 =</span> <span class="dv">45</span>) </span>
-<span id="cb18-11"><a></a></span>
-<span id="cb18-12"><a></a>p2 <span class="ot">&lt;-</span> p1 <span class="sc">+</span> <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"plasma"</span>)</span>
-<span id="cb18-13"><a></a></span>
-<span id="cb18-14"><a></a>p2 <span class="sc">+</span> <span class="fu">theme_map</span>() <span class="sc">+</span> <span class="fu">facet_wrap</span>(<span class="sc">~</span> year, <span class="at">ncol =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
-<span id="cb18-15"><a></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
-<span id="cb18-16"><a></a>          <span class="at">strip.background =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
-<span id="cb18-17"><a></a>    <span class="fu">labs</span>(<span class="at">fill =</span> <span class="st">"Death rate per 100,000 population "</span>,</span>
-<span id="cb18-18"><a></a>         <span class="at">title =</span> <span class="st">"Opiate Related Deaths by State, 2000-2014"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>opiates<span class="sc">$</span>region <span class="ot">&lt;-</span> <span class="fu">tolower</span>(opiates<span class="sc">$</span>state)</span>
+<span id="cb19-2"><a></a>opiates_map <span class="ot">&lt;-</span> <span class="fu">left_join</span>(us_states, opiates)</span>
+<span id="cb19-3"><a></a></span>
+<span id="cb19-4"><a></a>p0 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> <span class="fu">subset</span>(opiates_map, year <span class="sc">&gt;</span> <span class="dv">1999</span>),</span>
+<span id="cb19-5"><a></a>             <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> long, <span class="at">y =</span> lat,</span>
+<span id="cb19-6"><a></a>                 <span class="at">group =</span> group,</span>
+<span id="cb19-7"><a></a>                 <span class="at">fill =</span> adjusted))</span>
+<span id="cb19-8"><a></a></span>
+<span id="cb19-9"><a></a>p1 <span class="ot">&lt;-</span> p0 <span class="sc">+</span> <span class="fu">geom_polygon</span>(<span class="at">color =</span> <span class="st">"gray90"</span>, <span class="at">size =</span> <span class="fl">0.05</span>) <span class="sc">+</span></span>
+<span id="cb19-10"><a></a>    <span class="fu">coord_map</span>(<span class="at">projection =</span> <span class="st">"albers"</span>, <span class="at">lat0 =</span> <span class="dv">39</span>, <span class="at">lat1 =</span> <span class="dv">45</span>) </span>
+<span id="cb19-11"><a></a></span>
+<span id="cb19-12"><a></a>p2 <span class="ot">&lt;-</span> p1 <span class="sc">+</span> <span class="fu">scale_fill_viridis_c</span>(<span class="at">option =</span> <span class="st">"plasma"</span>)</span>
+<span id="cb19-13"><a></a></span>
+<span id="cb19-14"><a></a>p2 <span class="sc">+</span> <span class="fu">theme_map</span>() <span class="sc">+</span> <span class="fu">facet_wrap</span>(<span class="sc">~</span> year, <span class="at">ncol =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb19-15"><a></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>,</span>
+<span id="cb19-16"><a></a>          <span class="at">strip.background =</span> <span class="fu">element_blank</span>()) <span class="sc">+</span></span>
+<span id="cb19-17"><a></a>    <span class="fu">labs</span>(<span class="at">fill =</span> <span class="st">"Death rate per 100,000 population "</span>,</span>
+<span id="cb19-18"><a></a>         <span class="at">title =</span> <span class="st">"Opiate Related Deaths by State, 2000-2014"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="non-spatial-plots" class="slide level2">
@@ -853,21 +878,21 @@ Bounding box:  xmin: 913180.2 ymin: 120131.4 xmax: 1067382 ymax: 272798.5</code>
 <li>Direct numerical visualization more precise than colors</li>
 </ul>
 
-<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-29-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-5_files/figure-revealjs/unnamed-chunk-30-1.png" width="960" class="r-stretch"></section>
 <section id="non-spatial-plots-1" class="slide level2">
 <h2>Non-Spatial Plots</h2>
 <ul>
 <li>Direct numerical visualization more precise than colors</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a> election <span class="sc">|&gt;</span> <span class="fu">filter</span>(state <span class="sc">!=</span> <span class="st">"DC"</span>) <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(</span>
-<span id="cb19-2"><a></a>   <span class="fu">aes</span>(<span class="at">x =</span> r_points, <span class="at">y =</span> <span class="fu">reorder</span>(state, r_points),</span>
-<span id="cb19-3"><a></a>                           <span class="at">color =</span> party)) <span class="sc">+</span> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"gray30"</span>) <span class="sc">+</span></span>
-<span id="cb19-4"><a></a>    <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span> <span class="fu">scale_color_manual</span>(<span class="at">values =</span> party_colors) <span class="sc">+</span> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">30</span>, <span class="sc">-</span><span class="dv">20</span>, <span class="sc">-</span><span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>),                              <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"30</span><span class="sc">\n</span><span class="st"> (Clinton)"</span>, <span class="st">"20"</span>, <span class="st">"10"</span>, <span class="st">"0"</span>,</span>
-<span id="cb19-5"><a></a>                                         <span class="st">"10"</span>, <span class="st">"20"</span>, <span class="st">"30"</span>, <span class="st">"40</span><span class="sc">\n</span><span class="st">(Trump)"</span>)) <span class="sc">+</span> </span>
-<span id="cb19-6"><a></a>   <span class="fu">facet_wrap</span>(<span class="sc">~</span> census, <span class="at">scales=</span><span class="st">"free_y"</span>,<span class="at">ncol=</span><span class="dv">2</span>) <span class="sc">+</span></span>
-<span id="cb19-7"><a></a>    <span class="fu">guides</span>(<span class="at">color=</span><span class="cn">FALSE</span>) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Point Margin"</span>, <span class="at">y =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
-<span id="cb19-8"><a></a>    <span class="fu">theme</span>(<span class="at">axis.text=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">8</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a> election <span class="sc">|&gt;</span> <span class="fu">filter</span>(state <span class="sc">!=</span> <span class="st">"DC"</span>) <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(</span>
+<span id="cb20-2"><a></a>   <span class="fu">aes</span>(<span class="at">x =</span> r_points, <span class="at">y =</span> <span class="fu">reorder</span>(state, r_points),</span>
+<span id="cb20-3"><a></a>                           <span class="at">color =</span> party)) <span class="sc">+</span> <span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"gray30"</span>) <span class="sc">+</span></span>
+<span id="cb20-4"><a></a>    <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span> <span class="fu">scale_color_manual</span>(<span class="at">values =</span> party_colors) <span class="sc">+</span> <span class="fu">scale_x_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">30</span>, <span class="sc">-</span><span class="dv">20</span>, <span class="sc">-</span><span class="dv">10</span>, <span class="dv">0</span>, <span class="dv">10</span>, <span class="dv">20</span>, <span class="dv">30</span>, <span class="dv">40</span>),                              <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"30</span><span class="sc">\n</span><span class="st"> (Clinton)"</span>, <span class="st">"20"</span>, <span class="st">"10"</span>, <span class="st">"0"</span>,</span>
+<span id="cb20-5"><a></a>                                         <span class="st">"10"</span>, <span class="st">"20"</span>, <span class="st">"30"</span>, <span class="st">"40</span><span class="sc">\n</span><span class="st">(Trump)"</span>)) <span class="sc">+</span> </span>
+<span id="cb20-6"><a></a>   <span class="fu">facet_wrap</span>(<span class="sc">~</span> census, <span class="at">scales=</span><span class="st">"free_y"</span>,<span class="at">ncol=</span><span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb20-7"><a></a>    <span class="fu">guides</span>(<span class="at">color=</span><span class="cn">FALSE</span>) <span class="sc">+</span> <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Point Margin"</span>, <span class="at">y =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb20-8"><a></a>    <span class="fu">theme</span>(<span class="at">axis.text=</span><span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">8</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="thanks" class="slide level2">

@@ -1085,284 +1085,312 @@
     "text": "Thanks!\n\n\n\n\nDATA 608"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#week-summary",
-    "href": "meetups/meetup-10/meetup-10.html#week-summary",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "objectID": "meetups/meetup-5/meetup-5.html#october-1st-meetup-postponed",
+    "href": "meetups/meetup-5/meetup-5.html#october-1st-meetup-postponed",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "October 1st Meetup Postponed",
+    "text": "October 1st Meetup Postponed\n\nApologies\nNext meetup likely November 3rd stay tuned"
+  },
+  {
+    "objectID": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data",
+    "href": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Many Ways to Map the Same Data",
+    "text": "Many Ways to Map the Same Data\n\nResults of 2016 US Election"
+  },
+  {
+    "objectID": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data-1",
+    "href": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data-1",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Many Ways to Map the Same Data",
+    "text": "Many Ways to Map the Same Data\n\nResults of 2016 US Election"
+  },
+  {
+    "objectID": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data-2",
+    "href": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data-2",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Many Ways to Map the Same Data",
+    "text": "Many Ways to Map the Same Data\n\nResults of 2016 US Election"
+  },
+  {
+    "objectID": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data-3",
+    "href": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data-3",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Many Ways to Map the Same Data",
+    "text": "Many Ways to Map the Same Data\n\nResults of 2016 US Election\n\n\nHealy 7.1"
+  },
+  {
+    "objectID": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data-4",
+    "href": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data-4",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Many Ways to Map the Same Data",
+    "text": "Many Ways to Map the Same Data\n\nResults of 2016 US Election"
+  },
+  {
+    "objectID": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data-5",
+    "href": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data-5",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Many Ways to Map the Same Data",
+    "text": "Many Ways to Map the Same Data\n\nResults of 2016 US Election"
+  },
+  {
+    "objectID": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data-6",
+    "href": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data-6",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Many Ways to “Map” the Same Data",
+    "text": "Many Ways to “Map” the Same Data"
+  },
+  {
+    "objectID": "meetups/meetup-5/meetup-5.html#several-differences",
+    "href": "meetups/meetup-5/meetup-5.html#several-differences",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Several Differences",
+    "text": "Several Differences\n\nAreas of different regions vary by a lot\nNumber of people vary by a lot\nDifferent resolution shows different patterns\nPattern of votes vs. Meaningful outcome\nFor numbers, the dot-plot is better"
+  },
+  {
+    "objectID": "meetups/meetup-5/meetup-5.html#week-summary",
+    "href": "meetups/meetup-5/meetup-5.html#week-summary",
+    "title": "Meetup 5: Visualizing Geospatial Data",
     "section": "Week Summary",
-    "text": "Week Summary\n\nData Story 5 is Due this Sunday at Midnight\nReading is Section 12.3 of Fundamentals of Data Visualization\nWhat to do when the data has too many variables to visualize?"
+    "text": "Week Summary\n\nReading for the week:\n\nChapter 15 of Wilke\nChapter 7 of Healy (especially if R user)\nCartopy Tutorial (for pythonistas)\nEcological Fallacy Section\n\nDiscussion: Find a lying map\nNew Lab Available"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#many-variables",
-    "href": "meetups/meetup-10/meetup-10.html#many-variables",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Many variables?",
-    "text": "Many variables?\n\nPair Plot?"
+    "objectID": "meetups/meetup-5/meetup-5.html#how-does-r-draw-maps",
+    "href": "meetups/meetup-5/meetup-5.html#how-does-r-draw-maps",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "How Does R Draw Maps?",
+    "text": "How Does R Draw Maps?\n\nLet’s Look at the data available in a map:\n\n\nlibrary(maps)\nus_counties = map_data(\"county\") |&gt; as_tibble()\nhead(us_counties)\n\n# A tibble: 6 × 6\n   long   lat group order region  subregion\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    \n1 -86.5  32.3     1     1 alabama autauga  \n2 -86.5  32.4     1     2 alabama autauga  \n3 -86.5  32.4     1     3 alabama autauga  \n4 -86.6  32.4     1     4 alabama autauga  \n5 -86.6  32.4     1     5 alabama autauga  \n6 -86.6  32.4     1     6 alabama autauga  \n\n\n\nEach unit is a polygon with coordinates and ordering"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#pair-plots-are-limited",
-    "href": "meetups/meetup-10/meetup-10.html#pair-plots-are-limited",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Pair Plots are Limited",
-    "text": "Pair Plots are Limited\n\nData is physiological properties of Australian Olympians\nTakes time to read\nOther options like correlograms also somewhat limited\nWe could use an alternative even though these techniques are useful"
+    "objectID": "meetups/meetup-5/meetup-5.html#draw-some-polygons",
+    "href": "meetups/meetup-5/meetup-5.html#draw-some-polygons",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Draw Some Polygons",
+    "text": "Draw Some Polygons\n\nUse geom_polygon to see how it works\n\n\nus_counties |&gt; filter(region == \"new york\") |&gt;  ggplot(aes(x=long,y=lat,group=group)) +\n  geom_polygon(fill=\"white\",color=\"black\") +\n  theme_minimal(base_size=16) +\n  labs(title=\"Counties of New York\")"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#hopeless-when-data-increases-more",
-    "href": "meetups/meetup-10/meetup-10.html#hopeless-when-data-increases-more",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Hopeless when data increases more",
-    "text": "Hopeless when data increases more\n\nHere is a dataset of biomarker measurements from both ovarian cancer patients and healthy controls\nThere are 4000 variables\nThere will be no pair-plots\n\n\n\n# A tibble: 215 × 4,000\n   `0.063915` `0.033242` `0.018484` `0.0086177` `0.035629` `0.037925` `0.028865`\n        &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;\n 1     0.0254     0.0511    0.0563      0.0217      0.0274     0.0149    0.0225 \n 2     0.0255     0.0361    0.0542      0.00974     0.0275     0.0523    0.0428 \n 3     0.0128     0.0297    0.0793      0.0507      0.0397     0.0577    0.0445 \n 4     0.0198    -0.0106   -0.00750     0.0190      0.0688     0.0618    0.0390 \n 5     0.0390     0.0394    0.00134     0.0262      0.0441     0.0440    0.0396 \n 6     0.0232     0.0538    0.0370      0.0216      0.0388     0.0389    0.0516 \n 7     0.0270     0.0101    0.0177      0.0112      0.0367     0.0160    0.00668\n 8     0.0394     0.0389    0.0316      0.0196      0.0209     0.0300    0.0293 \n 9     0.0134     0.0165    0.0158      0.00492     0.0126     0.0322    0.0182 \n10     0.0337     0.0417    0.0326      0.0290      0.0285     0.0499    0.0502 \n# ℹ 205 more rows\n# ℹ 3,993 more variables: `0.061731` &lt;dbl&gt;, `0.0631` &lt;dbl&gt;, `0.024787` &lt;dbl&gt;,\n#   `0.034473` &lt;dbl&gt;, `0.033539` &lt;dbl&gt;, `0.01043` &lt;dbl&gt;, `0.018585` &lt;dbl&gt;,\n#   `0.051385` &lt;dbl&gt;, `0.045839` &lt;dbl&gt;, `0.02908` &lt;dbl&gt;, `0.079736` &lt;dbl&gt;,\n#   `0.089912` &lt;dbl&gt;, `0.06538` &lt;dbl&gt;, `0.048052` &lt;dbl&gt;, `0.017063` &lt;dbl&gt;,\n#   `0.016695` &lt;dbl&gt;, `0.013443` &lt;dbl&gt;, `0.016502` &lt;dbl&gt;, `0.061453` &lt;dbl&gt;,\n#   `0.085336` &lt;dbl&gt;, `0.069497` &lt;dbl&gt;, `0.063938` &lt;dbl&gt;, `0.045307` &lt;dbl&gt;, …"
+    "objectID": "meetups/meetup-5/meetup-5.html#mapping-libraries",
+    "href": "meetups/meetup-5/meetup-5.html#mapping-libraries",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Mapping Libraries",
+    "text": "Mapping Libraries\n\nThere are several tools which are better at making maps:\n\nsf or simple features\ntmap or tidy maps\n\nThese bring full suit of GIS (Geographic Information Systems Tools)\nProjections"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#dimensionality-reduction",
-    "href": "meetups/meetup-10/meetup-10.html#dimensionality-reduction",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Dimensionality Reduction",
-    "text": "Dimensionality Reduction\n\nMany datasets have a large number of variables\nWe often have intuition that the data follows simpler patterns\nOtherwise we couldn’t understand it\nThis motivates a search for simpler representations, which can be powerful visualization tools"
+    "objectID": "meetups/meetup-5/meetup-5.html#mapping-nyc",
+    "href": "meetups/meetup-5/meetup-5.html#mapping-nyc",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Mapping NYC",
+    "text": "Mapping NYC\n\n\nSimple feature collection with 2166 features and 12 fields\nGeometry type: MULTIPOLYGON\nDimension:     XY\nBounding box:  xmin: 913180.2 ymin: 120131.4 xmax: 1067382 ymax: 272798.5\n\n\nProjected CRS: NAD83 / New York Long Island (ftUS)\n# A tibble: 2,166 × 13\n\n\n   geoid       borough_tract_id state_fips county_fips tract_id county_name\n   &lt;chr&gt;       &lt;chr&gt;            &lt;chr&gt;      &lt;chr&gt;       &lt;chr&gt;    &lt;chr&gt;      \n 1 36061000100 1000100          36         061         000100   New York   \n 2 36061000201 1000201          36         061         000201   New York   \n 3 36061000202 1000202          36         061         000202   New York   \n 4 36061000500 1000500          36         061         000500   New York   \n 5 36061000600 1000600          36         061         000600   New York   \n 6 36061000700 1000700          36         061         000700   New York   \n 7 36061000800 1000800          36         061         000800   New York   \n 8 36061000900 1000900          36         061         000900   New York   \n 9 36061001001 1001001          36         061         001001   New York   \n10 36061001002 1001002          36         061         001002   New York   \n# ℹ 2,156 more rows\n# ℹ 7 more variables: borough_name &lt;chr&gt;, borough_id &lt;chr&gt;, nta_id &lt;chr&gt;,\n#   nta_name &lt;chr&gt;, puma_id &lt;chr&gt;, puma_name &lt;chr&gt;,\n#   geometry &lt;MULTIPOLYGON [US_survey_foot]&gt;"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#low-d-representation",
-    "href": "meetups/meetup-10/meetup-10.html#low-d-representation",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Low-D Representation",
-    "text": "Low-D Representation\n\nUsing a tool called Principal Component Analysis, can separate the groups neatly"
+    "objectID": "meetups/meetup-5/meetup-5.html#mapping-nyc-1",
+    "href": "meetups/meetup-5/meetup-5.html#mapping-nyc-1",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Mapping NYC",
+    "text": "Mapping NYC"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#d-representation",
-    "href": "meetups/meetup-10/meetup-10.html#d-representation",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "3D Representation",
-    "text": "3D Representation\n\n3D Neatly separates them"
+    "objectID": "meetups/meetup-5/meetup-5.html#mapping-nyc-2",
+    "href": "meetups/meetup-5/meetup-5.html#mapping-nyc-2",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Mapping NYC",
+    "text": "Mapping NYC\n\nLet’s get some data"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#principal-component-analysis-pca",
-    "href": "meetups/meetup-10/meetup-10.html#principal-component-analysis-pca",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Principal Component Analysis (PCA)",
-    "text": "Principal Component Analysis (PCA)\n\nPCA finds a new coordinate system\nNew directions called Principal Components\nEach PC is a combination/rotation of other ones\nPCs ordered based variability of the data"
+    "objectID": "meetups/meetup-5/meetup-5.html#mapping-nyc-3",
+    "href": "meetups/meetup-5/meetup-5.html#mapping-nyc-3",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Mapping NYC",
+    "text": "Mapping NYC\n\nLet’s get some data\n\n\ntract_acs_data |&gt; select(pop_total_est:med_age_est) |&gt; head(10)\n\n# A tibble: 10 × 3\n   pop_total_est pop_total_moe med_age_est\n           &lt;dbl&gt;         &lt;dbl&gt;       &lt;dbl&gt;\n 1          1382           132        48.4\n 2          8881           973        30.2\n 3          1674           217        33.6\n 4          8604          1004        42.4\n 5          8811          1035        45.8\n 6         15149          1399        35.8\n 7          4920           415        39.7\n 8          5621           616        38.7\n 9             0            11        NA  \n10          3990           331        39.9"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#simple-pca-example",
-    "href": "meetups/meetup-10/meetup-10.html#simple-pca-example",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Simple PCA example",
-    "text": "Simple PCA example\n\nMake a “1D” dataset in two dimensions\nData lies along a straight line with some noise"
+    "objectID": "meetups/meetup-5/meetup-5.html#mapping-nyc-4",
+    "href": "meetups/meetup-5/meetup-5.html#mapping-nyc-4",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Mapping NYC",
+    "text": "Mapping NYC\n\nLet’s get some data\n\n\nnyc_boundaries(geography = \"tract\") \n\nSimple feature collection with 2166 features and 12 fields\nGeometry type: MULTIPOLYGON\nDimension:     XY\nBounding box:  xmin: 913180.2 ymin: 120131.4 xmax: 1067382 ymax: 272798.5\n\n\nProjected CRS: NAD83 / New York Long Island (ftUS)\n# A tibble: 2,166 × 13\n\n\n   geoid       borough_tract_id state_fips county_fips tract_id county_name\n   &lt;chr&gt;       &lt;chr&gt;            &lt;chr&gt;      &lt;chr&gt;       &lt;chr&gt;    &lt;chr&gt;      \n 1 36061000100 1000100          36         061         000100   New York   \n 2 36061000201 1000201          36         061         000201   New York   \n 3 36061000202 1000202          36         061         000202   New York   \n 4 36061000500 1000500          36         061         000500   New York   \n 5 36061000600 1000600          36         061         000600   New York   \n 6 36061000700 1000700          36         061         000700   New York   \n 7 36061000800 1000800          36         061         000800   New York   \n 8 36061000900 1000900          36         061         000900   New York   \n 9 36061001001 1001001          36         061         001001   New York   \n10 36061001002 1001002          36         061         001002   New York   \n# ℹ 2,156 more rows\n# ℹ 7 more variables: borough_name &lt;chr&gt;, borough_id &lt;chr&gt;, nta_id &lt;chr&gt;,\n#   nta_name &lt;chr&gt;, puma_id &lt;chr&gt;, puma_name &lt;chr&gt;,\n#   geometry &lt;MULTIPOLYGON [US_survey_foot]&gt;"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#simple-pca-example-1",
-    "href": "meetups/meetup-10/meetup-10.html#simple-pca-example-1",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Simple PCA Example",
-    "text": "Simple PCA Example\n\nPCA looks for vectors along which the “variance” is maximized"
+    "objectID": "meetups/meetup-5/meetup-5.html#mapping-nyc-5",
+    "href": "meetups/meetup-5/meetup-5.html#mapping-nyc-5",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Mapping NYC",
+    "text": "Mapping NYC\n\nLet’s get some data\n\n\ntract_age = tract_acs_data |&gt; select(med_age_est,geoid)\n\nnyc_boundaries(geography = \"tract\") %&gt;% \n  left_join(tract_age, by = c(\"geoid\" = \"geoid\")) %&gt;% \n  ggplot() +\n  geom_sf(aes(fill = med_age_est)) +\n  scale_fill_viridis_c(name = \"Median Age (estimated)\") +\n  theme_void() +\n  labs(title = \"How does age vary across NYC Neighborhoods?\")"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#simple-pca-example-2",
-    "href": "meetups/meetup-10/meetup-10.html#simple-pca-example-2",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Simple PCA Example",
-    "text": "Simple PCA Example\n\nProject data points onto component"
+    "objectID": "meetups/meetup-5/meetup-5.html#projections",
+    "href": "meetups/meetup-5/meetup-5.html#projections",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Projections",
+    "text": "Projections\n\nMapping transforms from a spherical surface to a 2D plane\nMany Choices"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#find-the-variance",
-    "href": "meetups/meetup-10/meetup-10.html#find-the-variance",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Find the Variance",
-    "text": "Find the Variance\n\nProject data points onto component"
+    "objectID": "meetups/meetup-5/meetup-5.html#projections-1",
+    "href": "meetups/meetup-5/meetup-5.html#projections-1",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Projections",
+    "text": "Projections\n\nMapping transforms from a spherical surface to a 2D plane\nControl with coord_sf\n\n\nlibrary(rnaturalearth)\nsf_world &lt;- ne_countries(returnclass='sf')\nggplot(sf_world) + geom_sf() +\n  theme_minimal(base_size=16) +\n  labs(title=\"Default: WGS-84\") +\n  coord_sf(crs = st_crs(\"ESRI:54009\"))"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#looking-at-multiple-projections",
-    "href": "meetups/meetup-10/meetup-10.html#looking-at-multiple-projections",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Looking at Multiple Projections",
-    "text": "Looking at Multiple Projections\n\nAny projection is possible"
+    "objectID": "meetups/meetup-5/meetup-5.html#projections-2",
+    "href": "meetups/meetup-5/meetup-5.html#projections-2",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Projections",
+    "text": "Projections\n\nMapping transforms from a spherical surface to a 2D plane\nControl with coord_sf"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#first-principal-component",
-    "href": "meetups/meetup-10/meetup-10.html#first-principal-component",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "First Principal Component",
-    "text": "First Principal Component\n\nPC1 maximizes variance"
+    "objectID": "meetups/meetup-5/meetup-5.html#projections-3",
+    "href": "meetups/meetup-5/meetup-5.html#projections-3",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Projections",
+    "text": "Projections\n\nMapping transforms from a spherical surface to a 2D plane\nControl with coord_sf"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#subsequent-projections-repeat-process",
-    "href": "meetups/meetup-10/meetup-10.html#subsequent-projections-repeat-process",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Subsequent Projections Repeat Process",
-    "text": "Subsequent Projections Repeat Process\n\nPC1 is the direction with the most variance\nPC2 is perpendicular to PC1, most variance\nPC3 is perpendicular to PC1 and PC2, most variance\n\\(N\\) dimensional dataset has \\(N\\) PCs"
+    "objectID": "meetups/meetup-5/meetup-5.html#choropleth-maps",
+    "href": "meetups/meetup-5/meetup-5.html#choropleth-maps",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Choropleth Maps",
+    "text": "Choropleth Maps\n\nMaps that color regions based on data"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#why-is-it-dim.-reduction",
-    "href": "meetups/meetup-10/meetup-10.html#why-is-it-dim.-reduction",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Why is it Dim. Reduction?",
-    "text": "Why is it Dim. Reduction?\n\nEach PC is a variable\nYou can discard low variance PCs"
+    "objectID": "meetups/meetup-5/meetup-5.html#problems-with-choropleths",
+    "href": "meetups/meetup-5/meetup-5.html#problems-with-choropleths",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Problems With Choropleths",
+    "text": "Problems With Choropleths\n\nPopulation distribution very heterogeneous"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#picking-a-dimension",
-    "href": "meetups/meetup-10/meetup-10.html#picking-a-dimension",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Picking a Dimension",
-    "text": "Picking a Dimension\n\nYou can discard low variance PCs\nUse “Elbow” of plot to pick cutoff"
+    "objectID": "meetups/meetup-5/meetup-5.html#problems-with-choropleths-1",
+    "href": "meetups/meetup-5/meetup-5.html#problems-with-choropleths-1",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Problems with Choropleths",
+    "text": "Problems with Choropleths\n\nGeographic definitions also heterogeneous"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#australian-atheletes-example",
-    "href": "meetups/meetup-10/meetup-10.html#australian-atheletes-example",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Australian Atheletes Example",
-    "text": "Australian Atheletes Example"
+    "objectID": "meetups/meetup-5/meetup-5.html#problems-with-choropleths-2",
+    "href": "meetups/meetup-5/meetup-5.html#problems-with-choropleths-2",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Problems with Choropleths",
+    "text": "Problems with Choropleths\n\nGeographic definitions also heterogeneous\n\n\ncounty_full |&gt; \n  filter(abbr != \"AK\")\nggplot(aes(fill = land_area)) +\n  geom_sf() +\n  scale_fill_viridis_c(option=\"G\") +\n  theme_void(base_size=16) +\n  theme(panel.grid = element_line(color = \"transparent\")) +\n  labs(title = \"Population Density\")"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#athletes-pcs",
-    "href": "meetups/meetup-10/meetup-10.html#athletes-pcs",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Athletes PCs",
-    "text": "Athletes PCs"
+    "objectID": "meetups/meetup-5/meetup-5.html#problems-with-choropleths-3",
+    "href": "meetups/meetup-5/meetup-5.html#problems-with-choropleths-3",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Problems with Choropleths",
+    "text": "Problems with Choropleths\n\nGeographic definitions also heterogeneous"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#pca-clusters",
-    "href": "meetups/meetup-10/meetup-10.html#pca-clusters",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "PCA Clusters",
-    "text": "PCA Clusters"
+    "objectID": "meetups/meetup-5/meetup-5.html#ecological-fallacy",
+    "href": "meetups/meetup-5/meetup-5.html#ecological-fallacy",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Ecological Fallacy",
+    "text": "Ecological Fallacy\n\nProperties of individuals may not correspond to mean properties of the group"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#pc-clusters",
-    "href": "meetups/meetup-10/meetup-10.html#pc-clusters",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "PC Clusters",
-    "text": "PC Clusters\n\n\n\nPC1: +Size, -Leanness (Sex)\nPC2: +Size, -Red Blood Cells"
+    "objectID": "meetups/meetup-5/meetup-5.html#ecological-fallacy-1",
+    "href": "meetups/meetup-5/meetup-5.html#ecological-fallacy-1",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Ecological Fallacy",
+    "text": "Ecological Fallacy\n\nProperties of individuals may not correspond to mean properties of the group\nGroup level correlation may not apply at individual level\nNobel Laureates may not eat chocolate"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#sports",
-    "href": "meetups/meetup-10/meetup-10.html#sports",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Sports",
-    "text": "Sports"
+    "objectID": "meetups/meetup-5/meetup-5.html#modifiable-areal-units-problem",
+    "href": "meetups/meetup-5/meetup-5.html#modifiable-areal-units-problem",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Modifiable Areal Units Problem",
+    "text": "Modifiable Areal Units Problem\n\nMaps version of ecological fallacy\n\nDifferent areas may show different story"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#sports-clusters",
-    "href": "meetups/meetup-10/meetup-10.html#sports-clusters",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Sports Clusters",
-    "text": "Sports Clusters\n\n400m, gymnasts, tennis players have low PC2\nNetball, Field have high PC2\nRowers, Sprinters, Swimmers, Water Polo in the middle"
+    "objectID": "meetups/meetup-5/meetup-5.html#modifiable-areal-units-problem-1",
+    "href": "meetups/meetup-5/meetup-5.html#modifiable-areal-units-problem-1",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Modifiable Areal Units Problem",
+    "text": "Modifiable Areal Units Problem\n\nGeographical disparities in cancer stage at diagnosis\n\n\nFontanet et al 2024"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#higher-pcs-contrast",
-    "href": "meetups/meetup-10/meetup-10.html#higher-pcs-contrast",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Higher PCs Contrast",
-    "text": "Higher PCs Contrast\n\n\n\nPC3: +Body Fat, RBCs, -Height\nPC4: +Height, Fat, RBCs, -BMI"
+    "objectID": "meetups/meetup-5/meetup-5.html#facing-the-maup",
+    "href": "meetups/meetup-5/meetup-5.html#facing-the-maup",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Facing the MAUP",
+    "text": "Facing the MAUP\n\nPlot data at different resolutions if you can\nCheck and see if the result changes\nChoose the resolution most appropriate to your question"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#sport-clusters-2",
-    "href": "meetups/meetup-10/meetup-10.html#sport-clusters-2",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Sport Clusters 2",
-    "text": "Sport Clusters 2"
+    "objectID": "meetups/meetup-5/meetup-5.html#cartogram",
+    "href": "meetups/meetup-5/meetup-5.html#cartogram",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Cartogram",
+    "text": "Cartogram\n\nEqualize areas while retaining geography"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#how-to-make-these-plots-in-r",
-    "href": "meetups/meetup-10/meetup-10.html#how-to-make-these-plots-in-r",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "How to make these plots in R",
-    "text": "How to make these plots in R\n\nprcomp and scale\nretx keyword calcualtes embeddings\n\n\naus_fit = aus_athletes |&gt; \n  select(where(is.numeric))  |&gt;  \n  prcomp(scale = TRUE)\n\n# or\n# gets rid of mean and rescales variance\n\naus_fit = aus_athletes |&gt; \n  select(where(is.numeric))  |&gt;  \n  scale() |&gt; \n  prcomp(retx = TRUE)"
+    "objectID": "meetups/meetup-5/meetup-5.html#statebins-library",
+    "href": "meetups/meetup-5/meetup-5.html#statebins-library",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "statebins library",
+    "text": "statebins library\n\ngeom_statebins\n\n\nlibrary(geofacet)\nlibrary(statebins)\nstate_unemp |&gt; as_tibble() |&gt; filter(year==2008) |&gt;\n  ggplot(aes(fill=rate, state=state)) + \n  geom_statebins(lbl_size = 6) +\n  scale_fill_gradient(low=\"white\",high=\"red\") +\n  theme_void(base_size=18) +\n  labs(title=\"State Unemployment\")"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#contents-of-fit-object",
-    "href": "meetups/meetup-10/meetup-10.html#contents-of-fit-object",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Contents of fit object",
-    "text": "Contents of fit object\n\naus_fit\n\nStandard deviations (1, .., p=11):\n [1] 2.23404856 1.59923950 1.07582851 0.94294793 0.89180307 0.65872338\n [7] 0.32428594 0.20232605 0.15228831 0.07279582 0.03293771\n\nRotation (n x k) = (11 x 11):\n               PC1         PC2         PC3          PC4         PC5         PC6\nrcc     0.37449926 -0.15896859  0.23456267 -0.217592671  0.23113528  0.24042584\nwcc     0.07607989  0.14643132  0.63731981 -0.193874709 -0.71219980 -0.14657450\nhc      0.38921924 -0.16930334  0.22299174 -0.204335027  0.21329896  0.14848437\nhg      0.39398646 -0.14839419  0.21826369 -0.126293900  0.24631047  0.04743775\nferr    0.18096941  0.04022641  0.27331307  0.888524055 -0.03510540  0.31464529\nbmi     0.25688861  0.42398703  0.06970089  0.112465801  0.25980634 -0.56325123\nssf    -0.17658747  0.52587398  0.17904388 -0.116159628  0.22401028  0.28597833\npcBfat -0.23764689  0.47350512  0.19029580 -0.139708577  0.22171662  0.28202541\nlbm     0.39995499  0.18525045 -0.26453397  0.053428020 -0.13093113 -0.18218609\nht      0.29428652  0.19800646 -0.42823892 -0.139098319 -0.38179742  0.52599617\nwt      0.33804701  0.38333328 -0.20061209  0.005007978 -0.04690227 -0.09473171\n                 PC7          PC8          PC9          PC10          PC11\nrcc    -0.7566898361 -0.199201778 -0.092406080  9.108309e-03 -0.0015062443\nwcc     0.0008324697 -0.016739036 -0.002971962 -1.514497e-03  0.0010625852\nhc      0.2464133051  0.745988263  0.208183403 -1.621396e-02 -0.0011660217\nhg      0.5886349450 -0.574708220 -0.139182502 -8.034653e-03  0.0053383594\nferr   -0.0064610391  0.030403090 -0.016020513  9.893463e-05 -0.0002621549\nbmi    -0.0741855614  0.068435637 -0.076440484  5.747325e-01  0.0750846540\nssf     0.0166623190 -0.193117005  0.689708155 -1.666579e-02  0.0348216670\npcBfat  0.0712499174  0.171474610 -0.652105583 -1.868302e-01  0.2006538802\nlbm    -0.0507006292 -0.021952556  0.107081317 -4.884631e-01  0.6553134316\nht      0.0791128182 -0.008239715 -0.077125160  4.837802e-01  0.0518888717\nwt     -0.0219172451  0.019877608 -0.065472528 -4.018049e-01 -0.7216136734"
+    "objectID": "meetups/meetup-5/meetup-5.html#time-series-in-each-bin",
+    "href": "meetups/meetup-5/meetup-5.html#time-series-in-each-bin",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Time Series in Each Bin",
+    "text": "Time Series in Each Bin"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#contents-of-fit-object-1",
-    "href": "meetups/meetup-10/meetup-10.html#contents-of-fit-object-1",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Contents of fit object",
-    "text": "Contents of fit object\n\nstr(aus_fit)\n\nList of 5\n $ sdev    : num [1:11] 2.234 1.599 1.076 0.943 0.892 ...\n $ rotation: num [1:11, 1:11] 0.3745 0.0761 0.3892 0.394 0.181 ...\n  ..- attr(*, \"dimnames\")=List of 2\n  .. ..$ : chr [1:11] \"rcc\" \"wcc\" \"hc\" \"hg\" ...\n  .. ..$ : chr [1:11] \"PC1\" \"PC2\" \"PC3\" \"PC4\" ...\n $ center  : Named num [1:11] -3.77e-16 -5.22e-17 3.53e-17 -3.40e-16 -5.74e-17 ...\n  ..- attr(*, \"names\")= chr [1:11] \"rcc\" \"wcc\" \"hc\" \"hg\" ...\n $ scale   : Named num [1:11] 1 1 1 1 1 1 1 1 1 1 ...\n  ..- attr(*, \"names\")= chr [1:11] \"rcc\" \"wcc\" \"hc\" \"hg\" ...\n $ x       : num [1:202, 1:11] -2.07 -1.9 -3.38 -2.68 -1.8 ...\n  ..- attr(*, \"dimnames\")=List of 2\n  .. ..$ : NULL\n  .. ..$ : chr [1:11] \"PC1\" \"PC2\" \"PC3\" \"PC4\" ...\n - attr(*, \"class\")= chr \"prcomp\""
+    "objectID": "meetups/meetup-5/meetup-5.html#time-series-in-each-bin-1",
+    "href": "meetups/meetup-5/meetup-5.html#time-series-in-each-bin-1",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Time Series in Each Bin",
+    "text": "Time Series in Each Bin\n\nstate_unemp %&gt;%\n  ggplot(aes(year, rate)) + \n  geom_area(fill = \"#56B4E9\", alpha = 0.7) +\n  geom_line() + \n  scale_y_continuous(\n    name = \"unemployment rate\",\n    limits = c(0, 16), expand = c(0, 0),\n    breaks = c(5, 10),\n    labels = c( \"5\", \"10\")\n  ) +\n  scale_x_continuous(breaks = c(2006, 2012),\n    labels = c(\"\\'06\", \"\\'12\")) +\n  coord_cartesian(clip = \"off\") +\n  facet_geo(~state, grid = \"us_state_grid1\") +\n  theme_minimal(base_size=12) +\n  theme(\n    axis.line.x = element_blank(),\n    panel.spacing.x = grid::unit(1, \"pt\"),\n    panel.spacing.y = grid::unit(1, \"pt\"),\n    panel.grid.major = element_line(color = \"gray80\"),\n    panel.background = element_rect(fill = \"gray90\")\n  )"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#meaning-of-components",
-    "href": "meetups/meetup-10/meetup-10.html#meaning-of-components",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Meaning of Components",
-    "text": "Meaning of Components\n\nsdev is “standard deviation” of components\n\nsquare to get “variance”,\ndivide by number of variables to convert to percentage\n\nrotation is matrix where rows are Principal Components\nx is matrix that contains embeddings of each data point"
+    "objectID": "meetups/meetup-5/meetup-5.html#time-series-in-each-bin-2",
+    "href": "meetups/meetup-5/meetup-5.html#time-series-in-each-bin-2",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Time Series in Each Bin",
+    "text": "Time Series in Each Bin\n\n‘geofacet’ and ‘ggplot’ currently break\n\n\nassignInNamespace(\"get_full_geo_grid\", function(grid) {\n  grd &lt;- geofacet:::get_grid(grid)\n  nr &lt;- max(grd$row); nc &lt;- max(grd$col)\n  gd &lt;- expand.grid(col = seq_len(nc), row = seq_len(nr))\n  grd &lt;- merge(grd, gd, all.y = TRUE)\n  grd &lt;- grd[order(grd$row, grd$col), ]\n  grd$panel &lt;- paste0(\"panel-\", grd$col, \"-\", grd$row)\n  grd$strip &lt;- paste0(\"strip-t-\", grd$col, \"-\", grd$row)\n  grd\n}, ns = \"geofacet\")"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#tidy-pca",
-    "href": "meetups/meetup-10/meetup-10.html#tidy-pca",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Tidy PCA",
-    "text": "Tidy PCA\n\nUse augment from broom to make objects tidy\n\n\naus_fit  |&gt; \n  augment(aus_athletes)\n\n# A tibble: 202 × 25\n   .rownames   rcc   wcc    hc    hg  ferr   bmi   ssf pcBfat   lbm    ht    wt\n   &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 1          3.96   7.5  37.5  12.3    60  20.6 109.    19.8  63.3  196.  78.9\n 2 2          4.41   8.3  38.2  12.7    68  20.7 103.    21.3  58.6  190.  74.4\n 3 3          4.14   5    36.4  11.6    21  21.9 105.    19.9  55.4  178.  69.1\n 4 4          4.11   5.3  37.3  12.6    69  21.9 126.    23.7  57.2  185   74.9\n 5 5          4.45   6.8  41.5  14      29  19.0  80.3   17.6  53.2  185.  64.6\n 6 6          4.1    4.4  37.4  12.5    42  21.0  75.2   15.6  53.8  174   63.7\n 7 7          4.31   5.3  39.6  12.8    73  21.7  87.2   20.0  60.2  186.  75.2\n 8 8          4.42   5.7  39.9  13.2    44  20.6  97.9   22.4  48.3  174.  62.3\n 9 9          4.3    8.9  41.1  13.5    41  22.6  75.1   18.0  54.6  171.  66.5\n10 10         4.51   4.4  41.6  12.7    44  19.4  65.1   15.1  53.4  180.  62.9\n# ℹ 192 more rows\n# ℹ 13 more variables: sex &lt;fct&gt;, sport &lt;fct&gt;, .fittedPC1 &lt;dbl&gt;,\n#   .fittedPC2 &lt;dbl&gt;, .fittedPC3 &lt;dbl&gt;, .fittedPC4 &lt;dbl&gt;, .fittedPC5 &lt;dbl&gt;,\n#   .fittedPC6 &lt;dbl&gt;, .fittedPC7 &lt;dbl&gt;, .fittedPC8 &lt;dbl&gt;, .fittedPC9 &lt;dbl&gt;,\n#   .fittedPC10 &lt;dbl&gt;, .fittedPC11 &lt;dbl&gt;"
+    "objectID": "meetups/meetup-5/meetup-5.html#small-multiples",
+    "href": "meetups/meetup-5/meetup-5.html#small-multiples",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Small Multiples",
+    "text": "Small Multiples\n\nFacet by time"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#plotting-embeddings",
-    "href": "meetups/meetup-10/meetup-10.html#plotting-embeddings",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Plotting Embeddings",
-    "text": "Plotting Embeddings\n\naus_fit  |&gt; \n  augment(aus_athletes) %&gt;%\n  ggplot(aes(.fittedPC1, .fittedPC2,color=sex)) +\n  geom_point(size = 1.5) +\n  scale_color_manual(\n    values = c(m = \"#D55E00\", f = \"#0072B2\")\n  ) +\n  theme_minimal(base_size=16) +\n  labs(title=\"PCA Coordinates for Australian Athletes\",\n       x = \"PC 1\", y= \"PC 2\",subtitle = \"Color shows sex\")"
+    "objectID": "meetups/meetup-5/meetup-5.html#small-multiples-1",
+    "href": "meetups/meetup-5/meetup-5.html#small-multiples-1",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Small Multiples",
+    "text": "Small Multiples\n\nopiates$region &lt;- tolower(opiates$state)\nopiates_map &lt;- left_join(us_states, opiates)\n\np0 &lt;- ggplot(data = subset(opiates_map, year &gt; 1999),\n             mapping = aes(x = long, y = lat,\n                 group = group,\n                 fill = adjusted))\n\np1 &lt;- p0 + geom_polygon(color = \"gray90\", size = 0.05) +\n    coord_map(projection = \"albers\", lat0 = 39, lat1 = 45) \n\np2 &lt;- p1 + scale_fill_viridis_c(option = \"plasma\")\n\np2 + theme_map() + facet_wrap(~ year, ncol = 3) +\n    theme(legend.position = \"bottom\",\n          strip.background = element_blank()) +\n    labs(fill = \"Death rate per 100,000 population \",\n         title = \"Opiate Related Deaths by State, 2000-2014\")"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#plotting-embeddings-1",
-    "href": "meetups/meetup-10/meetup-10.html#plotting-embeddings-1",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Plotting Embeddings",
-    "text": "Plotting Embeddings"
+    "objectID": "meetups/meetup-5/meetup-5.html#non-spatial-plots",
+    "href": "meetups/meetup-5/meetup-5.html#non-spatial-plots",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Non-Spatial Plots",
+    "text": "Non-Spatial Plots\n\nDirect numerical visualization more precise than colors"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#drawing-clusters",
-    "href": "meetups/meetup-10/meetup-10.html#drawing-clusters",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Drawing Clusters",
-    "text": "Drawing Clusters"
+    "objectID": "meetups/meetup-5/meetup-5.html#non-spatial-plots-1",
+    "href": "meetups/meetup-5/meetup-5.html#non-spatial-plots-1",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Non-Spatial Plots",
+    "text": "Non-Spatial Plots\n\nDirect numerical visualization more precise than colors\n\n\n election |&gt; filter(state != \"DC\") |&gt; ggplot(\n   aes(x = r_points, y = reorder(state, r_points),\n                           color = party)) + geom_vline(xintercept = 0, color = \"gray30\") +\n    geom_point(size = 2) + scale_color_manual(values = party_colors) + scale_x_continuous(breaks = c(-30, -20, -10, 0, 10, 20, 30, 40),                              labels = c(\"30\\n (Clinton)\", \"20\", \"10\", \"0\",\n                                         \"10\", \"20\", \"30\", \"40\\n(Trump)\")) + \n   facet_wrap(~ census, scales=\"free_y\",ncol=2) +\n    guides(color=FALSE) + labs(x = \"Point Margin\", y = NULL) +\n    theme(axis.text=element_text(size=8))"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#drawing-clusters-1",
-    "href": "meetups/meetup-10/meetup-10.html#drawing-clusters-1",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Drawing Clusters",
-    "text": "Drawing Clusters\n\narrow_style &lt;- arrow(\n  angle = 20, length = grid::unit(8, \"pt\"),\n  ends = \"first\", type = \"closed\"\n)\naus_fit %&gt;%\n  tidy(matrix = \"rotation\")  |&gt; \n  pivot_wider(\n    names_from = \"PC\", values_from = \"value\",\n    names_prefix = \"PC\"\n  )  |&gt; \n  ggplot(aes(PC1, PC2)) +\n  geom_segment(\n    xend = 0, yend = 0,\n    arrow = arrow_style\n  ) +\n  geom_text_repel(aes(label = column), hjust = 1,vjust=1) +\n  xlim(-0.5, 0.5) + ylim(-0.25, 0.75) + \n  coord_fixed() +\n  theme_minimal(base_size =16)"
+    "objectID": "meetups/meetup-5/meetup-5.html#thanks",
+    "href": "meetups/meetup-5/meetup-5.html#thanks",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "Thanks",
+    "text": "Thanks"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#d-plot-using-plotly",
-    "href": "meetups/meetup-10/meetup-10.html#d-plot-using-plotly",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "3D Plot Using Plotly",
-    "text": "3D Plot Using Plotly\n\nlibrary(plotly)\n\nfig = pca_fit |&gt; \n augment(oc_data)  |&gt; \n  bind_cols(oc_group) |&gt; plot_ly(\n    x=~.fittedPC1, y=~.fittedPC2, z=~.fittedPC3, color = ~Cancer, colors = c(\"#D55E00\", \"#0072B2\"),size=2)\nfig &lt;- fig |&gt;  add_markers()\nfig &lt;- fig |&gt; layout(scene = list(xaxis = list(title = \"PC1\"),\n                     yaxis = list(title = 'PC2'),\n                     zaxis = list(title = 'PC3'))\n                     )\n\nfig"
-  },
-  {
-    "objectID": "meetups/meetup-10/meetup-10.html#d-plot-using-plotly-1",
-    "href": "meetups/meetup-10/meetup-10.html#d-plot-using-plotly-1",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "3D Plot Using Plotly",
-    "text": "3D Plot Using Plotly"
-  },
-  {
-    "objectID": "meetups/meetup-10/meetup-10.html#downsides-of-pca",
-    "href": "meetups/meetup-10/meetup-10.html#downsides-of-pca",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Downsides of PCA",
-    "text": "Downsides of PCA\n\nPCA learns a linear representation\n\nTons of other methods exist for nonlinear structures"
-  },
-  {
-    "objectID": "meetups/meetup-10/meetup-10.html#downsides-of-pca-1",
-    "href": "meetups/meetup-10/meetup-10.html#downsides-of-pca-1",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Downsides of PCA",
-    "text": "Downsides of PCA\n\nProne to overinterpretation\n\n\nShalizi/November"
-  },
-  {
-    "objectID": "meetups/meetup-10/meetup-10.html#downsides-of-pca-2",
-    "href": "meetups/meetup-10/meetup-10.html#downsides-of-pca-2",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Downsides of PCA",
-    "text": "Downsides of PCA\n\nProne to overinterpretation\n\n\nShalizi/November"
-  },
-  {
-    "objectID": "meetups/meetup-10/meetup-10.html#downsides-of-pca-3",
-    "href": "meetups/meetup-10/meetup-10.html#downsides-of-pca-3",
-    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Downsides of PCA",
-    "text": "Downsides of PCA\n\nSensitive to outliers\n\nIf your measurement process is not robust….\nUsing PCA could be very misleading!\n\nThere is an algorithm called robust PCA which is great these cases"
+    "objectID": "meetups/meetup-5/meetup-5.html#references",
+    "href": "meetups/meetup-5/meetup-5.html#references",
+    "title": "Meetup 5: Visualizing Geospatial Data",
+    "section": "References",
+    "text": "References\n\nKieran Healy Data Visualization and Github"
   },
   {
     "objectID": "meetups/meetup-11/meetup-11.html#week-summary",
@@ -2269,7 +2297,7 @@
     "href": "course/schedule.html",
     "title": "Schedule",
     "section": "",
-    "text": "Click Here to Join the Meetups on Zoom\nMeetups are Mondays at 8:00PM Eastern. We meet every Monday of the semester except the Monday after Thanksgiving.\n\nCourse Schedule\n\n\nDate\nModule\nSlides\nVideo\nMain Deliverables\n\n\n\n\nAug 31\nDeveloping a Critical Eye\nMeetup 1 Slides\nMeetup 1 Video\nStory 1 assigned\n\n\nSep 7\nThe Data Visualization Catalogue\nMeetup 2 Slides\nMeetup 2 Video\nStory 1 due Sun Sep 13\n\n\nSep 14\nVisualization Quality Features\nMeetup 3 Slides\nMeetup 3 Video\nStory 2 assigned\n\n\nSep 21\nAssociations and Time Series\nMeetup 4 Slides\nMeetup 4 Video\nStory 2 due Sun Sep 27\n\n\nSep 28\nVisualizing Geospatial Data\nMeetup 5 Slides\n\nStory 3 assigned\n\n\nOct 5\nStorytelling\n\n\nStory 3 due Sun Oct 11\n\n\nOct 12\nEffective Use of Color and Fonts\n\n\nStory 4 assigned\n\n\nOct 19\nDistributions and Histograms\n\n\nStory 4 due Sun Oct 25\n\n\nOct 26\nModels and Uncertainty\n\n\nStory 5 assigned\n\n\nNov 2\nDimension Reduction and PCA\n\n\nStory 5 due Sun Nov 8\n\n\nNov 9\nClustering\n\n\nStory 6 assigned\n\n\nNov 16\nHierarchical Clustering\n\n\nStory 6 due Sun Nov 22\n\n\nNov 23\nIntroduction to Shiny Apps\n\n\nStory 7 assigned\n\n\nNov 30\nNo Meetup — Thanksgiving\n\n\n\n\n\nDec 7\nInteractive Visualizations\nSlides\n\nStory 7 due Sun Dec 13\n\n\nDec 14\nWrap-Up\n\n\n\n\n\n\n\n\n\nWeek\nVideo Link\nAnnouncement Link\n\n\n\n\n2\nDot Plot Vignette\nDetails\n\n\n\nSlides and recordings are posted here after each meetup.",
+    "text": "Click Here to Join the Meetups on Zoom\nMeetups are Mondays at 8:00PM Eastern. We meet every Monday of the semester except the Monday after Thanksgiving.\n\nCourse Schedule\n\n\nDate\nModule\nSlides\nVideo\nMain Deliverables\n\n\n\n\nAug 31\nDeveloping a Critical Eye\nMeetup 1 Slides\nMeetup 1 Video\nStory 1 assigned\n\n\nSep 7\nThe Data Visualization Catalogue\nMeetup 2 Slides\nMeetup 2 Video\nStory 1 due Sun Sep 13\n\n\nSep 14\nVisualization Quality Features\nMeetup 3 Slides\nMeetup 3 Video\nStory 2 assigned\n\n\nSep 21\nAssociations and Time Series\nMeetup 4 Slides\nMeetup 4 Video\nStory 2 due Sun Sep 27\n\n\nSep 28\nVisualizing Geospatial Data\nMeetup 5 Slides\nMeetup 5 Video\nStory 3 assigned\n\n\nOct 5\nStorytelling\n\n\nStory 3 due Sun Oct 11\n\n\nOct 12\nEffective Use of Color and Fonts\n\n\nStory 4 assigned\n\n\nOct 19\nDistributions and Histograms\n\n\nStory 4 due Sun Oct 25\n\n\nOct 26\nModels and Uncertainty\n\n\nStory 5 assigned\n\n\nNov 2\nDimension Reduction and PCA\n\n\nStory 5 due Sun Nov 8\n\n\nNov 9\nClustering\n\n\nStory 6 assigned\n\n\nNov 16\nHierarchical Clustering\n\n\nStory 6 due Sun Nov 22\n\n\nNov 23\nIntroduction to Shiny Apps\n\n\nStory 7 assigned\n\n\nNov 30\nNo Meetup — Thanksgiving\n\n\n\n\n\nDec 7\nInteractive Visualizations\nSlides\n\nStory 7 due Sun Dec 13\n\n\nDec 14\nWrap-Up\n\n\n\n\n\n\n\n\n\nWeek\nVideo Link\nAnnouncement Link\n\n\n\n\n2\nDot Plot Vignette\nDetails\n\n\n\nSlides and recordings are posted here after each meetup.",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -2280,7 +2308,7 @@
     "href": "course/schedule.html#meetup-link",
     "title": "Schedule",
     "section": "",
-    "text": "Click Here to Join the Meetups on Zoom\nMeetups are Mondays at 8:00PM Eastern. We meet every Monday of the semester except the Monday after Thanksgiving.\n\nCourse Schedule\n\n\nDate\nModule\nSlides\nVideo\nMain Deliverables\n\n\n\n\nAug 31\nDeveloping a Critical Eye\nMeetup 1 Slides\nMeetup 1 Video\nStory 1 assigned\n\n\nSep 7\nThe Data Visualization Catalogue\nMeetup 2 Slides\nMeetup 2 Video\nStory 1 due Sun Sep 13\n\n\nSep 14\nVisualization Quality Features\nMeetup 3 Slides\nMeetup 3 Video\nStory 2 assigned\n\n\nSep 21\nAssociations and Time Series\nMeetup 4 Slides\nMeetup 4 Video\nStory 2 due Sun Sep 27\n\n\nSep 28\nVisualizing Geospatial Data\nMeetup 5 Slides\n\nStory 3 assigned\n\n\nOct 5\nStorytelling\n\n\nStory 3 due Sun Oct 11\n\n\nOct 12\nEffective Use of Color and Fonts\n\n\nStory 4 assigned\n\n\nOct 19\nDistributions and Histograms\n\n\nStory 4 due Sun Oct 25\n\n\nOct 26\nModels and Uncertainty\n\n\nStory 5 assigned\n\n\nNov 2\nDimension Reduction and PCA\n\n\nStory 5 due Sun Nov 8\n\n\nNov 9\nClustering\n\n\nStory 6 assigned\n\n\nNov 16\nHierarchical Clustering\n\n\nStory 6 due Sun Nov 22\n\n\nNov 23\nIntroduction to Shiny Apps\n\n\nStory 7 assigned\n\n\nNov 30\nNo Meetup — Thanksgiving\n\n\n\n\n\nDec 7\nInteractive Visualizations\nSlides\n\nStory 7 due Sun Dec 13\n\n\nDec 14\nWrap-Up\n\n\n\n\n\n\n\n\n\nWeek\nVideo Link\nAnnouncement Link\n\n\n\n\n2\nDot Plot Vignette\nDetails\n\n\n\nSlides and recordings are posted here after each meetup.",
+    "text": "Click Here to Join the Meetups on Zoom\nMeetups are Mondays at 8:00PM Eastern. We meet every Monday of the semester except the Monday after Thanksgiving.\n\nCourse Schedule\n\n\nDate\nModule\nSlides\nVideo\nMain Deliverables\n\n\n\n\nAug 31\nDeveloping a Critical Eye\nMeetup 1 Slides\nMeetup 1 Video\nStory 1 assigned\n\n\nSep 7\nThe Data Visualization Catalogue\nMeetup 2 Slides\nMeetup 2 Video\nStory 1 due Sun Sep 13\n\n\nSep 14\nVisualization Quality Features\nMeetup 3 Slides\nMeetup 3 Video\nStory 2 assigned\n\n\nSep 21\nAssociations and Time Series\nMeetup 4 Slides\nMeetup 4 Video\nStory 2 due Sun Sep 27\n\n\nSep 28\nVisualizing Geospatial Data\nMeetup 5 Slides\nMeetup 5 Video\nStory 3 assigned\n\n\nOct 5\nStorytelling\n\n\nStory 3 due Sun Oct 11\n\n\nOct 12\nEffective Use of Color and Fonts\n\n\nStory 4 assigned\n\n\nOct 19\nDistributions and Histograms\n\n\nStory 4 due Sun Oct 25\n\n\nOct 26\nModels and Uncertainty\n\n\nStory 5 assigned\n\n\nNov 2\nDimension Reduction and PCA\n\n\nStory 5 due Sun Nov 8\n\n\nNov 9\nClustering\n\n\nStory 6 assigned\n\n\nNov 16\nHierarchical Clustering\n\n\nStory 6 due Sun Nov 22\n\n\nNov 23\nIntroduction to Shiny Apps\n\n\nStory 7 assigned\n\n\nNov 30\nNo Meetup — Thanksgiving\n\n\n\n\n\nDec 7\nInteractive Visualizations\nSlides\n\nStory 7 due Sun Dec 13\n\n\nDec 14\nWrap-Up\n\n\n\n\n\n\n\n\n\nWeek\nVideo Link\nAnnouncement Link\n\n\n\n\n2\nDot Plot Vignette\nDetails\n\n\n\nSlides and recordings are posted here after each meetup.",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -3141,298 +3169,284 @@
     "text": "Thanks!"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data",
-    "href": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Many Ways to Map the Same Data",
-    "text": "Many Ways to Map the Same Data\n\nResults of 2016 US Election"
-  },
-  {
-    "objectID": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data-1",
-    "href": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data-1",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Many Ways to Map the Same Data",
-    "text": "Many Ways to Map the Same Data\n\nResults of 2016 US Election"
-  },
-  {
-    "objectID": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data-2",
-    "href": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data-2",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Many Ways to Map the Same Data",
-    "text": "Many Ways to Map the Same Data\n\nResults of 2016 US Election"
-  },
-  {
-    "objectID": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data-3",
-    "href": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data-3",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Many Ways to Map the Same Data",
-    "text": "Many Ways to Map the Same Data\n\nResults of 2016 US Election\n\n\nHealy 7.1"
-  },
-  {
-    "objectID": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data-4",
-    "href": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data-4",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Many Ways to Map the Same Data",
-    "text": "Many Ways to Map the Same Data\n\nResults of 2016 US Election"
-  },
-  {
-    "objectID": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data-5",
-    "href": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data-5",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Many Ways to Map the Same Data",
-    "text": "Many Ways to Map the Same Data\n\nResults of 2016 US Election"
-  },
-  {
-    "objectID": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data-6",
-    "href": "meetups/meetup-5/meetup-5.html#many-ways-to-map-the-same-data-6",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Many Ways to “Map” the Same Data",
-    "text": "Many Ways to “Map” the Same Data"
-  },
-  {
-    "objectID": "meetups/meetup-5/meetup-5.html#several-differences",
-    "href": "meetups/meetup-5/meetup-5.html#several-differences",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Several Differences",
-    "text": "Several Differences\n\nAreas of different regions vary by a lot\nNumber of people vary by a lot\nDifferent resolution shows different patterns\nPattern of votes vs. Meaningful outcome\nFor numbers, the dot-plot is better"
-  },
-  {
-    "objectID": "meetups/meetup-5/meetup-5.html#week-summary",
-    "href": "meetups/meetup-5/meetup-5.html#week-summary",
-    "title": "Meetup 5: Visualizing Geospatial Data",
+    "objectID": "meetups/meetup-10/meetup-10.html#week-summary",
+    "href": "meetups/meetup-10/meetup-10.html#week-summary",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
     "section": "Week Summary",
-    "text": "Week Summary\n\nReading for the week:\n\nChapter 15 of Wilke\nChapter 7 of Healy (especially if R user)\nCartopy Tutorial (for pythonistas)\nEcological Fallacy Section\n\nDiscussion: Find a lying map\nNew Lab Available"
+    "text": "Week Summary\n\nData Story 5 is Due this Sunday at Midnight\nReading is Section 12.3 of Fundamentals of Data Visualization\nWhat to do when the data has too many variables to visualize?"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#how-does-r-draw-maps",
-    "href": "meetups/meetup-5/meetup-5.html#how-does-r-draw-maps",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "How Does R Draw Maps?",
-    "text": "How Does R Draw Maps?\n\nLet’s Look at the data available in a map:\n\n\nlibrary(maps)\nus_counties = map_data(\"county\") |&gt; as_tibble()\nhead(us_counties)\n\n# A tibble: 6 × 6\n   long   lat group order region  subregion\n  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;int&gt; &lt;chr&gt;   &lt;chr&gt;    \n1 -86.5  32.3     1     1 alabama autauga  \n2 -86.5  32.4     1     2 alabama autauga  \n3 -86.5  32.4     1     3 alabama autauga  \n4 -86.6  32.4     1     4 alabama autauga  \n5 -86.6  32.4     1     5 alabama autauga  \n6 -86.6  32.4     1     6 alabama autauga  \n\n\n\nEach unit is a polygon with coordinates and ordering"
+    "objectID": "meetups/meetup-10/meetup-10.html#many-variables",
+    "href": "meetups/meetup-10/meetup-10.html#many-variables",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Many variables?",
+    "text": "Many variables?\n\nPair Plot?"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#draw-some-polygons",
-    "href": "meetups/meetup-5/meetup-5.html#draw-some-polygons",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Draw Some Polygons",
-    "text": "Draw Some Polygons\n\nUse geom_polygon to see how it works\n\n\nus_counties |&gt; filter(region == \"new york\") |&gt;  ggplot(aes(x=long,y=lat,group=group)) +\n  geom_polygon(fill=\"white\",color=\"black\") +\n  theme_minimal(base_size=16) +\n  labs(title=\"Counties of New York\")"
+    "objectID": "meetups/meetup-10/meetup-10.html#pair-plots-are-limited",
+    "href": "meetups/meetup-10/meetup-10.html#pair-plots-are-limited",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Pair Plots are Limited",
+    "text": "Pair Plots are Limited\n\nData is physiological properties of Australian Olympians\nTakes time to read\nOther options like correlograms also somewhat limited\nWe could use an alternative even though these techniques are useful"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#mapping-libraries",
-    "href": "meetups/meetup-5/meetup-5.html#mapping-libraries",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Mapping Libraries",
-    "text": "Mapping Libraries\n\nThere are several tools which are better at making maps:\n\nsf or simple features\ntmap or tidy maps\n\nThese bring full suit of GIS (Geographic Information Systems Tools)\nProjections"
+    "objectID": "meetups/meetup-10/meetup-10.html#hopeless-when-data-increases-more",
+    "href": "meetups/meetup-10/meetup-10.html#hopeless-when-data-increases-more",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Hopeless when data increases more",
+    "text": "Hopeless when data increases more\n\nHere is a dataset of biomarker measurements from both ovarian cancer patients and healthy controls\nThere are 4000 variables\nThere will be no pair-plots\n\n\n\n# A tibble: 215 × 4,000\n   `0.063915` `0.033242` `0.018484` `0.0086177` `0.035629` `0.037925` `0.028865`\n        &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;\n 1     0.0254     0.0511    0.0563      0.0217      0.0274     0.0149    0.0225 \n 2     0.0255     0.0361    0.0542      0.00974     0.0275     0.0523    0.0428 \n 3     0.0128     0.0297    0.0793      0.0507      0.0397     0.0577    0.0445 \n 4     0.0198    -0.0106   -0.00750     0.0190      0.0688     0.0618    0.0390 \n 5     0.0390     0.0394    0.00134     0.0262      0.0441     0.0440    0.0396 \n 6     0.0232     0.0538    0.0370      0.0216      0.0388     0.0389    0.0516 \n 7     0.0270     0.0101    0.0177      0.0112      0.0367     0.0160    0.00668\n 8     0.0394     0.0389    0.0316      0.0196      0.0209     0.0300    0.0293 \n 9     0.0134     0.0165    0.0158      0.00492     0.0126     0.0322    0.0182 \n10     0.0337     0.0417    0.0326      0.0290      0.0285     0.0499    0.0502 \n# ℹ 205 more rows\n# ℹ 3,993 more variables: `0.061731` &lt;dbl&gt;, `0.0631` &lt;dbl&gt;, `0.024787` &lt;dbl&gt;,\n#   `0.034473` &lt;dbl&gt;, `0.033539` &lt;dbl&gt;, `0.01043` &lt;dbl&gt;, `0.018585` &lt;dbl&gt;,\n#   `0.051385` &lt;dbl&gt;, `0.045839` &lt;dbl&gt;, `0.02908` &lt;dbl&gt;, `0.079736` &lt;dbl&gt;,\n#   `0.089912` &lt;dbl&gt;, `0.06538` &lt;dbl&gt;, `0.048052` &lt;dbl&gt;, `0.017063` &lt;dbl&gt;,\n#   `0.016695` &lt;dbl&gt;, `0.013443` &lt;dbl&gt;, `0.016502` &lt;dbl&gt;, `0.061453` &lt;dbl&gt;,\n#   `0.085336` &lt;dbl&gt;, `0.069497` &lt;dbl&gt;, `0.063938` &lt;dbl&gt;, `0.045307` &lt;dbl&gt;, …"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#mapping-nyc",
-    "href": "meetups/meetup-5/meetup-5.html#mapping-nyc",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Mapping NYC",
-    "text": "Mapping NYC\n\n\nSimple feature collection with 2166 features and 12 fields\nGeometry type: MULTIPOLYGON\nDimension:     XY\nBounding box:  xmin: 913180.2 ymin: 120131.4 xmax: 1067382 ymax: 272798.5\n\n\nProjected CRS: NAD83 / New York Long Island (ftUS)\n# A tibble: 2,166 × 13\n\n\n   geoid       borough_tract_id state_fips county_fips tract_id county_name\n   &lt;chr&gt;       &lt;chr&gt;            &lt;chr&gt;      &lt;chr&gt;       &lt;chr&gt;    &lt;chr&gt;      \n 1 36061000100 1000100          36         061         000100   New York   \n 2 36061000201 1000201          36         061         000201   New York   \n 3 36061000202 1000202          36         061         000202   New York   \n 4 36061000500 1000500          36         061         000500   New York   \n 5 36061000600 1000600          36         061         000600   New York   \n 6 36061000700 1000700          36         061         000700   New York   \n 7 36061000800 1000800          36         061         000800   New York   \n 8 36061000900 1000900          36         061         000900   New York   \n 9 36061001001 1001001          36         061         001001   New York   \n10 36061001002 1001002          36         061         001002   New York   \n# ℹ 2,156 more rows\n# ℹ 7 more variables: borough_name &lt;chr&gt;, borough_id &lt;chr&gt;, nta_id &lt;chr&gt;,\n#   nta_name &lt;chr&gt;, puma_id &lt;chr&gt;, puma_name &lt;chr&gt;,\n#   geometry &lt;MULTIPOLYGON [US_survey_foot]&gt;"
+    "objectID": "meetups/meetup-10/meetup-10.html#dimensionality-reduction",
+    "href": "meetups/meetup-10/meetup-10.html#dimensionality-reduction",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Dimensionality Reduction",
+    "text": "Dimensionality Reduction\n\nMany datasets have a large number of variables\nWe often have intuition that the data follows simpler patterns\nOtherwise we couldn’t understand it\nThis motivates a search for simpler representations, which can be powerful visualization tools"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#mapping-nyc-1",
-    "href": "meetups/meetup-5/meetup-5.html#mapping-nyc-1",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Mapping NYC",
-    "text": "Mapping NYC"
+    "objectID": "meetups/meetup-10/meetup-10.html#low-d-representation",
+    "href": "meetups/meetup-10/meetup-10.html#low-d-representation",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Low-D Representation",
+    "text": "Low-D Representation\n\nUsing a tool called Principal Component Analysis, can separate the groups neatly"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#mapping-nyc-2",
-    "href": "meetups/meetup-5/meetup-5.html#mapping-nyc-2",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Mapping NYC",
-    "text": "Mapping NYC\n\nLet’s get some data"
+    "objectID": "meetups/meetup-10/meetup-10.html#d-representation",
+    "href": "meetups/meetup-10/meetup-10.html#d-representation",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "3D Representation",
+    "text": "3D Representation\n\n3D Neatly separates them"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#mapping-nyc-3",
-    "href": "meetups/meetup-5/meetup-5.html#mapping-nyc-3",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Mapping NYC",
-    "text": "Mapping NYC\n\nLet’s get some data\n\n\ntract_acs_data |&gt; select(pop_total_est:med_age_est) |&gt; head(10)\n\n# A tibble: 10 × 3\n   pop_total_est pop_total_moe med_age_est\n           &lt;dbl&gt;         &lt;dbl&gt;       &lt;dbl&gt;\n 1          1382           132        48.4\n 2          8881           973        30.2\n 3          1674           217        33.6\n 4          8604          1004        42.4\n 5          8811          1035        45.8\n 6         15149          1399        35.8\n 7          4920           415        39.7\n 8          5621           616        38.7\n 9             0            11        NA  \n10          3990           331        39.9"
+    "objectID": "meetups/meetup-10/meetup-10.html#principal-component-analysis-pca",
+    "href": "meetups/meetup-10/meetup-10.html#principal-component-analysis-pca",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Principal Component Analysis (PCA)",
+    "text": "Principal Component Analysis (PCA)\n\nPCA finds a new coordinate system\nNew directions called Principal Components\nEach PC is a combination/rotation of other ones\nPCs ordered based variability of the data"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#mapping-nyc-4",
-    "href": "meetups/meetup-5/meetup-5.html#mapping-nyc-4",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Mapping NYC",
-    "text": "Mapping NYC\n\nLet’s get some data\n\n\nnyc_boundaries(geography = \"tract\") \n\nSimple feature collection with 2166 features and 12 fields\nGeometry type: MULTIPOLYGON\nDimension:     XY\nBounding box:  xmin: 913180.2 ymin: 120131.4 xmax: 1067382 ymax: 272798.5\n\n\nProjected CRS: NAD83 / New York Long Island (ftUS)\n# A tibble: 2,166 × 13\n\n\n   geoid       borough_tract_id state_fips county_fips tract_id county_name\n   &lt;chr&gt;       &lt;chr&gt;            &lt;chr&gt;      &lt;chr&gt;       &lt;chr&gt;    &lt;chr&gt;      \n 1 36061000100 1000100          36         061         000100   New York   \n 2 36061000201 1000201          36         061         000201   New York   \n 3 36061000202 1000202          36         061         000202   New York   \n 4 36061000500 1000500          36         061         000500   New York   \n 5 36061000600 1000600          36         061         000600   New York   \n 6 36061000700 1000700          36         061         000700   New York   \n 7 36061000800 1000800          36         061         000800   New York   \n 8 36061000900 1000900          36         061         000900   New York   \n 9 36061001001 1001001          36         061         001001   New York   \n10 36061001002 1001002          36         061         001002   New York   \n# ℹ 2,156 more rows\n# ℹ 7 more variables: borough_name &lt;chr&gt;, borough_id &lt;chr&gt;, nta_id &lt;chr&gt;,\n#   nta_name &lt;chr&gt;, puma_id &lt;chr&gt;, puma_name &lt;chr&gt;,\n#   geometry &lt;MULTIPOLYGON [US_survey_foot]&gt;"
+    "objectID": "meetups/meetup-10/meetup-10.html#simple-pca-example",
+    "href": "meetups/meetup-10/meetup-10.html#simple-pca-example",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Simple PCA example",
+    "text": "Simple PCA example\n\nMake a “1D” dataset in two dimensions\nData lies along a straight line with some noise"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#mapping-nyc-5",
-    "href": "meetups/meetup-5/meetup-5.html#mapping-nyc-5",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Mapping NYC",
-    "text": "Mapping NYC\n\nLet’s get some data\n\n\ntract_age = tract_acs_data |&gt; select(med_age_est,geoid)\n\nnyc_boundaries(geography = \"tract\") %&gt;% \n  left_join(tract_age, by = c(\"geoid\" = \"geoid\")) %&gt;% \n  ggplot() +\n  geom_sf(aes(fill = med_age_est)) +\n  scale_fill_viridis_c(name = \"Median Age (estimated)\") +\n  theme_void() +\n  labs(title = \"How does age vary across NYC Neighborhoods?\")"
+    "objectID": "meetups/meetup-10/meetup-10.html#simple-pca-example-1",
+    "href": "meetups/meetup-10/meetup-10.html#simple-pca-example-1",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Simple PCA Example",
+    "text": "Simple PCA Example\n\nPCA looks for vectors along which the “variance” is maximized"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#projections",
-    "href": "meetups/meetup-5/meetup-5.html#projections",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Projections",
-    "text": "Projections\n\nMapping transforms from a spherical surface to a 2D plane\nMany Choices"
+    "objectID": "meetups/meetup-10/meetup-10.html#simple-pca-example-2",
+    "href": "meetups/meetup-10/meetup-10.html#simple-pca-example-2",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Simple PCA Example",
+    "text": "Simple PCA Example\n\nProject data points onto component"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#projections-1",
-    "href": "meetups/meetup-5/meetup-5.html#projections-1",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Projections",
-    "text": "Projections\n\nMapping transforms from a spherical surface to a 2D plane\nControl with coord_sf\n\n\nlibrary(rnaturalearth)\nsf_world &lt;- ne_countries(returnclass='sf')\nggplot(sf_world) + geom_sf() +\n  theme_minimal(base_size=16) +\n  labs(title=\"Default: WGS-84\") +\n  coord_sf(crs = st_crs(\"ESRI:54009\"))"
+    "objectID": "meetups/meetup-10/meetup-10.html#find-the-variance",
+    "href": "meetups/meetup-10/meetup-10.html#find-the-variance",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Find the Variance",
+    "text": "Find the Variance\n\nProject data points onto component"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#projections-2",
-    "href": "meetups/meetup-5/meetup-5.html#projections-2",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Projections",
-    "text": "Projections\n\nMapping transforms from a spherical surface to a 2D plane\nControl with coord_sf"
+    "objectID": "meetups/meetup-10/meetup-10.html#looking-at-multiple-projections",
+    "href": "meetups/meetup-10/meetup-10.html#looking-at-multiple-projections",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Looking at Multiple Projections",
+    "text": "Looking at Multiple Projections\n\nAny projection is possible"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#projections-3",
-    "href": "meetups/meetup-5/meetup-5.html#projections-3",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Projections",
-    "text": "Projections\n\nMapping transforms from a spherical surface to a 2D plane\nControl with coord_sf"
+    "objectID": "meetups/meetup-10/meetup-10.html#first-principal-component",
+    "href": "meetups/meetup-10/meetup-10.html#first-principal-component",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "First Principal Component",
+    "text": "First Principal Component\n\nPC1 maximizes variance"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#choropleth-maps",
-    "href": "meetups/meetup-5/meetup-5.html#choropleth-maps",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Choropleth Maps",
-    "text": "Choropleth Maps\n\nMaps that color regions based on data"
+    "objectID": "meetups/meetup-10/meetup-10.html#subsequent-projections-repeat-process",
+    "href": "meetups/meetup-10/meetup-10.html#subsequent-projections-repeat-process",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Subsequent Projections Repeat Process",
+    "text": "Subsequent Projections Repeat Process\n\nPC1 is the direction with the most variance\nPC2 is perpendicular to PC1, most variance\nPC3 is perpendicular to PC1 and PC2, most variance\n\\(N\\) dimensional dataset has \\(N\\) PCs"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#problems-with-choropleths",
-    "href": "meetups/meetup-5/meetup-5.html#problems-with-choropleths",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Problems With Choropleths",
-    "text": "Problems With Choropleths\n\nPopulation distribution very heterogeneous"
+    "objectID": "meetups/meetup-10/meetup-10.html#why-is-it-dim.-reduction",
+    "href": "meetups/meetup-10/meetup-10.html#why-is-it-dim.-reduction",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Why is it Dim. Reduction?",
+    "text": "Why is it Dim. Reduction?\n\nEach PC is a variable\nYou can discard low variance PCs"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#problems-with-choropleths-1",
-    "href": "meetups/meetup-5/meetup-5.html#problems-with-choropleths-1",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Problems with Choropleths",
-    "text": "Problems with Choropleths\n\nGeographic definitions also heterogeneous"
+    "objectID": "meetups/meetup-10/meetup-10.html#picking-a-dimension",
+    "href": "meetups/meetup-10/meetup-10.html#picking-a-dimension",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Picking a Dimension",
+    "text": "Picking a Dimension\n\nYou can discard low variance PCs\nUse “Elbow” of plot to pick cutoff"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#problems-with-choropleths-2",
-    "href": "meetups/meetup-5/meetup-5.html#problems-with-choropleths-2",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Problems with Choropleths",
-    "text": "Problems with Choropleths\n\nGeographic definitions also heterogeneous\n\n\ncounty_full |&gt; \n  filter(abbr != \"AK\")\nggplot(aes(fill = land_area)) +\n  geom_sf() +\n  scale_fill_viridis_c(option=\"G\") +\n  theme_void(base_size=16) +\n  theme(panel.grid = element_line(color = \"transparent\")) +\n  labs(title = \"Population Density\")"
+    "objectID": "meetups/meetup-10/meetup-10.html#australian-atheletes-example",
+    "href": "meetups/meetup-10/meetup-10.html#australian-atheletes-example",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Australian Atheletes Example",
+    "text": "Australian Atheletes Example"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#problems-with-choropleths-3",
-    "href": "meetups/meetup-5/meetup-5.html#problems-with-choropleths-3",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Problems with Choropleths",
-    "text": "Problems with Choropleths\n\nGeographic definitions also heterogeneous"
+    "objectID": "meetups/meetup-10/meetup-10.html#athletes-pcs",
+    "href": "meetups/meetup-10/meetup-10.html#athletes-pcs",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Athletes PCs",
+    "text": "Athletes PCs"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#ecological-fallacy",
-    "href": "meetups/meetup-5/meetup-5.html#ecological-fallacy",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Ecological Fallacy",
-    "text": "Ecological Fallacy\n\nProperties of individuals may not correspond to mean properties of the group"
+    "objectID": "meetups/meetup-10/meetup-10.html#pca-clusters",
+    "href": "meetups/meetup-10/meetup-10.html#pca-clusters",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "PCA Clusters",
+    "text": "PCA Clusters"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#ecological-fallacy-1",
-    "href": "meetups/meetup-5/meetup-5.html#ecological-fallacy-1",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Ecological Fallacy",
-    "text": "Ecological Fallacy\n\nProperties of individuals may not correspond to mean properties of the group\nGroup level correlation may not apply at individual level\nNobel Laureates may not eat chocolate"
+    "objectID": "meetups/meetup-10/meetup-10.html#pc-clusters",
+    "href": "meetups/meetup-10/meetup-10.html#pc-clusters",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "PC Clusters",
+    "text": "PC Clusters\n\n\n\nPC1: +Size, -Leanness (Sex)\nPC2: +Size, -Red Blood Cells"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#modifiable-areal-units-problem",
-    "href": "meetups/meetup-5/meetup-5.html#modifiable-areal-units-problem",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Modifiable Areal Units Problem",
-    "text": "Modifiable Areal Units Problem\n\nMaps version of ecological fallacy\n\nDifferent areas may show different story"
+    "objectID": "meetups/meetup-10/meetup-10.html#sports",
+    "href": "meetups/meetup-10/meetup-10.html#sports",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Sports",
+    "text": "Sports"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#modifiable-areal-units-problem-1",
-    "href": "meetups/meetup-5/meetup-5.html#modifiable-areal-units-problem-1",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Modifiable Areal Units Problem",
-    "text": "Modifiable Areal Units Problem\n\nGeographical disparities in cancer stage at diagnosis\n\n\nFontanet et al 2024"
+    "objectID": "meetups/meetup-10/meetup-10.html#sports-clusters",
+    "href": "meetups/meetup-10/meetup-10.html#sports-clusters",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Sports Clusters",
+    "text": "Sports Clusters\n\n400m, gymnasts, tennis players have low PC2\nNetball, Field have high PC2\nRowers, Sprinters, Swimmers, Water Polo in the middle"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#facing-the-maup",
-    "href": "meetups/meetup-5/meetup-5.html#facing-the-maup",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Facing the MAUP",
-    "text": "Facing the MAUP\n\nPlot data at different resolutions if you can\nCheck and see if the result changes\nChoose the resolution most appropriate to your question"
+    "objectID": "meetups/meetup-10/meetup-10.html#higher-pcs-contrast",
+    "href": "meetups/meetup-10/meetup-10.html#higher-pcs-contrast",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Higher PCs Contrast",
+    "text": "Higher PCs Contrast\n\n\n\nPC3: +Body Fat, RBCs, -Height\nPC4: +Height, Fat, RBCs, -BMI"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#cartogram",
-    "href": "meetups/meetup-5/meetup-5.html#cartogram",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Cartogram",
-    "text": "Cartogram\n\nEqualize areas while retaining geography"
+    "objectID": "meetups/meetup-10/meetup-10.html#sport-clusters-2",
+    "href": "meetups/meetup-10/meetup-10.html#sport-clusters-2",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Sport Clusters 2",
+    "text": "Sport Clusters 2"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#statebins-library",
-    "href": "meetups/meetup-5/meetup-5.html#statebins-library",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "statebins library",
-    "text": "statebins library\n\ngeom_statebins\n\n\nlibrary(geofacet)\nlibrary(statebins)\nstate_unemp |&gt; as_tibble() |&gt; filter(year==2008) |&gt;\n  ggplot(aes(fill=rate, state=state)) + \n  geom_statebins(lbl_size = 6) +\n  scale_fill_gradient(low=\"white\",high=\"red\") +\n  theme_void(base_size=18) +\n  labs(title=\"State Unemployment\")"
+    "objectID": "meetups/meetup-10/meetup-10.html#how-to-make-these-plots-in-r",
+    "href": "meetups/meetup-10/meetup-10.html#how-to-make-these-plots-in-r",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "How to make these plots in R",
+    "text": "How to make these plots in R\n\nprcomp and scale\nretx keyword calcualtes embeddings\n\n\naus_fit = aus_athletes |&gt; \n  select(where(is.numeric))  |&gt;  \n  prcomp(scale = TRUE)\n\n# or\n# gets rid of mean and rescales variance\n\naus_fit = aus_athletes |&gt; \n  select(where(is.numeric))  |&gt;  \n  scale() |&gt; \n  prcomp(retx = TRUE)"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#time-series-in-each-bin",
-    "href": "meetups/meetup-5/meetup-5.html#time-series-in-each-bin",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Time Series in Each Bin",
-    "text": "Time Series in Each Bin"
+    "objectID": "meetups/meetup-10/meetup-10.html#contents-of-fit-object",
+    "href": "meetups/meetup-10/meetup-10.html#contents-of-fit-object",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Contents of fit object",
+    "text": "Contents of fit object\n\naus_fit\n\nStandard deviations (1, .., p=11):\n [1] 2.23404856 1.59923950 1.07582851 0.94294793 0.89180307 0.65872338\n [7] 0.32428594 0.20232605 0.15228831 0.07279582 0.03293771\n\nRotation (n x k) = (11 x 11):\n               PC1         PC2         PC3          PC4         PC5         PC6\nrcc     0.37449926 -0.15896859  0.23456267 -0.217592671  0.23113528  0.24042584\nwcc     0.07607989  0.14643132  0.63731981 -0.193874709 -0.71219980 -0.14657450\nhc      0.38921924 -0.16930334  0.22299174 -0.204335027  0.21329896  0.14848437\nhg      0.39398646 -0.14839419  0.21826369 -0.126293900  0.24631047  0.04743775\nferr    0.18096941  0.04022641  0.27331307  0.888524055 -0.03510540  0.31464529\nbmi     0.25688861  0.42398703  0.06970089  0.112465801  0.25980634 -0.56325123\nssf    -0.17658747  0.52587398  0.17904388 -0.116159628  0.22401028  0.28597833\npcBfat -0.23764689  0.47350512  0.19029580 -0.139708577  0.22171662  0.28202541\nlbm     0.39995499  0.18525045 -0.26453397  0.053428020 -0.13093113 -0.18218609\nht      0.29428652  0.19800646 -0.42823892 -0.139098319 -0.38179742  0.52599617\nwt      0.33804701  0.38333328 -0.20061209  0.005007978 -0.04690227 -0.09473171\n                 PC7          PC8          PC9          PC10          PC11\nrcc    -0.7566898361 -0.199201778 -0.092406080  9.108309e-03 -0.0015062443\nwcc     0.0008324697 -0.016739036 -0.002971962 -1.514497e-03  0.0010625852\nhc      0.2464133051  0.745988263  0.208183403 -1.621396e-02 -0.0011660217\nhg      0.5886349450 -0.574708220 -0.139182502 -8.034653e-03  0.0053383594\nferr   -0.0064610391  0.030403090 -0.016020513  9.893463e-05 -0.0002621549\nbmi    -0.0741855614  0.068435637 -0.076440484  5.747325e-01  0.0750846540\nssf     0.0166623190 -0.193117005  0.689708155 -1.666579e-02  0.0348216670\npcBfat  0.0712499174  0.171474610 -0.652105583 -1.868302e-01  0.2006538802\nlbm    -0.0507006292 -0.021952556  0.107081317 -4.884631e-01  0.6553134316\nht      0.0791128182 -0.008239715 -0.077125160  4.837802e-01  0.0518888717\nwt     -0.0219172451  0.019877608 -0.065472528 -4.018049e-01 -0.7216136734"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#time-series-in-each-bin-1",
-    "href": "meetups/meetup-5/meetup-5.html#time-series-in-each-bin-1",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Time Series in Each Bin",
-    "text": "Time Series in Each Bin\n\nstate_unemp %&gt;%\n  ggplot(aes(year, rate)) + \n  geom_area(fill = \"#56B4E9\", alpha = 0.7) +\n  geom_line() + \n  scale_y_continuous(\n    name = \"unemployment rate\",\n    limits = c(0, 16), expand = c(0, 0),\n    breaks = c(5, 10),\n    labels = c( \"5\", \"10\")\n  ) +\n  scale_x_continuous(breaks = c(2006, 2012),\n    labels = c(\"\\'06\", \"\\'12\")) +\n  coord_cartesian(clip = \"off\") +\n  facet_geo(~state, grid = \"us_state_grid1\") +\n  theme_minimal(base_size=12) +\n  theme(\n    axis.line.x = element_blank(),\n    panel.spacing.x = grid::unit(1, \"pt\"),\n    panel.spacing.y = grid::unit(1, \"pt\"),\n    panel.grid.major = element_line(color = \"gray80\"),\n    panel.background = element_rect(fill = \"gray90\")\n  )"
+    "objectID": "meetups/meetup-10/meetup-10.html#contents-of-fit-object-1",
+    "href": "meetups/meetup-10/meetup-10.html#contents-of-fit-object-1",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Contents of fit object",
+    "text": "Contents of fit object\n\nstr(aus_fit)\n\nList of 5\n $ sdev    : num [1:11] 2.234 1.599 1.076 0.943 0.892 ...\n $ rotation: num [1:11, 1:11] 0.3745 0.0761 0.3892 0.394 0.181 ...\n  ..- attr(*, \"dimnames\")=List of 2\n  .. ..$ : chr [1:11] \"rcc\" \"wcc\" \"hc\" \"hg\" ...\n  .. ..$ : chr [1:11] \"PC1\" \"PC2\" \"PC3\" \"PC4\" ...\n $ center  : Named num [1:11] -3.77e-16 -5.22e-17 3.53e-17 -3.40e-16 -5.74e-17 ...\n  ..- attr(*, \"names\")= chr [1:11] \"rcc\" \"wcc\" \"hc\" \"hg\" ...\n $ scale   : Named num [1:11] 1 1 1 1 1 1 1 1 1 1 ...\n  ..- attr(*, \"names\")= chr [1:11] \"rcc\" \"wcc\" \"hc\" \"hg\" ...\n $ x       : num [1:202, 1:11] -2.07 -1.9 -3.38 -2.68 -1.8 ...\n  ..- attr(*, \"dimnames\")=List of 2\n  .. ..$ : NULL\n  .. ..$ : chr [1:11] \"PC1\" \"PC2\" \"PC3\" \"PC4\" ...\n - attr(*, \"class\")= chr \"prcomp\""
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#small-multiples",
-    "href": "meetups/meetup-5/meetup-5.html#small-multiples",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Small Multiples",
-    "text": "Small Multiples\n\nFacet by time"
+    "objectID": "meetups/meetup-10/meetup-10.html#meaning-of-components",
+    "href": "meetups/meetup-10/meetup-10.html#meaning-of-components",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Meaning of Components",
+    "text": "Meaning of Components\n\nsdev is “standard deviation” of components\n\nsquare to get “variance”,\ndivide by number of variables to convert to percentage\n\nrotation is matrix where rows are Principal Components\nx is matrix that contains embeddings of each data point"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#small-multiples-1",
-    "href": "meetups/meetup-5/meetup-5.html#small-multiples-1",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Small Multiples",
-    "text": "Small Multiples\n\nopiates$region &lt;- tolower(opiates$state)\nopiates_map &lt;- left_join(us_states, opiates)\n\np0 &lt;- ggplot(data = subset(opiates_map, year &gt; 1999),\n             mapping = aes(x = long, y = lat,\n                 group = group,\n                 fill = adjusted))\n\np1 &lt;- p0 + geom_polygon(color = \"gray90\", size = 0.05) +\n    coord_map(projection = \"albers\", lat0 = 39, lat1 = 45) \n\np2 &lt;- p1 + scale_fill_viridis_c(option = \"plasma\")\n\np2 + theme_map() + facet_wrap(~ year, ncol = 3) +\n    theme(legend.position = \"bottom\",\n          strip.background = element_blank()) +\n    labs(fill = \"Death rate per 100,000 population \",\n         title = \"Opiate Related Deaths by State, 2000-2014\")"
+    "objectID": "meetups/meetup-10/meetup-10.html#tidy-pca",
+    "href": "meetups/meetup-10/meetup-10.html#tidy-pca",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Tidy PCA",
+    "text": "Tidy PCA\n\nUse augment from broom to make objects tidy\n\n\naus_fit  |&gt; \n  augment(aus_athletes)\n\n# A tibble: 202 × 25\n   .rownames   rcc   wcc    hc    hg  ferr   bmi   ssf pcBfat   lbm    ht    wt\n   &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n 1 1          3.96   7.5  37.5  12.3    60  20.6 109.    19.8  63.3  196.  78.9\n 2 2          4.41   8.3  38.2  12.7    68  20.7 103.    21.3  58.6  190.  74.4\n 3 3          4.14   5    36.4  11.6    21  21.9 105.    19.9  55.4  178.  69.1\n 4 4          4.11   5.3  37.3  12.6    69  21.9 126.    23.7  57.2  185   74.9\n 5 5          4.45   6.8  41.5  14      29  19.0  80.3   17.6  53.2  185.  64.6\n 6 6          4.1    4.4  37.4  12.5    42  21.0  75.2   15.6  53.8  174   63.7\n 7 7          4.31   5.3  39.6  12.8    73  21.7  87.2   20.0  60.2  186.  75.2\n 8 8          4.42   5.7  39.9  13.2    44  20.6  97.9   22.4  48.3  174.  62.3\n 9 9          4.3    8.9  41.1  13.5    41  22.6  75.1   18.0  54.6  171.  66.5\n10 10         4.51   4.4  41.6  12.7    44  19.4  65.1   15.1  53.4  180.  62.9\n# ℹ 192 more rows\n# ℹ 13 more variables: sex &lt;fct&gt;, sport &lt;fct&gt;, .fittedPC1 &lt;dbl&gt;,\n#   .fittedPC2 &lt;dbl&gt;, .fittedPC3 &lt;dbl&gt;, .fittedPC4 &lt;dbl&gt;, .fittedPC5 &lt;dbl&gt;,\n#   .fittedPC6 &lt;dbl&gt;, .fittedPC7 &lt;dbl&gt;, .fittedPC8 &lt;dbl&gt;, .fittedPC9 &lt;dbl&gt;,\n#   .fittedPC10 &lt;dbl&gt;, .fittedPC11 &lt;dbl&gt;"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#non-spatial-plots",
-    "href": "meetups/meetup-5/meetup-5.html#non-spatial-plots",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Non-Spatial Plots",
-    "text": "Non-Spatial Plots\n\nDirect numerical visualization more precise than colors"
+    "objectID": "meetups/meetup-10/meetup-10.html#plotting-embeddings",
+    "href": "meetups/meetup-10/meetup-10.html#plotting-embeddings",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Plotting Embeddings",
+    "text": "Plotting Embeddings\n\naus_fit  |&gt; \n  augment(aus_athletes) %&gt;%\n  ggplot(aes(.fittedPC1, .fittedPC2,color=sex)) +\n  geom_point(size = 1.5) +\n  scale_color_manual(\n    values = c(m = \"#D55E00\", f = \"#0072B2\")\n  ) +\n  theme_minimal(base_size=16) +\n  labs(title=\"PCA Coordinates for Australian Athletes\",\n       x = \"PC 1\", y= \"PC 2\",subtitle = \"Color shows sex\")"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#non-spatial-plots-1",
-    "href": "meetups/meetup-5/meetup-5.html#non-spatial-plots-1",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Non-Spatial Plots",
-    "text": "Non-Spatial Plots\n\nDirect numerical visualization more precise than colors\n\n\n election |&gt; filter(state != \"DC\") |&gt; ggplot(\n   aes(x = r_points, y = reorder(state, r_points),\n                           color = party)) + geom_vline(xintercept = 0, color = \"gray30\") +\n    geom_point(size = 2) + scale_color_manual(values = party_colors) + scale_x_continuous(breaks = c(-30, -20, -10, 0, 10, 20, 30, 40),                              labels = c(\"30\\n (Clinton)\", \"20\", \"10\", \"0\",\n                                         \"10\", \"20\", \"30\", \"40\\n(Trump)\")) + \n   facet_wrap(~ census, scales=\"free_y\",ncol=2) +\n    guides(color=FALSE) + labs(x = \"Point Margin\", y = NULL) +\n    theme(axis.text=element_text(size=8))"
+    "objectID": "meetups/meetup-10/meetup-10.html#plotting-embeddings-1",
+    "href": "meetups/meetup-10/meetup-10.html#plotting-embeddings-1",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Plotting Embeddings",
+    "text": "Plotting Embeddings"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#thanks",
-    "href": "meetups/meetup-5/meetup-5.html#thanks",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "Thanks",
-    "text": "Thanks"
+    "objectID": "meetups/meetup-10/meetup-10.html#drawing-clusters",
+    "href": "meetups/meetup-10/meetup-10.html#drawing-clusters",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Drawing Clusters",
+    "text": "Drawing Clusters"
   },
   {
-    "objectID": "meetups/meetup-5/meetup-5.html#references",
-    "href": "meetups/meetup-5/meetup-5.html#references",
-    "title": "Meetup 5: Visualizing Geospatial Data",
-    "section": "References",
-    "text": "References\n\nKieran Healy Data Visualization and Github"
+    "objectID": "meetups/meetup-10/meetup-10.html#drawing-clusters-1",
+    "href": "meetups/meetup-10/meetup-10.html#drawing-clusters-1",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Drawing Clusters",
+    "text": "Drawing Clusters\n\narrow_style &lt;- arrow(\n  angle = 20, length = grid::unit(8, \"pt\"),\n  ends = \"first\", type = \"closed\"\n)\naus_fit %&gt;%\n  tidy(matrix = \"rotation\")  |&gt; \n  pivot_wider(\n    names_from = \"PC\", values_from = \"value\",\n    names_prefix = \"PC\"\n  )  |&gt; \n  ggplot(aes(PC1, PC2)) +\n  geom_segment(\n    xend = 0, yend = 0,\n    arrow = arrow_style\n  ) +\n  geom_text_repel(aes(label = column), hjust = 1,vjust=1) +\n  xlim(-0.5, 0.5) + ylim(-0.25, 0.75) + \n  coord_fixed() +\n  theme_minimal(base_size =16)"
+  },
+  {
+    "objectID": "meetups/meetup-10/meetup-10.html#d-plot-using-plotly",
+    "href": "meetups/meetup-10/meetup-10.html#d-plot-using-plotly",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "3D Plot Using Plotly",
+    "text": "3D Plot Using Plotly\n\nlibrary(plotly)\n\nfig = pca_fit |&gt; \n augment(oc_data)  |&gt; \n  bind_cols(oc_group) |&gt; plot_ly(\n    x=~.fittedPC1, y=~.fittedPC2, z=~.fittedPC3, color = ~Cancer, colors = c(\"#D55E00\", \"#0072B2\"),size=2)\nfig &lt;- fig |&gt;  add_markers()\nfig &lt;- fig |&gt; layout(scene = list(xaxis = list(title = \"PC1\"),\n                     yaxis = list(title = 'PC2'),\n                     zaxis = list(title = 'PC3'))\n                     )\n\nfig"
+  },
+  {
+    "objectID": "meetups/meetup-10/meetup-10.html#d-plot-using-plotly-1",
+    "href": "meetups/meetup-10/meetup-10.html#d-plot-using-plotly-1",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "3D Plot Using Plotly",
+    "text": "3D Plot Using Plotly"
+  },
+  {
+    "objectID": "meetups/meetup-10/meetup-10.html#downsides-of-pca",
+    "href": "meetups/meetup-10/meetup-10.html#downsides-of-pca",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Downsides of PCA",
+    "text": "Downsides of PCA\n\nPCA learns a linear representation\n\nTons of other methods exist for nonlinear structures"
+  },
+  {
+    "objectID": "meetups/meetup-10/meetup-10.html#downsides-of-pca-1",
+    "href": "meetups/meetup-10/meetup-10.html#downsides-of-pca-1",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Downsides of PCA",
+    "text": "Downsides of PCA\n\nProne to overinterpretation\n\n\nShalizi/November"
+  },
+  {
+    "objectID": "meetups/meetup-10/meetup-10.html#downsides-of-pca-2",
+    "href": "meetups/meetup-10/meetup-10.html#downsides-of-pca-2",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Downsides of PCA",
+    "text": "Downsides of PCA\n\nProne to overinterpretation\n\n\nShalizi/November"
+  },
+  {
+    "objectID": "meetups/meetup-10/meetup-10.html#downsides-of-pca-3",
+    "href": "meetups/meetup-10/meetup-10.html#downsides-of-pca-3",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Downsides of PCA",
+    "text": "Downsides of PCA\n\nSensitive to outliers\n\nIf your measurement process is not robust….\nUsing PCA could be very misleading!\n\nThere is an algorithm called robust PCA which is great these cases"
   },
   {
     "objectID": "meetups/meetup-12/meetup-12.html#week-summary",

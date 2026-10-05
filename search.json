@@ -2516,7 +2516,7 @@
     "href": "course/schedule.html#meetup-link",
     "title": "DATA 608 Fall 2026",
     "section": "Meetup Link",
-    "text": "Meetup Link\nClick Here to Join the Meetups on Zoom\nMeetups are Mondays at 8:00PM Eastern. We meet every Monday of the semester except the Monday after Thanksgiving.\n\nCourse Schedule\n\n\nDate\nModule\nSlides\nVideo\nMain Deliverables\n\n\n\n\nAug 31\nDeveloping a Critical Eye\nMeetup 1 Slides\nMeetup 1 Video\nStory 1 assigned\n\n\nSep 7\nThe Data Visualization Catalogue\nMeetup 2 Slides\nMeetup 2 Video\nStory 1 due Sun Sep 13\n\n\nSep 14\nVisualization Quality Features\nMeetup 3 Slides\nMeetup 3 Video\nStory 2 assigned\n\n\nSep 21\nAssociations and Time Series\nMeetup 4 Slides\nMeetup 4 Video\nStory 2 due Sun Sep 27\n\n\nSep 28\nVisualizing Geospatial Data\nMeetup 5 Slides\nMeetup 5 Video\nStory 3 assigned\n\n\nOct 5\nStorytelling\n\n\nStory 3 due Sun Oct 11\n\n\nOct 12\nEffective Use of Color and Fonts\n\n\nStory 4 assigned\n\n\nOct 19\nDistributions and Histograms\n\n\nStory 4 due Sun Oct 25\n\n\nOct 26\nModels and Uncertainty\n\n\nStory 5 assigned\n\n\nNov 2\nDimension Reduction and PCA\n\n\nStory 5 due Sun Nov 8\n\n\nNov 9\nClustering\n\n\nStory 6 assigned\n\n\nNov 16\nHierarchical Clustering\n\n\nStory 6 due Sun Nov 22\n\n\nNov 23\nIntroduction to Shiny Apps\n\n\nStory 7 assigned\n\n\nNov 30\nNo Meetup — Thanksgiving\n\n\n\n\n\nDec 7\nInteractive Visualizations\nSlides\n\nStory 7 due Sun Dec 13\n\n\nDec 14\nWrap-Up\n\n\n\n\n\n\n\n\n\nWeek\nVideo Link\nAnnouncement Link\n\n\n\n\n2\nDot Plot Vignette\nDetails\n\n\n\nSlides and recordings are posted here after each meetup.",
+    "text": "Meetup Link\nClick Here to Join the Meetups on Zoom\nMeetups are Mondays at 8:00PM Eastern. We meet every Monday of the semester except the Monday after Thanksgiving.\n\nCourse Schedule\n\n\nDate\nModule\nSlides\nVideo\nMain Deliverables\n\n\n\n\nAug 31\nDeveloping a Critical Eye\nMeetup 1 Slides\nMeetup 1 Video\nStory 1 assigned\n\n\nSep 7\nThe Data Visualization Catalogue\nMeetup 2 Slides\nMeetup 2 Video\nStory 1 due Sun Sep 13\n\n\nSep 14\nVisualization Quality Features\nMeetup 3 Slides\nMeetup 3 Video\nStory 2 assigned\n\n\nSep 21\nAssociations and Time Series\nMeetup 4 Slides\nMeetup 4 Video\nStory 2 due Sun Sep 27\n\n\nSep 28\nVisualizing Geospatial Data\nMeetup 5 Slides\nMeetup 5 Video\nStory 3 assigned\n\n\nOct 5\nStorytelling\nMeetup 6 Slides\n\nStory 3 due Sun Oct 11\n\n\nOct 12\nEffective Use of Color and Fonts\n\n\nStory 4 assigned\n\n\nOct 19\nDistributions and Histograms\n\n\nStory 4 due Sun Oct 25\n\n\nOct 26\nModels and Uncertainty\n\n\nStory 5 assigned\n\n\nNov 2\nDimension Reduction and PCA\n\n\nStory 5 due Sun Nov 8\n\n\nNov 9\nClustering\n\n\nStory 6 assigned\n\n\nNov 16\nHierarchical Clustering\n\n\nStory 6 due Sun Nov 22\n\n\nNov 23\nIntroduction to Shiny Apps\n\n\nStory 7 assigned\n\n\nNov 30\nNo Meetup — Thanksgiving\n\n\n\n\n\nDec 7\nInteractive Visualizations\nSlides\n\nStory 7 due Sun Dec 13\n\n\nDec 14\nWrap-Up\n\n\n\n\n\n\n\n\n\nWeek\nVideo Link\nAnnouncement Link\n\n\n\n\n2\nDot Plot Vignette\nDetails\n\n\n\nSlides and recordings are posted here after each meetup.",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -2774,7 +2774,42 @@
     "href": "meetups/meetup-6/meetup-6.html#week-summary",
     "title": "Meetup 6: Narrative Structure",
     "section": "Week Summary",
-    "text": "Week Summary\n\nGoal of this week: think more concretely about stories\nRead: Chapter 29 of Fundamentals, Chapter 7 of Storytelling\nHW: Data Story 3 Due on Sunday\nDiscussion: Put week 1 story in story arc format"
+    "text": "Week Summary\n\nGoal of this week: think more concretely about stories\nRead: Chapter 29 of Fundamentals, Chapter 7 of Storytelling\nHW: Data Story 3 Due on Sunday"
+  },
+  {
+    "objectID": "meetups/meetup-6/meetup-6.html#november-meetup",
+    "href": "meetups/meetup-6/meetup-6.html#november-meetup",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "November Meetup!",
+    "text": "November Meetup!"
+  },
+  {
+    "objectID": "meetups/meetup-6/meetup-6.html#story-2",
+    "href": "meetups/meetup-6/meetup-6.html#story-2",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Story 2:",
+    "text": "Story 2:\n\nAll figures should have big idea!"
+  },
+  {
+    "objectID": "meetups/meetup-6/meetup-6.html#story-2-1",
+    "href": "meetups/meetup-6/meetup-6.html#story-2-1",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Story 2:",
+    "text": "Story 2:\n\nAll figures should have big idea!"
+  },
+  {
+    "objectID": "meetups/meetup-6/meetup-6.html#story-2-2",
+    "href": "meetups/meetup-6/meetup-6.html#story-2-2",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Story 2:",
+    "text": "Story 2:\n\nAll figures should have big idea!"
+  },
+  {
+    "objectID": "meetups/meetup-6/meetup-6.html#story-2-3",
+    "href": "meetups/meetup-6/meetup-6.html#story-2-3",
+    "title": "Meetup 6: Narrative Structure",
+    "section": "Story 2:",
+    "text": "Story 2:\n\nDo not turn in a long written report.\nGood to great: Making the figures work together more coherently"
   },
   {
     "objectID": "meetups/meetup-6/meetup-6.html#what-is-a-story",

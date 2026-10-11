@@ -57,8 +57,8 @@ However, I have created a few additional variables which are important for the a
 - `borough`: The borough of the listings
 - `n_amenities`: Count of number of amenities in JSON of the 'amenities' column. You may
 also engineer your own version or consider specific amenities.
-- `neighborhood`: The neighborhood of the listing.  Inside Airbnb's
-  `neighbourhood_cleansed` field. Note that `neighbourhoods.geojson` uses the UK spelling in case you want to join them.
+- `neighborhood`: The neighborhood of the listing. This is Inside Airbnb's
+  `neighbourhood_cleansed` field, renamed.
 - `neighbourhood_group`: Identical to `borough`. This is the neighborhood designation from the original dataset. You can use 'borough' instead.
 - `price_per_accommodates`: `price` divided by `accommodates`, nightly price per maximum number of guests.
 - `bathrooms_shared`: `TRUE` when the listing's bathroom is shared rather than
@@ -74,9 +74,8 @@ Mapping isn't required, but could be useful for your story. You can use `geojson
 #| echo: true
 library(geojsonsf)
 library(ggplot2)
-nyc_geo <- geojson_sf(
-  "/home/georgehagstrom/work/Teaching/DATA608/DataStory4/neighbourhoods.geojson")
-nyc_geo |> ggplot(aes(fill= neighbourhood)) + 
+nyc_geo <- geojson_sf("data/neighborhoods.geojson")
+nyc_geo |> ggplot(aes(fill = neighborhood)) + 
   geom_sf() +
    guides(fill = guide_none())
 

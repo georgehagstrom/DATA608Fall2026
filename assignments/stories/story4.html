@@ -403,7 +403,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><code>occupancy_level</code>: This variable categorizes listings into three categories, <code>Low</code>, <code>Medium</code>, and <code>High</code> occupancy. The levels are 33% or less occupancy, 33% to 66% occupancy, and greater than 66% occupancy</li>
 <li><code>borough</code>: The borough of the listings</li>
 <li><code>n_amenities</code>: Count of number of amenities in JSON of the ‘amenities’ column. You may also engineer your own version or consider specific amenities.</li>
-<li><code>neighborhood</code>: The neighborhood of the listing. Inside Airbnb’s <code>neighbourhood_cleansed</code> field. Note that <code>neighbourhoods.geojson</code> uses the UK spelling in case you want to join them.</li>
+<li><code>neighborhood</code>: The neighborhood of the listing. This is Inside Airbnb’s <code>neighbourhood_cleansed</code> field, renamed.</li>
 <li><code>neighbourhood_group</code>: Identical to <code>borough</code>. This is the neighborhood designation from the original dataset. You can use ‘borough’ instead.</li>
 <li><code>price_per_accommodates</code>: <code>price</code> divided by <code>accommodates</code>, nightly price per maximum number of guests.</li>
 <li><code>bathrooms_shared</code>: <code>TRUE</code> when the listing’s bathroom is shared rather than private, parsed from <code>bathrooms_text</code>.</li>
@@ -415,11 +415,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(geojsonsf)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>nyc_geo <span class="ot">&lt;-</span> <span class="fu">geojson_sf</span>(</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">"/home/georgehagstrom/work/Teaching/DATA608/DataStory4/neighbourhoods.geojson"</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>nyc_geo <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">fill=</span> neighbourhood)) <span class="sc">+</span> </span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>() <span class="sc">+</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>   <span class="fu">guides</span>(<span class="at">fill =</span> <span class="fu">guide_none</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>nyc_geo <span class="ot">&lt;-</span> <span class="fu">geojson_sf</span>(<span class="st">"data/neighborhoods.geojson"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>nyc_geo <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">fill =</span> neighborhood)) <span class="sc">+</span> </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_sf</span>() <span class="sc">+</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>   <span class="fu">guides</span>(<span class="at">fill =</span> <span class="fu">guide_none</span>())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure">

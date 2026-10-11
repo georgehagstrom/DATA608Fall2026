@@ -5,7 +5,14 @@ title: "Data Story 4: Airbnb Revenue Analysis"
 ## Assignment
 
 You have been given a dataset consisting of two files, `nyc_airbnb_listings.csv` and
-`neighborhoods.geojson`. The goal of this assignment is to tell a visual story
+`neighborhoods.geojson`. 
+
+
+- [`nyc_airbnb_listings.csv`](data/nyc_airbnb_listings.csv) 
+- [`neighbourhoods.geojson`](data/neighbourhoods.geojson)
+
+
+The goal of this assignment is to tell a visual story
 about the factors that differentiate profitable airbnbs from unprofitable airbnbs. You should imagine that you are either an analyst at airbnb looking for ways to help hosts become more profitable or to suggest to make suggestions about who should become a host, or a real estate investor looking to either acquire (or help manage) short term rental properties.
 
 Based on your analysis, you can phrase your story in different ways (these are just suggestions):

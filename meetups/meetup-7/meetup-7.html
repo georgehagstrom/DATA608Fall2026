@@ -404,6 +404,19 @@ George I. Hagstrom
 </div>
 
 </section>
+<section id="november-meetup" class="slide level2">
+<h2>November Meetup!</h2>
+
+<img data-src="MeetupNovChristian2026Seminar.png" class="r-stretch"></section>
+<section id="november-meetup-1" class="slide level2">
+<h2>November Meetup!</h2>
+
+<img data-src="MeetupNovChristian2026Seminar.png" class="r-stretch"><p>https://us02web.zoom.us/meeting/register/RQW4PGPcT0ixadrHwD0-aQ</p>
+</section>
+<section id="october-nyhackr-meetup" class="slide level2">
+<h2>October ‘nyhackr’ meetup</h2>
+
+<img data-src="October_2026_Meetup_Card.png" class="r-stretch"></section>
 <section id="weekly-summary" class="slide level2">
 <h2>Weekly Summary</h2>
 <ul>
@@ -412,7 +425,6 @@ George I. Hagstrom
 <li>Chapter 4 of Storytelling</li>
 <li>Okabe-Ito Page <a href="https://jfly.uni-koeln.de/color/" class="uri">https://jfly.uni-koeln.de/color/</a></li>
 <li>New Assignment: Airbnb Revenues in NYC</li>
-<li>No Discussion Next Two Weeks</li>
 </ul>
 </section>
 <section id="three-uses-of-color" class="slide level2">
@@ -652,7 +664,7 @@ George I. Hagstrom
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>p1 <span class="ot">=</span> neighborhood_df <span class="sc">|&gt;</span> </span>
-<span id="cb6-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>mean_revenue,</span>
+<span id="cb6-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="fu">fct_reorder</span>(neighborhood,mean_revenue),</span>
 <span id="cb6-3"><a></a>             <span class="at">y=</span>mean_revenue,</span>
 <span id="cb6-4"><a></a>             <span class="at">fill =</span> borough)) <span class="sc">+</span></span>
 <span id="cb6-5"><a></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
@@ -727,7 +739,7 @@ George I. Hagstrom
 <section id="rcolorbrewer-9" class="slide level2">
 <h2><code>RColorBrewer</code></h2>
 <ul>
-<li><code>na.value="grey30"</code> tells us the color for missing values</li>
+<li><code>na.value="grey70"</code> tells us the color for missing values</li>
 <li><code>guide = colorbar, legend, or colorsteps</code> says type of colorbar</li>
 </ul>
 <div class="cell">

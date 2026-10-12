@@ -4,6 +4,27 @@ author: "George I. Hagstrom"
 format: revealjs
 ---
 
+
+## November Meetup!
+
+![](MeetupNovChristian2026Seminar.png)
+
+
+
+## November Meetup!
+
+![](MeetupNovChristian2026Seminar.png)
+
+https://us02web.zoom.us/meeting/register/RQW4PGPcT0ixadrHwD0-aQ
+
+
+## October 'nyhackr' meetup
+
+![](October_2026_Meetup_Card.png)
+
+
+
+
 ## Weekly Summary
 
 -   This week is all about how to control colors in `R`
@@ -11,7 +32,6 @@ format: revealjs
 -   Chapter 4 of Storytelling
 -   Okabe-Ito Page <https://jfly.uni-koeln.de/color/>
 -   New Assignment: Airbnb Revenues in NYC
--   No Discussion Next Two Weeks
 
 ## Three Uses of Color
 
@@ -33,8 +53,18 @@ borough_colors <- c("#E69F00", "#56B4E9", "#009E73", "#F0E442","#0072B2" )
 
 
 
-neighborhood_df = nyc_bnb |> group_by(neighborhood,borough) |> summarise(num_listings = n(), mean_revenue = mean(revenue,na.rm =TRUE), mean_rating = mean(review_scores_rating,na.rm=TRUE),mean_location = mean(review_scores_location,na.rm=TRUE),mean_value = mean(review_scores_value,na.rm=TRUE)) |> filter(num_listings > 200) |> 
-  ungroup() |> slice_sample(n=20) # Need ungroup to make slice_sample pick 20 neighborhoods 
+neighborhood_df = nyc_bnb |> 
+  group_by(neighborhood,borough) |> 
+  summarise(
+      num_listings = n(), 
+      mean_revenue = mean(revenue,na.rm =TRUE), 
+      mean_rating = mean(review_scores_rating,na.rm=TRUE),
+      mean_location = mean(review_scores_location,na.rm=TRUE),
+      mean_value = mean(review_scores_value,na.rm=TRUE)
+      ) |> 
+  filter(num_listings > 200) |> 
+  ungroup() |> 
+  slice_sample(n=20) # Need ungroup to make slice_sample pick 20 neighborhoods 
 
 p_nabes = neighborhood_df |> 
   ggplot(aes(x=fct_reorder(neighborhood,mean_revenue),
@@ -112,10 +142,8 @@ neighborhood_df = nyc_bnb |>
             mean_occupancy = mean(occupancy,na.rm=TRUE)
           )
 
-nyc_sf = geojson_sf("/home/georgehagstrom/work/Teaching/DATA608/DataStory4/neighbourhoods.geojson") |> as_tibble()
-
-nyc_sf = nyc_sf |> rename(neighborhood = neighbourhood)
-neighborhood_df = neighborhood_df |> right_join(nyc_sf)
+nyc_sf = geojson_sf("../../assignments/stories/data/neighborhoods.geojson") |> as_tibble()
+neighborhood_df = neighborhood_df |> right_join(nyc_sf, by = c("neighborhood", "borough"))
 
 neighborhood_df |> ggplot(aes(fill=mean_occupancy)) +
   geom_sf(aes(geometry=geometry)) +
@@ -326,7 +354,7 @@ display.brewer.all(type = "qual",colorblindFriendly = TRUE)
 #| eval: false
 
 p1 = neighborhood_df |> 
-  ggplot(aes(x=mean_revenue,
+  ggplot(aes(x=fct_reorder(neighborhood,mean_revenue),
              y=mean_revenue,
              fill = borough)) +
   geom_col() +
@@ -426,7 +454,7 @@ p_nabes +
 
 ## `RColorBrewer`
 
-- `na.value="grey30"` tells us the color for missing values
+- `na.value="grey70"` tells us the color for missing values
 - `guide = colorbar, legend, or colorsteps` says type of colorbar
 
 ```{r}

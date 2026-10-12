@@ -20,6 +20,31 @@ library(DT)
 
 ```
 
+
+
+## Events Upcoming
+
+- Once per month (Tuesday, Wedneday, Thursday) "field trips" to New York Open Statistical Computing Meetup
+- [nyhackr.org](nyhackr.org)
+![](nyhackr.png)
+
+
+
+
+## Events Upcoming!
+
+![nyhackr.org](../../images/September_2026_Meetup_Card.png)
+
+
+
+## Events Upcoming!
+
+![nyhackr.org](../../images/Oct2026Seminar.png)
+
+
+
+
+
 ## Why Visualizations Matter
 
 - Graphs are the main way we communicate data
@@ -81,7 +106,7 @@ library(DT)
 
 -  Brightspace to submit homework
 - Course Meetup: Monday 8:00-9:00PM
-- [Zoom Link](https://us02web.zoom.us/j/6211354884?omn=86938044575)
+- [Zoom Link](https://us02web.zoom.us/j/81858708616?pwd=eE9ZGJFco9iicq3BsmANIfWUVLwy0x.1)
 
 
 :::
@@ -149,9 +174,6 @@ Two most important textbooks:
 ## Textbooks
 
 :::: {.columns}
-
-
-:::: {.columns}
 ::: {.column width="50%"}
 
 - For _pythonistas_
@@ -186,6 +208,8 @@ Useful for the story/business framing
 ![](storytelling.png)
 :::
 
+::::
+
 
 ## Textbooks
 
@@ -200,7 +224,7 @@ Useful for the story/business framing
 :::
 
 ::: {.column width="50%"}
-![](welcome_slides/baruch_library.png)
+![](baruch_library.png)
 :::
 ::::
 
@@ -364,18 +388,6 @@ what would you say?
 ![](IPCC_SPM_fig.png)
 
 
-## The Storyboard
-
-- Storyboard is like a visual outline of the story you want to tell
-- Arose in TV, film, and other narrative media
-- Sketch out the narrative and visual elements of your data story.
-- 2-6 elements
-- Problem, Research Question, Data, Insights, Recommendation/Conclusion
-
-## The Storyboard
-
-![](storyboard.png)
-
 ## Why Stories?
 
 - Humans are wired to hear and tell stories, it is how we relate
@@ -464,14 +476,6 @@ bad = penguins |> ggplot(aes(x=species)) +
 
 
 
-
-
-## Advert
-
-- Once per month (Tuesday, Wedneday, Thursday) "field trips" to New York Open Statistical Computing Meetup
-- Send me a DM I'll add you to the email list
-- [nyhackr.org](nyhackr.org)
-![](nyhackr.png)
 
 
 

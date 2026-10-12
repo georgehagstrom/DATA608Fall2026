@@ -9,7 +9,42 @@ format: revealjs
 -   Goal of this week: think more concretely about stories
 -   Read: Chapter 29 of Fundamentals, Chapter 7 of Storytelling
 -   HW: Data Story 3 Due on Sunday
--   Discussion: Put week 1 story in story arc format
+
+
+## November Meetup!
+
+![](../../images/MeetupNovChristian2026Seminar.png)
+
+
+## Story 2:
+
+- All figures should have big idea!
+
+![](IPCC_SPM_fig.png)
+
+
+
+## Story 2:
+
+- All figures should have big idea!
+
+![](fig1_reconstructed_observed.png)
+
+
+
+## Story 2:
+
+- All figures should have big idea!
+
+![](fig2_observed_vs_simulated.png)
+
+
+## Story 2:
+
+- Do not turn in a long written report. 
+- Good to great: Making the figures work together more coherently
+
+
 
 ## What is a story?
 
@@ -105,10 +140,10 @@ $$
 
 ## Story Arc
 
-- Opening: Why are Cancer rates lowest in rural counties?
-- Challenge: They are also highest in rural counties!
-- Action: Use stats, binomial variance formula
-- Resolution: Be wary when comparing unequally sized groups
+- __Opening__: Why are Cancer rates lowest in rural counties?
+- __Challenge__: They are also highest in rural counties!
+- __Action__: Use stats, binomial variance formula
+- __Resolution__: Be wary when comparing unequally sized groups
 
 ## Story Arcs
 
@@ -125,21 +160,21 @@ $$
 
 ## Arc 2
 
-- Lead: Give away main point
-- Development: Introduction and details
-- Resolution: Return to main point and moral
+- __Lead__: Give away main point
+- __Development__: Introduction and details
+- __Resolution__: Return to main point and moral
 
 ## Arc 2 applied
 
-- Lead: _Maps are biased because of population heterogeneities_
-- Development: _You can draw contradictory conclusions from maps. They can show that rural living both prevents and causes Kidney Cancer. This is because rural counties have high variance_
-- Resolution: _This issue plays a role whenever you compare groups of different sizes. Always consider standard errors!_
+- __Lead__: _Maps are biased because of population heterogeneities_
+- __Development__: _You can draw contradictory conclusions from maps. They can show that rural living both prevents and causes Kidney Cancer. This is because rural counties have high variance_
+- __Resolution__: _This issue plays a role whenever you compare groups of different sizes. Always consider standard errors!_
 
 ## Arc 2 applied (alt)
 
-- Lead: _All maps lie to you_
-- Development: _You can draw contradictory conclusions from maps. They can show that rural living both prevents and causes Kidney Cancer. This is because rural counties have high variance_
-- Resolution: _This issue plays a role whenever you compare groups of different sizes. Always consider standard errors!_
+- __Lead__: _All maps lie to you_
+- __Development__: _You can draw contradictory conclusions from maps. They can show that rural living both prevents and causes Kidney Cancer. This is because rural counties have high variance_
+- __Resolution__: _This issue plays a role whenever you compare groups of different sizes. Always consider standard errors!_
 
 
 ## Arc 3
@@ -153,11 +188,11 @@ $$
 
 ## Arc 3
 
-- Action: Show both figures together to get into conflict immediately
-- Background: Present other examples of this and the challenges they caused
-- Development: Connect with population size 
-- Climax: Variance Formula, least squares techniques
-- Ending: Highlight importance across areas
+- __Action__: Show both figures together to get into conflict immediately
+- __Background__: Present other examples of this and the challenges they caused
+- __Development__: Connect with population size 
+- __Climax__: Variance Formula, least squares techniques
+- __Ending__: Highlight importance across areas
 
 ## Translating to Figures
 

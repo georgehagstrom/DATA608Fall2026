@@ -3,6 +3,24 @@ title: "Meetup 5: Visualizing Geospatial Data"
 author: "George I. Hagstrom"
 format: revealjs
 ---
+```{r}
+assignInNamespace("get_full_geo_grid", function(grid) {
+  grd <- geofacet:::get_grid(grid)
+  nr <- max(grd$row); nc <- max(grd$col)
+  gd <- expand.grid(col = seq_len(nc), row = seq_len(nr))
+  grd <- merge(grd, gd, all.y = TRUE)
+  grd <- grd[order(grd$row, grd$col), ]
+  grd$panel <- paste0("panel-", grd$col, "-", grd$row)
+  grd$strip <- paste0("strip-t-", grd$col, "-", grd$row)
+  grd
+}, ns = "geofacet")
+```
+
+## October 1st Meetup Postponed
+
+- Apologies
+- Next meetup likely November 3rd stay tuned
+
 
 ## Many Ways to Map the Same Data
 
@@ -167,7 +185,7 @@ making maps:
   - `sf` or `simple features`
   - `tmap` or `tidy maps`
 - These bring full suit of GIS (Geographic Information Systems Tools)
-- Projections,
+- Projections
 
 
 ## Mapping NYC
@@ -201,7 +219,6 @@ nyc_boundaries(geography = "tract") %>%
   geom_sf(aes(fill = med_age_est)) +
   scale_fill_viridis_c(name = "Median Age (estimated)") +
   theme_void(base_size=16) +
-  theme(panel.grid = element_line(color = "transparent")) +
   labs(title = "How does age vary across NYC Neighborhoods?")
 
 
@@ -243,7 +260,6 @@ nyc_boundaries(geography = "tract") %>%
   geom_sf(aes(fill = med_age_est)) +
   scale_fill_viridis_c(name = "Median Age (estimated)") +
   theme_void() +
-  theme(panel.grid = element_line(color = "transparent")) +
   labs(title = "How does age vary across NYC Neighborhoods?")
 
 ```
@@ -331,7 +347,6 @@ county_full |> ggplot(aes(fill = hh_income)) +
   geom_sf() +
   scale_fill_viridis_c(name = "HHIncome",option="inferno") +
   theme_void(base_size=16) +
-  theme(panel.grid = element_line(color = "transparent")) +
   labs(title = "County Level Household Income")
 
 
@@ -347,7 +362,6 @@ ggplot(aes(fill = pop_density)) +
   geom_sf() +
   scale_fill_viridis_c(trans= "log10",option="magma") +
   theme_void(base_size=16) +
-  theme(panel.grid = element_line(color = "transparent")) +
   labs(title = "Population Density")
 
 
@@ -409,14 +423,37 @@ ggplot(aes(fill = land_area)) +
 ## Ecological Fallacy
 
 - Properties of individuals may not correspond to mean properties of the group
-- Modifiable Areal Units Problem
-  - Different areas may show different story
+
+![](chocolate_countries_large.jpg)
+
+
+
+
 
 ## Ecological Fallacy
+
+- Properties of individuals may not correspond to mean properties of the group
+- Group level correlation may not apply at individual level
+- Nobel Laureates may not eat chocolate
+
+
+## Modifiable Areal Units Problem
+
+- Maps version of ecological fallacy
+  - Different areas may show different story
+
+## Modifiable Areal Units Problem
 
 - Geographical disparities in cancer stage at diagnosis
 
 ![Fontanet et al 2024](muap.jpg)
+
+
+## Facing the MAUP
+
+1. Plot data at different resolutions if you can
+2. Check and see if the result changes
+3. Choose the resolution most appropriate to your question
 
 ## Cartogram
 
@@ -442,7 +479,7 @@ state_unemp |> as_tibble() |> filter(year==2008) |> ggplot(aes(fill=rate,state=s
 library(geofacet)
 library(statebins)
 state_unemp |> as_tibble() |> filter(year==2008) |>
-  ggplot(aes(fill=rate,                                                 state=state)) + 
+  ggplot(aes(fill=rate, state=state)) + 
   geom_statebins(lbl_size = 6) +
   scale_fill_gradient(low="white",high="red") +
   theme_void(base_size=18) +
@@ -511,6 +548,28 @@ state_unemp %>%
   ) 
 
 ```
+
+
+## Time Series in Each Bin
+
+- 'geofacet' and 'ggplot' currently break 
+
+```{r}
+#| echo: true
+#| eval: false
+
+assignInNamespace("get_full_geo_grid", function(grid) {
+  grd <- geofacet:::get_grid(grid)
+  nr <- max(grd$row); nc <- max(grd$col)
+  gd <- expand.grid(col = seq_len(nc), row = seq_len(nr))
+  grd <- merge(grd, gd, all.y = TRUE)
+  grd <- grd[order(grd$row, grd$col), ]
+  grd$panel <- paste0("panel-", grd$col, "-", grd$row)
+  grd$strip <- paste0("strip-t-", grd$col, "-", grd$row)
+  grd
+}, ns = "geofacet")
+```
+
 
 
 ## Small Multiples

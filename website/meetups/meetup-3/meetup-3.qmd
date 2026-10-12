@@ -21,6 +21,18 @@ library(DT)
 ```
 
 
+## Events Upcoming!
+
+![nyhackr.org](../../images/September_2026_Meetup_Card.png)
+
+
+
+## Events Upcoming!
+
+![](../../images/Oct2026Seminar.png)
+
+
+
 ## Week Summary
 
 - This week we will read about more quality principles used to structure graphs

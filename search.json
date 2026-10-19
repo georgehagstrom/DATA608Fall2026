@@ -455,331 +455,401 @@
     "text": "Thanks"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#week-summary",
-    "href": "meetups/meetup-9/meetup-9.html#week-summary",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Week Summary",
-    "text": "Week Summary\n\nThis week is about visualizing models and uncertainty\nNext week is about dimensionality reduction techniques\nAssignment: Make a model of house sale prices and tell a story about it\nReading: Healy Visualization, Fundamentals of Data Visualization 16\nBonus Readings: Marginal Effects Book: 2-3, 15"
+    "objectID": "meetups/meetup-7/meetup-7.html#november-meetup",
+    "href": "meetups/meetup-7/meetup-7.html#november-meetup",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "November Meetup!",
+    "text": "November Meetup!"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#how-to-talk-about-models",
-    "href": "meetups/meetup-9/meetup-9.html#how-to-talk-about-models",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "How to talk about models",
-    "text": "How to talk about models\n\nYou have just fitted a model\nYou have an array of model coefficients, accuracy measures, and summary statistics\nHow do you convey insights from the model to a PM, supervisor, or even a colleague?"
+    "objectID": "meetups/meetup-7/meetup-7.html#november-meetup-1",
+    "href": "meetups/meetup-7/meetup-7.html#november-meetup-1",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "November Meetup!",
+    "text": "November Meetup!\n\nhttps://us02web.zoom.us/meeting/register/RQW4PGPcT0ixadrHwD0-aQ"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#model-coefficients-hard-to-interpret",
-    "href": "meetups/meetup-9/meetup-9.html#model-coefficients-hard-to-interpret",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Model Coefficients Hard to Interpret",
-    "text": "Model Coefficients Hard to Interpret\n\nThornton dataset: How much does a monetary incentive impact the decision to get an HIV test?\n\n\ndat = get_dataset(\"thornton\")\nmod_thornton = glm(outcome ~ incentive * (agecat + distance), \n    data = dat, family = binomial)\ndat |&gt; head()\n\n# A data frame: 6 × 8\n  village outcome distance amount incentive   age hiv2004 agecat\n*   &lt;int&gt;   &lt;int&gt;    &lt;dbl&gt;  &lt;dbl&gt;     &lt;int&gt; &lt;int&gt;   &lt;int&gt; &lt;fct&gt; \n1      43       1    0.549      0         0    14       0 &lt;18   \n2     117       0    0.840      0         0    14       0 &lt;18   \n3       2       0    3.34       0         0    15       0 &lt;18   \n4       6       0    2.32       0         0    15       0 &lt;18   \n5      11       0    1.39       0         0    15       0 &lt;18   \n6      14       0    3.87       0         0    15       0 &lt;18"
+    "objectID": "meetups/meetup-7/meetup-7.html#october-nyhackr-meetup",
+    "href": "meetups/meetup-7/meetup-7.html#october-nyhackr-meetup",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "October ‘nyhackr’ meetup",
+    "text": "October ‘nyhackr’ meetup"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#model-coefficients-hard-to-interpret-1",
-    "href": "meetups/meetup-9/meetup-9.html#model-coefficients-hard-to-interpret-1",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Model Coefficients Hard to Interpret",
-    "text": "Model Coefficients Hard to Interpret\n\nWhat do these numbers mean?\nAre log-odds-ratios intuitive to you?\n\n\n\n             (Intercept)                incentive           agecat18 to 35 \n             -0.48616576               2.05760093               0.07937246 \n               agecat&gt;35                 distance incentive:agecat18 to 35 \n              0.34522236              -0.18439675              -0.05850445 \n     incentive:agecat&gt;35       incentive:distance \n             -0.12468320               0.02304394 \n\n\n\nLeads to poor decisions (like ignoring everything but sign)"
+    "objectID": "meetups/meetup-7/meetup-7.html#weekly-summary",
+    "href": "meetups/meetup-7/meetup-7.html#weekly-summary",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Weekly Summary",
+    "text": "Weekly Summary\n\nThis week is all about how to control colors in R\nChapter 4 (and 19) of Fundamentals\nChapter 4 of Storytelling\nOkabe-Ito Page https://jfly.uni-koeln.de/color/\nNew Assignment: Airbnb Revenues in NYC"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#model-coefficients-hard-to-interpret-2",
-    "href": "meetups/meetup-9/meetup-9.html#model-coefficients-hard-to-interpret-2",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Model Coefficients Hard to Interpret",
-    "text": "Model Coefficients Hard to Interpret\n\nThis isn’t unique to logistic regression\nFor any model but simple linear regression\nNeed a better way to present model results"
+    "objectID": "meetups/meetup-7/meetup-7.html#three-uses-of-color",
+    "href": "meetups/meetup-7/meetup-7.html#three-uses-of-color",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Three Uses of Color",
+    "text": "Three Uses of Color\n\nColor to Distinguish"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#alternative-workflow",
-    "href": "meetups/meetup-9/meetup-9.html#alternative-workflow",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Alternative Workflow",
-    "text": "Alternative Workflow\n\nDon’t focus on parameter estimates\nInstead transform them to quantities that shed light on your analytic questions\nPredictions, Comparisons, Slopes\nAlways Show Uncertainty"
+    "objectID": "meetups/meetup-7/meetup-7.html#three-uses-of-color-1",
+    "href": "meetups/meetup-7/meetup-7.html#three-uses-of-color-1",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Three Uses of Color",
+    "text": "Three Uses of Color\n\nQualitative Colormaps"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#predictions",
-    "href": "meetups/meetup-9/meetup-9.html#predictions",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Predictions",
-    "text": "Predictions\n\nA prediction shows what your model says would happen for units with hypothetical predictor values"
+    "objectID": "meetups/meetup-7/meetup-7.html#three-uses-of-color-2",
+    "href": "meetups/meetup-7/meetup-7.html#three-uses-of-color-2",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Three Uses of Color",
+    "text": "Three Uses of Color\n\nQualitative Colormaps"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#counterfactual-comparisons",
-    "href": "meetups/meetup-9/meetup-9.html#counterfactual-comparisons",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Counterfactual Comparisons",
-    "text": "Counterfactual Comparisons"
+    "objectID": "meetups/meetup-7/meetup-7.html#three-uses-of-color-3",
+    "href": "meetups/meetup-7/meetup-7.html#three-uses-of-color-3",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Three Uses of Color",
+    "text": "Three Uses of Color\n\nQualitative Colormaps"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#slopes",
-    "href": "meetups/meetup-9/meetup-9.html#slopes",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Slopes",
-    "text": "Slopes"
+    "objectID": "meetups/meetup-7/meetup-7.html#three-uses-of-color-4",
+    "href": "meetups/meetup-7/meetup-7.html#three-uses-of-color-4",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Three Uses of Color",
+    "text": "Three Uses of Color\n\nRepresent Numerical Values"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#look-inside-a-model-object",
-    "href": "meetups/meetup-9/meetup-9.html#look-inside-a-model-object",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Look inside a model object",
-    "text": "Look inside a model object\n\names = read_csv(\"/home/georgehagstrom/work/Teaching/DATA608/DataStory5/train.csv\")\nmod = lm(SalePrice ~ YearBuilt + BedroomAbvGr + `1stFlrSF` +\n           `2ndFlrSF` + GarageArea + Neighborhood,ames)\nmod\n\n\nCall:\nlm(formula = SalePrice ~ YearBuilt + BedroomAbvGr + `1stFlrSF` + \n    `2ndFlrSF` + GarageArea + Neighborhood, data = ames)\n\nCoefficients:\n        (Intercept)            YearBuilt         BedroomAbvGr  \n         -906678.44               477.60             -7057.40  \n         `1stFlrSF`           `2ndFlrSF`           GarageArea  \n              94.96                69.22                42.01  \nNeighborhoodBlueste   NeighborhoodBrDale  NeighborhoodBrkSide  \n          -15845.51            -18830.59              8491.97  \nNeighborhoodClearCr  NeighborhoodCollgCr  NeighborhoodCrawfor  \n           24509.12             14684.76             37778.60  \nNeighborhoodEdwards  NeighborhoodGilbert   NeighborhoodIDOTRR  \n          -13542.86             10214.85             -8014.57  \nNeighborhoodMeadowV  NeighborhoodMitchel    NeighborhoodNAmes  \n          -22671.49             -4473.58             -1497.55  \nNeighborhoodNoRidge  NeighborhoodNPkVill  NeighborhoodNridgHt  \n           71170.54             -5431.58             79487.57  \n NeighborhoodNWAmes  NeighborhoodOldTown   NeighborhoodSawyer  \n            -526.35             -5648.44             -3062.98  \nNeighborhoodSawyerW  NeighborhoodSomerst  NeighborhoodStoneBr  \n            2027.83             27340.82             82622.17  \n  NeighborhoodSWISU   NeighborhoodTimber  NeighborhoodVeenker  \n             676.90             32879.11             48196.84"
+    "objectID": "meetups/meetup-7/meetup-7.html#three-uses-of-color-5",
+    "href": "meetups/meetup-7/meetup-7.html#three-uses-of-color-5",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Three Uses of Color",
+    "text": "Three Uses of Color\n\nHighlighting"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#summary-for-top-level-info",
-    "href": "meetups/meetup-9/meetup-9.html#summary-for-top-level-info",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "summary for top level info",
-    "text": "summary for top level info\n\nmod |&gt; summary()\n\n\nCall:\nlm(formula = SalePrice ~ YearBuilt + BedroomAbvGr + `1stFlrSF` + \n    `2ndFlrSF` + GarageArea + Neighborhood, data = ames)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-428522  -16684     328   15778  269785 \n\nCoefficients:\n                      Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)         -9.067e+05  1.440e+05  -6.297 4.03e-10 ***\nYearBuilt            4.776e+02  7.191e+01   6.642 4.39e-11 ***\nBedroomAbvGr        -7.057e+03  1.599e+03  -4.412 1.10e-05 ***\n`1stFlrSF`           9.496e+01  3.591e+00  26.443  &lt; 2e-16 ***\n`2ndFlrSF`           6.922e+01  3.309e+00  20.919  &lt; 2e-16 ***\nGarageArea           4.201e+01  6.353e+00   6.613 5.29e-11 ***\nNeighborhoodBlueste -1.585e+04  2.834e+04  -0.559  0.57612    \nNeighborhoodBrDale  -1.883e+04  1.355e+04  -1.390  0.16488    \nNeighborhoodBrkSide  8.492e+03  1.165e+04   0.729  0.46628    \nNeighborhoodClearCr  2.451e+04  1.195e+04   2.050  0.04052 *  \nNeighborhoodCollgCr  1.468e+04  9.803e+03   1.498  0.13434    \nNeighborhoodCrawfor  3.778e+04  1.151e+04   3.283  0.00105 ** \nNeighborhoodEdwards -1.354e+04  1.055e+04  -1.284  0.19950    \nNeighborhoodGilbert  1.021e+04  1.035e+04   0.987  0.32400    \nNeighborhoodIDOTRR  -8.015e+03  1.236e+04  -0.649  0.51670    \nNeighborhoodMeadowV -2.267e+04  1.328e+04  -1.708  0.08792 .  \nNeighborhoodMitchel -4.474e+03  1.084e+04  -0.413  0.67998    \nNeighborhoodNAmes   -1.498e+03  1.011e+04  -0.148  0.88227    \nNeighborhoodNoRidge  7.117e+04  1.125e+04   6.326 3.36e-10 ***\nNeighborhoodNPkVill -5.432e+03  1.575e+04  -0.345  0.73021    \nNeighborhoodNridgHt  7.949e+04  1.024e+04   7.761 1.59e-14 ***\nNeighborhoodNWAmes  -5.264e+02  1.051e+04  -0.050  0.96007    \nNeighborhoodOldTown -5.648e+03  1.142e+04  -0.495  0.62102    \nNeighborhoodSawyer  -3.063e+03  1.068e+04  -0.287  0.77435    \nNeighborhoodSawyerW  2.028e+03  1.055e+04   0.192  0.84760    \nNeighborhoodSomerst  2.734e+04  1.017e+04   2.688  0.00726 ** \nNeighborhoodStoneBr  8.262e+04  1.191e+04   6.938 6.00e-12 ***\nNeighborhoodSWISU    6.769e+02  1.325e+04   0.051  0.95927    \nNeighborhoodTimber   3.288e+04  1.113e+04   2.953  0.00320 ** \nNeighborhoodVeenker  4.820e+04  1.468e+04   3.284  0.00105 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 37670 on 1430 degrees of freedom\nMultiple R-squared:  0.7796,    Adjusted R-squared:  0.7751 \nF-statistic: 174.4 on 29 and 1430 DF,  p-value: &lt; 2.2e-16"
+    "objectID": "meetups/meetup-7/meetup-7.html#three-uses-of-color-6",
+    "href": "meetups/meetup-7/meetup-7.html#three-uses-of-color-6",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Three Uses of Color",
+    "text": "Three Uses of Color\n\nHighlighting"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#str-for-all-details",
-    "href": "meetups/meetup-9/meetup-9.html#str-for-all-details",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "str for all details",
-    "text": "str for all details\n\nmod |&gt; str()\n\nList of 13\n $ coefficients : Named num [1:30] -906678.4 477.6 -7057.4 95 69.2 ...\n  ..- attr(*, \"names\")= chr [1:30] \"(Intercept)\" \"YearBuilt\" \"BedroomAbvGr\" \"`1stFlrSF`\" ...\n $ residuals    : Named num [1:1460] 1614 -21747 8140 -55088 -58200 ...\n  ..- attr(*, \"names\")= chr [1:1460] \"1\" \"2\" \"3\" \"4\" ...\n $ effects      : Named num [1:1460] -6912989 -1586708 -624098 -1370096 -1285383 ...\n  ..- attr(*, \"names\")= chr [1:1460] \"(Intercept)\" \"YearBuilt\" \"BedroomAbvGr\" \"`1stFlrSF`\" ...\n $ rank         : int 30\n $ fitted.values: Named num [1:1460] 206886 203247 215360 195088 308200 ...\n  ..- attr(*, \"names\")= chr [1:1460] \"1\" \"2\" \"3\" \"4\" ...\n $ assign       : int [1:30] 0 1 2 3 4 5 6 6 6 6 ...\n $ qr           :List of 5\n  ..$ qr   : num [1:1460, 1:30] -38.2099 0.0262 0.0262 0.0262 0.0262 ...\n  .. ..- attr(*, \"dimnames\")=List of 2\n  .. .. ..$ : chr [1:1460] \"1\" \"2\" \"3\" \"4\" ...\n  .. .. ..$ : chr [1:30] \"(Intercept)\" \"YearBuilt\" \"BedroomAbvGr\" \"`1stFlrSF`\" ...\n  .. ..- attr(*, \"assign\")= int [1:30] 0 1 2 3 4 5 6 6 6 6 ...\n  .. ..- attr(*, \"contrasts\")=List of 1\n  .. .. ..$ Neighborhood: chr \"contr.treatment\"\n  ..$ qraux: num [1:30] 1.03 1 1.01 1 1.02 ...\n  ..$ pivot: int [1:30] 1 2 3 4 5 6 7 8 9 10 ...\n  ..$ tol  : num 1e-07\n  ..$ rank : int 30\n  ..- attr(*, \"class\")= chr \"qr\"\n $ df.residual  : int 1430\n $ contrasts    :List of 1\n  ..$ Neighborhood: chr \"contr.treatment\"\n $ xlevels      :List of 1\n  ..$ Neighborhood: chr [1:25] \"Blmngtn\" \"Blueste\" \"BrDale\" \"BrkSide\" ...\n $ call         : language lm(formula = SalePrice ~ YearBuilt + BedroomAbvGr + `1stFlrSF` + `2ndFlrSF` +      GarageArea + Neighborhood, data = ames)\n $ terms        :Classes 'terms', 'formula'  language SalePrice ~ YearBuilt + BedroomAbvGr + `1stFlrSF` + `2ndFlrSF` + GarageArea +      Neighborhood\n  .. ..- attr(*, \"variables\")= language list(SalePrice, YearBuilt, BedroomAbvGr, `1stFlrSF`, `2ndFlrSF`, GarageArea,      Neighborhood)\n  .. ..- attr(*, \"factors\")= int [1:7, 1:6] 0 1 0 0 0 0 0 0 0 1 ...\n  .. .. ..- attr(*, \"dimnames\")=List of 2\n  .. .. .. ..$ : chr [1:7] \"SalePrice\" \"YearBuilt\" \"BedroomAbvGr\" \"`1stFlrSF`\" ...\n  .. .. .. ..$ : chr [1:6] \"YearBuilt\" \"BedroomAbvGr\" \"`1stFlrSF`\" \"`2ndFlrSF`\" ...\n  .. ..- attr(*, \"term.labels\")= chr [1:6] \"YearBuilt\" \"BedroomAbvGr\" \"`1stFlrSF`\" \"`2ndFlrSF`\" ...\n  .. ..- attr(*, \"order\")= int [1:6] 1 1 1 1 1 1\n  .. ..- attr(*, \"intercept\")= int 1\n  .. ..- attr(*, \"response\")= int 1\n  .. ..- attr(*, \".Environment\")=&lt;environment: R_GlobalEnv&gt; \n  .. ..- attr(*, \"predvars\")= language list(SalePrice, YearBuilt, BedroomAbvGr, `1stFlrSF`, `2ndFlrSF`, GarageArea,      Neighborhood)\n  .. ..- attr(*, \"dataClasses\")= Named chr [1:7] \"numeric\" \"numeric\" \"numeric\" \"numeric\" ...\n  .. .. ..- attr(*, \"names\")= chr [1:7] \"SalePrice\" \"YearBuilt\" \"BedroomAbvGr\" \"1stFlrSF\" ...\n $ model        :'data.frame':  1460 obs. of  7 variables:\n  ..$ SalePrice   : num [1:1460] 208500 181500 223500 140000 250000 ...\n  ..$ YearBuilt   : num [1:1460] 2003 1976 2001 1915 2000 ...\n  ..$ BedroomAbvGr: num [1:1460] 3 3 3 3 4 1 3 3 2 2 ...\n  ..$ 1stFlrSF    : num [1:1460] 856 1262 920 961 1145 ...\n  ..$ 2ndFlrSF    : num [1:1460] 854 0 866 756 1053 ...\n  ..$ GarageArea  : num [1:1460] 548 460 608 642 836 480 636 484 468 205 ...\n  ..$ Neighborhood: chr [1:1460] \"CollgCr\" \"Veenker\" \"CollgCr\" \"Crawfor\" ...\n  ..- attr(*, \"terms\")=Classes 'terms', 'formula'  language SalePrice ~ YearBuilt + BedroomAbvGr + `1stFlrSF` + `2ndFlrSF` + GarageArea +      Neighborhood\n  .. .. ..- attr(*, \"variables\")= language list(SalePrice, YearBuilt, BedroomAbvGr, `1stFlrSF`, `2ndFlrSF`, GarageArea,      Neighborhood)\n  .. .. ..- attr(*, \"factors\")= int [1:7, 1:6] 0 1 0 0 0 0 0 0 0 1 ...\n  .. .. .. ..- attr(*, \"dimnames\")=List of 2\n  .. .. .. .. ..$ : chr [1:7] \"SalePrice\" \"YearBuilt\" \"BedroomAbvGr\" \"`1stFlrSF`\" ...\n  .. .. .. .. ..$ : chr [1:6] \"YearBuilt\" \"BedroomAbvGr\" \"`1stFlrSF`\" \"`2ndFlrSF`\" ...\n  .. .. ..- attr(*, \"term.labels\")= chr [1:6] \"YearBuilt\" \"BedroomAbvGr\" \"`1stFlrSF`\" \"`2ndFlrSF`\" ...\n  .. .. ..- attr(*, \"order\")= int [1:6] 1 1 1 1 1 1\n  .. .. ..- attr(*, \"intercept\")= int 1\n  .. .. ..- attr(*, \"response\")= int 1\n  .. .. ..- attr(*, \".Environment\")=&lt;environment: R_GlobalEnv&gt; \n  .. .. ..- attr(*, \"predvars\")= language list(SalePrice, YearBuilt, BedroomAbvGr, `1stFlrSF`, `2ndFlrSF`, GarageArea,      Neighborhood)\n  .. .. ..- attr(*, \"dataClasses\")= Named chr [1:7] \"numeric\" \"numeric\" \"numeric\" \"numeric\" ...\n  .. .. .. ..- attr(*, \"names\")= chr [1:7] \"SalePrice\" \"YearBuilt\" \"BedroomAbvGr\" \"1stFlrSF\" ...\n - attr(*, \"class\")= chr \"lm\""
+    "objectID": "meetups/meetup-7/meetup-7.html#what-are-colors",
+    "href": "meetups/meetup-7/meetup-7.html#what-are-colors",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "What are colors?",
+    "text": "What are colors?\n\nLight is composed of a spectrum of photons each with different wavelength/energy\n\n\nWang and Yu 2023"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#tidying-model-objects",
-    "href": "meetups/meetup-9/meetup-9.html#tidying-model-objects",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Tidying Model Objects",
-    "text": "Tidying Model Objects\n\nbroom is part of tidymodels family and contains function which tidy the model for you\ntidy() creates tibble of model components:\n\n\nmod |&gt; tidy(conf.int = TRUE)"
+    "objectID": "meetups/meetup-7/meetup-7.html#what-are-colors-1",
+    "href": "meetups/meetup-7/meetup-7.html#what-are-colors-1",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "What are colors?",
+    "text": "What are colors?\n\nPrimary Colors each represent single wavelength\nROYGBIV\n\n\nWang and Yu 2023"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#model-table-from-tidy",
-    "href": "meetups/meetup-9/meetup-9.html#model-table-from-tidy",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Model Table from Tidy",
-    "text": "Model Table from Tidy\n\n\n# A tibble: 30 × 7\n   term                estimate std.error statistic   p.value conf.low conf.high\n   &lt;chr&gt;                  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n 1 (Intercept)          -9.07e5 143987.     -6.30   4.03e- 10  -1.19e6 -624229. \n 2 YearBuilt             4.78e2     71.9     6.64   4.39e- 11   3.37e2     619. \n 3 BedroomAbvGr         -7.06e3   1599.     -4.41   1.10e-  5  -1.02e4   -3920. \n 4 `1stFlrSF`            9.50e1      3.59   26.4    8.95e-126   8.79e1     102. \n 5 `2ndFlrSF`            6.92e1      3.31   20.9    5.41e- 85   6.27e1      75.7\n 6 GarageArea            4.20e1      6.35    6.61   5.29e- 11   2.96e1      54.5\n 7 NeighborhoodBlueste  -1.58e4  28337.     -0.559  5.76e-  1  -7.14e4   39741. \n 8 NeighborhoodBrDale   -1.88e4  13551.     -1.39   1.65e-  1  -4.54e4    7752. \n 9 NeighborhoodBrkSide   8.49e3  11653.      0.729  4.66e-  1  -1.44e4   31351. \n10 NeighborhoodClearCr   2.45e4  11954.      2.05   4.05e-  2   1.06e3   47959. \n11 NeighborhoodCollgCr   1.47e4   9803.      1.50   1.34e-  1  -4.54e3   33914. \n12 NeighborhoodCrawfor   3.78e4  11506.      3.28   1.05e-  3   1.52e4   60350. \n13 NeighborhoodEdwards  -1.35e4  10551.     -1.28   1.99e-  1  -3.42e4    7154. \n14 NeighborhoodGilbert   1.02e4  10354.      0.987  3.24e-  1  -1.01e4   30525. \n15 NeighborhoodIDOTRR   -8.01e3  12357.     -0.649  5.17e-  1  -3.23e4   16225. \n16 NeighborhoodMeadowV  -2.27e4  13277.     -1.71   8.79e-  2  -4.87e4    3372. \n17 NeighborhoodMitchel  -4.47e3  10843.     -0.413  6.80e-  1  -2.57e4   16797. \n18 NeighborhoodNAmes    -1.50e3  10110.     -0.148  8.82e-  1  -2.13e4   18335. \n19 NeighborhoodNoRidge   7.12e4  11251.      6.33   3.36e- 10   4.91e4   93240. \n20 NeighborhoodNPkVill  -5.43e3  15748.     -0.345  7.30e-  1  -3.63e4   25460. \n21 NeighborhoodNridgHt   7.95e4  10242.      7.76   1.59e- 14   5.94e4   99578. \n22 NeighborhoodNWAmes   -5.26e2  10511.     -0.0501 9.60e-  1  -2.11e4   20092. \n23 NeighborhoodOldTown  -5.65e3  11422.     -0.495  6.21e-  1  -2.81e4   16758. \n24 NeighborhoodSawyer   -3.06e3  10682.     -0.287  7.74e-  1  -2.40e4   17891. \n25 NeighborhoodSawyerW   2.03e3  10550.      0.192  8.48e-  1  -1.87e4   22723. \n26 NeighborhoodSomerst   2.73e4  10170.      2.69   7.26e-  3   7.39e3   47290. \n27 NeighborhoodStoneBr   8.26e4  11908.      6.94   6.00e- 12   5.93e4  105982. \n28 NeighborhoodSWISU     6.77e2  13254.      0.0511 9.59e-  1  -2.53e4   26675. \n29 NeighborhoodTimber    3.29e4  11134.      2.95   3.20e-  3   1.10e4   54720. \n30 NeighborhoodVeenker   4.82e4  14678.      3.28   1.05e-  3   1.94e4   76990."
+    "objectID": "meetups/meetup-7/meetup-7.html#color-perception",
+    "href": "meetups/meetup-7/meetup-7.html#color-perception",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Color Perception",
+    "text": "Color Perception\n\nWe don’t see spectrum\nOur eyes have 3 types of cone cells that sense color\nEach responds to a part of the spectrum"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#plotting-coefficients",
-    "href": "meetups/meetup-9/meetup-9.html#plotting-coefficients",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Plotting Coefficients",
-    "text": "Plotting Coefficients\n\ntidy lets us make plots of coordinates\n\n\ntidy_ames = tidy(mod)\ntidy_ames |&gt; ggplot(mapping = aes(x = term,\n                            y = estimate)) +\n  geom_point() +\n  coord_flip() +\n  theme_minimal(base_size=12) +\n  labs(title=\"Poor Display of Coordinates\")"
+    "objectID": "meetups/meetup-7/meetup-7.html#color-perception-1",
+    "href": "meetups/meetup-7/meetup-7.html#color-perception-1",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Color Perception",
+    "text": "Color Perception\n\nOur cones reduce the full spectrum to 3 numbers\n\n\n\n\nDifferent 3D encodings:\n\nRGB mix + Luminance\nHCL (Hue + Chroma + Luminance)\n\n\n\n\n\n\nhandprint.com"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#plotting-coefficients-1",
-    "href": "meetups/meetup-9/meetup-9.html#plotting-coefficients-1",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Plotting Coefficients",
-    "text": "Plotting Coefficients\n\ntidy lets us make plots of coordinates"
+    "objectID": "meetups/meetup-7/meetup-7.html#color-vision-variability",
+    "href": "meetups/meetup-7/meetup-7.html#color-vision-variability",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Color Vision Variability",
+    "text": "Color Vision Variability\n\nNumber and function of each cone type can vary from person to person\nDifferent types of color perception referred to as colorblindness\n\n\ndatacolor.com"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#select-neighborhood-clean-names",
-    "href": "meetups/meetup-9/meetup-9.html#select-neighborhood-clean-names",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Select Neighborhood, Clean Names",
-    "text": "Select Neighborhood, Clean Names\n\ntidy_ames |&gt; filter(str_detect(term,\"Neighborhood\")) |&gt; \n  mutate(term = str_remove_all(term,\"Neighborhood\")) |&gt; \n  ggplot(mapping = aes(x = term,\n                            y = estimate)) +\n  geom_point() +\n  coord_flip() +\n  theme_minimal(base_size=12) +\n  labs(title=\"Neighborhood Effect on Housing Price in Ames\",\n       subtitle= \"Still Needs Uncertainties, to be sorted\",\n       y=\"Neighborhood\",\n       x = \"Price Effect (USD)\")"
+    "objectID": "meetups/meetup-7/meetup-7.html#checking-your-color-palettes",
+    "href": "meetups/meetup-7/meetup-7.html#checking-your-color-palettes",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Checking your Color Palettes",
+    "text": "Checking your Color Palettes\n\nwww.daltonlens.com\n\nSimulates on Images or even entire slidedeck\nAll types of colorblindness"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#select-neighborhood-clean-names-1",
-    "href": "meetups/meetup-9/meetup-9.html#select-neighborhood-clean-names-1",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Select Neighborhood, Clean Names",
-    "text": "Select Neighborhood, Clean Names"
+    "objectID": "meetups/meetup-7/meetup-7.html#checking-your-color-palettes-1",
+    "href": "meetups/meetup-7/meetup-7.html#checking-your-color-palettes-1",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Checking your Color Palettes",
+    "text": "Checking your Color Palettes\n\nwww.daltonlens.com"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#sort-and-add-uncertainty",
-    "href": "meetups/meetup-9/meetup-9.html#sort-and-add-uncertainty",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Sort and add Uncertainty",
-    "text": "Sort and add Uncertainty\n\ntidy_ames |&gt; filter(str_detect(term,\"Neighborhood\")) |&gt; \n  mutate(term = str_remove_all(term,\"Neighborhood\")) |&gt; \n  ggplot(mapping = aes(x = reorder(term,estimate),\n                       y = estimate,\n                       ymin = estimate - std.error, \n                       ymax = estimate + std.error)) +\n  geom_pointrange() +\n  coord_flip() +\n  theme_minimal(base_size=12) +\n  labs(title=\"Neighborhood Effect on Housing Price in Ames\", subtitle = \"Error bars show 95% confidence interval\",\n       y = \"Price Effect (USD)\",\n       x = \"Neighborhood\")"
+    "objectID": "meetups/meetup-7/meetup-7.html#checking-your-color-palettes-2",
+    "href": "meetups/meetup-7/meetup-7.html#checking-your-color-palettes-2",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Checking your Color Palettes",
+    "text": "Checking your Color Palettes\n\ncolorBlindnes simulator\n\n\ncolorBlindness::displayAllColors(rainbow(6))"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#sort-and-add-uncertainty-1",
-    "href": "meetups/meetup-9/meetup-9.html#sort-and-add-uncertainty-1",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Sort and add Uncertainty",
-    "text": "Sort and add Uncertainty"
+    "objectID": "meetups/meetup-7/meetup-7.html#checking-your-color-palettes-3",
+    "href": "meetups/meetup-7/meetup-7.html#checking-your-color-palettes-3",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Checking your Color Palettes",
+    "text": "Checking your Color Palettes\n\ncolorBlindnes simulator\n\n\ncolorBlindness::displayAllColors(ggokabeito::palette_okabe_ito(1:9))"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#augment-adds-fits-to-data",
-    "href": "meetups/meetup-9/meetup-9.html#augment-adds-fits-to-data",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Augment adds fits to data",
-    "text": "Augment adds fits to data\n\names_fit = mod |&gt; augment(ames)\names_fit |&gt; select(SalePrice:.std.resid)\n\n# A tibble: 1,460 × 7\n   SalePrice .fitted  .resid    .hat .sigma     .cooksd .std.resid\n       &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;       &lt;dbl&gt;      &lt;dbl&gt;\n 1    208500 206886.   1614. 0.00851 37688. 0.000000530     0.0430\n 2    181500 203247. -21747. 0.0932  37683. 0.00126        -0.606 \n 3    223500 215360.   8140. 0.00842 37687. 0.0000133       0.217 \n 4    140000 195088. -55088. 0.0254  37659. 0.00190        -1.48  \n 5    250000 308200. -58200. 0.0276  37655. 0.00232        -1.57  \n 6    143000 168576. -25576. 0.0295  37682. 0.000482       -0.689 \n 7    307000 244182.  62818. 0.0145  37651. 0.00139         1.68  \n 8    200000 207423.  -7423. 0.0166  37687. 0.0000222      -0.199 \n 9    129900 164566. -34666. 0.0117  37676. 0.000338       -0.926 \n10    118000 124647.  -6647. 0.0185  37687. 0.0000199      -0.178 \n# ℹ 1,450 more rows"
+    "objectID": "meetups/meetup-7/meetup-7.html#checking-your-color-palettes-4",
+    "href": "meetups/meetup-7/meetup-7.html#checking-your-color-palettes-4",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Checking your Color Palettes",
+    "text": "Checking your Color Palettes\n\ncolorBlindnes simulator\n\n\ncolorBlindness::displayAllColors(viridis::viridis(6))"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#purrr-and-broom-work-with-many-models",
-    "href": "meetups/meetup-9/meetup-9.html#purrr-and-broom-work-with-many-models",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "purrr and broom: work with many models",
-    "text": "purrr and broom: work with many models\n\nUse gapminder data on GDP and life expectancy\n\n\nlibrary(gapminder)\ngapminder\n\n# A tibble: 1,704 × 6\n   country     continent  year lifeExp      pop gdpPercap\n   &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;\n 1 Afghanistan Asia       1952    28.8  8425333      779.\n 2 Afghanistan Asia       1957    30.3  9240934      821.\n 3 Afghanistan Asia       1962    32.0 10267083      853.\n 4 Afghanistan Asia       1967    34.0 11537966      836.\n 5 Afghanistan Asia       1972    36.1 13079460      740.\n 6 Afghanistan Asia       1977    38.4 14880372      786.\n 7 Afghanistan Asia       1982    39.9 12881816      978.\n 8 Afghanistan Asia       1987    40.8 13867957      852.\n 9 Afghanistan Asia       1992    41.7 16317921      649.\n10 Afghanistan Asia       1997    41.8 22227415      635.\n# ℹ 1,694 more rows"
+    "objectID": "meetups/meetup-7/meetup-7.html#what-i-do",
+    "href": "meetups/meetup-7/meetup-7.html#what-i-do",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "What I Do",
+    "text": "What I Do\n\nStick with known accessible palettes\nviridis and okabe-ito families\nLuminance based\nAvoid red-green gradients"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#nest-creates-a-tibble-of-tibbles",
-    "href": "meetups/meetup-9/meetup-9.html#nest-creates-a-tibble-of-tibbles",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "nest creates a tibble of tibbles",
-    "text": "nest creates a tibble of tibbles\n\nnested_gap = gapminder |&gt; \n  group_by(continent,year) |&gt;\n  nest()\nnested_gap\n\n# A tibble: 60 × 3\n# Groups:   continent, year [60]\n   continent  year data             \n   &lt;fct&gt;     &lt;int&gt; &lt;list&gt;           \n 1 Asia       1952 &lt;tibble [33 × 4]&gt;\n 2 Asia       1957 &lt;tibble [33 × 4]&gt;\n 3 Asia       1962 &lt;tibble [33 × 4]&gt;\n 4 Asia       1967 &lt;tibble [33 × 4]&gt;\n 5 Asia       1972 &lt;tibble [33 × 4]&gt;\n 6 Asia       1977 &lt;tibble [33 × 4]&gt;\n 7 Asia       1982 &lt;tibble [33 × 4]&gt;\n 8 Asia       1987 &lt;tibble [33 × 4]&gt;\n 9 Asia       1992 &lt;tibble [33 × 4]&gt;\n10 Asia       1997 &lt;tibble [33 × 4]&gt;\n# ℹ 50 more rows"
+    "objectID": "meetups/meetup-7/meetup-7.html#ggplot-color-scale-functions",
+    "href": "meetups/meetup-7/meetup-7.html#ggplot-color-scale-functions",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "ggplot color scale functions",
+    "text": "ggplot color scale functions\n\nSimilar to how you control axis scales\nscale_*aes*_*name_of_color_function*\nscale_color_xxxx controls color (usually border)\nscale_fill_xxxx controls fill\nxxxx is usually the name of a package or color scheme"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#use-map-to-fit-models",
-    "href": "meetups/meetup-9/meetup-9.html#use-map-to-fit-models",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Use map to fit models",
-    "text": "Use map to fit models\n\nfit_ols &lt;- function(df) {\n    lm(lifeExp ~ log(gdpPercap), data = df)\n}\n\nout_tidy = nested_gap |&gt; \n    mutate(model = map(data, fit_ols),\n           tidied = map(model, tidy))  |&gt; \n    unnest(tidied, .drop = TRUE)  |&gt; \n    filter(term != \"(Intercept)\" &\n           continent != \"Oceania\")\n\nout_tidy"
+    "objectID": "meetups/meetup-7/meetup-7.html#atlas-of-color-qualtitative-packages",
+    "href": "meetups/meetup-7/meetup-7.html#atlas-of-color-qualtitative-packages",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Atlas of color qualtitative packages",
+    "text": "Atlas of color qualtitative packages\n\nColor Packages\n\n\nCommand\nPackage\nColor Safety?\n\n\n\n\nscale_fill_hue\nggplot2\nNo\n\n\nscale_fill_brewer\nRColorBrewer\nSome\n\n\nscale_fill_paleteer_d\npaleteer\nMany\n\n\nscale_fill_okabe_ito\nggokabeito\nYes\n\n\nscale_fill_OkabeIto\ncolorblindr\nYes"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#use-map-to-fit-models-1",
-    "href": "meetups/meetup-9/meetup-9.html#use-map-to-fit-models-1",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Use map to fit models",
-    "text": "Use map to fit models\n\n\n# A tibble: 15 × 9\n# Groups:   continent, year [15]\n   continent  year data     model  term    estimate std.error statistic  p.value\n   &lt;fct&gt;     &lt;int&gt; &lt;list&gt;   &lt;list&gt; &lt;chr&gt;      &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n 1 Asia       1952 &lt;tibble&gt; &lt;lm&gt;   log(gd…     4.16     1.25       3.33 2.28e- 3\n 2 Asia       1957 &lt;tibble&gt; &lt;lm&gt;   log(gd…     4.17     1.28       3.26 2.71e- 3\n 3 Asia       1962 &lt;tibble&gt; &lt;lm&gt;   log(gd…     4.59     1.24       3.72 7.94e- 4\n 4 Asia       1967 &lt;tibble&gt; &lt;lm&gt;   log(gd…     4.50     1.15       3.90 4.77e- 4\n 5 Asia       1972 &lt;tibble&gt; &lt;lm&gt;   log(gd…     4.44     1.01       4.41 1.16e- 4\n 6 Asia       1977 &lt;tibble&gt; &lt;lm&gt;   log(gd…     4.87     1.03       4.75 4.42e- 5\n 7 Asia       1982 &lt;tibble&gt; &lt;lm&gt;   log(gd…     4.78     0.852      5.61 3.77e- 6\n 8 Asia       1987 &lt;tibble&gt; &lt;lm&gt;   log(gd…     5.17     0.727      7.12 5.31e- 8\n 9 Asia       1992 &lt;tibble&gt; &lt;lm&gt;   log(gd…     5.09     0.649      7.84 7.60e- 9\n10 Asia       1997 &lt;tibble&gt; &lt;lm&gt;   log(gd…     5.11     0.628      8.15 3.35e- 9\n11 Asia       2002 &lt;tibble&gt; &lt;lm&gt;   log(gd…     5.44     0.696      7.82 8.05e- 9\n12 Asia       2007 &lt;tibble&gt; &lt;lm&gt;   log(gd…     5.16     0.694      7.43 2.26e- 8\n13 Europe     1952 &lt;tibble&gt; &lt;lm&gt;   log(gd…     9.00     0.987      9.12 7.04e-10\n14 Europe     1957 &lt;tibble&gt; &lt;lm&gt;   log(gd…     7.45     0.945      7.88 1.39e- 8\n15 Europe     1962 &lt;tibble&gt; &lt;lm&gt;   log(gd…     5.91     0.853      6.93 1.56e- 7"
+    "objectID": "meetups/meetup-7/meetup-7.html#rcolorbrewer",
+    "href": "meetups/meetup-7/meetup-7.html#rcolorbrewer",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "RColorBrewer",
+    "text": "RColorBrewer\n\nDesigned for discrete values on maps\n\n\ndisplay.brewer.all(type = \"qual\")"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#use-map-to-fit-models-2",
-    "href": "meetups/meetup-9/meetup-9.html#use-map-to-fit-models-2",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Use Map to Fit Models",
-    "text": "Use Map to Fit Models"
+    "objectID": "meetups/meetup-7/meetup-7.html#rcolorbrewer-1",
+    "href": "meetups/meetup-7/meetup-7.html#rcolorbrewer-1",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "RColorBrewer",
+    "text": "RColorBrewer\n\n3 Colorblind friendly palettes\nOnly friendly up to 3 categories (Set2 and Dark2) or 4 categories (Paired)\n\n\ndisplay.brewer.all(type = \"qual\",colorblindFriendly = TRUE)"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#marginal-effects-package",
-    "href": "meetups/meetup-9/meetup-9.html#marginal-effects-package",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Marginal Effects Package",
-    "text": "Marginal Effects Package\n\nmarginaleffects is a powerful package in both python and R for model interpretation\nComes with a book Marginal Effects\nSeveral alternatives exist (detailed there)\nCan be used with nearly any type of model, from statistical, to Bayesian, to Machine Learning"
+    "objectID": "meetups/meetup-7/meetup-7.html#rcolorbrewer-2",
+    "href": "meetups/meetup-7/meetup-7.html#rcolorbrewer-2",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "RColorBrewer",
+    "text": "RColorBrewer\n\nCode for Column Plot\n\n\np1 = neighborhood_df |&gt; \n  ggplot(aes(x=fct_reorder(neighborhood,mean_revenue),\n             y=mean_revenue,\n             fill = borough)) +\n  geom_col() +\n  scale_y_continuous(\n    name = \"Revenue Per Day\"\n  ) +\n  coord_flip() + \n  theme_minimal(base_size=16) +\n  theme(axis.title.y = element_blank(),\n        axis.line.y = element_blank(),\n        axis.ticks.length = unit(0, \"pt\"),\n        #axis.text.y = element_text(size = 10, color = borough_colors),\n        legend.background = element_rect(fill = \"#ffffffb0\")) +\n  labs(title = \"Mean Revenue Per Day of Airbnb Listings in\\n Selected NYC Neighborhoods\")"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#plotting-predictions",
-    "href": "meetups/meetup-9/meetup-9.html#plotting-predictions",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Plotting Predictions",
-    "text": "Plotting Predictions\n\nplot_predictions function (also predictions)\nSpecify grid of data on which to predict\nDo this with condition\n\n\nmod = lm(revenue ~ . + host_is_superhost*bedrooms +\n           host_is_superhost*neighborhood +\n           num_amenities*neighborhood + \n           num_amenities*bedrooms  ,\n         data = nyc_bnb_slim)\n\nmod |&gt; plot_predictions(condition = c(\"num_amenities\", \"neighborhood\")) +\n  theme_minimal(base_size = 16) +\n  labs(title = \"Amenities increase revenues\",\n       x=\"Number of Amenities\",\n       y=\"Revenus (USD)\")"
+    "objectID": "meetups/meetup-7/meetup-7.html#rcolorbrewer-3",
+    "href": "meetups/meetup-7/meetup-7.html#rcolorbrewer-3",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "RColorBrewer",
+    "text": "RColorBrewer\n\nscale_fill_brewer()\npalette can choose from list of palettes\nname gives legend label\n\n\np1 + \n  scale_fill_brewer(name = \"Boroughs\", \n                    palette = \"Set1\")"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#plotting-predictions-1",
-    "href": "meetups/meetup-9/meetup-9.html#plotting-predictions-1",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Plotting Predictions",
-    "text": "Plotting Predictions"
+    "objectID": "meetups/meetup-7/meetup-7.html#rcolorbrewer-4",
+    "href": "meetups/meetup-7/meetup-7.html#rcolorbrewer-4",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "RColorBrewer",
+    "text": "RColorBrewer"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#changing-the-conditions",
-    "href": "meetups/meetup-9/meetup-9.html#changing-the-conditions",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Changing the Conditions",
-    "text": "Changing the Conditions\n\nCan provide a range of conditions\n\n\nmod |&gt; plot_predictions(condition = \n          list(\"num_amenities\" = 40:60, \n            \"neighborhood\")) +\n  theme_minimal(base_size = 16) +\n  labs(title = \"Do Amenities Increase Revenue?\",\n       subtitle = \"The model predicts a strong relationship between amenities and revenue in Williamsburg and Harlem,\\n but they don't seem to matter in the West Village or Bedford-Stuyvesant\",\n       x=\"Number of Amenities\",\n       y=\"Revenus (USD)\")"
+    "objectID": "meetups/meetup-7/meetup-7.html#rcolorbrewer-5",
+    "href": "meetups/meetup-7/meetup-7.html#rcolorbrewer-5",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "RColorBrewer",
+    "text": "RColorBrewer\n\nUse direction=-1 to reverse the colors\n\n\np_nabes + \n  scale_fill_brewer(name = \"Boroughs\", \n                    direction = -1, \n                    palette = \"Set1\")"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#changing-the-conditions-1",
-    "href": "meetups/meetup-9/meetup-9.html#changing-the-conditions-1",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Changing the Conditions",
-    "text": "Changing the Conditions\n\nCan provide a range of conditions"
+    "objectID": "meetups/meetup-7/meetup-7.html#rcolorbrewer-6",
+    "href": "meetups/meetup-7/meetup-7.html#rcolorbrewer-6",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "RColorBrewer",
+    "text": "RColorBrewer\n\nUse direction=-1 to reverse the colors"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#changing-the-conditions-2",
-    "href": "meetups/meetup-9/meetup-9.html#changing-the-conditions-2",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Changing the Conditions",
-    "text": "Changing the Conditions\n\nCan split into subplots\n\n\nmod |&gt; plot_predictions(condition = \n          list(\"num_amenities\", \n            \"neighborhood\",\n            \"bedrooms\" = unique)) +\n  theme_minimal(base_size = 16) +\n  labs(title = \"Do Amenities Increase Revenue?\",\n       x=\"Number of Amenities\",\n       y=\"Revenus (USD)\")"
+    "objectID": "meetups/meetup-7/meetup-7.html#rcolorbrewer-7",
+    "href": "meetups/meetup-7/meetup-7.html#rcolorbrewer-7",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "RColorBrewer",
+    "text": "RColorBrewer\n\nIf you forget names, you can use type=\"qual\" and palette= number:\n\n\np_nabes + \n  scale_fill_brewer(name = \"Boroughs\", \n                    type = \"qual\",\n                    palette = 3)"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#changing-the-conditions-3",
-    "href": "meetups/meetup-9/meetup-9.html#changing-the-conditions-3",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Changing the Conditions",
-    "text": "Changing the Conditions"
+    "objectID": "meetups/meetup-7/meetup-7.html#rcolorbrewer-8",
+    "href": "meetups/meetup-7/meetup-7.html#rcolorbrewer-8",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "RColorBrewer",
+    "text": "RColorBrewer\n\nIf you forget names, you can use type=\"qual\" and palette= number:"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#adding-cases",
-    "href": "meetups/meetup-9/meetup-9.html#adding-cases",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Adding Cases",
-    "text": "Adding Cases\n\n“threenum” keyword plots \\(\\mathrm{mean}\\pm\\mathrm{\\sigma}\\)\nOther options include “minmax”, “quartile”, check ?plot_predictions\n\n\nmod |&gt; plot_predictions(condition = \n          list(\"num_amenities\",\n               \"review_scores_rating\" = \"threenum\")) +\n  theme_minimal(base_size = 16) +\n  labs(title = \"Do Amenities Increase Revenue?\",\n       subtitle = \"The model predicts a strong relationship between amenities and revenue in Williamsburg and Harlem,\\n but they don't seem to matter in the West Village or Bedford-Stuyvesant\",\n       x=\"Number of Amenities\",\n       y=\"Revenus (USD)\")"
+    "objectID": "meetups/meetup-7/meetup-7.html#rcolorbrewer-9",
+    "href": "meetups/meetup-7/meetup-7.html#rcolorbrewer-9",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "RColorBrewer",
+    "text": "RColorBrewer\n\nna.value=\"grey70\" tells us the color for missing values\nguide = colorbar, legend, or colorsteps says type of colorbar\n\n\np_nabes + \n  scale_fill_brewer(name = \"Boroughs\", \n                    type = \"qual\",\n                    palette = 2,\n                    aesthetics = c(\"color,fill\"),\n                    na.value = \"grey70\")"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#adding-cases-1",
-    "href": "meetups/meetup-9/meetup-9.html#adding-cases-1",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Adding Cases",
-    "text": "Adding Cases"
+    "objectID": "meetups/meetup-7/meetup-7.html#rcolorbrewer-10",
+    "href": "meetups/meetup-7/meetup-7.html#rcolorbrewer-10",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "RColorBrewer",
+    "text": "RColorBrewer"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#show-your-data",
-    "href": "meetups/meetup-9/meetup-9.html#show-your-data",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Show Your Data",
-    "text": "Show Your Data\n\nIf you can, plot your data along with predictions\n\n\nplot_predictions(\n    mod,conf_level = .99,\n    condition = list(\n        \"num_amenities\",\n        \"host_is_superhost\"), points = .5, rug = TRUE) +\n  theme_minimal(base_size=16) +\n  labs(title = \"Impact of Amenities on Revenue\",\n       subtitle = \"Predictions made for 2 Bedroom Airbnbs in NYC\", x = \"Number of Amenities\",y=\"Revenue ($ per night)\")"
+    "objectID": "meetups/meetup-7/meetup-7.html#ggokabeito",
+    "href": "meetups/meetup-7/meetup-7.html#ggokabeito",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "ggokabeito",
+    "text": "ggokabeito\n\nscale_fill_okabe_ito\nTakes many of same arguments as scale_fill_brewer\nAlso can give “order” for colorscale\n\n\np_nabes +\n  scale_fill_okabe_ito(order = 1:9,alpha=0.8)"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#show-your-data-1",
-    "href": "meetups/meetup-9/meetup-9.html#show-your-data-1",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Show Your Data",
-    "text": "Show Your Data\n\nIf you can, plot your data along with predictions"
+    "objectID": "meetups/meetup-7/meetup-7.html#ggokabeito-1",
+    "href": "meetups/meetup-7/meetup-7.html#ggokabeito-1",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "ggokabeito",
+    "text": "ggokabeito\n\nscale_fill_okabe_ito"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#marginal-predictions",
-    "href": "meetups/meetup-9/meetup-9.html#marginal-predictions",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Marginal Predictions",
-    "text": "Marginal Predictions\n\nMarginal prediction is averaged over a grouping\nUse by keyword to specify aggregation\n\n\nmod |&gt; plot_predictions(by = c(\"neighborhood\", \"host_response_time\")) +\n  theme_minimal(base_size=16) +\n  labs(title = \"Modeled revenue increases with host response rate\",\n       y = \"Revenue (USD)\",\n       x = \"Neighborhood\")"
+    "objectID": "meetups/meetup-7/meetup-7.html#ggokabeito-order",
+    "href": "meetups/meetup-7/meetup-7.html#ggokabeito-order",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "ggokabeito order",
+    "text": "ggokabeito order\n\np_nabes +\n  scale_fill_okabe_ito(order = c(1,2,9,3,4,5,6,7,8),alpha=0.8)"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#marginal-predictions-1",
-    "href": "meetups/meetup-9/meetup-9.html#marginal-predictions-1",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Marginal Predictions",
-    "text": "Marginal Predictions"
+    "objectID": "meetups/meetup-7/meetup-7.html#tons-of-other-options.",
+    "href": "meetups/meetup-7/meetup-7.html#tons-of-other-options.",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Tons of other options….",
+    "text": "Tons of other options….\n\nThe main options all work like this\nDefault arguments plus some special options\ncolorspace package is really nice and brings a bit of order"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#plotting-comparisons",
-    "href": "meetups/meetup-9/meetup-9.html#plotting-comparisons",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Plotting Comparisons",
-    "text": "Plotting Comparisons\n\nComparisons with plot_comparisons\nSimilar syntax to plot_predictions\nVery useful for categorical outcomes"
+    "objectID": "meetups/meetup-7/meetup-7.html#choosing-discrete-colors",
+    "href": "meetups/meetup-7/meetup-7.html#choosing-discrete-colors",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Choosing Discrete Colors",
+    "text": "Choosing Discrete Colors\n\nFor Categorical Data\n\nEach Color above 6 should make you wince\nFor colorblind friendliness, becomes very hard\n\nDon’t represent numbers\n\nMaximally Distinctive"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#thornton-revisited",
-    "href": "meetups/meetup-9/meetup-9.html#thornton-revisited",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Thornton Revisited",
-    "text": "Thornton Revisited\n\nThornton dataset: How much does a monetary incentive impact the decision to get an HIV test?\n\n\n\n\nCall:\nlm(formula = revenue ~ . + host_is_superhost * bedrooms + host_is_superhost * \n    neighborhood + num_amenities * neighborhood + num_amenities * \n    bedrooms, data = nyc_bnb_slim)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-282.29  -50.44   -7.98   40.73  654.75 \n\nCoefficients: (1 not defined because of singularities)\n                                                   Estimate Std. Error t value\n(Intercept)                                      -156.33072  126.44123  -1.236\nneighborhoodBedford-Stuyvesant                    -32.49483   20.36231  -1.596\nneighborhoodWest Village                           86.16582   32.33182   2.665\nneighborhoodHarlem                                -49.46094   22.80865  -2.169\nneighbourhood_groupManhattan                             NA         NA      NA\nbedrooms                                           -4.25002    8.31598  -0.511\nnum_amenities                                      -0.67673    0.51225  -1.321\nreview_scores_rating                              101.90580   29.98804   3.398\nreview_scores_accuracy                            -20.50176   26.14237  -0.784\nreview_scores_cleanliness                          14.11705   15.63285   0.903\nreview_scores_checkin                             -12.03781   19.43860  -0.619\nreview_scores_communication                        -0.27244   24.45593  -0.011\nreview_scores_value                               -26.11923   17.62562  -1.482\nreview_scores_location                             -3.66151   15.54947  -0.235\nhost_has_profile_pic                                8.87632   23.59085   0.376\nhost_is_superhost                                  -7.50775   14.06849  -0.534\nhost_response_timewithin a few hours              -18.89199    6.87368  -2.748\nhost_response_timewithin a day                    -24.08064    9.57480  -2.515\nhost_response_timea few days or more              -56.27695   34.10359  -1.650\nhost_response_rate                                  0.07002    0.35042   0.200\nhost_acceptance_rate                                0.29018    0.17252   1.682\nbedrooms:host_is_superhost                         12.82689    5.69852   2.251\nneighborhoodBedford-Stuyvesant:host_is_superhost   -1.32929   14.14480  -0.094\nneighborhoodWest Village:host_is_superhost         44.61606   21.77459   2.049\nneighborhoodHarlem:host_is_superhost               -2.75697   15.55588  -0.177\nneighborhoodBedford-Stuyvesant:num_amenities       -0.63934    0.49032  -1.304\nneighborhoodWest Village:num_amenities             -0.98698    0.84379  -1.170\nneighborhoodHarlem:num_amenities                    0.42245    0.55395   0.763\nbedrooms:num_amenities                              1.11220    0.19711   5.642\n                                                 Pr(&gt;|t|)    \n(Intercept)                                      0.216584    \nneighborhoodBedford-Stuyvesant                   0.110820    \nneighborhoodWest Village                         0.007813 ** \nneighborhoodHarlem                               0.030338 *  \nneighbourhood_groupManhattan                           NA    \nbedrooms                                         0.609409    \nnum_amenities                                    0.186757    \nreview_scores_rating                             0.000703 ***\nreview_scores_accuracy                           0.433075    \nreview_scores_cleanliness                        0.366708    \nreview_scores_checkin                            0.535868    \nreview_scores_communication                      0.991114    \nreview_scores_value                              0.138663    \nreview_scores_location                           0.813885    \nhost_has_profile_pic                             0.706797    \nhost_is_superhost                                0.593689    \nhost_response_timewithin a few hours             0.006088 ** \nhost_response_timewithin a day                   0.012048 *  \nhost_response_timea few days or more             0.099199 .  \nhost_response_rate                               0.841655    \nhost_acceptance_rate                             0.092862 .  \nbedrooms:host_is_superhost                       0.024592 *  \nneighborhoodBedford-Stuyvesant:host_is_superhost 0.925144    \nneighborhoodWest Village:host_is_superhost       0.040705 *  \nneighborhoodHarlem:host_is_superhost             0.859361    \nneighborhoodBedford-Stuyvesant:num_amenities     0.192532    \nneighborhoodWest Village:num_amenities           0.242378    \nneighborhoodHarlem:num_amenities                 0.445867    \nbedrooms:num_amenities                           2.14e-08 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 89.22 on 1074 degrees of freedom\nMultiple R-squared:  0.3773,    Adjusted R-squared:  0.3617 \nF-statistic:  24.1 on 27 and 1074 DF,  p-value: &lt; 2.2e-16"
+    "objectID": "meetups/meetup-7/meetup-7.html#color-for-scatterplots",
+    "href": "meetups/meetup-7/meetup-7.html#color-for-scatterplots",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Color for Scatterplots",
+    "text": "Color for Scatterplots\n\nBrighter Colors Better for Small Points\n\n\nlibrary(palmerpenguins)\n\n\n\npoint = penguins |&gt;  ggplot(aes(bill_length_mm, bill_depth_mm)) +\n  geom_point(aes(colour = species))  + \n  theme_minimal(base_size=16) +\n  labs(x = \"Bill Length (mm)\", y = \n         \"Bill Depth (mm)\")\n\n# three palettes\n#point + scale_colour_brewer(palette = \"Set1\")\n#point + scale_colour_brewer(palette = \"Set2\")  \n#point + scale_colour_brewer(palette = \"Pastel1\")"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#comparisons",
-    "href": "meetups/meetup-9/meetup-9.html#comparisons",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Comparisons",
-    "text": "Comparisons\n\nvariable is what is compared across\nby provides additional levels\n\n\nplot_comparisons(mod_thornton,\n  variables = c(\"incentive\"),\n  by = c(\"agecat\"),\n  comparison = \"lift\") +\n  theme_minimal(base_size=16) +\n  labs(title = \"Impact of a monetary incentive on choice to get an HIV test\", y = \"Lift\",x=\"Age Category\")"
+    "objectID": "meetups/meetup-7/meetup-7.html#color-for-scatterplots-1",
+    "href": "meetups/meetup-7/meetup-7.html#color-for-scatterplots-1",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Color for Scatterplots",
+    "text": "Color for Scatterplots\n\nBrighter Colors Better for Small Points\n\n\npoint + scale_colour_brewer(palette = \"Set1\")"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#comparisons-1",
-    "href": "meetups/meetup-9/meetup-9.html#comparisons-1",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Comparisons",
-    "text": "Comparisons"
+    "objectID": "meetups/meetup-7/meetup-7.html#color-for-scatterplots-2",
+    "href": "meetups/meetup-7/meetup-7.html#color-for-scatterplots-2",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Color for Scatterplots",
+    "text": "Color for Scatterplots\n\nBrighter Colors Better for Small Points\n\n\npoint + scale_colour_brewer(palette = \"Set2\")"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#comparison-functions",
-    "href": "meetups/meetup-9/meetup-9.html#comparison-functions",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Comparison Functions",
-    "text": "Comparison Functions\n\ndifference, ratio, odds, arbitrary functions possible\n\n\nModel to Meaning"
+    "objectID": "meetups/meetup-7/meetup-7.html#color-for-scatterplots-3",
+    "href": "meetups/meetup-7/meetup-7.html#color-for-scatterplots-3",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Color for Scatterplots",
+    "text": "Color for Scatterplots\n\nBrighter Colors Better for Small Points"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#slopes-1",
-    "href": "meetups/meetup-9/meetup-9.html#slopes-1",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Slopes",
-    "text": "Slopes\n\nThe slope is the sensitivity of outcome to a predictor\neyex keyword computes elasticity\n\n\nplot_slopes(mod,\n  variables = \"num_amenities\",\n  slope = \"eyex\",\n  condition = list(\"neighborhood\", \"bedrooms\"= 0:3)) +\n  theme_minimal(base_size=16) +\n  labs(title=\"Investments in Amenities Scale With Apartment Size\",\n       subtitle= \"Decrease in revenue for studios suggests either a flaw in model formulation or very unusual dynamics\",y=\"Increase in Revenue per Amenity\",x=\"Neighborhood\")"
+    "objectID": "meetups/meetup-7/meetup-7.html#color-for-fill",
+    "href": "meetups/meetup-7/meetup-7.html#color-for-fill",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Color for Fill",
+    "text": "Color for Fill\n\nSubtler colors work better for Areas\n\n\nplot = nyc_bnb |&gt; group_by(borough) |&gt; filter(number_of_reviews_ltm&gt;20) |&gt; \n  summarise(revenue = mean(revenue/accommodates,na.rm=TRUE)) |&gt; \n  ggplot(aes(x=fct_reorder(borough,desc(revenue)),y=revenue,fill=borough)) +\n  geom_col() +\n  theme_minimal(base_size=16) +\n  labs(x = \"Borough\", y = \n         \"Mean Revenue\",\n       title = \"Revenue per person across boroughs\")"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#slopes-2",
-    "href": "meetups/meetup-9/meetup-9.html#slopes-2",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
-    "section": "Slopes",
-    "text": "Slopes"
+    "objectID": "meetups/meetup-7/meetup-7.html#color-for-fill-1",
+    "href": "meetups/meetup-7/meetup-7.html#color-for-fill-1",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Color for Fill",
+    "text": "Color for Fill\n\nSubtler colors work better for Areas\n\n\nplot + scale_fill_brewer(palette = \"Pastel1\")"
   },
   {
-    "objectID": "meetups/meetup-9/meetup-9.html#thanks",
-    "href": "meetups/meetup-9/meetup-9.html#thanks",
-    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "objectID": "meetups/meetup-7/meetup-7.html#color-for-fill-2",
+    "href": "meetups/meetup-7/meetup-7.html#color-for-fill-2",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Color for Fill",
+    "text": "Color for Fill\n\nSubtler colors work better for Areas\n\n\nplot + scale_fill_brewer(palette = \"Set1\")"
+  },
+  {
+    "objectID": "meetups/meetup-7/meetup-7.html#color-for-fill-3",
+    "href": "meetups/meetup-7/meetup-7.html#color-for-fill-3",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Color for Fill",
+    "text": "Color for Fill\n\nSubtler colors work better for Areas\n\n\nplot + scale_fill_brewer(palette = \"Set2\")"
+  },
+  {
+    "objectID": "meetups/meetup-7/meetup-7.html#color-for-fill-4",
+    "href": "meetups/meetup-7/meetup-7.html#color-for-fill-4",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Color for Fill",
+    "text": "Color for Fill\n\nColorspace controls for accents\n\n\nplot + scale_fill_OkabeIto(darken=-0.3)"
+  },
+  {
+    "objectID": "meetups/meetup-7/meetup-7.html#setting-colors-manually",
+    "href": "meetups/meetup-7/meetup-7.html#setting-colors-manually",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Setting Colors Manually",
+    "text": "Setting Colors Manually\n\nIn many cases want to pick the colors for each category\nEspecially important for accenting color palettes\nalpha modifies the colors and creates fill vector\n\n\ncolors &lt;- c(\"#808080\",\"#BD3828\", rep(\"#808080\", 3))\nfills &lt;- c(\n  alpha(colors[1], .5),\n  alpha(colors[2],0.85),\n  alpha(colors[3:5], .5)\n)"
+  },
+  {
+    "objectID": "meetups/meetup-7/meetup-7.html#setting-colors-manually-1",
+    "href": "meetups/meetup-7/meetup-7.html#setting-colors-manually-1",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Setting Colors Manually",
+    "text": "Setting Colors Manually\n\nneighborhood_df |&gt; filter(!is.na(borough) & num_listings&gt;20) |&gt;\n  ggplot(aes(x=mean_occupancy,y=mean_revenue,color=borough,shape=borough,fill=borough)) +\n  geom_point(size=4) +\n  scale_y_continuous(limits = c(0,275)) +\n    scale_shape_manual(values = 21:25) +\n   scale_color_manual(values = colors) +\n  scale_fill_manual(values = fills) +\n  theme_minimal(base_size = 16) +\n  labs(title = \"Revenue and Occupancy Across NYC Neighborhoods\")+\n  xlab(\"Mean Occupancy\") +\n  ylab(\"Mean Revenue\")"
+  },
+  {
+    "objectID": "meetups/meetup-7/meetup-7.html#setting-colors-manually-2",
+    "href": "meetups/meetup-7/meetup-7.html#setting-colors-manually-2",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Setting Colors Manually",
+    "text": "Setting Colors Manually"
+  },
+  {
+    "objectID": "meetups/meetup-7/meetup-7.html#more-scale_fill_manual",
+    "href": "meetups/meetup-7/meetup-7.html#more-scale_fill_manual",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "More scale_fill_manual",
+    "text": "More scale_fill_manual\n\nplot_2 +\n   scale_color_manual(values =\n                        c(\"Manhattan\"=\"#BD3828\", \n                          \"Brooklyn\" = \"#92540040\",\n               \"Staten Island\" = \"#92540040\", \n               \"Queens\" = \"#92540040\",\n               \"Bronx\" = \"#92540040\")) + \n  scale_fill_manual(values = \n                      c(\"Manhattan\"=\"#BD3828\", \n                        \"Brooklyn\" = \"#92540040\",\n               \"Staten Island\" = \"#92540040\", \n               \"Queens\" = \"#92540040\",\n               \"Bronx\" = \"#92540040\"))"
+  },
+  {
+    "objectID": "meetups/meetup-7/meetup-7.html#what-do-codes-mean",
+    "href": "meetups/meetup-7/meetup-7.html#what-do-codes-mean",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "What do Codes Mean?",
+    "text": "What do Codes Mean?\n\n\"#BD3828\"\n\"#808080\"\n\"#92540050\"\n\n\n(Red)(Green)(Blue)(alpha)\nEach is a two hex numbers:\n\n(1,2,3,4,5,6,7,8,9,A,B,C,D,E,F)"
+  },
+  {
+    "objectID": "meetups/meetup-7/meetup-7.html#codes-for-okabe-ito",
+    "href": "meetups/meetup-7/meetup-7.html#codes-for-okabe-ito",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "Codes for Okabe-Ito",
+    "text": "Codes for Okabe-Ito\n\n\n\n\n\n\n\nName\nHex code\n\n\n\n\norange\n#E69F00\n\n\nsky blue\n#56B4E9\n\n\nbluish green\n#009E73\n\n\nyellow\n#F0E442\n\n\nblue\n#0072B2\n\n\nvermilion\n#D55E00\n\n\nreddish purple\n#CC79A7\n\n\nblack\n#000000"
+  },
+  {
+    "objectID": "meetups/meetup-7/meetup-7.html#how-to-get-the-codes",
+    "href": "meetups/meetup-7/meetup-7.html#how-to-get-the-codes",
+    "title": "DATA 608 Meetup 7: Working With Color",
+    "section": "How to get the codes?",
+    "text": "How to get the codes?\n\nDifferent functions:\n\n\nbrewer.pal(12,\"Paired\")\n\n [1] \"#A6CEE3\" \"#1F78B4\" \"#B2DF8A\" \"#33A02C\" \"#FB9A99\" \"#E31A1C\" \"#FDBF6F\"\n [8] \"#FF7F00\" \"#CAB2D6\" \"#6A3D9A\" \"#FFFF99\" \"#B15928\"\n\npalette_okabe_ito()\n\n[1] \"#E69F00\" \"#56B4E9\" \"#009E73\" \"#F0E442\" \"#0072B2\" \"#D55E00\" \"#CC79A7\"\n[8] \"#999999\" \"#000000\"\n\ndarken(palette_OkabeIto,-0.3)\n\n[1] \"#F4BA73\" \"#ABC7DE\" \"#0BC490\" \"#F2EBAE\" \"#589BDB\" \"#E78F72\" \"#C9AABA\"\n[8] \"#B7B7B7\""
+  },
+  {
+    "objectID": "meetups/meetup-7/meetup-7.html#thanks",
+    "href": "meetups/meetup-7/meetup-7.html#thanks",
+    "title": "DATA 608 Meetup 7: Working With Color",
     "section": "Thanks!",
     "text": "Thanks!"
   },
@@ -2390,7 +2460,7 @@
     "href": "course/schedule.html#meetup-link",
     "title": "DATA 608 Fall 2026",
     "section": "Meetup Link",
-    "text": "Meetup Link\nClick Here to Join the Meetups on Zoom\nMeetups are Mondays at 8:00PM Eastern. We meet every Monday of the semester except the Monday after Thanksgiving.\n\nCourse Schedule\n\n\nDate\nModule\nSlides\nVideo\nMain Deliverables\n\n\n\n\nAug 31\nDeveloping a Critical Eye\nMeetup 1 Slides\nMeetup 1 Video\nStory 1 assigned\n\n\nSep 7\nThe Data Visualization Catalogue\nMeetup 2 Slides\nMeetup 2 Video\nStory 1 due Sun Sep 13\n\n\nSep 14\nVisualization Quality Features\nMeetup 3 Slides\nMeetup 3 Video\nStory 2 assigned\n\n\nSep 21\nAssociations and Time Series\nMeetup 4 Slides\nMeetup 4 Video\nStory 2 due Sun Sep 27\n\n\nSep 28\nVisualizing Geospatial Data\nMeetup 5 Slides\nMeetup 5 Video\nStory 3 assigned\n\n\nOct 5\nStorytelling\nMeetup 6 Slides\nMeetup 6 Video\nStory 3 due Sun Oct 11\n\n\nOct 12\nEffective Use of Color and Fonts\nMeeutp 7 Slides\nMeetup 7 Video\nStory 4 assigned\n\n\nOct 19\nDistributions and Histograms\n\n\nStory 4 due Sun Oct 25\n\n\nOct 26\nModels and Uncertainty\n\n\nStory 5 assigned\n\n\nNov 2\nDimension Reduction and PCA\n\n\nStory 5 due Sun Nov 8\n\n\nNov 9\nClustering\n\n\nStory 6 assigned\n\n\nNov 16\nHierarchical Clustering\n\n\nStory 6 due Sun Nov 22\n\n\nNov 23\nIntroduction to Shiny Apps\n\n\nStory 7 assigned\n\n\nNov 30\nNo Meetup — Thanksgiving\n\n\n\n\n\nDec 7\nInteractive Visualizations\nSlides\n\nStory 7 due Sun Dec 13\n\n\nDec 14\nWrap-Up\n\n\n\n\n\n\n\n\n\nWeek\nVideo Link\nAnnouncement Link\n\n\n\n\n2\nDot Plot Vignette\nDetails\n\n\n\nSlides and recordings are posted here after each meetup.",
+    "text": "Meetup Link\nClick Here to Join the Meetups on Zoom\nMeetups are Mondays at 8:00PM Eastern. We meet every Monday of the semester except the Monday after Thanksgiving.\n\nCourse Schedule\n\n\nDate\nModule\nSlides\nVideo\nMain Deliverables\n\n\n\n\nAug 31\nDeveloping a Critical Eye\nMeetup 1 Slides\nMeetup 1 Video\nStory 1 assigned\n\n\nSep 7\nThe Data Visualization Catalogue\nMeetup 2 Slides\nMeetup 2 Video\nStory 1 due Sun Sep 13\n\n\nSep 14\nVisualization Quality Features\nMeetup 3 Slides\nMeetup 3 Video\nStory 2 assigned\n\n\nSep 21\nAssociations and Time Series\nMeetup 4 Slides\nMeetup 4 Video\nStory 2 due Sun Sep 27\n\n\nSep 28\nVisualizing Geospatial Data\nMeetup 5 Slides\nMeetup 5 Video\nStory 3 assigned\n\n\nOct 5\nStorytelling\nMeetup 6 Slides\nMeetup 6 Video\nStory 3 due Sun Oct 11\n\n\nOct 12\nEffective Use of Color and Fonts\nMeetup 7 Slides\nMeetup 7 Video\nStory 4 assigned\n\n\nOct 19\nDistributions and Histograms\nMeetup 8 Slides\n\nStory 4 due Sun Oct 25\n\n\nOct 26\nModels and Uncertainty\n\n\nStory 5 assigned\n\n\nNov 2\nDimension Reduction and PCA\n\n\nStory 5 due Sun Nov 8\n\n\nNov 9\nClustering\n\n\nStory 6 assigned\n\n\nNov 16\nHierarchical Clustering\n\n\nStory 6 due Sun Nov 22\n\n\nNov 23\nIntroduction to Shiny Apps\n\n\nStory 7 assigned\n\n\nNov 30\nNo Meetup — Thanksgiving\n\n\n\n\n\nDec 7\nInteractive Visualizations\nSlides\n\nStory 7 due Sun Dec 13\n\n\nDec 14\nWrap-Up\n\n\n\n\n\n\n\n\n\nWeek\nVideo Link\nAnnouncement Link\n\n\n\n\n2\nDot Plot Vignette\nDetails\n\n\n\nSlides and recordings are posted here after each meetup.",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -3918,32 +3988,361 @@
     "text": "Thanks!"
   },
   {
+    "objectID": "meetups/meetup-9/meetup-9.html#week-summary",
+    "href": "meetups/meetup-9/meetup-9.html#week-summary",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Week Summary",
+    "text": "Week Summary\n\nThis week is about visualizing models and uncertainty\nNext week is about dimensionality reduction techniques\nAssignment: Make a model of house sale prices and tell a story about it\nReading: Healy Visualization, Fundamentals of Data Visualization 16\nBonus Readings: Marginal Effects Book: 2-3, 15"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#how-to-talk-about-models",
+    "href": "meetups/meetup-9/meetup-9.html#how-to-talk-about-models",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "How to talk about models",
+    "text": "How to talk about models\n\nYou have just fitted a model\nYou have an array of model coefficients, accuracy measures, and summary statistics\nHow do you convey insights from the model to a PM, supervisor, or even a colleague?"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#model-coefficients-hard-to-interpret",
+    "href": "meetups/meetup-9/meetup-9.html#model-coefficients-hard-to-interpret",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Model Coefficients Hard to Interpret",
+    "text": "Model Coefficients Hard to Interpret\n\nThornton dataset: How much does a monetary incentive impact the decision to get an HIV test?\n\n\ndat = get_dataset(\"thornton\")\nmod_thornton = glm(outcome ~ incentive * (agecat + distance), \n    data = dat, family = binomial)\ndat |&gt; head()\n\n# A data frame: 6 × 8\n  village outcome distance amount incentive   age hiv2004 agecat\n*   &lt;int&gt;   &lt;int&gt;    &lt;dbl&gt;  &lt;dbl&gt;     &lt;int&gt; &lt;int&gt;   &lt;int&gt; &lt;fct&gt; \n1      43       1    0.549      0         0    14       0 &lt;18   \n2     117       0    0.840      0         0    14       0 &lt;18   \n3       2       0    3.34       0         0    15       0 &lt;18   \n4       6       0    2.32       0         0    15       0 &lt;18   \n5      11       0    1.39       0         0    15       0 &lt;18   \n6      14       0    3.87       0         0    15       0 &lt;18"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#model-coefficients-hard-to-interpret-1",
+    "href": "meetups/meetup-9/meetup-9.html#model-coefficients-hard-to-interpret-1",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Model Coefficients Hard to Interpret",
+    "text": "Model Coefficients Hard to Interpret\n\nWhat do these numbers mean?\nAre log-odds-ratios intuitive to you?\n\n\n\n             (Intercept)                incentive           agecat18 to 35 \n             -0.48616576               2.05760093               0.07937246 \n               agecat&gt;35                 distance incentive:agecat18 to 35 \n              0.34522236              -0.18439675              -0.05850445 \n     incentive:agecat&gt;35       incentive:distance \n             -0.12468320               0.02304394 \n\n\n\nLeads to poor decisions (like ignoring everything but sign)"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#model-coefficients-hard-to-interpret-2",
+    "href": "meetups/meetup-9/meetup-9.html#model-coefficients-hard-to-interpret-2",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Model Coefficients Hard to Interpret",
+    "text": "Model Coefficients Hard to Interpret\n\nThis isn’t unique to logistic regression\nFor any model but simple linear regression\nNeed a better way to present model results"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#alternative-workflow",
+    "href": "meetups/meetup-9/meetup-9.html#alternative-workflow",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Alternative Workflow",
+    "text": "Alternative Workflow\n\nDon’t focus on parameter estimates\nInstead transform them to quantities that shed light on your analytic questions\nPredictions, Comparisons, Slopes\nAlways Show Uncertainty"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#predictions",
+    "href": "meetups/meetup-9/meetup-9.html#predictions",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Predictions",
+    "text": "Predictions\n\nA prediction shows what your model says would happen for units with hypothetical predictor values"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#counterfactual-comparisons",
+    "href": "meetups/meetup-9/meetup-9.html#counterfactual-comparisons",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Counterfactual Comparisons",
+    "text": "Counterfactual Comparisons"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#slopes",
+    "href": "meetups/meetup-9/meetup-9.html#slopes",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Slopes",
+    "text": "Slopes"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#look-inside-a-model-object",
+    "href": "meetups/meetup-9/meetup-9.html#look-inside-a-model-object",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Look inside a model object",
+    "text": "Look inside a model object\n\names = read_csv(\"/home/georgehagstrom/work/Teaching/DATA608/DataStory5/train.csv\")\nmod = lm(SalePrice ~ YearBuilt + BedroomAbvGr + `1stFlrSF` +\n           `2ndFlrSF` + GarageArea + Neighborhood,ames)\nmod\n\n\nCall:\nlm(formula = SalePrice ~ YearBuilt + BedroomAbvGr + `1stFlrSF` + \n    `2ndFlrSF` + GarageArea + Neighborhood, data = ames)\n\nCoefficients:\n        (Intercept)            YearBuilt         BedroomAbvGr  \n         -906678.44               477.60             -7057.40  \n         `1stFlrSF`           `2ndFlrSF`           GarageArea  \n              94.96                69.22                42.01  \nNeighborhoodBlueste   NeighborhoodBrDale  NeighborhoodBrkSide  \n          -15845.51            -18830.59              8491.97  \nNeighborhoodClearCr  NeighborhoodCollgCr  NeighborhoodCrawfor  \n           24509.12             14684.76             37778.60  \nNeighborhoodEdwards  NeighborhoodGilbert   NeighborhoodIDOTRR  \n          -13542.86             10214.85             -8014.57  \nNeighborhoodMeadowV  NeighborhoodMitchel    NeighborhoodNAmes  \n          -22671.49             -4473.58             -1497.55  \nNeighborhoodNoRidge  NeighborhoodNPkVill  NeighborhoodNridgHt  \n           71170.54             -5431.58             79487.57  \n NeighborhoodNWAmes  NeighborhoodOldTown   NeighborhoodSawyer  \n            -526.35             -5648.44             -3062.98  \nNeighborhoodSawyerW  NeighborhoodSomerst  NeighborhoodStoneBr  \n            2027.83             27340.82             82622.17  \n  NeighborhoodSWISU   NeighborhoodTimber  NeighborhoodVeenker  \n             676.90             32879.11             48196.84"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#summary-for-top-level-info",
+    "href": "meetups/meetup-9/meetup-9.html#summary-for-top-level-info",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "summary for top level info",
+    "text": "summary for top level info\n\nmod |&gt; summary()\n\n\nCall:\nlm(formula = SalePrice ~ YearBuilt + BedroomAbvGr + `1stFlrSF` + \n    `2ndFlrSF` + GarageArea + Neighborhood, data = ames)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-428522  -16684     328   15778  269785 \n\nCoefficients:\n                      Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)         -9.067e+05  1.440e+05  -6.297 4.03e-10 ***\nYearBuilt            4.776e+02  7.191e+01   6.642 4.39e-11 ***\nBedroomAbvGr        -7.057e+03  1.599e+03  -4.412 1.10e-05 ***\n`1stFlrSF`           9.496e+01  3.591e+00  26.443  &lt; 2e-16 ***\n`2ndFlrSF`           6.922e+01  3.309e+00  20.919  &lt; 2e-16 ***\nGarageArea           4.201e+01  6.353e+00   6.613 5.29e-11 ***\nNeighborhoodBlueste -1.585e+04  2.834e+04  -0.559  0.57612    \nNeighborhoodBrDale  -1.883e+04  1.355e+04  -1.390  0.16488    \nNeighborhoodBrkSide  8.492e+03  1.165e+04   0.729  0.46628    \nNeighborhoodClearCr  2.451e+04  1.195e+04   2.050  0.04052 *  \nNeighborhoodCollgCr  1.468e+04  9.803e+03   1.498  0.13434    \nNeighborhoodCrawfor  3.778e+04  1.151e+04   3.283  0.00105 ** \nNeighborhoodEdwards -1.354e+04  1.055e+04  -1.284  0.19950    \nNeighborhoodGilbert  1.021e+04  1.035e+04   0.987  0.32400    \nNeighborhoodIDOTRR  -8.015e+03  1.236e+04  -0.649  0.51670    \nNeighborhoodMeadowV -2.267e+04  1.328e+04  -1.708  0.08792 .  \nNeighborhoodMitchel -4.474e+03  1.084e+04  -0.413  0.67998    \nNeighborhoodNAmes   -1.498e+03  1.011e+04  -0.148  0.88227    \nNeighborhoodNoRidge  7.117e+04  1.125e+04   6.326 3.36e-10 ***\nNeighborhoodNPkVill -5.432e+03  1.575e+04  -0.345  0.73021    \nNeighborhoodNridgHt  7.949e+04  1.024e+04   7.761 1.59e-14 ***\nNeighborhoodNWAmes  -5.264e+02  1.051e+04  -0.050  0.96007    \nNeighborhoodOldTown -5.648e+03  1.142e+04  -0.495  0.62102    \nNeighborhoodSawyer  -3.063e+03  1.068e+04  -0.287  0.77435    \nNeighborhoodSawyerW  2.028e+03  1.055e+04   0.192  0.84760    \nNeighborhoodSomerst  2.734e+04  1.017e+04   2.688  0.00726 ** \nNeighborhoodStoneBr  8.262e+04  1.191e+04   6.938 6.00e-12 ***\nNeighborhoodSWISU    6.769e+02  1.325e+04   0.051  0.95927    \nNeighborhoodTimber   3.288e+04  1.113e+04   2.953  0.00320 ** \nNeighborhoodVeenker  4.820e+04  1.468e+04   3.284  0.00105 ** \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 37670 on 1430 degrees of freedom\nMultiple R-squared:  0.7796,    Adjusted R-squared:  0.7751 \nF-statistic: 174.4 on 29 and 1430 DF,  p-value: &lt; 2.2e-16"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#str-for-all-details",
+    "href": "meetups/meetup-9/meetup-9.html#str-for-all-details",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "str for all details",
+    "text": "str for all details\n\nmod |&gt; str()\n\nList of 13\n $ coefficients : Named num [1:30] -906678.4 477.6 -7057.4 95 69.2 ...\n  ..- attr(*, \"names\")= chr [1:30] \"(Intercept)\" \"YearBuilt\" \"BedroomAbvGr\" \"`1stFlrSF`\" ...\n $ residuals    : Named num [1:1460] 1614 -21747 8140 -55088 -58200 ...\n  ..- attr(*, \"names\")= chr [1:1460] \"1\" \"2\" \"3\" \"4\" ...\n $ effects      : Named num [1:1460] -6912989 -1586708 -624098 -1370096 -1285383 ...\n  ..- attr(*, \"names\")= chr [1:1460] \"(Intercept)\" \"YearBuilt\" \"BedroomAbvGr\" \"`1stFlrSF`\" ...\n $ rank         : int 30\n $ fitted.values: Named num [1:1460] 206886 203247 215360 195088 308200 ...\n  ..- attr(*, \"names\")= chr [1:1460] \"1\" \"2\" \"3\" \"4\" ...\n $ assign       : int [1:30] 0 1 2 3 4 5 6 6 6 6 ...\n $ qr           :List of 5\n  ..$ qr   : num [1:1460, 1:30] -38.2099 0.0262 0.0262 0.0262 0.0262 ...\n  .. ..- attr(*, \"dimnames\")=List of 2\n  .. .. ..$ : chr [1:1460] \"1\" \"2\" \"3\" \"4\" ...\n  .. .. ..$ : chr [1:30] \"(Intercept)\" \"YearBuilt\" \"BedroomAbvGr\" \"`1stFlrSF`\" ...\n  .. ..- attr(*, \"assign\")= int [1:30] 0 1 2 3 4 5 6 6 6 6 ...\n  .. ..- attr(*, \"contrasts\")=List of 1\n  .. .. ..$ Neighborhood: chr \"contr.treatment\"\n  ..$ qraux: num [1:30] 1.03 1 1.01 1 1.02 ...\n  ..$ pivot: int [1:30] 1 2 3 4 5 6 7 8 9 10 ...\n  ..$ tol  : num 1e-07\n  ..$ rank : int 30\n  ..- attr(*, \"class\")= chr \"qr\"\n $ df.residual  : int 1430\n $ contrasts    :List of 1\n  ..$ Neighborhood: chr \"contr.treatment\"\n $ xlevels      :List of 1\n  ..$ Neighborhood: chr [1:25] \"Blmngtn\" \"Blueste\" \"BrDale\" \"BrkSide\" ...\n $ call         : language lm(formula = SalePrice ~ YearBuilt + BedroomAbvGr + `1stFlrSF` + `2ndFlrSF` +      GarageArea + Neighborhood, data = ames)\n $ terms        :Classes 'terms', 'formula'  language SalePrice ~ YearBuilt + BedroomAbvGr + `1stFlrSF` + `2ndFlrSF` + GarageArea +      Neighborhood\n  .. ..- attr(*, \"variables\")= language list(SalePrice, YearBuilt, BedroomAbvGr, `1stFlrSF`, `2ndFlrSF`, GarageArea,      Neighborhood)\n  .. ..- attr(*, \"factors\")= int [1:7, 1:6] 0 1 0 0 0 0 0 0 0 1 ...\n  .. .. ..- attr(*, \"dimnames\")=List of 2\n  .. .. .. ..$ : chr [1:7] \"SalePrice\" \"YearBuilt\" \"BedroomAbvGr\" \"`1stFlrSF`\" ...\n  .. .. .. ..$ : chr [1:6] \"YearBuilt\" \"BedroomAbvGr\" \"`1stFlrSF`\" \"`2ndFlrSF`\" ...\n  .. ..- attr(*, \"term.labels\")= chr [1:6] \"YearBuilt\" \"BedroomAbvGr\" \"`1stFlrSF`\" \"`2ndFlrSF`\" ...\n  .. ..- attr(*, \"order\")= int [1:6] 1 1 1 1 1 1\n  .. ..- attr(*, \"intercept\")= int 1\n  .. ..- attr(*, \"response\")= int 1\n  .. ..- attr(*, \".Environment\")=&lt;environment: R_GlobalEnv&gt; \n  .. ..- attr(*, \"predvars\")= language list(SalePrice, YearBuilt, BedroomAbvGr, `1stFlrSF`, `2ndFlrSF`, GarageArea,      Neighborhood)\n  .. ..- attr(*, \"dataClasses\")= Named chr [1:7] \"numeric\" \"numeric\" \"numeric\" \"numeric\" ...\n  .. .. ..- attr(*, \"names\")= chr [1:7] \"SalePrice\" \"YearBuilt\" \"BedroomAbvGr\" \"1stFlrSF\" ...\n $ model        :'data.frame':  1460 obs. of  7 variables:\n  ..$ SalePrice   : num [1:1460] 208500 181500 223500 140000 250000 ...\n  ..$ YearBuilt   : num [1:1460] 2003 1976 2001 1915 2000 ...\n  ..$ BedroomAbvGr: num [1:1460] 3 3 3 3 4 1 3 3 2 2 ...\n  ..$ 1stFlrSF    : num [1:1460] 856 1262 920 961 1145 ...\n  ..$ 2ndFlrSF    : num [1:1460] 854 0 866 756 1053 ...\n  ..$ GarageArea  : num [1:1460] 548 460 608 642 836 480 636 484 468 205 ...\n  ..$ Neighborhood: chr [1:1460] \"CollgCr\" \"Veenker\" \"CollgCr\" \"Crawfor\" ...\n  ..- attr(*, \"terms\")=Classes 'terms', 'formula'  language SalePrice ~ YearBuilt + BedroomAbvGr + `1stFlrSF` + `2ndFlrSF` + GarageArea +      Neighborhood\n  .. .. ..- attr(*, \"variables\")= language list(SalePrice, YearBuilt, BedroomAbvGr, `1stFlrSF`, `2ndFlrSF`, GarageArea,      Neighborhood)\n  .. .. ..- attr(*, \"factors\")= int [1:7, 1:6] 0 1 0 0 0 0 0 0 0 1 ...\n  .. .. .. ..- attr(*, \"dimnames\")=List of 2\n  .. .. .. .. ..$ : chr [1:7] \"SalePrice\" \"YearBuilt\" \"BedroomAbvGr\" \"`1stFlrSF`\" ...\n  .. .. .. .. ..$ : chr [1:6] \"YearBuilt\" \"BedroomAbvGr\" \"`1stFlrSF`\" \"`2ndFlrSF`\" ...\n  .. .. ..- attr(*, \"term.labels\")= chr [1:6] \"YearBuilt\" \"BedroomAbvGr\" \"`1stFlrSF`\" \"`2ndFlrSF`\" ...\n  .. .. ..- attr(*, \"order\")= int [1:6] 1 1 1 1 1 1\n  .. .. ..- attr(*, \"intercept\")= int 1\n  .. .. ..- attr(*, \"response\")= int 1\n  .. .. ..- attr(*, \".Environment\")=&lt;environment: R_GlobalEnv&gt; \n  .. .. ..- attr(*, \"predvars\")= language list(SalePrice, YearBuilt, BedroomAbvGr, `1stFlrSF`, `2ndFlrSF`, GarageArea,      Neighborhood)\n  .. .. ..- attr(*, \"dataClasses\")= Named chr [1:7] \"numeric\" \"numeric\" \"numeric\" \"numeric\" ...\n  .. .. .. ..- attr(*, \"names\")= chr [1:7] \"SalePrice\" \"YearBuilt\" \"BedroomAbvGr\" \"1stFlrSF\" ...\n - attr(*, \"class\")= chr \"lm\""
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#tidying-model-objects",
+    "href": "meetups/meetup-9/meetup-9.html#tidying-model-objects",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Tidying Model Objects",
+    "text": "Tidying Model Objects\n\nbroom is part of tidymodels family and contains function which tidy the model for you\ntidy() creates tibble of model components:\n\n\nmod |&gt; tidy(conf.int = TRUE)"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#model-table-from-tidy",
+    "href": "meetups/meetup-9/meetup-9.html#model-table-from-tidy",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Model Table from Tidy",
+    "text": "Model Table from Tidy\n\n\n# A tibble: 30 × 7\n   term                estimate std.error statistic   p.value conf.low conf.high\n   &lt;chr&gt;                  &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n 1 (Intercept)          -9.07e5 143987.     -6.30   4.03e- 10  -1.19e6 -624229. \n 2 YearBuilt             4.78e2     71.9     6.64   4.39e- 11   3.37e2     619. \n 3 BedroomAbvGr         -7.06e3   1599.     -4.41   1.10e-  5  -1.02e4   -3920. \n 4 `1stFlrSF`            9.50e1      3.59   26.4    8.95e-126   8.79e1     102. \n 5 `2ndFlrSF`            6.92e1      3.31   20.9    5.41e- 85   6.27e1      75.7\n 6 GarageArea            4.20e1      6.35    6.61   5.29e- 11   2.96e1      54.5\n 7 NeighborhoodBlueste  -1.58e4  28337.     -0.559  5.76e-  1  -7.14e4   39741. \n 8 NeighborhoodBrDale   -1.88e4  13551.     -1.39   1.65e-  1  -4.54e4    7752. \n 9 NeighborhoodBrkSide   8.49e3  11653.      0.729  4.66e-  1  -1.44e4   31351. \n10 NeighborhoodClearCr   2.45e4  11954.      2.05   4.05e-  2   1.06e3   47959. \n11 NeighborhoodCollgCr   1.47e4   9803.      1.50   1.34e-  1  -4.54e3   33914. \n12 NeighborhoodCrawfor   3.78e4  11506.      3.28   1.05e-  3   1.52e4   60350. \n13 NeighborhoodEdwards  -1.35e4  10551.     -1.28   1.99e-  1  -3.42e4    7154. \n14 NeighborhoodGilbert   1.02e4  10354.      0.987  3.24e-  1  -1.01e4   30525. \n15 NeighborhoodIDOTRR   -8.01e3  12357.     -0.649  5.17e-  1  -3.23e4   16225. \n16 NeighborhoodMeadowV  -2.27e4  13277.     -1.71   8.79e-  2  -4.87e4    3372. \n17 NeighborhoodMitchel  -4.47e3  10843.     -0.413  6.80e-  1  -2.57e4   16797. \n18 NeighborhoodNAmes    -1.50e3  10110.     -0.148  8.82e-  1  -2.13e4   18335. \n19 NeighborhoodNoRidge   7.12e4  11251.      6.33   3.36e- 10   4.91e4   93240. \n20 NeighborhoodNPkVill  -5.43e3  15748.     -0.345  7.30e-  1  -3.63e4   25460. \n21 NeighborhoodNridgHt   7.95e4  10242.      7.76   1.59e- 14   5.94e4   99578. \n22 NeighborhoodNWAmes   -5.26e2  10511.     -0.0501 9.60e-  1  -2.11e4   20092. \n23 NeighborhoodOldTown  -5.65e3  11422.     -0.495  6.21e-  1  -2.81e4   16758. \n24 NeighborhoodSawyer   -3.06e3  10682.     -0.287  7.74e-  1  -2.40e4   17891. \n25 NeighborhoodSawyerW   2.03e3  10550.      0.192  8.48e-  1  -1.87e4   22723. \n26 NeighborhoodSomerst   2.73e4  10170.      2.69   7.26e-  3   7.39e3   47290. \n27 NeighborhoodStoneBr   8.26e4  11908.      6.94   6.00e- 12   5.93e4  105982. \n28 NeighborhoodSWISU     6.77e2  13254.      0.0511 9.59e-  1  -2.53e4   26675. \n29 NeighborhoodTimber    3.29e4  11134.      2.95   3.20e-  3   1.10e4   54720. \n30 NeighborhoodVeenker   4.82e4  14678.      3.28   1.05e-  3   1.94e4   76990."
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#plotting-coefficients",
+    "href": "meetups/meetup-9/meetup-9.html#plotting-coefficients",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Plotting Coefficients",
+    "text": "Plotting Coefficients\n\ntidy lets us make plots of coordinates\n\n\ntidy_ames = tidy(mod)\ntidy_ames |&gt; ggplot(mapping = aes(x = term,\n                            y = estimate)) +\n  geom_point() +\n  coord_flip() +\n  theme_minimal(base_size=12) +\n  labs(title=\"Poor Display of Coordinates\")"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#plotting-coefficients-1",
+    "href": "meetups/meetup-9/meetup-9.html#plotting-coefficients-1",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Plotting Coefficients",
+    "text": "Plotting Coefficients\n\ntidy lets us make plots of coordinates"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#select-neighborhood-clean-names",
+    "href": "meetups/meetup-9/meetup-9.html#select-neighborhood-clean-names",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Select Neighborhood, Clean Names",
+    "text": "Select Neighborhood, Clean Names\n\ntidy_ames |&gt; filter(str_detect(term,\"Neighborhood\")) |&gt; \n  mutate(term = str_remove_all(term,\"Neighborhood\")) |&gt; \n  ggplot(mapping = aes(x = term,\n                            y = estimate)) +\n  geom_point() +\n  coord_flip() +\n  theme_minimal(base_size=12) +\n  labs(title=\"Neighborhood Effect on Housing Price in Ames\",\n       subtitle= \"Still Needs Uncertainties, to be sorted\",\n       y=\"Neighborhood\",\n       x = \"Price Effect (USD)\")"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#select-neighborhood-clean-names-1",
+    "href": "meetups/meetup-9/meetup-9.html#select-neighborhood-clean-names-1",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Select Neighborhood, Clean Names",
+    "text": "Select Neighborhood, Clean Names"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#sort-and-add-uncertainty",
+    "href": "meetups/meetup-9/meetup-9.html#sort-and-add-uncertainty",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Sort and add Uncertainty",
+    "text": "Sort and add Uncertainty\n\ntidy_ames |&gt; filter(str_detect(term,\"Neighborhood\")) |&gt; \n  mutate(term = str_remove_all(term,\"Neighborhood\")) |&gt; \n  ggplot(mapping = aes(x = reorder(term,estimate),\n                       y = estimate,\n                       ymin = estimate - std.error, \n                       ymax = estimate + std.error)) +\n  geom_pointrange() +\n  coord_flip() +\n  theme_minimal(base_size=12) +\n  labs(title=\"Neighborhood Effect on Housing Price in Ames\", subtitle = \"Error bars show 95% confidence interval\",\n       y = \"Price Effect (USD)\",\n       x = \"Neighborhood\")"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#sort-and-add-uncertainty-1",
+    "href": "meetups/meetup-9/meetup-9.html#sort-and-add-uncertainty-1",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Sort and add Uncertainty",
+    "text": "Sort and add Uncertainty"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#augment-adds-fits-to-data",
+    "href": "meetups/meetup-9/meetup-9.html#augment-adds-fits-to-data",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Augment adds fits to data",
+    "text": "Augment adds fits to data\n\names_fit = mod |&gt; augment(ames)\names_fit |&gt; select(SalePrice:.std.resid)\n\n# A tibble: 1,460 × 7\n   SalePrice .fitted  .resid    .hat .sigma     .cooksd .std.resid\n       &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt;       &lt;dbl&gt;      &lt;dbl&gt;\n 1    208500 206886.   1614. 0.00851 37688. 0.000000530     0.0430\n 2    181500 203247. -21747. 0.0932  37683. 0.00126        -0.606 \n 3    223500 215360.   8140. 0.00842 37687. 0.0000133       0.217 \n 4    140000 195088. -55088. 0.0254  37659. 0.00190        -1.48  \n 5    250000 308200. -58200. 0.0276  37655. 0.00232        -1.57  \n 6    143000 168576. -25576. 0.0295  37682. 0.000482       -0.689 \n 7    307000 244182.  62818. 0.0145  37651. 0.00139         1.68  \n 8    200000 207423.  -7423. 0.0166  37687. 0.0000222      -0.199 \n 9    129900 164566. -34666. 0.0117  37676. 0.000338       -0.926 \n10    118000 124647.  -6647. 0.0185  37687. 0.0000199      -0.178 \n# ℹ 1,450 more rows"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#purrr-and-broom-work-with-many-models",
+    "href": "meetups/meetup-9/meetup-9.html#purrr-and-broom-work-with-many-models",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "purrr and broom: work with many models",
+    "text": "purrr and broom: work with many models\n\nUse gapminder data on GDP and life expectancy\n\n\nlibrary(gapminder)\ngapminder\n\n# A tibble: 1,704 × 6\n   country     continent  year lifeExp      pop gdpPercap\n   &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;\n 1 Afghanistan Asia       1952    28.8  8425333      779.\n 2 Afghanistan Asia       1957    30.3  9240934      821.\n 3 Afghanistan Asia       1962    32.0 10267083      853.\n 4 Afghanistan Asia       1967    34.0 11537966      836.\n 5 Afghanistan Asia       1972    36.1 13079460      740.\n 6 Afghanistan Asia       1977    38.4 14880372      786.\n 7 Afghanistan Asia       1982    39.9 12881816      978.\n 8 Afghanistan Asia       1987    40.8 13867957      852.\n 9 Afghanistan Asia       1992    41.7 16317921      649.\n10 Afghanistan Asia       1997    41.8 22227415      635.\n# ℹ 1,694 more rows"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#nest-creates-a-tibble-of-tibbles",
+    "href": "meetups/meetup-9/meetup-9.html#nest-creates-a-tibble-of-tibbles",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "nest creates a tibble of tibbles",
+    "text": "nest creates a tibble of tibbles\n\nnested_gap = gapminder |&gt; \n  group_by(continent,year) |&gt;\n  nest()\nnested_gap\n\n# A tibble: 60 × 3\n# Groups:   continent, year [60]\n   continent  year data             \n   &lt;fct&gt;     &lt;int&gt; &lt;list&gt;           \n 1 Asia       1952 &lt;tibble [33 × 4]&gt;\n 2 Asia       1957 &lt;tibble [33 × 4]&gt;\n 3 Asia       1962 &lt;tibble [33 × 4]&gt;\n 4 Asia       1967 &lt;tibble [33 × 4]&gt;\n 5 Asia       1972 &lt;tibble [33 × 4]&gt;\n 6 Asia       1977 &lt;tibble [33 × 4]&gt;\n 7 Asia       1982 &lt;tibble [33 × 4]&gt;\n 8 Asia       1987 &lt;tibble [33 × 4]&gt;\n 9 Asia       1992 &lt;tibble [33 × 4]&gt;\n10 Asia       1997 &lt;tibble [33 × 4]&gt;\n# ℹ 50 more rows"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#use-map-to-fit-models",
+    "href": "meetups/meetup-9/meetup-9.html#use-map-to-fit-models",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Use map to fit models",
+    "text": "Use map to fit models\n\nfit_ols &lt;- function(df) {\n    lm(lifeExp ~ log(gdpPercap), data = df)\n}\n\nout_tidy = nested_gap |&gt; \n    mutate(model = map(data, fit_ols),\n           tidied = map(model, tidy))  |&gt; \n    unnest(tidied, .drop = TRUE)  |&gt; \n    filter(term != \"(Intercept)\" &\n           continent != \"Oceania\")\n\nout_tidy"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#use-map-to-fit-models-1",
+    "href": "meetups/meetup-9/meetup-9.html#use-map-to-fit-models-1",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Use map to fit models",
+    "text": "Use map to fit models\n\n\n# A tibble: 15 × 9\n# Groups:   continent, year [15]\n   continent  year data     model  term    estimate std.error statistic  p.value\n   &lt;fct&gt;     &lt;int&gt; &lt;list&gt;   &lt;list&gt; &lt;chr&gt;      &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n 1 Asia       1952 &lt;tibble&gt; &lt;lm&gt;   log(gd…     4.16     1.25       3.33 2.28e- 3\n 2 Asia       1957 &lt;tibble&gt; &lt;lm&gt;   log(gd…     4.17     1.28       3.26 2.71e- 3\n 3 Asia       1962 &lt;tibble&gt; &lt;lm&gt;   log(gd…     4.59     1.24       3.72 7.94e- 4\n 4 Asia       1967 &lt;tibble&gt; &lt;lm&gt;   log(gd…     4.50     1.15       3.90 4.77e- 4\n 5 Asia       1972 &lt;tibble&gt; &lt;lm&gt;   log(gd…     4.44     1.01       4.41 1.16e- 4\n 6 Asia       1977 &lt;tibble&gt; &lt;lm&gt;   log(gd…     4.87     1.03       4.75 4.42e- 5\n 7 Asia       1982 &lt;tibble&gt; &lt;lm&gt;   log(gd…     4.78     0.852      5.61 3.77e- 6\n 8 Asia       1987 &lt;tibble&gt; &lt;lm&gt;   log(gd…     5.17     0.727      7.12 5.31e- 8\n 9 Asia       1992 &lt;tibble&gt; &lt;lm&gt;   log(gd…     5.09     0.649      7.84 7.60e- 9\n10 Asia       1997 &lt;tibble&gt; &lt;lm&gt;   log(gd…     5.11     0.628      8.15 3.35e- 9\n11 Asia       2002 &lt;tibble&gt; &lt;lm&gt;   log(gd…     5.44     0.696      7.82 8.05e- 9\n12 Asia       2007 &lt;tibble&gt; &lt;lm&gt;   log(gd…     5.16     0.694      7.43 2.26e- 8\n13 Europe     1952 &lt;tibble&gt; &lt;lm&gt;   log(gd…     9.00     0.987      9.12 7.04e-10\n14 Europe     1957 &lt;tibble&gt; &lt;lm&gt;   log(gd…     7.45     0.945      7.88 1.39e- 8\n15 Europe     1962 &lt;tibble&gt; &lt;lm&gt;   log(gd…     5.91     0.853      6.93 1.56e- 7"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#use-map-to-fit-models-2",
+    "href": "meetups/meetup-9/meetup-9.html#use-map-to-fit-models-2",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Use Map to Fit Models",
+    "text": "Use Map to Fit Models"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#marginal-effects-package",
+    "href": "meetups/meetup-9/meetup-9.html#marginal-effects-package",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Marginal Effects Package",
+    "text": "Marginal Effects Package\n\nmarginaleffects is a powerful package in both python and R for model interpretation\nComes with a book Marginal Effects\nSeveral alternatives exist (detailed there)\nCan be used with nearly any type of model, from statistical, to Bayesian, to Machine Learning"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#plotting-predictions",
+    "href": "meetups/meetup-9/meetup-9.html#plotting-predictions",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Plotting Predictions",
+    "text": "Plotting Predictions\n\nplot_predictions function (also predictions)\nSpecify grid of data on which to predict\nDo this with condition\n\n\nmod = lm(revenue ~ . + host_is_superhost*bedrooms +\n           host_is_superhost*neighborhood +\n           num_amenities*neighborhood + \n           num_amenities*bedrooms  ,\n         data = nyc_bnb_slim)\n\nmod |&gt; plot_predictions(condition = c(\"num_amenities\", \"neighborhood\")) +\n  theme_minimal(base_size = 16) +\n  labs(title = \"Amenities increase revenues\",\n       x=\"Number of Amenities\",\n       y=\"Revenus (USD)\")"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#plotting-predictions-1",
+    "href": "meetups/meetup-9/meetup-9.html#plotting-predictions-1",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Plotting Predictions",
+    "text": "Plotting Predictions"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#changing-the-conditions",
+    "href": "meetups/meetup-9/meetup-9.html#changing-the-conditions",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Changing the Conditions",
+    "text": "Changing the Conditions\n\nCan provide a range of conditions\n\n\nmod |&gt; plot_predictions(condition = \n          list(\"num_amenities\" = 40:60, \n            \"neighborhood\")) +\n  theme_minimal(base_size = 16) +\n  labs(title = \"Do Amenities Increase Revenue?\",\n       subtitle = \"The model predicts a strong relationship between amenities and revenue in Williamsburg and Harlem,\\n but they don't seem to matter in the West Village or Bedford-Stuyvesant\",\n       x=\"Number of Amenities\",\n       y=\"Revenus (USD)\")"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#changing-the-conditions-1",
+    "href": "meetups/meetup-9/meetup-9.html#changing-the-conditions-1",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Changing the Conditions",
+    "text": "Changing the Conditions\n\nCan provide a range of conditions"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#changing-the-conditions-2",
+    "href": "meetups/meetup-9/meetup-9.html#changing-the-conditions-2",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Changing the Conditions",
+    "text": "Changing the Conditions\n\nCan split into subplots\n\n\nmod |&gt; plot_predictions(condition = \n          list(\"num_amenities\", \n            \"neighborhood\",\n            \"bedrooms\" = unique)) +\n  theme_minimal(base_size = 16) +\n  labs(title = \"Do Amenities Increase Revenue?\",\n       x=\"Number of Amenities\",\n       y=\"Revenus (USD)\")"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#changing-the-conditions-3",
+    "href": "meetups/meetup-9/meetup-9.html#changing-the-conditions-3",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Changing the Conditions",
+    "text": "Changing the Conditions"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#adding-cases",
+    "href": "meetups/meetup-9/meetup-9.html#adding-cases",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Adding Cases",
+    "text": "Adding Cases\n\n“threenum” keyword plots \\(\\mathrm{mean}\\pm\\mathrm{\\sigma}\\)\nOther options include “minmax”, “quartile”, check ?plot_predictions\n\n\nmod |&gt; plot_predictions(condition = \n          list(\"num_amenities\",\n               \"review_scores_rating\" = \"threenum\")) +\n  theme_minimal(base_size = 16) +\n  labs(title = \"Do Amenities Increase Revenue?\",\n       subtitle = \"The model predicts a strong relationship between amenities and revenue in Williamsburg and Harlem,\\n but they don't seem to matter in the West Village or Bedford-Stuyvesant\",\n       x=\"Number of Amenities\",\n       y=\"Revenus (USD)\")"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#adding-cases-1",
+    "href": "meetups/meetup-9/meetup-9.html#adding-cases-1",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Adding Cases",
+    "text": "Adding Cases"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#show-your-data",
+    "href": "meetups/meetup-9/meetup-9.html#show-your-data",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Show Your Data",
+    "text": "Show Your Data\n\nIf you can, plot your data along with predictions\n\n\nplot_predictions(\n    mod,conf_level = .99,\n    condition = list(\n        \"num_amenities\",\n        \"host_is_superhost\"), points = .5, rug = TRUE) +\n  theme_minimal(base_size=16) +\n  labs(title = \"Impact of Amenities on Revenue\",\n       subtitle = \"Predictions made for 2 Bedroom Airbnbs in NYC\", x = \"Number of Amenities\",y=\"Revenue ($ per night)\")"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#show-your-data-1",
+    "href": "meetups/meetup-9/meetup-9.html#show-your-data-1",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Show Your Data",
+    "text": "Show Your Data\n\nIf you can, plot your data along with predictions"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#marginal-predictions",
+    "href": "meetups/meetup-9/meetup-9.html#marginal-predictions",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Marginal Predictions",
+    "text": "Marginal Predictions\n\nMarginal prediction is averaged over a grouping\nUse by keyword to specify aggregation\n\n\nmod |&gt; plot_predictions(by = c(\"neighborhood\", \"host_response_time\")) +\n  theme_minimal(base_size=16) +\n  labs(title = \"Modeled revenue increases with host response rate\",\n       y = \"Revenue (USD)\",\n       x = \"Neighborhood\")"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#marginal-predictions-1",
+    "href": "meetups/meetup-9/meetup-9.html#marginal-predictions-1",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Marginal Predictions",
+    "text": "Marginal Predictions"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#plotting-comparisons",
+    "href": "meetups/meetup-9/meetup-9.html#plotting-comparisons",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Plotting Comparisons",
+    "text": "Plotting Comparisons\n\nComparisons with plot_comparisons\nSimilar syntax to plot_predictions\nVery useful for categorical outcomes"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#thornton-revisited",
+    "href": "meetups/meetup-9/meetup-9.html#thornton-revisited",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Thornton Revisited",
+    "text": "Thornton Revisited\n\nThornton dataset: How much does a monetary incentive impact the decision to get an HIV test?\n\n\n\n\nCall:\nlm(formula = revenue ~ . + host_is_superhost * bedrooms + host_is_superhost * \n    neighborhood + num_amenities * neighborhood + num_amenities * \n    bedrooms, data = nyc_bnb_slim)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-282.29  -50.44   -7.98   40.73  654.75 \n\nCoefficients: (1 not defined because of singularities)\n                                                   Estimate Std. Error t value\n(Intercept)                                      -156.33072  126.44123  -1.236\nneighborhoodBedford-Stuyvesant                    -32.49483   20.36231  -1.596\nneighborhoodWest Village                           86.16582   32.33182   2.665\nneighborhoodHarlem                                -49.46094   22.80865  -2.169\nneighbourhood_groupManhattan                             NA         NA      NA\nbedrooms                                           -4.25002    8.31598  -0.511\nnum_amenities                                      -0.67673    0.51225  -1.321\nreview_scores_rating                              101.90580   29.98804   3.398\nreview_scores_accuracy                            -20.50176   26.14237  -0.784\nreview_scores_cleanliness                          14.11705   15.63285   0.903\nreview_scores_checkin                             -12.03781   19.43860  -0.619\nreview_scores_communication                        -0.27244   24.45593  -0.011\nreview_scores_value                               -26.11923   17.62562  -1.482\nreview_scores_location                             -3.66151   15.54947  -0.235\nhost_has_profile_pic                                8.87632   23.59085   0.376\nhost_is_superhost                                  -7.50775   14.06849  -0.534\nhost_response_timewithin a few hours              -18.89199    6.87368  -2.748\nhost_response_timewithin a day                    -24.08064    9.57480  -2.515\nhost_response_timea few days or more              -56.27695   34.10359  -1.650\nhost_response_rate                                  0.07002    0.35042   0.200\nhost_acceptance_rate                                0.29018    0.17252   1.682\nbedrooms:host_is_superhost                         12.82689    5.69852   2.251\nneighborhoodBedford-Stuyvesant:host_is_superhost   -1.32929   14.14480  -0.094\nneighborhoodWest Village:host_is_superhost         44.61606   21.77459   2.049\nneighborhoodHarlem:host_is_superhost               -2.75697   15.55588  -0.177\nneighborhoodBedford-Stuyvesant:num_amenities       -0.63934    0.49032  -1.304\nneighborhoodWest Village:num_amenities             -0.98698    0.84379  -1.170\nneighborhoodHarlem:num_amenities                    0.42245    0.55395   0.763\nbedrooms:num_amenities                              1.11220    0.19711   5.642\n                                                 Pr(&gt;|t|)    \n(Intercept)                                      0.216584    \nneighborhoodBedford-Stuyvesant                   0.110820    \nneighborhoodWest Village                         0.007813 ** \nneighborhoodHarlem                               0.030338 *  \nneighbourhood_groupManhattan                           NA    \nbedrooms                                         0.609409    \nnum_amenities                                    0.186757    \nreview_scores_rating                             0.000703 ***\nreview_scores_accuracy                           0.433075    \nreview_scores_cleanliness                        0.366708    \nreview_scores_checkin                            0.535868    \nreview_scores_communication                      0.991114    \nreview_scores_value                              0.138663    \nreview_scores_location                           0.813885    \nhost_has_profile_pic                             0.706797    \nhost_is_superhost                                0.593689    \nhost_response_timewithin a few hours             0.006088 ** \nhost_response_timewithin a day                   0.012048 *  \nhost_response_timea few days or more             0.099199 .  \nhost_response_rate                               0.841655    \nhost_acceptance_rate                             0.092862 .  \nbedrooms:host_is_superhost                       0.024592 *  \nneighborhoodBedford-Stuyvesant:host_is_superhost 0.925144    \nneighborhoodWest Village:host_is_superhost       0.040705 *  \nneighborhoodHarlem:host_is_superhost             0.859361    \nneighborhoodBedford-Stuyvesant:num_amenities     0.192532    \nneighborhoodWest Village:num_amenities           0.242378    \nneighborhoodHarlem:num_amenities                 0.445867    \nbedrooms:num_amenities                           2.14e-08 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 89.22 on 1074 degrees of freedom\nMultiple R-squared:  0.3773,    Adjusted R-squared:  0.3617 \nF-statistic:  24.1 on 27 and 1074 DF,  p-value: &lt; 2.2e-16"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#comparisons",
+    "href": "meetups/meetup-9/meetup-9.html#comparisons",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Comparisons",
+    "text": "Comparisons\n\nvariable is what is compared across\nby provides additional levels\n\n\nplot_comparisons(mod_thornton,\n  variables = c(\"incentive\"),\n  by = c(\"agecat\"),\n  comparison = \"lift\") +\n  theme_minimal(base_size=16) +\n  labs(title = \"Impact of a monetary incentive on choice to get an HIV test\", y = \"Lift\",x=\"Age Category\")"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#comparisons-1",
+    "href": "meetups/meetup-9/meetup-9.html#comparisons-1",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Comparisons",
+    "text": "Comparisons"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#comparison-functions",
+    "href": "meetups/meetup-9/meetup-9.html#comparison-functions",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Comparison Functions",
+    "text": "Comparison Functions\n\ndifference, ratio, odds, arbitrary functions possible\n\n\nModel to Meaning"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#slopes-1",
+    "href": "meetups/meetup-9/meetup-9.html#slopes-1",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Slopes",
+    "text": "Slopes\n\nThe slope is the sensitivity of outcome to a predictor\neyex keyword computes elasticity\n\n\nplot_slopes(mod,\n  variables = \"num_amenities\",\n  slope = \"eyex\",\n  condition = list(\"neighborhood\", \"bedrooms\"= 0:3)) +\n  theme_minimal(base_size=16) +\n  labs(title=\"Investments in Amenities Scale With Apartment Size\",\n       subtitle= \"Decrease in revenue for studios suggests either a flaw in model formulation or very unusual dynamics\",y=\"Increase in Revenue per Amenity\",x=\"Neighborhood\")"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#slopes-2",
+    "href": "meetups/meetup-9/meetup-9.html#slopes-2",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Slopes",
+    "text": "Slopes"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#thanks",
+    "href": "meetups/meetup-9/meetup-9.html#thanks",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Thanks!",
+    "text": "Thanks!"
+  },
+  {
+    "objectID": "meetups/meetup-8/meetup-8.html#november-3rd",
+    "href": "meetups/meetup-8/meetup-8.html#november-3rd",
+    "title": "DATA 608 Meetup 8: Visualizing Distributions",
+    "section": "November 3rd!",
+    "text": "November 3rd!\n\nhttps://us02web.zoom.us/meeting/register/RQW4PGPcT0ixadrHwD0-aQ#/registration"
+  },
+  {
+    "objectID": "meetups/meetup-8/meetup-8.html#november-19th",
+    "href": "meetups/meetup-8/meetup-8.html#november-19th",
+    "title": "DATA 608 Meetup 8: Visualizing Distributions",
+    "section": "November 19th!",
+    "text": "November 19th!"
+  },
+  {
+    "objectID": "meetups/meetup-8/meetup-8.html#internships-and-jobs",
+    "href": "meetups/meetup-8/meetup-8.html#internships-and-jobs",
+    "title": "DATA 608 Meetup 8: Visualizing Distributions",
+    "section": "Internships and Jobs",
+    "text": "Internships and Jobs"
+  },
+  {
     "objectID": "meetups/meetup-8/meetup-8.html#week-summary",
     "href": "meetups/meetup-8/meetup-8.html#week-summary",
     "title": "DATA 608 Meetup 8: Visualizing Distributions",
     "section": "Week Summary",
     "text": "Week Summary\n\nThis focus is on distributions\n\nHistograms, density plots, ridge plots\nBuild to working with models\n\nData Story 4 due Sunday\nReading: Chapter 7-9 of Fundamentals of Data Visualization"
-  },
-  {
-    "objectID": "meetups/meetup-8/meetup-8.html#data-story-2-review",
-    "href": "meetups/meetup-8/meetup-8.html#data-story-2-review",
-    "title": "DATA 608 Meetup 8: Visualizing Distributions",
-    "section": "Data Story 2 Review",
-    "text": "Data Story 2 Review"
-  },
-  {
-    "objectID": "meetups/meetup-8/meetup-8.html#data-story-2-review-1",
-    "href": "meetups/meetup-8/meetup-8.html#data-story-2-review-1",
-    "title": "DATA 608 Meetup 8: Visualizing Distributions",
-    "section": "Data Story 2 Review",
-    "text": "Data Story 2 Review"
-  },
-  {
-    "objectID": "meetups/meetup-8/meetup-8.html#dual-axes-considerations",
-    "href": "meetups/meetup-8/meetup-8.html#dual-axes-considerations",
-    "title": "DATA 608 Meetup 8: Visualizing Distributions",
-    "section": "Dual Axes Considerations",
-    "text": "Dual Axes Considerations\n\nGenerally only plot time series on the same axis if units are comparable\nDual axis plots very prone to misinterpretation\nSee here for more Kieran Healy Blog"
   },
   {
     "objectID": "meetups/meetup-8/meetup-8.html#how-to-visualize-distributions",
@@ -3957,7 +4356,7 @@
     "href": "meetups/meetup-8/meetup-8.html#how-to-visualize-distributions-1",
     "title": "DATA 608 Meetup 8: Visualizing Distributions",
     "section": "How to Visualize Distributions",
-    "text": "How to Visualize Distributions\n\ngeom_histogram"
+    "text": "How to Visualize Distributions\n\ngeom_histogram\n\n\nnyc_bnb |&gt; \n  ggplot(aes(price_per_accommodates)) +\n  geom_histogram() +\n  scale_x_continuous(limits = c(0,500)) +\n  theme_minimal(base_size = 16) +\n  labs(x = \"Price per Accomodated Guest\",\n       y = \"Count\",\n       title = \"Distribution of Prices per Guest for Airbnb Accomodations in NYC \")"
   },
   {
     "objectID": "meetups/meetup-8/meetup-8.html#how-to-visualize-distributions-2",
@@ -3979,6 +4378,20 @@
     "title": "DATA 608 Meetup 8: Visualizing Distributions",
     "section": "Histogram Binwidth",
     "text": "Histogram Binwidth\n\nAlways experiment with binwidth"
+  },
+  {
+    "objectID": "meetups/meetup-8/meetup-8.html#algorithmic-bandwidth",
+    "href": "meetups/meetup-8/meetup-8.html#algorithmic-bandwidth",
+    "title": "DATA 608 Meetup 8: Visualizing Distributions",
+    "section": "Algorithmic Bandwidth",
+    "text": "Algorithmic Bandwidth\n\n\n\nMethod\nCode\nDescription\n\n\n\n\nSilverman’s Rule\nbw = \"nrd0\"\nAssume Gaussian\n\n\nScott’s Rule\nbw = \"nrd\"\nAssume Gaussian\n\n\nCross-Validation\nbw = \"ucv\"\nCV error\n\n\nSheather-Jones\nbw = \"sj\"\nRMSE based on curvature"
+  },
+  {
+    "objectID": "meetups/meetup-8/meetup-8.html#comparing-algos",
+    "href": "meetups/meetup-8/meetup-8.html#comparing-algos",
+    "title": "DATA 608 Meetup 8: Visualizing Distributions",
+    "section": "Comparing Algos",
+    "text": "Comparing Algos"
   },
   {
     "objectID": "meetups/meetup-8/meetup-8.html#number-of-bins",
@@ -4219,6 +4632,69 @@
     "text": "When to Overlap Densities\n\nAvoid Multiple Density Plot when there is major overlap\nOK when densities are distinct"
   },
   {
+    "objectID": "meetups/meetup-8/meetup-8.html#multiple-and-non-overlapping",
+    "href": "meetups/meetup-8/meetup-8.html#multiple-and-non-overlapping",
+    "title": "DATA 608 Meetup 8: Visualizing Distributions",
+    "section": "Multiple and Non-Overlapping",
+    "text": "Multiple and Non-Overlapping\n\nSeveral Flashy methods\n\nBoxplots (‘geom_boxplot’)\nViolin Plots (‘geom_violin’)\nStrip Plots (‘geom_jitter’)\nSina Plots (‘geom_sina’)\nRidge Plots (‘geom_density_ridges’)"
+  },
+  {
+    "objectID": "meetups/meetup-8/meetup-8.html#boxplots",
+    "href": "meetups/meetup-8/meetup-8.html#boxplots",
+    "title": "DATA 608 Meetup 8: Visualizing Distributions",
+    "section": "Boxplots",
+    "text": "Boxplots"
+  },
+  {
+    "objectID": "meetups/meetup-8/meetup-8.html#boxplots-1",
+    "href": "meetups/meetup-8/meetup-8.html#boxplots-1",
+    "title": "DATA 608 Meetup 8: Visualizing Distributions",
+    "section": "Boxplots",
+    "text": "Boxplots\n\nnb_vec = c(\"Williamsburg\",\"West Village\",\"Park Slope\",\"Upper East Side\",\"Bedford-Stuyvesant\",\"Astoria\")\nnyc_bnb |&gt; filter(neighborhood %in% nb_vec, revenue &lt; 1000) |&gt;\n  ggplot(aes(x=revenue,y = neighborhood)) +\n  coord_cartesian(xlim = c(0,500)) +\n  geom_boxplot() +\n  theme_minimal(base_size=16) +\n  labs(title=\"Revenue per Night in 6 NYC Neighborhoods\",\n       x=\"Revenue per Night ($)\",y=\"Neighborhood\")"
+  },
+  {
+    "objectID": "meetups/meetup-8/meetup-8.html#violin-plots",
+    "href": "meetups/meetup-8/meetup-8.html#violin-plots",
+    "title": "DATA 608 Meetup 8: Visualizing Distributions",
+    "section": "Violin Plots",
+    "text": "Violin Plots"
+  },
+  {
+    "objectID": "meetups/meetup-8/meetup-8.html#violin-plots-1",
+    "href": "meetups/meetup-8/meetup-8.html#violin-plots-1",
+    "title": "DATA 608 Meetup 8: Visualizing Distributions",
+    "section": "Violin Plots",
+    "text": "Violin Plots\n\nnb_vec = c(\"Williamsburg\",\"West Village\",\"Park Slope\",\"Upper East Side\",\"Bedford-Stuyvesant\",\"Astoria\")\nnyc_bnb |&gt; filter(neighborhood %in% nb_vec, revenue &lt; 1000) |&gt;\n  ggplot(aes(x=revenue,y = neighborhood)) +\n  coord_cartesian(xlim = c(0,500)) +\n  geom_violin(fill = \"grey80\") +\n  theme_minimal(base_size=16) +\n  labs(title=\"Revenue per Night in 6 NYC Neighborhoods\",\n       x=\"Revenue per Night ($)\",y=\"Neighborhood\")"
+  },
+  {
+    "objectID": "meetups/meetup-8/meetup-8.html#strip-charts",
+    "href": "meetups/meetup-8/meetup-8.html#strip-charts",
+    "title": "DATA 608 Meetup 8: Visualizing Distributions",
+    "section": "Strip Charts",
+    "text": "Strip Charts"
+  },
+  {
+    "objectID": "meetups/meetup-8/meetup-8.html#strip-charts-1",
+    "href": "meetups/meetup-8/meetup-8.html#strip-charts-1",
+    "title": "DATA 608 Meetup 8: Visualizing Distributions",
+    "section": "Strip Charts",
+    "text": "Strip Charts\n\nnb_vec = c(\"Williamsburg\",\"West Village\",\"Park Slope\",\"Upper East Side\",\"Bedford-Stuyvesant\",\"Astoria\")\nnyc_bnb |&gt; filter(neighborhood %in% nb_vec, revenue &lt; 1000) |&gt;\n  ggplot(aes(x=revenue,y = neighborhood)) +\n  coord_cartesian(xlim = c(0,500)) +\n  geom_jitter(height = 0.3, width = 0, size = 0.5, alpha = 0.2) +\n  theme_minimal(base_size=16) +\n  labs(title=\"Revenue per Night in 6 NYC Neighborhoods\",\n       x=\"Revenue per Night ($)\",y=\"Neighborhood\")"
+  },
+  {
+    "objectID": "meetups/meetup-8/meetup-8.html#sina-plots",
+    "href": "meetups/meetup-8/meetup-8.html#sina-plots",
+    "title": "DATA 608 Meetup 8: Visualizing Distributions",
+    "section": "Sina Plots",
+    "text": "Sina Plots"
+  },
+  {
+    "objectID": "meetups/meetup-8/meetup-8.html#sina-plots-1",
+    "href": "meetups/meetup-8/meetup-8.html#sina-plots-1",
+    "title": "DATA 608 Meetup 8: Visualizing Distributions",
+    "section": "Sina Plots",
+    "text": "Sina Plots\n\nlibrary(ggforce)\nnb_vec = c(\"Williamsburg\",\"West Village\",\"Park Slope\",\"Upper East Side\",\"Bedford-Stuyvesant\",\"Astoria\")\nnyc_bnb |&gt; filter(neighborhood %in% nb_vec, revenue &lt; 1000) |&gt;\n  ggplot(aes(x=revenue,y = neighborhood)) +\n  coord_cartesian(xlim = c(0,500)) +\n  geom_violin(color = NA, fill = \"grey90\") +\n  geom_sina(size = 0.5, alpha = 0.3) +\n  theme_minimal(base_size=16) +\n  labs(title=\"Revenue per Night in 6 NYC Neighborhoods\",\n       x=\"Revenue per Night ($)\",y=\"Neighborhood\")"
+  },
+  {
     "objectID": "meetups/meetup-8/meetup-8.html#ridge-plots",
     "href": "meetups/meetup-8/meetup-8.html#ridge-plots",
     "title": "DATA 608 Meetup 8: Visualizing Distributions",
@@ -4233,408 +4709,37 @@
     "text": "Ridge Plots\n\nlibrary(ggridges)\nnb_vec = c(\"Williamsburg\",\"West Village\",\"Park Slope\",\"Upper East Side\",\"Bedford-Stuyvesant\",\"Astoria\")\nnyc_bnb |&gt; filter(neighborhood %in% nb_vec) |&gt; \n  ggplot(aes(x=reviews_per_month,y = neighborhood)) +\n  scale_x_continuous(limits = c(0,3)) +\n  geom_density_ridges(rel_min_height=0.05,alpha=0.4) +\n  theme_minimal(base_size=16) +\n  labs(title=\"Reviews Per Month in 4 NYC Neighborhoods\",\n       x=\"Reviews Per Month\",y=\"Neighborhood\")"
   },
   {
+    "objectID": "meetups/meetup-8/meetup-8.html#ridge-plots-on-a-log-scale",
+    "href": "meetups/meetup-8/meetup-8.html#ridge-plots-on-a-log-scale",
+    "title": "DATA 608 Meetup 8: Visualizing Distributions",
+    "section": "Ridge Plots on a log Scale",
+    "text": "Ridge Plots on a log Scale"
+  },
+  {
+    "objectID": "meetups/meetup-8/meetup-8.html#ridge-plots-on-a-log-scale-1",
+    "href": "meetups/meetup-8/meetup-8.html#ridge-plots-on-a-log-scale-1",
+    "title": "DATA 608 Meetup 8: Visualizing Distributions",
+    "section": "Ridge Plots on a log Scale",
+    "text": "Ridge Plots on a log Scale\n\nlibrary(ggridges)\nnb_vec = c(\"Williamsburg\",\"West Village\",\"Park Slope\",\"Upper East Side\",\"Bedford-Stuyvesant\",\"Astoria\")\nnyc_bnb |&gt; filter(neighborhood %in% nb_vec, revenue &gt; 0, revenue &lt; 1000) |&gt;\n  ggplot(aes(x=revenue,y = neighborhood)) +\n  scale_x_log10(breaks = c(10, 100, 1000), labels = c(\"$10\", \"$100\", \"$1,000\")) +\n  coord_cartesian(xlim = c(2, 1000)) +\n  geom_density_ridges(rel_min_height=0.05,alpha=0.4) +\n  theme_minimal(base_size=16) +\n  labs(title=\"Revenue per Night in 6 NYC Neighborhoods\",\n       x=\"Revenue per Night ($)\",y=\"Neighborhood\")"
+  },
+  {
+    "objectID": "meetups/meetup-8/meetup-8.html#comparing-ecdfs",
+    "href": "meetups/meetup-8/meetup-8.html#comparing-ecdfs",
+    "title": "DATA 608 Meetup 8: Visualizing Distributions",
+    "section": "Comparing ECDFs",
+    "text": "Comparing ECDFs"
+  },
+  {
+    "objectID": "meetups/meetup-8/meetup-8.html#comparing-ecdfs-1",
+    "href": "meetups/meetup-8/meetup-8.html#comparing-ecdfs-1",
+    "title": "DATA 608 Meetup 8: Visualizing Distributions",
+    "section": "Comparing ECDFs",
+    "text": "Comparing ECDFs\n\nnb_vec = c(\"West Village\",\"Upper East Side\",\"Bedford-Stuyvesant\")\nnyc_bnb |&gt; filter(neighborhood %in% nb_vec, revenue &gt; 0, revenue &lt; 1000) |&gt;\n  ggplot(aes(x=revenue, color = fct_reorder(neighborhood, revenue, median))) +\n  stat_ecdf(geom = \"step\", linewidth = 1) +\n  scale_x_log10(breaks = c(10, 100, 1000), labels = c(\"$10\", \"$100\", \"$1,000\")) +\n  coord_cartesian(xlim = c(2, 1000)) +\n  scale_color_OkabeIto() +\n  theme_minimal(base_size=16) +\n  labs(title=\"Revenue per Night in 3 NYC Neighborhoods\",\n       x=\"Revenue per Night ($)\",y=\"Fraction of Listings\",color=\"Neighborhood\")"
+  },
+  {
     "objectID": "meetups/meetup-8/meetup-8.html#thanks",
     "href": "meetups/meetup-8/meetup-8.html#thanks",
     "title": "DATA 608 Meetup 8: Visualizing Distributions",
-    "section": "Thanks!",
-    "text": "Thanks!"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#november-meetup",
-    "href": "meetups/meetup-7/meetup-7.html#november-meetup",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "November Meetup!",
-    "text": "November Meetup!"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#november-meetup-1",
-    "href": "meetups/meetup-7/meetup-7.html#november-meetup-1",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "November Meetup!",
-    "text": "November Meetup!\n\nhttps://us02web.zoom.us/meeting/register/RQW4PGPcT0ixadrHwD0-aQ"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#october-nyhackr-meetup",
-    "href": "meetups/meetup-7/meetup-7.html#october-nyhackr-meetup",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "October ‘nyhackr’ meetup",
-    "text": "October ‘nyhackr’ meetup"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#weekly-summary",
-    "href": "meetups/meetup-7/meetup-7.html#weekly-summary",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Weekly Summary",
-    "text": "Weekly Summary\n\nThis week is all about how to control colors in R\nChapter 4 (and 19) of Fundamentals\nChapter 4 of Storytelling\nOkabe-Ito Page https://jfly.uni-koeln.de/color/\nNew Assignment: Airbnb Revenues in NYC"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#three-uses-of-color",
-    "href": "meetups/meetup-7/meetup-7.html#three-uses-of-color",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Three Uses of Color",
-    "text": "Three Uses of Color\n\nColor to Distinguish"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#three-uses-of-color-1",
-    "href": "meetups/meetup-7/meetup-7.html#three-uses-of-color-1",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Three Uses of Color",
-    "text": "Three Uses of Color\n\nQualitative Colormaps"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#three-uses-of-color-2",
-    "href": "meetups/meetup-7/meetup-7.html#three-uses-of-color-2",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Three Uses of Color",
-    "text": "Three Uses of Color\n\nQualitative Colormaps"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#three-uses-of-color-3",
-    "href": "meetups/meetup-7/meetup-7.html#three-uses-of-color-3",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Three Uses of Color",
-    "text": "Three Uses of Color\n\nQualitative Colormaps"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#three-uses-of-color-4",
-    "href": "meetups/meetup-7/meetup-7.html#three-uses-of-color-4",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Three Uses of Color",
-    "text": "Three Uses of Color\n\nRepresent Numerical Values"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#three-uses-of-color-5",
-    "href": "meetups/meetup-7/meetup-7.html#three-uses-of-color-5",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Three Uses of Color",
-    "text": "Three Uses of Color\n\nHighlighting"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#three-uses-of-color-6",
-    "href": "meetups/meetup-7/meetup-7.html#three-uses-of-color-6",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Three Uses of Color",
-    "text": "Three Uses of Color\n\nHighlighting"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#what-are-colors",
-    "href": "meetups/meetup-7/meetup-7.html#what-are-colors",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "What are colors?",
-    "text": "What are colors?\n\nLight is composed of a spectrum of photons each with different wavelength/energy\n\n\nWang and Yu 2023"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#what-are-colors-1",
-    "href": "meetups/meetup-7/meetup-7.html#what-are-colors-1",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "What are colors?",
-    "text": "What are colors?\n\nPrimary Colors each represent single wavelength\nROYGBIV\n\n\nWang and Yu 2023"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#color-perception",
-    "href": "meetups/meetup-7/meetup-7.html#color-perception",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Color Perception",
-    "text": "Color Perception\n\nWe don’t see spectrum\nOur eyes have 3 types of cone cells that sense color\nEach responds to a part of the spectrum"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#color-perception-1",
-    "href": "meetups/meetup-7/meetup-7.html#color-perception-1",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Color Perception",
-    "text": "Color Perception\n\nOur cones reduce the full spectrum to 3 numbers\n\n\n\n\nDifferent 3D encodings:\n\nRGB mix + Luminance\nHCL (Hue + Chroma + Luminance)\n\n\n\n\n\n\nhandprint.com"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#color-vision-variability",
-    "href": "meetups/meetup-7/meetup-7.html#color-vision-variability",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Color Vision Variability",
-    "text": "Color Vision Variability\n\nNumber and function of each cone type can vary from person to person\nDifferent types of color perception referred to as colorblindness\n\n\ndatacolor.com"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#checking-your-color-palettes",
-    "href": "meetups/meetup-7/meetup-7.html#checking-your-color-palettes",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Checking your Color Palettes",
-    "text": "Checking your Color Palettes\n\nwww.daltonlens.com\n\nSimulates on Images or even entire slidedeck\nAll types of colorblindness"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#checking-your-color-palettes-1",
-    "href": "meetups/meetup-7/meetup-7.html#checking-your-color-palettes-1",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Checking your Color Palettes",
-    "text": "Checking your Color Palettes\n\nwww.daltonlens.com"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#checking-your-color-palettes-2",
-    "href": "meetups/meetup-7/meetup-7.html#checking-your-color-palettes-2",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Checking your Color Palettes",
-    "text": "Checking your Color Palettes\n\ncolorBlindnes simulator\n\n\ncolorBlindness::displayAllColors(rainbow(6))"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#checking-your-color-palettes-3",
-    "href": "meetups/meetup-7/meetup-7.html#checking-your-color-palettes-3",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Checking your Color Palettes",
-    "text": "Checking your Color Palettes\n\ncolorBlindnes simulator\n\n\ncolorBlindness::displayAllColors(ggokabeito::palette_okabe_ito(1:9))"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#checking-your-color-palettes-4",
-    "href": "meetups/meetup-7/meetup-7.html#checking-your-color-palettes-4",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Checking your Color Palettes",
-    "text": "Checking your Color Palettes\n\ncolorBlindnes simulator\n\n\ncolorBlindness::displayAllColors(viridis::viridis(6))"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#what-i-do",
-    "href": "meetups/meetup-7/meetup-7.html#what-i-do",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "What I Do",
-    "text": "What I Do\n\nStick with known accessible palettes\nviridis and okabe-ito families\nLuminance based\nAvoid red-green gradients"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#ggplot-color-scale-functions",
-    "href": "meetups/meetup-7/meetup-7.html#ggplot-color-scale-functions",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "ggplot color scale functions",
-    "text": "ggplot color scale functions\n\nSimilar to how you control axis scales\nscale_*aes*_*name_of_color_function*\nscale_color_xxxx controls color (usually border)\nscale_fill_xxxx controls fill\nxxxx is usually the name of a package or color scheme"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#atlas-of-color-qualtitative-packages",
-    "href": "meetups/meetup-7/meetup-7.html#atlas-of-color-qualtitative-packages",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Atlas of color qualtitative packages",
-    "text": "Atlas of color qualtitative packages\n\nColor Packages\n\n\nCommand\nPackage\nColor Safety?\n\n\n\n\nscale_fill_hue\nggplot2\nNo\n\n\nscale_fill_brewer\nRColorBrewer\nSome\n\n\nscale_fill_paleteer_d\npaleteer\nMany\n\n\nscale_fill_okabe_ito\nggokabeito\nYes\n\n\nscale_fill_OkabeIto\ncolorblindr\nYes"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#rcolorbrewer",
-    "href": "meetups/meetup-7/meetup-7.html#rcolorbrewer",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "RColorBrewer",
-    "text": "RColorBrewer\n\nDesigned for discrete values on maps\n\n\ndisplay.brewer.all(type = \"qual\")"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#rcolorbrewer-1",
-    "href": "meetups/meetup-7/meetup-7.html#rcolorbrewer-1",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "RColorBrewer",
-    "text": "RColorBrewer\n\n3 Colorblind friendly palettes\nOnly friendly up to 3 categories (Set2 and Dark2) or 4 categories (Paired)\n\n\ndisplay.brewer.all(type = \"qual\",colorblindFriendly = TRUE)"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#rcolorbrewer-2",
-    "href": "meetups/meetup-7/meetup-7.html#rcolorbrewer-2",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "RColorBrewer",
-    "text": "RColorBrewer\n\nCode for Column Plot\n\n\np1 = neighborhood_df |&gt; \n  ggplot(aes(x=fct_reorder(neighborhood,mean_revenue),\n             y=mean_revenue,\n             fill = borough)) +\n  geom_col() +\n  scale_y_continuous(\n    name = \"Revenue Per Day\"\n  ) +\n  coord_flip() + \n  theme_minimal(base_size=16) +\n  theme(axis.title.y = element_blank(),\n        axis.line.y = element_blank(),\n        axis.ticks.length = unit(0, \"pt\"),\n        #axis.text.y = element_text(size = 10, color = borough_colors),\n        legend.background = element_rect(fill = \"#ffffffb0\")) +\n  labs(title = \"Mean Revenue Per Day of Airbnb Listings in\\n Selected NYC Neighborhoods\")"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#rcolorbrewer-3",
-    "href": "meetups/meetup-7/meetup-7.html#rcolorbrewer-3",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "RColorBrewer",
-    "text": "RColorBrewer\n\nscale_fill_brewer()\npalette can choose from list of palettes\nname gives legend label\n\n\np1 + \n  scale_fill_brewer(name = \"Boroughs\", \n                    palette = \"Set1\")"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#rcolorbrewer-4",
-    "href": "meetups/meetup-7/meetup-7.html#rcolorbrewer-4",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "RColorBrewer",
-    "text": "RColorBrewer"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#rcolorbrewer-5",
-    "href": "meetups/meetup-7/meetup-7.html#rcolorbrewer-5",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "RColorBrewer",
-    "text": "RColorBrewer\n\nUse direction=-1 to reverse the colors\n\n\np_nabes + \n  scale_fill_brewer(name = \"Boroughs\", \n                    direction = -1, \n                    palette = \"Set1\")"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#rcolorbrewer-6",
-    "href": "meetups/meetup-7/meetup-7.html#rcolorbrewer-6",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "RColorBrewer",
-    "text": "RColorBrewer\n\nUse direction=-1 to reverse the colors"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#rcolorbrewer-7",
-    "href": "meetups/meetup-7/meetup-7.html#rcolorbrewer-7",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "RColorBrewer",
-    "text": "RColorBrewer\n\nIf you forget names, you can use type=\"qual\" and palette= number:\n\n\np_nabes + \n  scale_fill_brewer(name = \"Boroughs\", \n                    type = \"qual\",\n                    palette = 3)"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#rcolorbrewer-8",
-    "href": "meetups/meetup-7/meetup-7.html#rcolorbrewer-8",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "RColorBrewer",
-    "text": "RColorBrewer\n\nIf you forget names, you can use type=\"qual\" and palette= number:"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#rcolorbrewer-9",
-    "href": "meetups/meetup-7/meetup-7.html#rcolorbrewer-9",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "RColorBrewer",
-    "text": "RColorBrewer\n\nna.value=\"grey70\" tells us the color for missing values\nguide = colorbar, legend, or colorsteps says type of colorbar\n\n\np_nabes + \n  scale_fill_brewer(name = \"Boroughs\", \n                    type = \"qual\",\n                    palette = 2,\n                    aesthetics = c(\"color,fill\"),\n                    na.value = \"grey70\")"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#rcolorbrewer-10",
-    "href": "meetups/meetup-7/meetup-7.html#rcolorbrewer-10",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "RColorBrewer",
-    "text": "RColorBrewer"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#ggokabeito",
-    "href": "meetups/meetup-7/meetup-7.html#ggokabeito",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "ggokabeito",
-    "text": "ggokabeito\n\nscale_fill_okabe_ito\nTakes many of same arguments as scale_fill_brewer\nAlso can give “order” for colorscale\n\n\np_nabes +\n  scale_fill_okabe_ito(order = 1:9,alpha=0.8)"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#ggokabeito-1",
-    "href": "meetups/meetup-7/meetup-7.html#ggokabeito-1",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "ggokabeito",
-    "text": "ggokabeito\n\nscale_fill_okabe_ito"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#ggokabeito-order",
-    "href": "meetups/meetup-7/meetup-7.html#ggokabeito-order",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "ggokabeito order",
-    "text": "ggokabeito order\n\np_nabes +\n  scale_fill_okabe_ito(order = c(1,2,9,3,4,5,6,7,8),alpha=0.8)"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#tons-of-other-options.",
-    "href": "meetups/meetup-7/meetup-7.html#tons-of-other-options.",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Tons of other options….",
-    "text": "Tons of other options….\n\nThe main options all work like this\nDefault arguments plus some special options\ncolorspace package is really nice and brings a bit of order"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#choosing-discrete-colors",
-    "href": "meetups/meetup-7/meetup-7.html#choosing-discrete-colors",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Choosing Discrete Colors",
-    "text": "Choosing Discrete Colors\n\nFor Categorical Data\n\nEach Color above 6 should make you wince\nFor colorblind friendliness, becomes very hard\n\nDon’t represent numbers\n\nMaximally Distinctive"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#color-for-scatterplots",
-    "href": "meetups/meetup-7/meetup-7.html#color-for-scatterplots",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Color for Scatterplots",
-    "text": "Color for Scatterplots\n\nBrighter Colors Better for Small Points\n\n\nlibrary(palmerpenguins)\n\n\n\npoint = penguins |&gt;  ggplot(aes(bill_length_mm, bill_depth_mm)) +\n  geom_point(aes(colour = species))  + \n  theme_minimal(base_size=16) +\n  labs(x = \"Bill Length (mm)\", y = \n         \"Bill Depth (mm)\")\n\n# three palettes\n#point + scale_colour_brewer(palette = \"Set1\")\n#point + scale_colour_brewer(palette = \"Set2\")  \n#point + scale_colour_brewer(palette = \"Pastel1\")"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#color-for-scatterplots-1",
-    "href": "meetups/meetup-7/meetup-7.html#color-for-scatterplots-1",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Color for Scatterplots",
-    "text": "Color for Scatterplots\n\nBrighter Colors Better for Small Points\n\n\npoint + scale_colour_brewer(palette = \"Set1\")"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#color-for-scatterplots-2",
-    "href": "meetups/meetup-7/meetup-7.html#color-for-scatterplots-2",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Color for Scatterplots",
-    "text": "Color for Scatterplots\n\nBrighter Colors Better for Small Points\n\n\npoint + scale_colour_brewer(palette = \"Set2\")"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#color-for-scatterplots-3",
-    "href": "meetups/meetup-7/meetup-7.html#color-for-scatterplots-3",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Color for Scatterplots",
-    "text": "Color for Scatterplots\n\nBrighter Colors Better for Small Points"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#color-for-fill",
-    "href": "meetups/meetup-7/meetup-7.html#color-for-fill",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Color for Fill",
-    "text": "Color for Fill\n\nSubtler colors work better for Areas\n\n\nplot = nyc_bnb |&gt; group_by(borough) |&gt; filter(number_of_reviews_ltm&gt;20) |&gt; \n  summarise(revenue = mean(revenue/accommodates,na.rm=TRUE)) |&gt; \n  ggplot(aes(x=fct_reorder(borough,desc(revenue)),y=revenue,fill=borough)) +\n  geom_col() +\n  theme_minimal(base_size=16) +\n  labs(x = \"Borough\", y = \n         \"Mean Revenue\",\n       title = \"Revenue per person across boroughs\")"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#color-for-fill-1",
-    "href": "meetups/meetup-7/meetup-7.html#color-for-fill-1",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Color for Fill",
-    "text": "Color for Fill\n\nSubtler colors work better for Areas\n\n\nplot + scale_fill_brewer(palette = \"Pastel1\")"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#color-for-fill-2",
-    "href": "meetups/meetup-7/meetup-7.html#color-for-fill-2",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Color for Fill",
-    "text": "Color for Fill\n\nSubtler colors work better for Areas\n\n\nplot + scale_fill_brewer(palette = \"Set1\")"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#color-for-fill-3",
-    "href": "meetups/meetup-7/meetup-7.html#color-for-fill-3",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Color for Fill",
-    "text": "Color for Fill\n\nSubtler colors work better for Areas\n\n\nplot + scale_fill_brewer(palette = \"Set2\")"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#color-for-fill-4",
-    "href": "meetups/meetup-7/meetup-7.html#color-for-fill-4",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Color for Fill",
-    "text": "Color for Fill\n\nColorspace controls for accents\n\n\nplot + scale_fill_OkabeIto(darken=-0.3)"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#setting-colors-manually",
-    "href": "meetups/meetup-7/meetup-7.html#setting-colors-manually",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Setting Colors Manually",
-    "text": "Setting Colors Manually\n\nIn many cases want to pick the colors for each category\nEspecially important for accenting color palettes\nalpha modifies the colors and creates fill vector\n\n\ncolors &lt;- c(\"#808080\",\"#BD3828\", rep(\"#808080\", 3))\nfills &lt;- c(\n  alpha(colors[1], .5),\n  alpha(colors[2],0.85),\n  alpha(colors[3:5], .5)\n)"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#setting-colors-manually-1",
-    "href": "meetups/meetup-7/meetup-7.html#setting-colors-manually-1",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Setting Colors Manually",
-    "text": "Setting Colors Manually\n\nneighborhood_df |&gt; filter(!is.na(borough) & num_listings&gt;20) |&gt;\n  ggplot(aes(x=mean_occupancy,y=mean_revenue,color=borough,shape=borough,fill=borough)) +\n  geom_point(size=4) +\n  scale_y_continuous(limits = c(0,275)) +\n    scale_shape_manual(values = 21:25) +\n   scale_color_manual(values = colors) +\n  scale_fill_manual(values = fills) +\n  theme_minimal(base_size = 16) +\n  labs(title = \"Revenue and Occupancy Across NYC Neighborhoods\")+\n  xlab(\"Mean Occupancy\") +\n  ylab(\"Mean Revenue\")"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#setting-colors-manually-2",
-    "href": "meetups/meetup-7/meetup-7.html#setting-colors-manually-2",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Setting Colors Manually",
-    "text": "Setting Colors Manually"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#more-scale_fill_manual",
-    "href": "meetups/meetup-7/meetup-7.html#more-scale_fill_manual",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "More scale_fill_manual",
-    "text": "More scale_fill_manual\n\nplot_2 +\n   scale_color_manual(values =\n                        c(\"Manhattan\"=\"#BD3828\", \n                          \"Brooklyn\" = \"#92540040\",\n               \"Staten Island\" = \"#92540040\", \n               \"Queens\" = \"#92540040\",\n               \"Bronx\" = \"#92540040\")) + \n  scale_fill_manual(values = \n                      c(\"Manhattan\"=\"#BD3828\", \n                        \"Brooklyn\" = \"#92540040\",\n               \"Staten Island\" = \"#92540040\", \n               \"Queens\" = \"#92540040\",\n               \"Bronx\" = \"#92540040\"))"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#what-do-codes-mean",
-    "href": "meetups/meetup-7/meetup-7.html#what-do-codes-mean",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "What do Codes Mean?",
-    "text": "What do Codes Mean?\n\n\"#BD3828\"\n\"#808080\"\n\"#92540050\"\n\n\n(Red)(Green)(Blue)(alpha)\nEach is a two hex numbers:\n\n(1,2,3,4,5,6,7,8,9,A,B,C,D,E,F)"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#codes-for-okabe-ito",
-    "href": "meetups/meetup-7/meetup-7.html#codes-for-okabe-ito",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "Codes for Okabe-Ito",
-    "text": "Codes for Okabe-Ito\n\n\n\n\n\n\n\nName\nHex code\n\n\n\n\norange\n#E69F00\n\n\nsky blue\n#56B4E9\n\n\nbluish green\n#009E73\n\n\nyellow\n#F0E442\n\n\nblue\n#0072B2\n\n\nvermilion\n#D55E00\n\n\nreddish purple\n#CC79A7\n\n\nblack\n#000000"
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#how-to-get-the-codes",
-    "href": "meetups/meetup-7/meetup-7.html#how-to-get-the-codes",
-    "title": "DATA 608 Meetup 7: Working With Color",
-    "section": "How to get the codes?",
-    "text": "How to get the codes?\n\nDifferent functions:\n\n\nbrewer.pal(12,\"Paired\")\n\n [1] \"#A6CEE3\" \"#1F78B4\" \"#B2DF8A\" \"#33A02C\" \"#FB9A99\" \"#E31A1C\" \"#FDBF6F\"\n [8] \"#FF7F00\" \"#CAB2D6\" \"#6A3D9A\" \"#FFFF99\" \"#B15928\"\n\npalette_okabe_ito()\n\n[1] \"#E69F00\" \"#56B4E9\" \"#009E73\" \"#F0E442\" \"#0072B2\" \"#D55E00\" \"#CC79A7\"\n[8] \"#999999\" \"#000000\"\n\ndarken(palette_OkabeIto,-0.3)\n\n[1] \"#F4BA73\" \"#ABC7DE\" \"#0BC490\" \"#F2EBAE\" \"#589BDB\" \"#E78F72\" \"#C9AABA\"\n[8] \"#B7B7B7\""
-  },
-  {
-    "objectID": "meetups/meetup-7/meetup-7.html#thanks",
-    "href": "meetups/meetup-7/meetup-7.html#thanks",
-    "title": "DATA 608 Meetup 7: Working With Color",
     "section": "Thanks!",
     "text": "Thanks!"
   }

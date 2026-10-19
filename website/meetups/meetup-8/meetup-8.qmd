@@ -4,6 +4,26 @@ author: "George I. Hagstrom"
 format: revealjs
 ---
 
+
+
+## November 3rd!
+
+![](MeetupNovChristian2026Seminar.png)
+
+https://us02web.zoom.us/meeting/register/RQW4PGPcT0ixadrHwD0-aQ
+
+
+## November 19th!
+
+![](Nov2026Seminar.png)
+
+
+## Internships and Jobs
+
+![](jobs-channel.png)
+
+
+
 ## Week Summary
 
 - This focus is on distributions
@@ -12,7 +32,7 @@ format: revealjs
 - Data Story 4 due Sunday
 - Reading: Chapter 7-9 of Fundamentals of Data Visualization
 
-## Data Story 2 Review
+
 
 ```{r}
 #| echo: false
@@ -30,49 +50,7 @@ nyc_bnb = read_csv("/home/georgehagstrom/work/Teaching/DATA608/DataStory4/nyc_ai
 neighborhood_df = nyc_bnb |> group_by(neighborhood,borough) |> summarise(num_listings = n(), mean_revenue = mean(revenue,na.rm =TRUE), mean_rating = mean(review_scores_rating,na.rm=TRUE),mean_location = mean(review_scores_location,na.rm=TRUE),mean_value = mean(review_scores_value,na.rm=TRUE)) |> filter(num_listings > 200) |> 
   ungroup() |> slice_sample(n=20) # Need ungroup to make slice_sample pick 20 neighborhoods 
 
-
-library(TTR)
-gdp = read_csv("GDPC1.csv")
-gdp = gdp |> mutate(growth = 100*(GDPC1/lag(GDPC1,4)-1)) 
-unemp = read_csv("UNRATE.csv")
-gdp = gdp |> filter(!is.na(growth))
-gdp = gdp |> left_join(unemp)
-
-
-gdp |> ggplot(aes(x=observation_date,y=growth)) +
-  geom_line(color="blue") +
-  geom_line(aes(y=UNRATE),color="red") +
-  theme_bw(base_size=16) +
-  theme(panel.grid.minor.x = element_blank(),
-          panel.grid.major.x = element_blank() )+
-  labs(title="GDP Growth and Unemployment") +
-  xlab("Date") +
-  ylab("Percent")
-
 ```
-
-## Data Story 2 Review
-
-```{r}
-gdp |> ggplot(aes(x=observation_date,y=growth)) +
-  geom_line(color="blue") +
-  geom_line(aes(y=UNRATE),color="red") +
-  geom_line(aes(y=GDPC1),color="orange")+
-  theme_bw(base_size=16) +
-  theme(panel.grid.minor.x = element_blank(),
-          panel.grid.major.x = element_blank() )+
-  labs(title="GDP Growth and Unemployment") +
-  xlab("Date") +
-  ylab("Percent")
-
-
-```
-
-## Dual Axes Considerations
-
-- Generally only plot time series on the same axis if units are comparable
-- Dual axis plots very prone to misinterpretation
-- See here for more [Kieran Healy Blog](https://kieranhealy.org/blog/archives/2016/01/16/two-y-axes/)
 
 
 ## How to Visualize Distributions
@@ -97,10 +75,9 @@ nyc_bnb |>
 - `geom_histogram`
 
 ```{r}
-
 #| echo: true
 #| eval: false
-#| 
+#| code-line-numbers: "3"
 nyc_bnb |> 
   ggplot(aes(price_per_accommodates)) +
   geom_histogram() +
@@ -167,6 +144,66 @@ diamonds |>
        y="Count")
 ```
 
+
+## Algorithmic Bandwidth
+
+
+| Method | Code | Description |
+|--------|------|-----------|
+| **Silverman's Rule** | `bw = "nrd0"` | Assume Gaussian |
+| **Scott's Rule** | `bw = "nrd"` | Assume Gaussian |
+| **Cross-Validation** | `bw = "ucv"` | CV error |
+| **Sheather-Jones** | `bw = "sj"` | RMSE based on curvature |
+
+## Comparing Algos
+
+```{r}
+#| fig-width: 12
+#| fig-asp: 0.67
+
+library(patchwork)
+
+p1 <- diamonds |> 
+  ggplot(aes(price)) +
+  geom_density(bw = "nrd0", fill = "grey50", alpha = 0.7) +
+  scale_x_continuous(limits = c(0, 20000)) +
+  theme_minimal(base_size = 16) +
+  labs(title = "Silverman's Rule (nrd0)",
+       subtitle = "Default method",
+       x = "Price", y = "Density")
+
+p2 <- diamonds |> 
+  ggplot(aes(price)) +
+  geom_density(bw = "nrd", fill = "grey50", alpha = 0.7) +
+  scale_x_continuous(limits = c(0, 20000)) +
+  theme_minimal(base_size = 16) +
+  labs(title = "Scott's Rule (nrd)",
+       subtitle = "Slightly wider",
+       x = "Price", y = "Density")
+
+p3 <- diamonds |> 
+  ggplot(aes(price)) +
+  geom_density(bw = "ucv", fill = "grey50", alpha = 0.7) +
+  scale_x_continuous(limits = c(0, 20000)) +
+  theme_minimal(base_size = 16) +
+  labs(title = "Cross-Validation (ucv)",
+       subtitle = "Data-driven",
+       x = "Price", y = "Density")
+
+p4 <- diamonds |> 
+  ggplot(aes(price)) +
+  geom_density(bw = "sj", fill = "grey50", alpha = 0.7) +
+  scale_x_continuous(limits = c(0, 20000)) +
+  theme_minimal(base_size = 16) +
+  labs(title = "Sheather-Jones (sj)",
+       subtitle = "Sophisticated method",
+       x = "Price", y = "Density")
+
+(p1 | p2) / (p3 | p4)
+
+```
+
+
 ## Number of Bins
 
 - Can also control number of bins
@@ -191,7 +228,7 @@ diamonds |>
 ```{r}
 #| echo: true
 #| eval: false
-#| source-line-numbers: "3"
+#| code-line-numbers: "3"
 diamonds |> 
   ggplot(aes(carat)) +
   geom_histogram(bins =20, fill = "grey50",color = "grey50") +
@@ -246,6 +283,7 @@ diamonds |>
 ```{r}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "3"
 
 diamonds |> 
   ggplot(aes(carat)) +
@@ -284,6 +322,7 @@ diamonds |>
 ```{r}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "6"
 diamonds |> 
   ggplot(aes(carat)) +
   geom_histogram(bins =5, 
@@ -342,6 +381,7 @@ diamonds |>
 ```{r}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "3"
 
 diamonds |> 
   ggplot(aes(carat)) +
@@ -396,6 +436,7 @@ data |> ggplot(aes(x)) +
 ```{r}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "4-5"
 
 data = tibble(x = rnorm(100))
 
@@ -477,6 +518,7 @@ data |> ggplot(aes(x)) +
 ```{r}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "4"
 data = tibble(x = rnorm(100))
 
 data |> ggplot(aes(x)) +
@@ -530,6 +572,7 @@ nyc_bnb |> ggplot(aes(revenue)) +
 ```{r}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "4"
 nyc_bnb |> ggplot(aes(revenue)) +
   geom_density(color = palette_OkabeIto[1],
                fill = darken(palette_OkabeIto[1],-0.3),
@@ -682,6 +725,7 @@ UScereal |> ggplot(aes(sample=fibre)) +
 ```{r }
 #| echo: true
 #| eval: false
+#| code-line-numbers: "4,10-11"
 
 
 
@@ -737,6 +781,7 @@ nyc_bnb |> filter(neighborhood %in% nb_vec) |>
 ```{r}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "5"
 
 nb_vec = c("Williamsburg","West Village","Park Slope","Upper East Side")
 nyc_bnb |> filter(neighborhood %in% nb_vec) |> 
@@ -775,6 +820,7 @@ nyc_bnb |> filter(neighborhood %in% nb_vec) |>
 ```{r}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "3-4"
 nb_vec = c("Williamsburg","West Village","Park Slope","Upper East Side")
 nyc_bnb |> filter(neighborhood %in% nb_vec) |> 
   ggplot(aes(x=revenue,group = neighborhood,fill = neighborhood,color=neighborhood)) +
@@ -811,6 +857,143 @@ penguins |> filter(sex == "male") |>
 ```
 
 
+## Multiple and Non-Overlapping
+
+- Several Flashy methods
+  - Boxplots ('geom_boxplot')
+  - Violin Plots ('geom_violin')
+  - Strip Plots ('geom_jitter')
+  - Sina Plots  ('geom_sina')
+  - Ridge Plots ('geom_density_ridges')
+
+
+## Boxplots
+
+```{r}
+nb_vec = c("Williamsburg","West Village","Park Slope","Upper East Side","Bedford-Stuyvesant","Astoria")
+nyc_bnb |> filter(neighborhood %in% nb_vec, revenue < 1000) |>
+  ggplot(aes(x=revenue,y = neighborhood)) +
+  coord_cartesian(xlim = c(0,500)) +
+  geom_boxplot() +
+  theme_minimal(base_size=16) +
+  labs(title="Revenue per Night in 6 NYC Neighborhoods",
+       x="Revenue per Night ($)",y="Neighborhood")
+```
+
+## Boxplots
+
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "5"
+nb_vec = c("Williamsburg","West Village","Park Slope","Upper East Side","Bedford-Stuyvesant","Astoria")
+nyc_bnb |> filter(neighborhood %in% nb_vec, revenue < 1000) |>
+  ggplot(aes(x=revenue,y = neighborhood)) +
+  coord_cartesian(xlim = c(0,500)) +
+  geom_boxplot() +
+  theme_minimal(base_size=16) +
+  labs(title="Revenue per Night in 6 NYC Neighborhoods",
+       x="Revenue per Night ($)",y="Neighborhood")
+```
+
+
+
+## Violin Plots
+
+```{r}
+nb_vec = c("Williamsburg","West Village","Park Slope","Upper East Side","Bedford-Stuyvesant","Astoria")
+nyc_bnb |> filter(neighborhood %in% nb_vec, revenue < 1000) |>
+  ggplot(aes(x=revenue,y = neighborhood)) +
+  coord_cartesian(xlim = c(0,500)) +
+  geom_violin(fill = "grey80") +
+  theme_minimal(base_size=16) +
+  labs(title="Revenue per Night in 6 NYC Neighborhoods",
+       x="Revenue per Night ($)",y="Neighborhood")
+```
+
+## Violin Plots
+
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "5"
+nb_vec = c("Williamsburg","West Village","Park Slope","Upper East Side","Bedford-Stuyvesant","Astoria")
+nyc_bnb |> filter(neighborhood %in% nb_vec, revenue < 1000) |>
+  ggplot(aes(x=revenue,y = neighborhood)) +
+  coord_cartesian(xlim = c(0,500)) +
+  geom_violin(fill = "grey80") +
+  theme_minimal(base_size=16) +
+  labs(title="Revenue per Night in 6 NYC Neighborhoods",
+       x="Revenue per Night ($)",y="Neighborhood")
+```
+
+
+
+## Strip Charts
+
+```{r}
+nb_vec = c("Williamsburg","West Village","Park Slope","Upper East Side","Bedford-Stuyvesant","Astoria")
+nyc_bnb |> filter(neighborhood %in% nb_vec, revenue < 1000) |>
+  ggplot(aes(x=revenue,y = neighborhood)) +
+  coord_cartesian(xlim = c(0,500)) +
+  geom_jitter(height = 0.3, width = 0, size = 0.5, alpha = 0.2) +
+  theme_minimal(base_size=16) +
+  labs(title="Revenue per Night in 6 NYC Neighborhoods",
+       x="Revenue per Night ($)",y="Neighborhood")
+```
+
+## Strip Charts
+
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "5"
+nb_vec = c("Williamsburg","West Village","Park Slope","Upper East Side","Bedford-Stuyvesant","Astoria")
+nyc_bnb |> filter(neighborhood %in% nb_vec, revenue < 1000) |>
+  ggplot(aes(x=revenue,y = neighborhood)) +
+  coord_cartesian(xlim = c(0,500)) +
+  geom_jitter(height = 0.3, width = 0, size = 0.5, alpha = 0.2) +
+  theme_minimal(base_size=16) +
+  labs(title="Revenue per Night in 6 NYC Neighborhoods",
+       x="Revenue per Night ($)",y="Neighborhood")
+```
+
+
+
+## Sina Plots
+
+```{r}
+library(ggforce)
+nb_vec = c("Williamsburg","West Village","Park Slope","Upper East Side","Bedford-Stuyvesant","Astoria")
+nyc_bnb |> filter(neighborhood %in% nb_vec, revenue < 1000) |>
+  ggplot(aes(x=revenue,y = neighborhood)) +
+  coord_cartesian(xlim = c(0,500)) +
+  geom_violin(color = NA, fill = "grey90") +
+  geom_sina(size = 0.5, alpha = 0.3) +
+  theme_minimal(base_size=16) +
+  labs(title="Revenue per Night in 6 NYC Neighborhoods",
+       x="Revenue per Night ($)",y="Neighborhood")
+```
+
+## Sina Plots
+
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "6-7"
+library(ggforce)
+nb_vec = c("Williamsburg","West Village","Park Slope","Upper East Side","Bedford-Stuyvesant","Astoria")
+nyc_bnb |> filter(neighborhood %in% nb_vec, revenue < 1000) |>
+  ggplot(aes(x=revenue,y = neighborhood)) +
+  coord_cartesian(xlim = c(0,500)) +
+  geom_violin(color = NA, fill = "grey90") +
+  geom_sina(size = 0.5, alpha = 0.3) +
+  theme_minimal(base_size=16) +
+  labs(title="Revenue per Night in 6 NYC Neighborhoods",
+       x="Revenue per Night ($)",y="Neighborhood")
+```
+
+
 
 ## Ridge Plots
 
@@ -835,6 +1018,7 @@ nyc_bnb |> filter(neighborhood %in% nb_vec) |>
 ```{r}
 #| echo: true
 #| eval: false
+#| code-line-numbers: "6"
 library(ggridges)
 nb_vec = c("Williamsburg","West Village","Park Slope","Upper East Side","Bedford-Stuyvesant","Astoria")
 nyc_bnb |> filter(neighborhood %in% nb_vec) |> 
@@ -846,6 +1030,41 @@ nyc_bnb |> filter(neighborhood %in% nb_vec) |>
        x="Reviews Per Month",y="Neighborhood")
 
 
+```
+
+
+
+## Ridge Plots on a `log` Scale
+
+```{r}
+library(ggridges)
+nb_vec = c("Williamsburg","West Village","Park Slope","Upper East Side","Bedford-Stuyvesant","Astoria")
+nyc_bnb |> filter(neighborhood %in% nb_vec, revenue > 0, revenue < 1000) |>
+  ggplot(aes(x=revenue,y = neighborhood)) +
+  scale_x_log10(breaks = c(10, 100, 1000), labels = c("$10", "$100", "$1,000")) +
+  coord_cartesian(xlim = c(2, 1000)) +
+  geom_density_ridges(rel_min_height=0.05,alpha=0.4) +
+  theme_minimal(base_size=16) +
+  labs(title="Revenue per Night in 6 NYC Neighborhoods",
+       x="Revenue per Night ($)",y="Neighborhood")
+```
+
+## Ridge Plots on a `log` Scale
+
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "3,5-6"
+library(ggridges)
+nb_vec = c("Williamsburg","West Village","Park Slope","Upper East Side","Bedford-Stuyvesant","Astoria")
+nyc_bnb |> filter(neighborhood %in% nb_vec, revenue > 0, revenue < 1000) |>
+  ggplot(aes(x=revenue,y = neighborhood)) +
+  scale_x_log10(breaks = c(10, 100, 1000), labels = c("$10", "$100", "$1,000")) +
+  coord_cartesian(xlim = c(2, 1000)) +
+  geom_density_ridges(rel_min_height=0.05,alpha=0.4) +
+  theme_minimal(base_size=16) +
+  labs(title="Revenue per Night in 6 NYC Neighborhoods",
+       x="Revenue per Night ($)",y="Neighborhood")
 ```
 
 

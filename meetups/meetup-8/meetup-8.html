@@ -473,6 +473,152 @@ George I. Hagstrom
 </ul>
 
 <img data-src="meetup-8_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<section id="number-of-bins" class="slide level2">
+<h2>Number of Bins</h2>
+<ul>
+<li>Can also control number of bins</li>
+</ul>
+
+<img data-src="meetup-8_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
+<section id="number-of-bins-1" class="slide level2">
+<h2>Number of Bins</h2>
+<ul>
+<li>Can also control number of bins</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>diamonds <span class="sc">|&gt;</span> </span>
+<span id="cb2-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(carat)) <span class="sc">+</span></span>
+<span id="cb2-3"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span><span class="dv">20</span>, <span class="at">fill =</span> <span class="st">"grey50"</span>,<span class="at">color =</span> <span class="st">"grey50"</span>) <span class="sc">+</span></span>
+<span id="cb2-4"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
+<span id="cb2-5"><a></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">3</span>)) <span class="sc">+</span></span>
+<span id="cb2-6"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Histogram of Diamond Weights"</span>,</span>
+<span id="cb2-7"><a></a>       <span class="at">subtitle=</span> <span class="st">"10 bins"</span>,</span>
+<span id="cb2-8"><a></a>       <span class="at">x=</span><span class="st">"Carat"</span>,</span>
+<span id="cb2-9"><a></a>       <span class="at">y=</span><span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="center" class="slide level2">
+<h2>center</h2>
+<ul>
+<li>Can control centering of bins</li>
+</ul>
+
+<img data-src="meetup-8_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
+<section id="center-1" class="slide level2">
+<h2>center</h2>
+<ul>
+<li>Can control centering of bins</li>
+</ul>
+
+<img data-src="meetup-8_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
+<section id="center-2" class="slide level2">
+<h2>center</h2>
+<ul>
+<li>Can control centering of bins</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>diamonds <span class="sc">|&gt;</span> </span>
+<span id="cb3-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(carat)) <span class="sc">+</span></span>
+<span id="cb3-3"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span><span class="dv">5</span>, <span class="at">fill =</span> <span class="st">"grey50"</span>,<span class="at">color =</span> <span class="st">"grey50"</span>,<span class="at">center =</span> <span class="fl">1.5</span>) <span class="sc">+</span></span>
+<span id="cb3-4"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
+<span id="cb3-5"><a></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">4</span>)) <span class="sc">+</span></span>
+<span id="cb3-6"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Histogram of Diamond Weights"</span>,</span>
+<span id="cb3-7"><a></a>       <span class="at">subtitle=</span> <span class="st">"This is has a bin centered on 1.5"</span>,</span>
+<span id="cb3-8"><a></a>       <span class="at">x=</span><span class="st">"Carat"</span>,</span>
+<span id="cb3-9"><a></a>       <span class="at">y=</span><span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="boundary" class="slide level2">
+<h2>boundary</h2>
+<ul>
+<li><code>boundary</code> instead of <code>center</code> sets the edge</li>
+</ul>
+
+<img data-src="meetup-8_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
+<section id="boundary-1" class="slide level2">
+<h2>boundary</h2>
+<ul>
+<li><code>boundary</code> instead of <code>center</code> sets the edge</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>diamonds <span class="sc">|&gt;</span> </span>
+<span id="cb4-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(carat)) <span class="sc">+</span></span>
+<span id="cb4-3"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span><span class="dv">5</span>, </span>
+<span id="cb4-4"><a></a>                 <span class="at">fill =</span> <span class="st">"grey50"</span>,</span>
+<span id="cb4-5"><a></a>                 <span class="at">color =</span> <span class="st">"grey50"</span>, </span>
+<span id="cb4-6"><a></a>                 <span class="at">boundary =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb4-7"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
+<span id="cb4-8"><a></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">4</span>)) <span class="sc">+</span></span>
+<span id="cb4-9"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Histogram of Diamond Weights"</span>,</span>
+<span id="cb4-10"><a></a>       <span class="at">subtitle=</span> <span class="st">"Boundary of 1 forces a bin to start there"</span>,</span>
+<span id="cb4-11"><a></a>       <span class="at">x=</span><span class="st">"Carat"</span>,</span>
+<span id="cb4-12"><a></a>       <span class="at">y=</span><span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="geom_freqpoly" class="slide level2">
+<h2>geom_freqpoly</h2>
+<ul>
+<li>Histogram with lines</li>
+</ul>
+
+<img data-src="meetup-8_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section>
+<section id="geom_freqpoly-1" class="slide level2">
+<h2>geom_freqpoly</h2>
+<ul>
+<li>Histogram with lines</li>
+</ul>
+
+<img data-src="meetup-8_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section>
+<section id="geom_freqpoly-2" class="slide level2">
+<h2>geom_freqpoly</h2>
+<ul>
+<li>Histogram with lines</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>diamonds <span class="sc">|&gt;</span> </span>
+<span id="cb5-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(carat)) <span class="sc">+</span></span>
+<span id="cb5-3"><a></a>  <span class="fu">geom_freqpoly</span>(<span class="at">binwidth =</span><span class="fl">0.03</span>, <span class="at">fill =</span> <span class="st">" "</span>,<span class="at">color =</span> <span class="st">"#CC79A7"</span>) <span class="sc">+</span></span>
+<span id="cb5-4"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
+<span id="cb5-5"><a></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">3</span>)) <span class="sc">+</span></span>
+<span id="cb5-6"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Histogram of Diamond Weights"</span>,</span>
+<span id="cb5-7"><a></a>       <span class="at">subtitle=</span> <span class="st">""</span>,</span>
+<span id="cb5-8"><a></a>       <span class="at">x=</span><span class="st">"Carat"</span>,</span>
+<span id="cb5-9"><a></a>       <span class="at">y=</span><span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="density" class="slide level2">
+<h2>Density</h2>
+<ul>
+<li>Density estimates a smooth curve from the points</li>
+<li>Uses <code>kernel density estimation</code> or <code>kde</code> <span class="math display">\[
+p(x|{x_i}) = \frac{1}{nb_W}\sum_{i=1}^n K\left(\frac{x-x_i}{b_W}\right)
+\]</span></li>
+<li><span class="math inline">\(K\)</span> is a standard probability distribution</li>
+<li><span class="math inline">\(b_W\)</span> is called the bandwidth</li>
+</ul>
+</section>
+<section id="density-1" class="slide level2">
+<h2>Density</h2>
+<ul>
+<li>Two different bandwidths</li>
+</ul>
+
+<img data-src="meetup-8_files/figure-revealjs/unnamed-chunk-17-1.png" width="576" class="r-stretch"></section>
+<section id="density-2" class="slide level2">
+<h2>Density</h2>
+<ul>
+<li>Two different bandwidths</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6" data-code-line-numbers="4-5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>data <span class="ot">=</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">rnorm</span>(<span class="dv">100</span>))</span>
+<span id="cb6-2"><a></a></span>
+<span id="cb6-3"><a></a>data <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span></span>
+<span id="cb6-4"><a></a>  <span class="fu">geom_density</span>(<span class="at">bw =</span> <span class="fl">0.01</span>,<span class="at">color=</span><span class="st">"#E69F00"</span>) <span class="sc">+</span></span>
+<span id="cb6-5"><a></a>    <span class="fu">geom_density</span>(<span class="at">bw =</span> <span class="fl">0.1</span>,<span class="at">color=</span><span class="st">"#56B4E9"</span>) <span class="sc">+</span></span>
+<span id="cb6-6"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size=</span><span class="dv">16</span>) <span class="sc">+</span></span>
+<span id="cb6-7"><a></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Demonstrating different bandwidth"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
 <section id="algorithmic-bandwidth" class="slide level2">
 <h2>Algorithmic Bandwidth</h2>
 <table class="caption-top">
@@ -510,153 +656,7 @@ George I. Hagstrom
 <section id="comparing-algos" class="slide level2">
 <h2>Comparing Algos</h2>
 
-<img data-src="meetup-8_files/figure-revealjs/unnamed-chunk-7-1.png" width="1152" class="r-stretch"></section>
-<section id="number-of-bins" class="slide level2">
-<h2>Number of Bins</h2>
-<ul>
-<li>Can also control number of bins</li>
-</ul>
-
-<img data-src="meetup-8_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
-<section id="number-of-bins-1" class="slide level2">
-<h2>Number of Bins</h2>
-<ul>
-<li>Can also control number of bins</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>diamonds <span class="sc">|&gt;</span> </span>
-<span id="cb2-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(carat)) <span class="sc">+</span></span>
-<span id="cb2-3"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span><span class="dv">20</span>, <span class="at">fill =</span> <span class="st">"grey50"</span>,<span class="at">color =</span> <span class="st">"grey50"</span>) <span class="sc">+</span></span>
-<span id="cb2-4"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
-<span id="cb2-5"><a></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">3</span>)) <span class="sc">+</span></span>
-<span id="cb2-6"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Histogram of Diamond Weights"</span>,</span>
-<span id="cb2-7"><a></a>       <span class="at">subtitle=</span> <span class="st">"10 bins"</span>,</span>
-<span id="cb2-8"><a></a>       <span class="at">x=</span><span class="st">"Carat"</span>,</span>
-<span id="cb2-9"><a></a>       <span class="at">y=</span><span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="center" class="slide level2">
-<h2>center</h2>
-<ul>
-<li>Can control centering of bins</li>
-</ul>
-
-<img data-src="meetup-8_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
-<section id="center-1" class="slide level2">
-<h2>center</h2>
-<ul>
-<li>Can control centering of bins</li>
-</ul>
-
-<img data-src="meetup-8_files/figure-revealjs/unnamed-chunk-11-1.png" width="960" class="r-stretch"></section>
-<section id="center-2" class="slide level2">
-<h2>center</h2>
-<ul>
-<li>Can control centering of bins</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>diamonds <span class="sc">|&gt;</span> </span>
-<span id="cb3-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(carat)) <span class="sc">+</span></span>
-<span id="cb3-3"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span><span class="dv">5</span>, <span class="at">fill =</span> <span class="st">"grey50"</span>,<span class="at">color =</span> <span class="st">"grey50"</span>,<span class="at">center =</span> <span class="fl">1.5</span>) <span class="sc">+</span></span>
-<span id="cb3-4"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
-<span id="cb3-5"><a></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">4</span>)) <span class="sc">+</span></span>
-<span id="cb3-6"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Histogram of Diamond Weights"</span>,</span>
-<span id="cb3-7"><a></a>       <span class="at">subtitle=</span> <span class="st">"This is has a bin centered on 1.5"</span>,</span>
-<span id="cb3-8"><a></a>       <span class="at">x=</span><span class="st">"Carat"</span>,</span>
-<span id="cb3-9"><a></a>       <span class="at">y=</span><span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="boundary" class="slide level2">
-<h2>boundary</h2>
-<ul>
-<li><code>boundary</code> instead of <code>center</code> sets the edge</li>
-</ul>
-
-<img data-src="meetup-8_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section>
-<section id="boundary-1" class="slide level2">
-<h2>boundary</h2>
-<ul>
-<li><code>boundary</code> instead of <code>center</code> sets the edge</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>diamonds <span class="sc">|&gt;</span> </span>
-<span id="cb4-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(carat)) <span class="sc">+</span></span>
-<span id="cb4-3"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">bins =</span><span class="dv">5</span>, </span>
-<span id="cb4-4"><a></a>                 <span class="at">fill =</span> <span class="st">"grey50"</span>,</span>
-<span id="cb4-5"><a></a>                 <span class="at">color =</span> <span class="st">"grey50"</span>, </span>
-<span id="cb4-6"><a></a>                 <span class="at">boundary =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
-<span id="cb4-7"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
-<span id="cb4-8"><a></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">4</span>)) <span class="sc">+</span></span>
-<span id="cb4-9"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Histogram of Diamond Weights"</span>,</span>
-<span id="cb4-10"><a></a>       <span class="at">subtitle=</span> <span class="st">"Boundary of 1 forces a bin to start there"</span>,</span>
-<span id="cb4-11"><a></a>       <span class="at">x=</span><span class="st">"Carat"</span>,</span>
-<span id="cb4-12"><a></a>       <span class="at">y=</span><span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="geom_freqpoly" class="slide level2">
-<h2>geom_freqpoly</h2>
-<ul>
-<li>Histogram with lines</li>
-</ul>
-
-<img data-src="meetup-8_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section>
-<section id="geom_freqpoly-1" class="slide level2">
-<h2>geom_freqpoly</h2>
-<ul>
-<li>Histogram with lines</li>
-</ul>
-
-<img data-src="meetup-8_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section>
-<section id="geom_freqpoly-2" class="slide level2">
-<h2>geom_freqpoly</h2>
-<ul>
-<li>Histogram with lines</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>diamonds <span class="sc">|&gt;</span> </span>
-<span id="cb5-2"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(carat)) <span class="sc">+</span></span>
-<span id="cb5-3"><a></a>  <span class="fu">geom_freqpoly</span>(<span class="at">binwidth =</span><span class="fl">0.03</span>, <span class="at">fill =</span> <span class="st">" "</span>,<span class="at">color =</span> <span class="st">"#CC79A7"</span>) <span class="sc">+</span></span>
-<span id="cb5-4"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
-<span id="cb5-5"><a></a>  <span class="fu">scale_x_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">3</span>)) <span class="sc">+</span></span>
-<span id="cb5-6"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Histogram of Diamond Weights"</span>,</span>
-<span id="cb5-7"><a></a>       <span class="at">subtitle=</span> <span class="st">""</span>,</span>
-<span id="cb5-8"><a></a>       <span class="at">x=</span><span class="st">"Carat"</span>,</span>
-<span id="cb5-9"><a></a>       <span class="at">y=</span><span class="st">"Count"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="density" class="slide level2">
-<h2>Density</h2>
-<ul>
-<li>Density estimates a smooth curve from the points</li>
-<li>Uses <code>kernel density estimation</code> or <code>kde</code> <span class="math display">\[
-p(x|{x_i}) = \frac{1}{nb_W}\sum_{i=1}^n K\left(\frac{x-x_i}{b_W}\right)
-\]</span></li>
-<li><span class="math inline">\(K\)</span> is a standard probability distribution</li>
-<li><span class="math inline">\(b_W\)</span> is called the bandwidth</li>
-</ul>
-</section>
-<section id="density-1" class="slide level2">
-<h2>Density</h2>
-<ul>
-<li>Two different bandwidths</li>
-</ul>
-
-<img data-src="meetup-8_files/figure-revealjs/unnamed-chunk-18-1.png" width="576" class="r-stretch"></section>
-<section id="density-2" class="slide level2">
-<h2>Density</h2>
-<ul>
-<li>Two different bandwidths</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6" data-code-line-numbers="4-5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>data <span class="ot">=</span> <span class="fu">tibble</span>(<span class="at">x =</span> <span class="fu">rnorm</span>(<span class="dv">100</span>))</span>
-<span id="cb6-2"><a></a></span>
-<span id="cb6-3"><a></a>data <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(x)) <span class="sc">+</span></span>
-<span id="cb6-4"><a></a>  <span class="fu">geom_density</span>(<span class="at">bw =</span> <span class="fl">0.01</span>,<span class="at">color=</span><span class="st">"#E69F00"</span>) <span class="sc">+</span></span>
-<span id="cb6-5"><a></a>    <span class="fu">geom_density</span>(<span class="at">bw =</span> <span class="fl">0.1</span>,<span class="at">color=</span><span class="st">"#56B4E9"</span>) <span class="sc">+</span></span>
-<span id="cb6-6"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size=</span><span class="dv">16</span>) <span class="sc">+</span></span>
-<span id="cb6-7"><a></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Demonstrating different bandwidth"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
+<img data-src="meetup-8_files/figure-revealjs/unnamed-chunk-19-1.png" width="1152" class="r-stretch"></section>
 <section id="kernels" class="slide level2">
 <h2>Kernels</h2>
 <ul>

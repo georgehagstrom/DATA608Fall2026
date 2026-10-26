@@ -2591,7 +2591,7 @@
     "href": "course/schedule.html#meetup-link",
     "title": "DATA 608 Fall 2026",
     "section": "Meetup Link",
-    "text": "Meetup Link\nClick Here to Join the Meetups on Zoom\nMeetups are Mondays at 8:00PM Eastern. We meet every Monday of the semester except the Monday after Thanksgiving.\n\nCourse Schedule\n\n\nDate\nModule\nSlides\nVideo\nMain Deliverables\n\n\n\n\nAug 31\nDeveloping a Critical Eye\nMeetup 1 Slides\nMeetup 1 Video\nStory 1 assigned\n\n\nSep 7\nThe Data Visualization Catalogue\nMeetup 2 Slides\nMeetup 2 Video\nStory 1 due Sun Sep 13\n\n\nSep 14\nVisualization Quality Features\nMeetup 3 Slides\nMeetup 3 Video\nStory 2 assigned\n\n\nSep 21\nAssociations and Time Series\nMeetup 4 Slides\nMeetup 4 Video\nStory 2 due Sun Sep 27\n\n\nSep 28\nVisualizing Geospatial Data\nMeetup 5 Slides\nMeetup 5 Video\nStory 3 assigned\n\n\nOct 5\nStorytelling\nMeetup 6 Slides\nMeetup 6 Video\nStory 3 due Sun Oct 11\n\n\nOct 12\nEffective Use of Color and Fonts\nMeetup 7 Slides\nMeetup 7 Video\nStory 4 assigned\n\n\nOct 19\nDistributions and Histograms\nMeetup 8 Slides\nMeetup 8 Video\nStory 4 due Sun Oct 25\n\n\nOct 26\nModels and Uncertainty\n\n\nStory 5 assigned\n\n\nNov 2\nDimension Reduction and PCA\n\n\nStory 5 due Sun Nov 8\n\n\nNov 9\nClustering\n\n\nStory 6 assigned\n\n\nNov 16\nHierarchical Clustering\n\n\nStory 6 due Sun Nov 22\n\n\nNov 23\nIntroduction to Shiny Apps\n\n\nStory 7 assigned\n\n\nNov 30\nNo Meetup — Thanksgiving\n\n\n\n\n\nDec 7\nInteractive Visualizations\nSlides\n\nStory 7 due Sun Dec 13\n\n\nDec 14\nWrap-Up\n\n\n\n\n\n\n\n\n\nWeek\nVideo Link\nAnnouncement Link\n\n\n\n\n2\nDot Plot Vignette\nDetails\n\n\n\nSlides and recordings are posted here after each meetup.",
+    "text": "Meetup Link\nClick Here to Join the Meetups on Zoom\nMeetups are Mondays at 8:00PM Eastern. We meet every Monday of the semester except the Monday after Thanksgiving.\n\nCourse Schedule\n\n\nDate\nModule\nSlides\nVideo\nMain Deliverables\n\n\n\n\nAug 31\nDeveloping a Critical Eye\nMeetup 1 Slides\nMeetup 1 Video\nStory 1 assigned\n\n\nSep 7\nThe Data Visualization Catalogue\nMeetup 2 Slides\nMeetup 2 Video\nStory 1 due Sun Sep 13\n\n\nSep 14\nVisualization Quality Features\nMeetup 3 Slides\nMeetup 3 Video\nStory 2 assigned\n\n\nSep 21\nAssociations and Time Series\nMeetup 4 Slides\nMeetup 4 Video\nStory 2 due Sun Sep 27\n\n\nSep 28\nVisualizing Geospatial Data\nMeetup 5 Slides\nMeetup 5 Video\nStory 3 assigned\n\n\nOct 5\nStorytelling\nMeetup 6 Slides\nMeetup 6 Video\nStory 3 due Sun Oct 11\n\n\nOct 12\nEffective Use of Color and Fonts\nMeetup 7 Slides\nMeetup 7 Video\nStory 4 assigned\n\n\nOct 19\nDistributions and Histograms\nMeetup 8 Slides\nMeetup 8 Video\nStory 4 due Sun Oct 25\n\n\nOct 26\nModels and Uncertainty\nMeetup 9 Slides\n\nStory 5 assigned\n\n\nNov 2\nDimension Reduction and PCA\n\n\nStory 5 due Sun Nov 8\n\n\nNov 9\nClustering\n\n\nStory 6 assigned\n\n\nNov 16\nHierarchical Clustering\n\n\nStory 6 due Sun Nov 22\n\n\nNov 23\nIntroduction to Shiny Apps\n\n\nStory 7 assigned\n\n\nNov 30\nNo Meetup — Thanksgiving\n\n\n\n\n\nDec 7\nInteractive Visualizations\nSlides\n\nStory 7 due Sun Dec 13\n\n\nDec 14\nWrap-Up\n\n\n\n\n\n\n\n\n\nWeek\nVideo Link\nAnnouncement Link\n\n\n\n\n2\nDot Plot Vignette\nDetails\n\n\n\nSlides and recordings are posted here after each meetup.",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -4016,11 +4016,32 @@
     "text": "Thanks!"
   },
   {
+    "objectID": "meetups/meetup-9/meetup-9.html#tuesday",
+    "href": "meetups/meetup-9/meetup-9.html#tuesday",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Tuesday!",
+    "text": "Tuesday!\n\nhttps://us02web.zoom.us/meeting/register/RQW4PGPcT0ixadrHwD0-aQ#/registration"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#november-19th",
+    "href": "meetups/meetup-9/meetup-9.html#november-19th",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "November 19th!",
+    "text": "November 19th!"
+  },
+  {
     "objectID": "meetups/meetup-9/meetup-9.html#week-summary",
     "href": "meetups/meetup-9/meetup-9.html#week-summary",
     "title": "DATA 608 Meetup 9: Models and Uncertainty",
     "section": "Week Summary",
     "text": "Week Summary\n\nThis week is about visualizing models and uncertainty\nNext week is about dimensionality reduction techniques\nAssignment: Make a model of house sale prices and tell a story about it\nReading: Healy Visualization, Fundamentals of Data Visualization 16\nBonus Readings: Marginal Effects Book: 2-3, 15"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#lab-4-review-narrative-structure",
+    "href": "meetups/meetup-9/meetup-9.html#lab-4-review-narrative-structure",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Lab 4 Review: Narrative Structure:",
+    "text": "Lab 4 Review: Narrative Structure:\n\nFinding a good conclusion\nMake sure it is there in the first place"
   },
   {
     "objectID": "meetups/meetup-9/meetup-9.html#how-to-talk-about-models",
@@ -4034,7 +4055,7 @@
     "href": "meetups/meetup-9/meetup-9.html#model-coefficients-hard-to-interpret",
     "title": "DATA 608 Meetup 9: Models and Uncertainty",
     "section": "Model Coefficients Hard to Interpret",
-    "text": "Model Coefficients Hard to Interpret\n\nThornton dataset: How much does a monetary incentive impact the decision to get an HIV test?\n\n\ndat = get_dataset(\"thornton\")\nmod_thornton = glm(outcome ~ incentive * (agecat + distance), \n    data = dat, family = binomial)\ndat |&gt; head()\n\n# A data frame: 6 × 8\n  village outcome distance amount incentive   age hiv2004 agecat\n*   &lt;int&gt;   &lt;int&gt;    &lt;dbl&gt;  &lt;dbl&gt;     &lt;int&gt; &lt;int&gt;   &lt;int&gt; &lt;fct&gt; \n1      43       1    0.549      0         0    14       0 &lt;18   \n2     117       0    0.840      0         0    14       0 &lt;18   \n3       2       0    3.34       0         0    15       0 &lt;18   \n4       6       0    2.32       0         0    15       0 &lt;18   \n5      11       0    1.39       0         0    15       0 &lt;18   \n6      14       0    3.87       0         0    15       0 &lt;18"
+    "text": "Model Coefficients Hard to Interpret\n\nThornton dataset: How much does a monetary incentive impact the decision to get an HIV test?\n\n\ndat = get_dataset(\"thornton\")\nmod_thornton = glm(outcome ~ incentive * (agecat + distance), \n    data = dat, family = binomial)\ndat |&gt; head()\n\n  village outcome  distance amount incentive age hiv2004 agecat\n1      43       1 0.5485229      0         0  14       0    &lt;18\n2     117       0 0.8402644      0         0  14       0    &lt;18\n3       2       0 3.3421636      0         0  15       0    &lt;18\n4       6       0 2.3228946      0         0  15       0    &lt;18\n5      11       0 1.3862627      0         0  15       0    &lt;18\n6      14       0 3.8656266      0         0  15       0    &lt;18"
   },
   {
     "objectID": "meetups/meetup-9/meetup-9.html#model-coefficients-hard-to-interpret-1",
@@ -4065,6 +4086,13 @@
     "text": "Predictions\n\nA prediction shows what your model says would happen for units with hypothetical predictor values"
   },
   {
+    "objectID": "meetups/meetup-9/meetup-9.html#predictions-random-forest",
+    "href": "meetups/meetup-9/meetup-9.html#predictions-random-forest",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Predictions: Random Forest",
+    "text": "Predictions: Random Forest\n\nFor ML models there are no “coefficients” to fall back on"
+  },
+  {
     "objectID": "meetups/meetup-9/meetup-9.html#counterfactual-comparisons",
     "href": "meetups/meetup-9/meetup-9.html#counterfactual-comparisons",
     "title": "DATA 608 Meetup 9: Models and Uncertainty",
@@ -4072,11 +4100,25 @@
     "text": "Counterfactual Comparisons"
   },
   {
+    "objectID": "meetups/meetup-9/meetup-9.html#counterfactual-comparisons-1",
+    "href": "meetups/meetup-9/meetup-9.html#counterfactual-comparisons-1",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Counterfactual Comparisons",
+    "text": "Counterfactual Comparisons\n\nRandom Forests"
+  },
+  {
     "objectID": "meetups/meetup-9/meetup-9.html#slopes",
     "href": "meetups/meetup-9/meetup-9.html#slopes",
     "title": "DATA 608 Meetup 9: Models and Uncertainty",
     "section": "Slopes",
     "text": "Slopes"
+  },
+  {
+    "objectID": "meetups/meetup-9/meetup-9.html#slopes-random-forest",
+    "href": "meetups/meetup-9/meetup-9.html#slopes-random-forest",
+    "title": "DATA 608 Meetup 9: Models and Uncertainty",
+    "section": "Slopes: Random Forest",
+    "text": "Slopes: Random Forest\n\nCan use finite differences to do this for a Random Forest"
   },
   {
     "objectID": "meetups/meetup-9/meetup-9.html#look-inside-a-model-object",
@@ -4118,14 +4160,14 @@
     "href": "meetups/meetup-9/meetup-9.html#plotting-coefficients",
     "title": "DATA 608 Meetup 9: Models and Uncertainty",
     "section": "Plotting Coefficients",
-    "text": "Plotting Coefficients\n\ntidy lets us make plots of coordinates\n\n\ntidy_ames = tidy(mod)\ntidy_ames |&gt; ggplot(mapping = aes(x = term,\n                            y = estimate)) +\n  geom_point() +\n  coord_flip() +\n  theme_minimal(base_size=12) +\n  labs(title=\"Poor Display of Coordinates\")"
+    "text": "Plotting Coefficients\n\ntidy lets us make plots of coefficients\n\n\ntidy_ames = tidy(mod)\ntidy_ames |&gt; ggplot(mapping = aes(x = term,\n                            y = estimate)) +\n  geom_point() +\n  coord_flip() +\n  theme_minimal(base_size=12) +\n  labs(title=\"Poor Display of Coefficients\")"
   },
   {
     "objectID": "meetups/meetup-9/meetup-9.html#plotting-coefficients-1",
     "href": "meetups/meetup-9/meetup-9.html#plotting-coefficients-1",
     "title": "DATA 608 Meetup 9: Models and Uncertainty",
     "section": "Plotting Coefficients",
-    "text": "Plotting Coefficients\n\ntidy lets us make plots of coordinates"
+    "text": "Plotting Coefficients\n\ntidy lets us make plots of coefficients"
   },
   {
     "objectID": "meetups/meetup-9/meetup-9.html#select-neighborhood-clean-names",
@@ -4146,7 +4188,7 @@
     "href": "meetups/meetup-9/meetup-9.html#sort-and-add-uncertainty",
     "title": "DATA 608 Meetup 9: Models and Uncertainty",
     "section": "Sort and add Uncertainty",
-    "text": "Sort and add Uncertainty\n\ntidy_ames |&gt; filter(str_detect(term,\"Neighborhood\")) |&gt; \n  mutate(term = str_remove_all(term,\"Neighborhood\")) |&gt; \n  ggplot(mapping = aes(x = reorder(term,estimate),\n                       y = estimate,\n                       ymin = estimate - std.error, \n                       ymax = estimate + std.error)) +\n  geom_pointrange() +\n  coord_flip() +\n  theme_minimal(base_size=12) +\n  labs(title=\"Neighborhood Effect on Housing Price in Ames\", subtitle = \"Error bars show 95% confidence interval\",\n       y = \"Price Effect (USD)\",\n       x = \"Neighborhood\")"
+    "text": "Sort and add Uncertainty\n\ntidy_ames |&gt; filter(str_detect(term,\"Neighborhood\")) |&gt; \n  mutate(term = str_remove_all(term,\"Neighborhood\")) |&gt; \n  ggplot(mapping = aes(x = reorder(term,estimate),\n                       y = estimate,\n                       ymin = estimate - std.error, \n                       ymax = estimate + std.error)) +\n  geom_pointrange() +\n  coord_flip() +\n  theme_minimal(base_size=12) +\n  labs(title=\"Neighborhood Effect on Housing Price in Ames\", subtitle = \"Error bars show ±1 standard error (≈68% confidence interval)\",\n       y = \"Price Effect (USD)\",\n       x = \"Neighborhood\")"
   },
   {
     "objectID": "meetups/meetup-9/meetup-9.html#sort-and-add-uncertainty-1",
@@ -4209,7 +4251,7 @@
     "href": "meetups/meetup-9/meetup-9.html#plotting-predictions",
     "title": "DATA 608 Meetup 9: Models and Uncertainty",
     "section": "Plotting Predictions",
-    "text": "Plotting Predictions\n\nplot_predictions function (also predictions)\nSpecify grid of data on which to predict\nDo this with condition\n\n\nmod = lm(revenue ~ . + host_is_superhost*bedrooms +\n           host_is_superhost*neighborhood +\n           num_amenities*neighborhood + \n           num_amenities*bedrooms  ,\n         data = nyc_bnb_slim)\n\nmod |&gt; plot_predictions(condition = c(\"num_amenities\", \"neighborhood\")) +\n  theme_minimal(base_size = 16) +\n  labs(title = \"Amenities increase revenues\",\n       x=\"Number of Amenities\",\n       y=\"Revenus (USD)\")"
+    "text": "Plotting Predictions\n\nplot_predictions function (also predictions)\nSpecify grid of data on which to predict\nDo this with condition\n\n\nmod = lm(revenue ~ . + host_is_superhost*bedrooms +\n           host_is_superhost*neighborhood +\n           num_amenities*neighborhood + \n           num_amenities*bedrooms  ,\n         data = nyc_bnb_slim)\n\nmod |&gt; plot_predictions(condition = c(\"num_amenities\", \"neighborhood\")) +\n  theme_minimal(base_size = 16) +\n  labs(title = \"Amenities increase revenues\",\n       x=\"Number of Amenities\",\n       y=\"Revenue (USD)\")"
   },
   {
     "objectID": "meetups/meetup-9/meetup-9.html#plotting-predictions-1",
@@ -4223,7 +4265,7 @@
     "href": "meetups/meetup-9/meetup-9.html#changing-the-conditions",
     "title": "DATA 608 Meetup 9: Models and Uncertainty",
     "section": "Changing the Conditions",
-    "text": "Changing the Conditions\n\nCan provide a range of conditions\n\n\nmod |&gt; plot_predictions(condition = \n          list(\"num_amenities\" = 40:60, \n            \"neighborhood\")) +\n  theme_minimal(base_size = 16) +\n  labs(title = \"Do Amenities Increase Revenue?\",\n       subtitle = \"The model predicts a strong relationship between amenities and revenue in Williamsburg and Harlem,\\n but they don't seem to matter in the West Village or Bedford-Stuyvesant\",\n       x=\"Number of Amenities\",\n       y=\"Revenus (USD)\")"
+    "text": "Changing the Conditions\n\nCan provide a range of conditions\n\n\nmod |&gt; plot_predictions(condition = \n          list(\"num_amenities\" = 40:60, \n            \"neighborhood\")) +\n  theme_minimal(base_size = 16) +\n  labs(title = \"Do Amenities Increase Revenue?\",\n       subtitle = \"Revenue rises with amenities in every neighborhood,\\nmost steeply in Harlem and Williamsburg\",\n       x=\"Number of Amenities\",\n       y=\"Revenue (USD)\")"
   },
   {
     "objectID": "meetups/meetup-9/meetup-9.html#changing-the-conditions-1",
@@ -4237,7 +4279,7 @@
     "href": "meetups/meetup-9/meetup-9.html#changing-the-conditions-2",
     "title": "DATA 608 Meetup 9: Models and Uncertainty",
     "section": "Changing the Conditions",
-    "text": "Changing the Conditions\n\nCan split into subplots\n\n\nmod |&gt; plot_predictions(condition = \n          list(\"num_amenities\", \n            \"neighborhood\",\n            \"bedrooms\" = unique)) +\n  theme_minimal(base_size = 16) +\n  labs(title = \"Do Amenities Increase Revenue?\",\n       x=\"Number of Amenities\",\n       y=\"Revenus (USD)\")"
+    "text": "Changing the Conditions\n\nCan split into subplots\n\n\nmod |&gt; plot_predictions(condition = \n          list(\"num_amenities\", \n            \"neighborhood\",\n            \"bedrooms\" = unique)) +\n  theme_minimal(base_size = 16) +\n  labs(title = \"Do Amenities Increase Revenue?\",\n       x=\"Number of Amenities\",\n       y=\"Revenue (USD)\")"
   },
   {
     "objectID": "meetups/meetup-9/meetup-9.html#changing-the-conditions-3",
@@ -4251,7 +4293,7 @@
     "href": "meetups/meetup-9/meetup-9.html#adding-cases",
     "title": "DATA 608 Meetup 9: Models and Uncertainty",
     "section": "Adding Cases",
-    "text": "Adding Cases\n\n“threenum” keyword plots \\(\\mathrm{mean}\\pm\\mathrm{\\sigma}\\)\nOther options include “minmax”, “quartile”, check ?plot_predictions\n\n\nmod |&gt; plot_predictions(condition = \n          list(\"num_amenities\",\n               \"review_scores_rating\" = \"threenum\")) +\n  theme_minimal(base_size = 16) +\n  labs(title = \"Do Amenities Increase Revenue?\",\n       subtitle = \"The model predicts a strong relationship between amenities and revenue in Williamsburg and Harlem,\\n but they don't seem to matter in the West Village or Bedford-Stuyvesant\",\n       x=\"Number of Amenities\",\n       y=\"Revenus (USD)\")"
+    "text": "Adding Cases\n\n“threenum” keyword plots \\(\\mathrm{mean}\\pm\\mathrm{\\sigma}\\)\nOther options include “minmax”, “quartile”, check ?plot_predictions\n\n\nmod |&gt; plot_predictions(condition = \n          list(\"num_amenities\",\n               \"review_scores_rating\" = \"threenum\")) +\n  theme_minimal(base_size = 16) +\n  labs(title = \"Both Amenities and Review Scores Increase Revenue\",\n       x=\"Number of Amenities\",\n       y=\"Revenue (USD)\")"
   },
   {
     "objectID": "meetups/meetup-9/meetup-9.html#adding-cases-1",
@@ -4279,7 +4321,7 @@
     "href": "meetups/meetup-9/meetup-9.html#marginal-predictions",
     "title": "DATA 608 Meetup 9: Models and Uncertainty",
     "section": "Marginal Predictions",
-    "text": "Marginal Predictions\n\nMarginal prediction is averaged over a grouping\nUse by keyword to specify aggregation\n\n\nmod |&gt; plot_predictions(by = c(\"neighborhood\", \"host_response_time\")) +\n  theme_minimal(base_size=16) +\n  labs(title = \"Modeled revenue increases with host response rate\",\n       y = \"Revenue (USD)\",\n       x = \"Neighborhood\")"
+    "text": "Marginal Predictions\n\nMarginal prediction is averaged over a grouping\nUse by keyword to specify aggregation\n\n\nmod |&gt; plot_predictions(by = c(\"neighborhood\", \"host_response_time\")) +\n  theme_minimal(base_size=16) +\n  labs(title = \"Modeled revenue is higher for hosts who respond faster\",\n       y = \"Revenue (USD)\",\n       x = \"Neighborhood\")"
   },
   {
     "objectID": "meetups/meetup-9/meetup-9.html#marginal-predictions-1",
@@ -4300,7 +4342,7 @@
     "href": "meetups/meetup-9/meetup-9.html#thornton-revisited",
     "title": "DATA 608 Meetup 9: Models and Uncertainty",
     "section": "Thornton Revisited",
-    "text": "Thornton Revisited\n\nThornton dataset: How much does a monetary incentive impact the decision to get an HIV test?\n\n\n\n\nCall:\nlm(formula = revenue ~ . + host_is_superhost * bedrooms + host_is_superhost * \n    neighborhood + num_amenities * neighborhood + num_amenities * \n    bedrooms, data = nyc_bnb_slim)\n\nResiduals:\n    Min      1Q  Median      3Q     Max \n-282.29  -50.44   -7.98   40.73  654.75 \n\nCoefficients: (1 not defined because of singularities)\n                                                   Estimate Std. Error t value\n(Intercept)                                      -156.33072  126.44123  -1.236\nneighborhoodBedford-Stuyvesant                    -32.49483   20.36231  -1.596\nneighborhoodWest Village                           86.16582   32.33182   2.665\nneighborhoodHarlem                                -49.46094   22.80865  -2.169\nneighbourhood_groupManhattan                             NA         NA      NA\nbedrooms                                           -4.25002    8.31598  -0.511\nnum_amenities                                      -0.67673    0.51225  -1.321\nreview_scores_rating                              101.90580   29.98804   3.398\nreview_scores_accuracy                            -20.50176   26.14237  -0.784\nreview_scores_cleanliness                          14.11705   15.63285   0.903\nreview_scores_checkin                             -12.03781   19.43860  -0.619\nreview_scores_communication                        -0.27244   24.45593  -0.011\nreview_scores_value                               -26.11923   17.62562  -1.482\nreview_scores_location                             -3.66151   15.54947  -0.235\nhost_has_profile_pic                                8.87632   23.59085   0.376\nhost_is_superhost                                  -7.50775   14.06849  -0.534\nhost_response_timewithin a few hours              -18.89199    6.87368  -2.748\nhost_response_timewithin a day                    -24.08064    9.57480  -2.515\nhost_response_timea few days or more              -56.27695   34.10359  -1.650\nhost_response_rate                                  0.07002    0.35042   0.200\nhost_acceptance_rate                                0.29018    0.17252   1.682\nbedrooms:host_is_superhost                         12.82689    5.69852   2.251\nneighborhoodBedford-Stuyvesant:host_is_superhost   -1.32929   14.14480  -0.094\nneighborhoodWest Village:host_is_superhost         44.61606   21.77459   2.049\nneighborhoodHarlem:host_is_superhost               -2.75697   15.55588  -0.177\nneighborhoodBedford-Stuyvesant:num_amenities       -0.63934    0.49032  -1.304\nneighborhoodWest Village:num_amenities             -0.98698    0.84379  -1.170\nneighborhoodHarlem:num_amenities                    0.42245    0.55395   0.763\nbedrooms:num_amenities                              1.11220    0.19711   5.642\n                                                 Pr(&gt;|t|)    \n(Intercept)                                      0.216584    \nneighborhoodBedford-Stuyvesant                   0.110820    \nneighborhoodWest Village                         0.007813 ** \nneighborhoodHarlem                               0.030338 *  \nneighbourhood_groupManhattan                           NA    \nbedrooms                                         0.609409    \nnum_amenities                                    0.186757    \nreview_scores_rating                             0.000703 ***\nreview_scores_accuracy                           0.433075    \nreview_scores_cleanliness                        0.366708    \nreview_scores_checkin                            0.535868    \nreview_scores_communication                      0.991114    \nreview_scores_value                              0.138663    \nreview_scores_location                           0.813885    \nhost_has_profile_pic                             0.706797    \nhost_is_superhost                                0.593689    \nhost_response_timewithin a few hours             0.006088 ** \nhost_response_timewithin a day                   0.012048 *  \nhost_response_timea few days or more             0.099199 .  \nhost_response_rate                               0.841655    \nhost_acceptance_rate                             0.092862 .  \nbedrooms:host_is_superhost                       0.024592 *  \nneighborhoodBedford-Stuyvesant:host_is_superhost 0.925144    \nneighborhoodWest Village:host_is_superhost       0.040705 *  \nneighborhoodHarlem:host_is_superhost             0.859361    \nneighborhoodBedford-Stuyvesant:num_amenities     0.192532    \nneighborhoodWest Village:num_amenities           0.242378    \nneighborhoodHarlem:num_amenities                 0.445867    \nbedrooms:num_amenities                           2.14e-08 ***\n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 89.22 on 1074 degrees of freedom\nMultiple R-squared:  0.3773,    Adjusted R-squared:  0.3617 \nF-statistic:  24.1 on 27 and 1074 DF,  p-value: &lt; 2.2e-16"
+    "text": "Thornton Revisited\n\nThornton dataset: How much does a monetary incentive impact the decision to get an HIV test?\n\n\n\n             (Intercept)                incentive           agecat18 to 35 \n             -0.48616576               2.05760093               0.07937246 \n               agecat&gt;35                 distance incentive:agecat18 to 35 \n              0.34522236              -0.18439675              -0.05850445 \n     incentive:agecat&gt;35       incentive:distance \n             -0.12468320               0.02304394"
   },
   {
     "objectID": "meetups/meetup-9/meetup-9.html#comparisons",

@@ -404,14 +404,30 @@ George I. Hagstrom
 </div>
 
 </section>
+<section id="tuesday" class="slide level2">
+<h2>Tuesday!</h2>
+
+<img data-src="MeetupNovChristian2026Seminar.png" class="r-stretch"><p>https://us02web.zoom.us/meeting/register/RQW4PGPcT0ixadrHwD0-aQ#/registration</p>
+</section>
+<section id="november-19th" class="slide level2">
+<h2>November 19th!</h2>
+
+<img data-src="Nov2026Seminar.png" class="r-stretch"></section>
 <section id="week-summary" class="slide level2">
 <h2>Week Summary</h2>
 <ul>
 <li>This week is about visualizing models and uncertainty</li>
 <li>Next week is about dimensionality reduction techniques</li>
 <li>Assignment: Make a model of house sale prices and tell a story about it</li>
-<li>Reading: <a href="https://socviz.co/modeling.html#modeling">Healy Visualization</a>, Fundamentals of Data Visualization 16</li>
+<li>Reading: <a href="https://socviz.co/06-modeling.html">Healy Visualization</a>, Fundamentals of Data Visualization 16</li>
 <li>Bonus Readings: <a href="https://marginaleffects.com/bonus/plot.html">Marginal Effects Book: 2-3, 15</a></li>
+</ul>
+</section>
+<section id="lab-4-review-narrative-structure" class="slide level2">
+<h2>Lab 4 Review: Narrative Structure:</h2>
+<ul>
+<li>Finding a good conclusion</li>
+<li>Make sure it is there in the first place</li>
 </ul>
 </section>
 <section id="how-to-talk-about-models" class="slide level2">
@@ -433,15 +449,13 @@ George I. Hagstrom
 <span id="cb1-3"><a></a>    <span class="at">data =</span> dat, <span class="at">family =</span> binomial)</span>
 <span id="cb1-4"><a></a>dat <span class="sc">|&gt;</span> <span class="fu">head</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A data frame: 6 × 8
-  village outcome distance amount incentive   age hiv2004 agecat
-*   &lt;int&gt;   &lt;int&gt;    &lt;dbl&gt;  &lt;dbl&gt;     &lt;int&gt; &lt;int&gt;   &lt;int&gt; &lt;fct&gt; 
-1      43       1    0.549      0         0    14       0 &lt;18   
-2     117       0    0.840      0         0    14       0 &lt;18   
-3       2       0    3.34       0         0    15       0 &lt;18   
-4       6       0    2.32       0         0    15       0 &lt;18   
-5      11       0    1.39       0         0    15       0 &lt;18   
-6      14       0    3.87       0         0    15       0 &lt;18   </code></pre>
+<pre><code>  village outcome  distance amount incentive age hiv2004 agecat
+1      43       1 0.5485229      0         0  14       0    &lt;18
+2     117       0 0.8402644      0         0  14       0    &lt;18
+3       2       0 3.3421636      0         0  15       0    &lt;18
+4       6       0 2.3228946      0         0  15       0    &lt;18
+5      11       0 1.3862627      0         0  15       0    &lt;18
+6      14       0 3.8656266      0         0  15       0    &lt;18</code></pre>
 </div>
 </div>
 </section>
@@ -489,14 +503,35 @@ George I. Hagstrom
 </ul>
 
 <img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-4-1.png" width="960" class="r-stretch"></section>
+<section id="predictions-random-forest" class="slide level2">
+<h2>Predictions: Random Forest</h2>
+<ul>
+<li>For ML models there are no “coefficients” to fall back on</li>
+</ul>
+
+<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
 <section id="counterfactual-comparisons" class="slide level2">
 <h2>Counterfactual Comparisons</h2>
 
-<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<section id="counterfactual-comparisons-1" class="slide level2">
+<h2>Counterfactual Comparisons</h2>
+<ul>
+<li>Random Forests</li>
+</ul>
+
+<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
 <section id="slopes" class="slide level2">
 <h2>Slopes</h2>
 
-<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-6-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
+<section id="slopes-random-forest" class="slide level2">
+<h2>Slopes: Random Forest</h2>
+<ul>
+<li>Can use <em>finite differences</em> to do this for a Random Forest</li>
+</ul>
+
+<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
 <section id="look-inside-a-model-object" class="slide level2">
 <h2>Look inside a model object</h2>
 <div class="cell">
@@ -717,7 +752,7 @@ F-statistic: 174.4 on 29 and 1430 DF,  p-value: &lt; 2.2e-16</code></pre>
 <section id="plotting-coefficients" class="slide level2">
 <h2>Plotting Coefficients</h2>
 <ul>
-<li><code>tidy</code> lets us make plots of coordinates</li>
+<li><code>tidy</code> lets us make plots of coefficients</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>tidy_ames <span class="ot">=</span> <span class="fu">tidy</span>(mod)</span>
@@ -726,16 +761,16 @@ F-statistic: 174.4 on 29 and 1430 DF,  p-value: &lt; 2.2e-16</code></pre>
 <span id="cb12-4"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb12-5"><a></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
 <span id="cb12-6"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size=</span><span class="dv">12</span>) <span class="sc">+</span></span>
-<span id="cb12-7"><a></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Poor Display of Coordinates"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb12-7"><a></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Poor Display of Coefficients"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="plotting-coefficients-1" class="slide level2">
 <h2>Plotting Coefficients</h2>
 <ul>
-<li><code>tidy</code> lets us make plots of coordinates</li>
+<li><code>tidy</code> lets us make plots of coefficients</li>
 </ul>
 
-<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-16-1.png" width="960" class="r-stretch"></section>
 <section id="select-neighborhood-clean-names" class="slide level2">
 <h2>Select Neighborhood, Clean Names</h2>
 <div class="cell">
@@ -755,7 +790,7 @@ F-statistic: 174.4 on 29 and 1430 DF,  p-value: &lt; 2.2e-16</code></pre>
 <section id="select-neighborhood-clean-names-1" class="slide level2">
 <h2>Select Neighborhood, Clean Names</h2>
 
-<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-15-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch"></section>
 <section id="sort-and-add-uncertainty" class="slide level2">
 <h2>Sort and add Uncertainty</h2>
 <div class="cell">
@@ -768,7 +803,7 @@ F-statistic: 174.4 on 29 and 1430 DF,  p-value: &lt; 2.2e-16</code></pre>
 <span id="cb14-7"><a></a>  <span class="fu">geom_pointrange</span>() <span class="sc">+</span></span>
 <span id="cb14-8"><a></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
 <span id="cb14-9"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size=</span><span class="dv">12</span>) <span class="sc">+</span></span>
-<span id="cb14-10"><a></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Neighborhood Effect on Housing Price in Ames"</span>, <span class="at">subtitle =</span> <span class="st">"Error bars show 95% confidence interval"</span>,</span>
+<span id="cb14-10"><a></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Neighborhood Effect on Housing Price in Ames"</span>, <span class="at">subtitle =</span> <span class="st">"Error bars show ±1 standard error (≈68% confidence interval)"</span>,</span>
 <span id="cb14-11"><a></a>       <span class="at">y =</span> <span class="st">"Price Effect (USD)"</span>,</span>
 <span id="cb14-12"><a></a>       <span class="at">x =</span> <span class="st">"Neighborhood"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -776,7 +811,7 @@ F-statistic: 174.4 on 29 and 1430 DF,  p-value: &lt; 2.2e-16</code></pre>
 <section id="sort-and-add-uncertainty-1" class="slide level2">
 <h2>Sort and add Uncertainty</h2>
 
-<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-17-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-20-1.png" width="960" class="r-stretch"></section>
 <section id="augment-adds-fits-to-data" class="slide level2">
 <h2>Augment adds fits to data</h2>
 <div class="cell">
@@ -898,7 +933,7 @@ F-statistic: 174.4 on 29 and 1430 DF,  p-value: &lt; 2.2e-16</code></pre>
 <section id="use-map-to-fit-models-2" class="slide level2">
 <h2>Use Map to Fit Models</h2>
 
-<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-23-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-26-1.png" width="960" class="r-stretch"></section>
 <section id="marginal-effects-package" class="slide level2">
 <h2>Marginal Effects Package</h2>
 <ul>
@@ -926,13 +961,13 @@ F-statistic: 174.4 on 29 and 1430 DF,  p-value: &lt; 2.2e-16</code></pre>
 <span id="cb23-8"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
 <span id="cb23-9"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Amenities increase revenues"</span>,</span>
 <span id="cb23-10"><a></a>       <span class="at">x=</span><span class="st">"Number of Amenities"</span>,</span>
-<span id="cb23-11"><a></a>       <span class="at">y=</span><span class="st">"Revenus (USD)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb23-11"><a></a>       <span class="at">y=</span><span class="st">"Revenue (USD)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="plotting-predictions-1" class="slide level2">
 <h2>Plotting Predictions</h2>
 
-<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-25-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-28-1.png" width="960" class="r-stretch"></section>
 <section id="changing-the-conditions" class="slide level2">
 <h2>Changing the Conditions</h2>
 <ul>
@@ -944,9 +979,9 @@ F-statistic: 174.4 on 29 and 1430 DF,  p-value: &lt; 2.2e-16</code></pre>
 <span id="cb24-3"><a></a>            <span class="st">"neighborhood"</span>)) <span class="sc">+</span></span>
 <span id="cb24-4"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
 <span id="cb24-5"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Do Amenities Increase Revenue?"</span>,</span>
-<span id="cb24-6"><a></a>       <span class="at">subtitle =</span> <span class="st">"The model predicts a strong relationship between amenities and revenue in Williamsburg and Harlem,</span><span class="sc">\n</span><span class="st"> but they don't seem to matter in the West Village or Bedford-Stuyvesant"</span>,</span>
+<span id="cb24-6"><a></a>       <span class="at">subtitle =</span> <span class="st">"Revenue rises with amenities in every neighborhood,</span><span class="sc">\n</span><span class="st">most steeply in Harlem and Williamsburg"</span>,</span>
 <span id="cb24-7"><a></a>       <span class="at">x=</span><span class="st">"Number of Amenities"</span>,</span>
-<span id="cb24-8"><a></a>       <span class="at">y=</span><span class="st">"Revenus (USD)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb24-8"><a></a>       <span class="at">y=</span><span class="st">"Revenue (USD)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="changing-the-conditions-1" class="slide level2">
@@ -955,7 +990,7 @@ F-statistic: 174.4 on 29 and 1430 DF,  p-value: &lt; 2.2e-16</code></pre>
 <li>Can provide a range of conditions</li>
 </ul>
 
-<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-27-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-30-1.png" width="960" class="r-stretch"></section>
 <section id="changing-the-conditions-2" class="slide level2">
 <h2>Changing the Conditions</h2>
 <ul>
@@ -969,13 +1004,13 @@ F-statistic: 174.4 on 29 and 1430 DF,  p-value: &lt; 2.2e-16</code></pre>
 <span id="cb25-5"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
 <span id="cb25-6"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Do Amenities Increase Revenue?"</span>,</span>
 <span id="cb25-7"><a></a>       <span class="at">x=</span><span class="st">"Number of Amenities"</span>,</span>
-<span id="cb25-8"><a></a>       <span class="at">y=</span><span class="st">"Revenus (USD)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb25-8"><a></a>       <span class="at">y=</span><span class="st">"Revenue (USD)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="changing-the-conditions-3" class="slide level2">
 <h2>Changing the Conditions</h2>
 
-<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-29-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-32-1.png" width="960" class="r-stretch"></section>
 <section id="adding-cases" class="slide level2">
 <h2>Adding Cases</h2>
 <ul>
@@ -987,16 +1022,15 @@ F-statistic: 174.4 on 29 and 1430 DF,  p-value: &lt; 2.2e-16</code></pre>
 <span id="cb26-2"><a></a>          <span class="fu">list</span>(<span class="st">"num_amenities"</span>,</span>
 <span id="cb26-3"><a></a>               <span class="st">"review_scores_rating"</span> <span class="ot">=</span> <span class="st">"threenum"</span>)) <span class="sc">+</span></span>
 <span id="cb26-4"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
-<span id="cb26-5"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Do Amenities Increase Revenue?"</span>,</span>
-<span id="cb26-6"><a></a>       <span class="at">subtitle =</span> <span class="st">"The model predicts a strong relationship between amenities and revenue in Williamsburg and Harlem,</span><span class="sc">\n</span><span class="st"> but they don't seem to matter in the West Village or Bedford-Stuyvesant"</span>,</span>
-<span id="cb26-7"><a></a>       <span class="at">x=</span><span class="st">"Number of Amenities"</span>,</span>
-<span id="cb26-8"><a></a>       <span class="at">y=</span><span class="st">"Revenus (USD)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb26-5"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Both Amenities and Review Scores Increase Revenue"</span>,</span>
+<span id="cb26-6"><a></a>       <span class="at">x=</span><span class="st">"Number of Amenities"</span>,</span>
+<span id="cb26-7"><a></a>       <span class="at">y=</span><span class="st">"Revenue (USD)"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="adding-cases-1" class="slide level2">
 <h2>Adding Cases</h2>
 
-<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-31-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-34-1.png" width="960" class="r-stretch"></section>
 <section id="show-your-data" class="slide level2">
 <h2>Show Your Data</h2>
 <ul>
@@ -1019,7 +1053,7 @@ F-statistic: 174.4 on 29 and 1430 DF,  p-value: &lt; 2.2e-16</code></pre>
 <li>If you can, plot your data along with predictions</li>
 </ul>
 
-<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-33-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-36-1.png" width="960" class="r-stretch"></section>
 <section id="marginal-predictions" class="slide level2">
 <h2>Marginal Predictions</h2>
 <ul>
@@ -1029,7 +1063,7 @@ F-statistic: 174.4 on 29 and 1430 DF,  p-value: &lt; 2.2e-16</code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a>mod <span class="sc">|&gt;</span> <span class="fu">plot_predictions</span>(<span class="at">by =</span> <span class="fu">c</span>(<span class="st">"neighborhood"</span>, <span class="st">"host_response_time"</span>)) <span class="sc">+</span></span>
 <span id="cb28-2"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size=</span><span class="dv">16</span>) <span class="sc">+</span></span>
-<span id="cb28-3"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Modeled revenue increases with host response rate"</span>,</span>
+<span id="cb28-3"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Modeled revenue is higher for hosts who respond faster"</span>,</span>
 <span id="cb28-4"><a></a>       <span class="at">y =</span> <span class="st">"Revenue (USD)"</span>,</span>
 <span id="cb28-5"><a></a>       <span class="at">x =</span> <span class="st">"Neighborhood"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -1037,7 +1071,7 @@ F-statistic: 174.4 on 29 and 1430 DF,  p-value: &lt; 2.2e-16</code></pre>
 <section id="marginal-predictions-1" class="slide level2">
 <h2>Marginal Predictions</h2>
 
-<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-35-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-38-1.png" width="960" class="r-stretch"></section>
 <section id="plotting-comparisons" class="slide level2">
 <h2>Plotting Comparisons</h2>
 <ul>
@@ -1053,83 +1087,12 @@ F-statistic: 174.4 on 29 and 1430 DF,  p-value: &lt; 2.2e-16</code></pre>
 </ul>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>
-Call:
-lm(formula = revenue ~ . + host_is_superhost * bedrooms + host_is_superhost * 
-    neighborhood + num_amenities * neighborhood + num_amenities * 
-    bedrooms, data = nyc_bnb_slim)
-
-Residuals:
-    Min      1Q  Median      3Q     Max 
--282.29  -50.44   -7.98   40.73  654.75 
-
-Coefficients: (1 not defined because of singularities)
-                                                   Estimate Std. Error t value
-(Intercept)                                      -156.33072  126.44123  -1.236
-neighborhoodBedford-Stuyvesant                    -32.49483   20.36231  -1.596
-neighborhoodWest Village                           86.16582   32.33182   2.665
-neighborhoodHarlem                                -49.46094   22.80865  -2.169
-neighbourhood_groupManhattan                             NA         NA      NA
-bedrooms                                           -4.25002    8.31598  -0.511
-num_amenities                                      -0.67673    0.51225  -1.321
-review_scores_rating                              101.90580   29.98804   3.398
-review_scores_accuracy                            -20.50176   26.14237  -0.784
-review_scores_cleanliness                          14.11705   15.63285   0.903
-review_scores_checkin                             -12.03781   19.43860  -0.619
-review_scores_communication                        -0.27244   24.45593  -0.011
-review_scores_value                               -26.11923   17.62562  -1.482
-review_scores_location                             -3.66151   15.54947  -0.235
-host_has_profile_pic                                8.87632   23.59085   0.376
-host_is_superhost                                  -7.50775   14.06849  -0.534
-host_response_timewithin a few hours              -18.89199    6.87368  -2.748
-host_response_timewithin a day                    -24.08064    9.57480  -2.515
-host_response_timea few days or more              -56.27695   34.10359  -1.650
-host_response_rate                                  0.07002    0.35042   0.200
-host_acceptance_rate                                0.29018    0.17252   1.682
-bedrooms:host_is_superhost                         12.82689    5.69852   2.251
-neighborhoodBedford-Stuyvesant:host_is_superhost   -1.32929   14.14480  -0.094
-neighborhoodWest Village:host_is_superhost         44.61606   21.77459   2.049
-neighborhoodHarlem:host_is_superhost               -2.75697   15.55588  -0.177
-neighborhoodBedford-Stuyvesant:num_amenities       -0.63934    0.49032  -1.304
-neighborhoodWest Village:num_amenities             -0.98698    0.84379  -1.170
-neighborhoodHarlem:num_amenities                    0.42245    0.55395   0.763
-bedrooms:num_amenities                              1.11220    0.19711   5.642
-                                                 Pr(&gt;|t|)    
-(Intercept)                                      0.216584    
-neighborhoodBedford-Stuyvesant                   0.110820    
-neighborhoodWest Village                         0.007813 ** 
-neighborhoodHarlem                               0.030338 *  
-neighbourhood_groupManhattan                           NA    
-bedrooms                                         0.609409    
-num_amenities                                    0.186757    
-review_scores_rating                             0.000703 ***
-review_scores_accuracy                           0.433075    
-review_scores_cleanliness                        0.366708    
-review_scores_checkin                            0.535868    
-review_scores_communication                      0.991114    
-review_scores_value                              0.138663    
-review_scores_location                           0.813885    
-host_has_profile_pic                             0.706797    
-host_is_superhost                                0.593689    
-host_response_timewithin a few hours             0.006088 ** 
-host_response_timewithin a day                   0.012048 *  
-host_response_timea few days or more             0.099199 .  
-host_response_rate                               0.841655    
-host_acceptance_rate                             0.092862 .  
-bedrooms:host_is_superhost                       0.024592 *  
-neighborhoodBedford-Stuyvesant:host_is_superhost 0.925144    
-neighborhoodWest Village:host_is_superhost       0.040705 *  
-neighborhoodHarlem:host_is_superhost             0.859361    
-neighborhoodBedford-Stuyvesant:num_amenities     0.192532    
-neighborhoodWest Village:num_amenities           0.242378    
-neighborhoodHarlem:num_amenities                 0.445867    
-bedrooms:num_amenities                           2.14e-08 ***
----
-Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
-
-Residual standard error: 89.22 on 1074 degrees of freedom
-Multiple R-squared:  0.3773,    Adjusted R-squared:  0.3617 
-F-statistic:  24.1 on 27 and 1074 DF,  p-value: &lt; 2.2e-16</code></pre>
+<pre><code>             (Intercept)                incentive           agecat18 to 35 
+             -0.48616576               2.05760093               0.07937246 
+               agecat&gt;35                 distance incentive:agecat18 to 35 
+              0.34522236              -0.18439675              -0.05850445 
+     incentive:agecat&gt;35       incentive:distance 
+             -0.12468320               0.02304394 </code></pre>
 </div>
 </div>
 </section>
@@ -1151,7 +1114,7 @@ F-statistic:  24.1 on 27 and 1074 DF,  p-value: &lt; 2.2e-16</code></pre>
 <section id="comparisons-1" class="slide level2">
 <h2>Comparisons</h2>
 
-<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-38-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-41-1.png" width="960" class="r-stretch"></section>
 <section id="comparison-functions" class="slide level2">
 <h2>Comparison Functions</h2>
 <ul>
@@ -1178,7 +1141,7 @@ F-statistic:  24.1 on 27 and 1074 DF,  p-value: &lt; 2.2e-16</code></pre>
 <section id="slopes-2" class="slide level2">
 <h2>Slopes</h2>
 
-<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-40-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-9_files/figure-revealjs/unnamed-chunk-43-1.png" width="960" class="r-stretch"></section>
 <section id="thanks" class="slide level2">
 <h2>Thanks!</h2>
 

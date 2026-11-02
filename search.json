@@ -2497,7 +2497,7 @@
     "href": "course/schedule.html#meetup-link",
     "title": "DATA 608 Fall 2026",
     "section": "Meetup Link",
-    "text": "Meetup Link\nClick Here to Join the Meetups on Zoom\nMeetups are Mondays at 8:00PM Eastern. We meet every Monday of the semester except the Monday after Thanksgiving.\n\nCourse Schedule\n\n\nDate\nModule\nSlides\nVideo\nMain Deliverables\n\n\n\n\nAug 31\nDeveloping a Critical Eye\nMeetup 1 Slides\nMeetup 1 Video\nStory 1 assigned\n\n\nSep 7\nThe Data Visualization Catalogue\nMeetup 2 Slides\nMeetup 2 Video\nStory 1 due Sun Sep 13\n\n\nSep 14\nVisualization Quality Features\nMeetup 3 Slides\nMeetup 3 Video\nStory 2 assigned\n\n\nSep 21\nAssociations and Time Series\nMeetup 4 Slides\nMeetup 4 Video\nStory 2 due Sun Sep 27\n\n\nSep 28\nVisualizing Geospatial Data\nMeetup 5 Slides\nMeetup 5 Video\nStory 3 assigned\n\n\nOct 5\nStorytelling\nMeetup 6 Slides\nMeetup 6 Video\nStory 3 due Sun Oct 11\n\n\nOct 12\nEffective Use of Color and Fonts\nMeetup 7 Slides\nMeetup 7 Video\nStory 4 assigned\n\n\nOct 19\nDistributions and Histograms\nMeetup 8 Slides\nMeetup 8 Video\nStory 4 due Sun Oct 25\n\n\nOct 26\nModels and Uncertainty\nMeetup 9 Slides\nMeetup 9 Video\nStory 5 assigned\n\n\nNov 2\nDimension Reduction and PCA\n\n\nStory 5 due Sun Nov 8\n\n\nNov 9\nClustering\n\n\nStory 6 assigned\n\n\nNov 16\nHierarchical Clustering\n\n\nStory 6 due Sun Nov 22\n\n\nNov 23\nIntroduction to Shiny Apps\n\n\nStory 7 assigned\n\n\nNov 30\nNo Meetup — Thanksgiving\n\n\n\n\n\nDec 7\nInteractive Visualizations\nSlides\n\nStory 7 due Sun Dec 13\n\n\nDec 14\nWrap-Up\n\n\n\n\n\n\n\n\n\nWeek\nVideo Link\nAnnouncement Link\n\n\n\n\n2\nDot Plot Vignette\nDetails\n\n\n\nSlides and recordings are posted here after each meetup.",
+    "text": "Meetup Link\nClick Here to Join the Meetups on Zoom\nMeetups are Mondays at 8:00PM Eastern. We meet every Monday of the semester except the Monday after Thanksgiving.\n\nCourse Schedule\n\n\nDate\nModule\nSlides\nVideo\nMain Deliverables\n\n\n\n\nAug 31\nDeveloping a Critical Eye\nMeetup 1 Slides\nMeetup 1 Video\nStory 1 assigned\n\n\nSep 7\nThe Data Visualization Catalogue\nMeetup 2 Slides\nMeetup 2 Video\nStory 1 due Sun Sep 13\n\n\nSep 14\nVisualization Quality Features\nMeetup 3 Slides\nMeetup 3 Video\nStory 2 assigned\n\n\nSep 21\nAssociations and Time Series\nMeetup 4 Slides\nMeetup 4 Video\nStory 2 due Sun Sep 27\n\n\nSep 28\nVisualizing Geospatial Data\nMeetup 5 Slides\nMeetup 5 Video\nStory 3 assigned\n\n\nOct 5\nStorytelling\nMeetup 6 Slides\nMeetup 6 Video\nStory 3 due Sun Oct 11\n\n\nOct 12\nEffective Use of Color and Fonts\nMeetup 7 Slides\nMeetup 7 Video\nStory 4 assigned\n\n\nOct 19\nDistributions and Histograms\nMeetup 8 Slides\nMeetup 8 Video\nStory 4 due Sun Oct 25\n\n\nOct 26\nModels and Uncertainty\nMeetup 9 Slides\nMeetup 9 Video\nStory 5 assigned\n\n\nNov 2\nDimension Reduction and PCA\nMeetup 10 Slides\n\nStory 5 due Sun Nov 8\n\n\nNov 9\nClustering\n\n\nStory 6 assigned\n\n\nNov 16\nHierarchical Clustering\n\n\nStory 6 due Sun Nov 22\n\n\nNov 23\nIntroduction to Shiny Apps\n\n\nStory 7 assigned\n\n\nNov 30\nNo Meetup — Thanksgiving\n\n\n\n\n\nDec 7\nInteractive Visualizations\nSlides\n\nStory 7 due Sun Dec 13\n\n\nDec 14\nWrap-Up\n\n\n\n\n\n\n\n\n\nWeek\nVideo Link\nAnnouncement Link\n\n\n\n\n2\nDot Plot Vignette\nDetails\n\n\n\nSlides and recordings are posted here after each meetup.",
     "crumbs": [
       "Course information",
       "Schedule"
@@ -3369,7 +3369,28 @@
     "href": "meetups/meetup-10/meetup-10.html#week-summary",
     "title": "DATA 608 Meetup 10: Dimensionality Reduction",
     "section": "Week Summary",
-    "text": "Week Summary\n\nData Story 5 is Due this Sunday at Midnight\nReading is Section 12.3 of Fundamentals of Data Visualization\nWhat to do when the data has too many variables to visualize?"
+    "text": "Week Summary\n\nData Story 5 is Due this Sunday at Midnight\nReading is Section 12.3 of Fundamentals of Data Visualization\n\nVisual explanation of PCA: setosa.io\nIn-depth math tutorial (optional): Shlens\nSteve Brunton’s PCA videos\n\nWhat to do when the data has too many variables to visualize?"
+  },
+  {
+    "objectID": "meetups/meetup-10/meetup-10.html#tomorrow",
+    "href": "meetups/meetup-10/meetup-10.html#tomorrow",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "Tomorrow!",
+    "text": "Tomorrow!\n\nhttps://us02web.zoom.us/meeting/register/RQW4PGPcT0ixadrHwD0-aQ#/registration"
+  },
+  {
+    "objectID": "meetups/meetup-10/meetup-10.html#november-19th",
+    "href": "meetups/meetup-10/meetup-10.html#november-19th",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "November 19th!",
+    "text": "November 19th!"
+  },
+  {
+    "objectID": "meetups/meetup-10/meetup-10.html#ny-open-statistical-programming-meetup",
+    "href": "meetups/meetup-10/meetup-10.html#ny-open-statistical-programming-meetup",
+    "title": "DATA 608 Meetup 10: Dimensionality Reduction",
+    "section": "NY Open Statistical Programming Meetup",
+    "text": "NY Open Statistical Programming Meetup\n\nTuesday, November 10th, 6:30-8:30+\nGreat Networking/Learning Opportunity"
   },
   {
     "objectID": "meetups/meetup-10/meetup-10.html#many-variables",
@@ -3418,7 +3439,7 @@
     "href": "meetups/meetup-10/meetup-10.html#principal-component-analysis-pca",
     "title": "DATA 608 Meetup 10: Dimensionality Reduction",
     "section": "Principal Component Analysis (PCA)",
-    "text": "Principal Component Analysis (PCA)\n\nPCA finds a new coordinate system\nNew directions called Principal Components\nEach PC is a combination/rotation of other ones\nPCs ordered based variability of the data"
+    "text": "Principal Component Analysis (PCA)\n\nPCA finds a new coordinate system\nNew directions called Principal Components\nEach PC is a combination/rotation of other ones\nPCs ordered based on variability of the data"
   },
   {
     "objectID": "meetups/meetup-10/meetup-10.html#simple-pca-example",
@@ -3484,11 +3505,11 @@
     "text": "Picking a Dimension\n\nYou can discard low variance PCs\nUse “Elbow” of plot to pick cutoff"
   },
   {
-    "objectID": "meetups/meetup-10/meetup-10.html#australian-atheletes-example",
-    "href": "meetups/meetup-10/meetup-10.html#australian-atheletes-example",
+    "objectID": "meetups/meetup-10/meetup-10.html#australian-athletes-example",
+    "href": "meetups/meetup-10/meetup-10.html#australian-athletes-example",
     "title": "DATA 608 Meetup 10: Dimensionality Reduction",
-    "section": "Australian Atheletes Example",
-    "text": "Australian Atheletes Example"
+    "section": "Australian Athletes Example",
+    "text": "Australian Athletes Example"
   },
   {
     "objectID": "meetups/meetup-10/meetup-10.html#athletes-pcs",
@@ -3509,7 +3530,7 @@
     "href": "meetups/meetup-10/meetup-10.html#pc-clusters",
     "title": "DATA 608 Meetup 10: Dimensionality Reduction",
     "section": "PC Clusters",
-    "text": "PC Clusters\n\n\n\nPC1: +Size, -Leanness (Sex)\nPC2: +Size, -Red Blood Cells"
+    "text": "PC Clusters\n\n\n\nPC1: +Size, +Red Blood Cells, -Body Fat (Sex)\nPC2: +Body Fat/BMI, -Red Blood Cells"
   },
   {
     "objectID": "meetups/meetup-10/meetup-10.html#sports",
@@ -3530,7 +3551,7 @@
     "href": "meetups/meetup-10/meetup-10.html#higher-pcs-contrast",
     "title": "DATA 608 Meetup 10: Dimensionality Reduction",
     "section": "Higher PCs Contrast",
-    "text": "Higher PCs Contrast\n\n\n\nPC3: +Body Fat, RBCs, -Height\nPC4: +Height, Fat, RBCs, -BMI"
+    "text": "Higher PCs Contrast\n\n\n\nPC3: +White Cells, Body Fat, RBCs, -Height\nPC4: +Ferritin, -RBCs, Height, Fat"
   },
   {
     "objectID": "meetups/meetup-10/meetup-10.html#sport-clusters-2",
@@ -3544,7 +3565,7 @@
     "href": "meetups/meetup-10/meetup-10.html#how-to-make-these-plots-in-r",
     "title": "DATA 608 Meetup 10: Dimensionality Reduction",
     "section": "How to make these plots in R",
-    "text": "How to make these plots in R\n\nprcomp and scale\nretx keyword calcualtes embeddings\n\n\naus_fit = aus_athletes |&gt; \n  select(where(is.numeric))  |&gt;  \n  prcomp(scale = TRUE)\n\n# or\n# gets rid of mean and rescales variance\n\naus_fit = aus_athletes |&gt; \n  select(where(is.numeric))  |&gt;  \n  scale() |&gt; \n  prcomp(retx = TRUE)"
+    "text": "How to make these plots in R\n\nprcomp and scale\nretx keyword calculates embeddings\n\n\naus_fit = aus_athletes |&gt; \n  select(where(is.numeric))  |&gt;  \n  prcomp(scale = TRUE)\n\n# or\n# gets rid of mean and rescales variance\n\naus_fit = aus_athletes |&gt; \n  select(where(is.numeric))  |&gt;  \n  scale() |&gt; \n  prcomp(retx = TRUE)"
   },
   {
     "objectID": "meetups/meetup-10/meetup-10.html#contents-of-fit-object",
@@ -3621,28 +3642,28 @@
     "href": "meetups/meetup-10/meetup-10.html#downsides-of-pca",
     "title": "DATA 608 Meetup 10: Dimensionality Reduction",
     "section": "Downsides of PCA",
-    "text": "Downsides of PCA\n\nPCA learns a linear representation\n\nTons of other methods exist for nonlinear structures"
+    "text": "Downsides of PCA\n\nPCA learns a linear representation\n\nTons of other methods exist for nonlinear structures\n\n\n\nCoifman et al"
   },
   {
     "objectID": "meetups/meetup-10/meetup-10.html#downsides-of-pca-1",
     "href": "meetups/meetup-10/meetup-10.html#downsides-of-pca-1",
     "title": "DATA 608 Meetup 10: Dimensionality Reduction",
     "section": "Downsides of PCA",
-    "text": "Downsides of PCA\n\nProne to overinterpretation\n\n\nShalizi/November"
+    "text": "Downsides of PCA\n\nProne to overinterpretation\n\n\nShalizi/Novembre"
   },
   {
     "objectID": "meetups/meetup-10/meetup-10.html#downsides-of-pca-2",
     "href": "meetups/meetup-10/meetup-10.html#downsides-of-pca-2",
     "title": "DATA 608 Meetup 10: Dimensionality Reduction",
     "section": "Downsides of PCA",
-    "text": "Downsides of PCA\n\nProne to overinterpretation\n\n\nShalizi/November"
+    "text": "Downsides of PCA\n\nProne to overinterpretation\n\n\nShalizi/Novembre"
   },
   {
     "objectID": "meetups/meetup-10/meetup-10.html#downsides-of-pca-3",
     "href": "meetups/meetup-10/meetup-10.html#downsides-of-pca-3",
     "title": "DATA 608 Meetup 10: Dimensionality Reduction",
     "section": "Downsides of PCA",
-    "text": "Downsides of PCA\n\nSensitive to outliers\n\nIf your measurement process is not robust….\nUsing PCA could be very misleading!\n\nThere is an algorithm called robust PCA which is great these cases"
+    "text": "Downsides of PCA\n\nSensitive to outliers\n\nIf your measurement process is not robust….\nUsing PCA could be very misleading!\n\nThere is an algorithm called robust PCA which is great in these cases"
   },
   {
     "objectID": "meetups/meetup-12/meetup-12.html#week-summary",

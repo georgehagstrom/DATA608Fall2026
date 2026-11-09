@@ -1470,11 +1470,18 @@
     "text": "Week Summary\n\nData Story 6 is available, due Sunday November 22\nLast Data Story will be on Shiny Apps\nTalking about clustering today"
   },
   {
-    "objectID": "meetups/meetup-11/meetup-11.html#tomorrow-ny-open-statistical-programming-meetup",
-    "href": "meetups/meetup-11/meetup-11.html#tomorrow-ny-open-statistical-programming-meetup",
+    "objectID": "meetups/meetup-11/meetup-11.html#readings",
+    "href": "meetups/meetup-11/meetup-11.html#readings",
     "title": "DATA 608 Meetup 11: Clustering",
-    "section": "Tomorrow! NY Open Statistical Programming Meetup",
-    "text": "Tomorrow! NY Open Statistical Programming Meetup\n\nTuesday, November 10th, 6:30-8:30+\nGreat Networking/Learning Opportunity"
+    "section": "Readings",
+    "text": "Readings\n\nR Companion chapter on cluster analysis in Introduction to Data Mining\nWikipedia: k-means clustering\nNaftali Harris blog post: Interactive k-means demonstration\nStackoverflow post: Determining the appropriate number of clusters in k-means\nMedium article: The 5 Clustering Algorithms Data Scientists Need to Know"
+  },
+  {
+    "objectID": "meetups/meetup-11/meetup-11.html#tomorrow-nyhackr-meetup",
+    "href": "meetups/meetup-11/meetup-11.html#tomorrow-nyhackr-meetup",
+    "title": "DATA 608 Meetup 11: Clustering",
+    "section": "Tomorrow! nyhackr meetup",
+    "text": "Tomorrow! nyhackr meetup\n\nTuesday, November 10th, 6:30-8:30+\nGreat Networking/Learning Opportunity"
   },
   {
     "objectID": "meetups/meetup-11/meetup-11.html#november-19th",
@@ -1482,6 +1489,13 @@
     "title": "DATA 608 Meetup 11: Clustering",
     "section": "November 19th!",
     "text": "November 19th!"
+  },
+  {
+    "objectID": "meetups/meetup-11/meetup-11.html#tuesday-december-15th",
+    "href": "meetups/meetup-11/meetup-11.html#tuesday-december-15th",
+    "title": "DATA 608 Meetup 11: Clustering",
+    "section": "Tuesday December 15th!",
+    "text": "Tuesday December 15th!\n\nJoe Sabelja: What is AI?\nCapstone Showcase!\n\nPresentations from Graduating Students!"
   },
   {
     "objectID": "meetups/meetup-11/meetup-11.html#clustering-and-dim.-reduction",
@@ -1530,7 +1544,7 @@
     "href": "meetups/meetup-11/meetup-11.html#implementing-k-means-in-r",
     "title": "DATA 608 Meetup 11: Clustering",
     "section": "Implementing k-means in R",
-    "text": "Implementing k-means in R\n\nkmeans in stats package\n\n\nwine_clusters = pca_fit|&gt; \n    augment(wine_df) |&gt; select(-Type) |&gt; \n  select(.fittedPC1:.fittedPC13) |&gt; \n  kmeans(centers=3,nstart = 10) \n\nwine_clusters\n\nK-means clustering with 3 clusters of sizes 51, 62, 65\n\nCluster means:\n   .fittedPC1 .fittedPC2   .fittedPC3  .fittedPC4  .fittedPC5  .fittedPC6\n1  2.71238444 -1.1224849 -0.238420685  0.06228125 -0.07346875  0.09964414\n2 -2.26979079 -0.9294322  0.001523733 -0.13511700  0.13453261 -0.21766922\n3  0.03685265  1.7672542  0.185615130  0.08001400 -0.07067870  0.12944063\n    .fittedPC7   .fittedPC8  .fittedPC9 .fittedPC10  .fittedPC11  .fittedPC12\n1 -0.060213318 -0.007367207 -0.01997059  0.06129547  0.008093155  0.003445464\n2  0.051963343  0.024894027  0.05014407 -0.07446923 -0.021230820 -0.007417378\n3 -0.002320739 -0.017964647 -0.03216049  0.02293882  0.013900922  0.004371673\n   .fittedPC13\n1  0.050408713\n2 -0.050476861\n3  0.008595707\n\nClustering vector:\n  [1] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2\n [38] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 3 1 3 3 3 3 3 3 3 3 3 3 3 2\n [75] 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3\n[112] 3 3 3 3 3 3 3 1 3 3 2 3 3 3 3 3 3 3 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n[149] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n\nWithin cluster sum of squares by cluster:\n[1] 326.3537 385.6983 558.6971\n (between_SS / total_SS =  44.8 %)\n\nAvailable components:\n\n[1] \"cluster\"      \"centers\"      \"totss\"        \"withinss\"     \"tot.withinss\"\n[6] \"betweenss\"    \"size\"         \"iter\"         \"ifault\""
+    "text": "Implementing k-means in R\n\nkmeans in stats package\n\n\nwine_clusters = pca_fit|&gt; \n    augment(wine_df) |&gt; select(-Type) |&gt; \n  select(.fittedPC1:.fittedPC13) |&gt; \n  kmeans(centers=3,nstart = 10) \n\nwine_clusters\n\nK-means clustering with 3 clusters of sizes 51, 65, 62\n\nCluster means:\n   .fittedPC1 .fittedPC2   .fittedPC3  .fittedPC4  .fittedPC5  .fittedPC6\n1  2.71238444 -1.1224849 -0.238420685  0.06228125 -0.07346875  0.09964414\n2  0.03685265  1.7672542  0.185615130  0.08001400 -0.07067870  0.12944063\n3 -2.26979079 -0.9294322  0.001523733 -0.13511700  0.13453261 -0.21766922\n    .fittedPC7   .fittedPC8  .fittedPC9 .fittedPC10  .fittedPC11  .fittedPC12\n1 -0.060213318 -0.007367207 -0.01997059  0.06129547  0.008093155  0.003445464\n2 -0.002320739 -0.017964647 -0.03216049  0.02293882  0.013900922  0.004371673\n3  0.051963343  0.024894027  0.05014407 -0.07446923 -0.021230820 -0.007417378\n   .fittedPC13\n1  0.050408713\n2  0.008595707\n3 -0.050476861\n\nClustering vector:\n  [1] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3\n [38] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 2 1 2 2 2 2 2 2 2 2 2 2 2 3\n [75] 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2\n[112] 2 2 2 2 2 2 2 1 2 2 3 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n[149] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n\nWithin cluster sum of squares by cluster:\n[1] 326.3537 558.6971 385.6983\n (between_SS / total_SS =  44.8 %)\n\nAvailable components:\n\n[1] \"cluster\"      \"centers\"      \"totss\"        \"withinss\"     \"tot.withinss\"\n[6] \"betweenss\"    \"size\"         \"iter\"         \"ifault\""
   },
   {
     "objectID": "meetups/meetup-11/meetup-11.html#key-arguments",
@@ -1544,28 +1558,28 @@
     "href": "meetups/meetup-11/meetup-11.html#key-outputs",
     "title": "DATA 608 Meetup 11: Clustering",
     "section": "Key Outputs",
-    "text": "Key Outputs\n\nClustering Vector: Identifies each point by cluster. Is attached to original data frame by augmnet\n\n\nwine_clusters$cluster \n\n  [1] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2\n [38] 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 3 3 1 3 3 3 3 3 3 3 3 3 3 3 2\n [75] 3 3 3 3 3 3 3 3 3 1 3 3 3 3 3 3 3 3 3 3 3 2 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3\n[112] 3 3 3 3 3 3 3 1 3 3 2 3 3 3 3 3 3 3 3 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n[149] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1"
+    "text": "Key Outputs\n\nClustering Vector: Identifies each point by cluster. Is attached to original data frame by augmnet\n\n\nwine_clusters$cluster \n\n  [1] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3\n [38] 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 2 2 1 2 2 2 2 2 2 2 2 2 2 2 3\n [75] 2 2 2 2 2 2 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2 3 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2\n[112] 2 2 2 2 2 2 2 1 2 2 3 2 2 2 2 2 2 2 2 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1\n[149] 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1"
   },
   {
     "objectID": "meetups/meetup-11/meetup-11.html#key-outputs-1",
     "href": "meetups/meetup-11/meetup-11.html#key-outputs-1",
     "title": "DATA 608 Meetup 11: Clustering",
     "section": "Key Outputs",
-    "text": "Key Outputs\n\nCluster Means: These are the cluster centers\n\n\nwine_clusters$centers\n\n   .fittedPC1 .fittedPC2   .fittedPC3  .fittedPC4  .fittedPC5  .fittedPC6\n1  2.71238444 -1.1224849 -0.238420685  0.06228125 -0.07346875  0.09964414\n2 -2.26979079 -0.9294322  0.001523733 -0.13511700  0.13453261 -0.21766922\n3  0.03685265  1.7672542  0.185615130  0.08001400 -0.07067870  0.12944063\n    .fittedPC7   .fittedPC8  .fittedPC9 .fittedPC10  .fittedPC11  .fittedPC12\n1 -0.060213318 -0.007367207 -0.01997059  0.06129547  0.008093155  0.003445464\n2  0.051963343  0.024894027  0.05014407 -0.07446923 -0.021230820 -0.007417378\n3 -0.002320739 -0.017964647 -0.03216049  0.02293882  0.013900922  0.004371673\n   .fittedPC13\n1  0.050408713\n2 -0.050476861\n3  0.008595707"
+    "text": "Key Outputs\n\nCluster Means: These are the cluster centers\n\n\nwine_clusters$centers\n\n   .fittedPC1 .fittedPC2   .fittedPC3  .fittedPC4  .fittedPC5  .fittedPC6\n1  2.71238444 -1.1224849 -0.238420685  0.06228125 -0.07346875  0.09964414\n2  0.03685265  1.7672542  0.185615130  0.08001400 -0.07067870  0.12944063\n3 -2.26979079 -0.9294322  0.001523733 -0.13511700  0.13453261 -0.21766922\n    .fittedPC7   .fittedPC8  .fittedPC9 .fittedPC10  .fittedPC11  .fittedPC12\n1 -0.060213318 -0.007367207 -0.01997059  0.06129547  0.008093155  0.003445464\n2 -0.002320739 -0.017964647 -0.03216049  0.02293882  0.013900922  0.004371673\n3  0.051963343  0.024894027  0.05014407 -0.07446923 -0.021230820 -0.007417378\n   .fittedPC13\n1  0.050408713\n2  0.008595707\n3 -0.050476861"
   },
   {
     "objectID": "meetups/meetup-11/meetup-11.html#key-outputs-2",
     "href": "meetups/meetup-11/meetup-11.html#key-outputs-2",
     "title": "DATA 608 Meetup 11: Clustering",
     "section": "Key Outputs",
-    "text": "Key Outputs\n\nCluster Means: These are the cluster centers\n\n\nwine_clusters$centers\n\n   .fittedPC1 .fittedPC2   .fittedPC3  .fittedPC4  .fittedPC5  .fittedPC6\n1  2.71238444 -1.1224849 -0.238420685  0.06228125 -0.07346875  0.09964414\n2 -2.26979079 -0.9294322  0.001523733 -0.13511700  0.13453261 -0.21766922\n3  0.03685265  1.7672542  0.185615130  0.08001400 -0.07067870  0.12944063\n    .fittedPC7   .fittedPC8  .fittedPC9 .fittedPC10  .fittedPC11  .fittedPC12\n1 -0.060213318 -0.007367207 -0.01997059  0.06129547  0.008093155  0.003445464\n2  0.051963343  0.024894027  0.05014407 -0.07446923 -0.021230820 -0.007417378\n3 -0.002320739 -0.017964647 -0.03216049  0.02293882  0.013900922  0.004371673\n   .fittedPC13\n1  0.050408713\n2 -0.050476861\n3  0.008595707"
+    "text": "Key Outputs\n\nCluster Means: These are the cluster centers\n\n\nwine_clusters$centers\n\n   .fittedPC1 .fittedPC2   .fittedPC3  .fittedPC4  .fittedPC5  .fittedPC6\n1  2.71238444 -1.1224849 -0.238420685  0.06228125 -0.07346875  0.09964414\n2  0.03685265  1.7672542  0.185615130  0.08001400 -0.07067870  0.12944063\n3 -2.26979079 -0.9294322  0.001523733 -0.13511700  0.13453261 -0.21766922\n    .fittedPC7   .fittedPC8  .fittedPC9 .fittedPC10  .fittedPC11  .fittedPC12\n1 -0.060213318 -0.007367207 -0.01997059  0.06129547  0.008093155  0.003445464\n2 -0.002320739 -0.017964647 -0.03216049  0.02293882  0.013900922  0.004371673\n3  0.051963343  0.024894027  0.05014407 -0.07446923 -0.021230820 -0.007417378\n   .fittedPC13\n1  0.050408713\n2  0.008595707\n3 -0.050476861"
   },
   {
     "objectID": "meetups/meetup-11/meetup-11.html#key-outputs-3",
     "href": "meetups/meetup-11/meetup-11.html#key-outputs-3",
     "title": "DATA 608 Meetup 11: Clustering",
     "section": "Key Outputs",
-    "text": "Key Outputs\n\nError Measurements\n\nwithinss sum of squares within clusters\nbetweenss between cluster sum of squares\ntot.withinss/totss measure of how much clusters explain variance\n\n\n\nwine_clusters$withinss\n\n[1] 326.3537 385.6983 558.6971\n\nwine_clusters$totss\n\n[1] 2301\n\nwine_clusters$tot.withinss/wine_clusters$totss\n\n[1] 0.5522595"
+    "text": "Key Outputs\n\nError Measurements\n\nwithinss sum of squares within clusters\nbetweenss between cluster sum of squares\ntot.withinss/totss measure of how much clusters explain variance\n\n\n\nwine_clusters$withinss\n\n[1] 326.3537 558.6971 385.6983\n\nwine_clusters$totss\n\n[1] 2301\n\nwine_clusters$tot.withinss/wine_clusters$totss\n\n[1] 0.5522595"
   },
   {
     "objectID": "meetups/meetup-11/meetup-11.html#how-many-clusters",
@@ -1635,7 +1649,7 @@
     "href": "meetups/meetup-11/meetup-11.html#interpreting-clusters-1",
     "title": "DATA 608 Meetup 11: Clustering",
     "section": "Interpreting Clusters",
-    "text": "Interpreting Clusters\n\nTakes some tricky to understand code to transform the PCA coordinates:\n\n\nwine_df_2 = wine_df |&gt; select(-Type)\ncenters_df = t(t(wine_clusters$centers %*% t(pca_fit$rotation)) *\n            pca_fit$scale + pca_fit$center) |&gt; \n  as_tibble() |&gt; \n  bind_rows(wine_df_2) |&gt; \n  scale() |&gt; \n  as_tibble() |&gt; \n  head(n=3) |&gt;\n  mutate(center = seq(1:3))\n\n\nt(t(wine_clusters$centers %*% t(pca_fit$rotation)) * pca_fit$scale + pca_fit$center) coordinate transformation\nscale enables visualization of variables together"
+    "text": "Interpreting Clusters\n\nAverage the labelled points of each cluster to get the centers in real space\nAlternatively can use linear algebra and the PCA transformation\n\n\nwine_scaled = wine_df |&gt; select(-Type) |&gt; scale() |&gt; as_tibble()\n\ncenters_df = wine_clusters |&gt; \n  augment(wine_scaled) |&gt; \n  group_by(.cluster) |&gt; \n  summarise(across(everything(), mean))"
   },
   {
     "objectID": "meetups/meetup-11/meetup-11.html#interpreting-clusters-2",
@@ -1650,6 +1664,13 @@
     "title": "DATA 608 Meetup 11: Clustering",
     "section": "Annotating Clusters",
     "text": "Annotating Clusters\n\ngeom_mark_ellipse to draw circles around clusters"
+  },
+  {
+    "objectID": "meetups/meetup-11/meetup-11.html#annotating-clusters-1",
+    "href": "meetups/meetup-11/meetup-11.html#annotating-clusters-1",
+    "title": "DATA 608 Meetup 11: Clustering",
+    "section": "Annotating Clusters",
+    "text": "Annotating Clusters\n\ngeom_mark_ellipse to draw circles around clusters\n\n\nlibrary(ggforce)\n\n\nplot_df = pca_fit|&gt; \n    augment(wine_df) |&gt; \n  select(.fittedPC1:.fittedPC13)\n\nwine_clusters = plot_df |&gt; kmeans(centers = 3,nstart=10)\n\nwine_clusters |&gt; augment(plot_df) |&gt; ggplot(aes(.fittedPC1,.fittedPC2,color=.cluster)) +geom_point() +\n  geom_mark_ellipse(aes(fill=as_factor(.cluster)),alpha = 0.3) +\n  scale_color_discrete(guide = \"none\") +\n  scale_fill_discrete(guide = \"none\") +\n  theme_minimal(base_size=16) +\n  labs(title = \"Wine Clusters drawn with ellipses\")"
   },
   {
     "objectID": "meetups/meetup-11/meetup-11.html#k-means-tips-and-pitfalls",

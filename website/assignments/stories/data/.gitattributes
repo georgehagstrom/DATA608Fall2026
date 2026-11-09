@@ -1,1 +1,2 @@
 fars_accidents_2023_2024.csv filter=lfs diff=lfs merge=lfs -text
+DataStory6_files.zip filter=lfs diff=lfs merge=lfs -text

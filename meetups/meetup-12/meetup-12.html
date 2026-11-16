@@ -425,13 +425,11 @@ George I. Hagstrom
 <li><a href="https://seaborn.pydata.org/generated/seaborn.clustermap.html">For Python: Seaborn Clustermap</a></li>
 <li><a href="https://docs.scipy.org/doc/scipy/reference/cluster.html">For Python: Scipy Clusters</a></li>
 </ol>
-<!-- TODO Fall 2026: Spring 2025 event announcement - swap in a current
-     event card before the meetup.
+</section>
+<section id="meetup-thursday-november-19th" class="slide level2">
+<h2>Meetup Thursday November 19th!</h2>
 
-## May 9th Meetup!
-
-![](May_2025_Meetup_Card.png)
--->
+<img data-src="Nov2026Seminar.png" class="r-stretch"><p><a href="https://us02web.zoom.us/meeting/register/vNnES24tQkqUktS86HL1og">Registration Link</a></p>
 </section>
 <section id="tree-of-life" class="slide level2">
 <h2>Tree of Life</h2>
@@ -440,6 +438,10 @@ George I. Hagstrom
 </ul>
 
 <img data-src="tree_of_life.jpg" class="r-stretch quarto-figure-center"><p class="caption">Jonathan Eisen</p></section>
+<section id="language-families" class="slide level2">
+<h2>Language Families</h2>
+
+<img data-src="sundberg_language_tree.jpg" class="r-stretch quarto-figure-center"><p class="caption">Minna Sundberg</p></section>
 <section id="statistics-of-us-states" class="slide level2 smaller">
 <h2>Statistics of US States</h2>
 <div class="cell">
@@ -497,6 +499,10 @@ George I. Hagstrom
 <h2>Dendrogram Cuts</h2>
 
 <img data-src="meetup-12_files/figure-revealjs/unnamed-chunk-9-1.png" width="960" class="r-stretch"></section>
+<section id="dendrogram-clusters-on-a-map" class="slide level2">
+<h2>Dendrogram Clusters on a Map</h2>
+
+<img data-src="meetup-12_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
 <section id="why-hierarchical-clustering" class="slide level2">
 <h2>Why Hierarchical Clustering?</h2>
 <ul>
@@ -7552,7 +7558,7 @@ George I. Hagstrom
 <span id="cb8-8"><a></a>  <span class="fu">ggdendrogram</span>( <span class="at">rotate =</span> <span class="cn">TRUE</span>,<span class="at">labels=</span><span class="cn">FALSE</span>,<span class="at">leaf_labels =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
-<img data-src="meetup-12_files/figure-revealjs/unnamed-chunk-13-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-12_files/figure-revealjs/unnamed-chunk-14-1.png" width="960" class="r-stretch"></section>
 <section id="tree-objects" class="slide level2">
 <h2>Tree objects</h2>
 <div class="cell">
@@ -7618,43 +7624,90 @@ George I. Hagstrom
 <li>Join clusters with original data frame</li>
 </ul>
 
-<img data-src="meetup-12_files/figure-revealjs/unnamed-chunk-17-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-12_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch"></section>
 <section id="visualizing-clusters-2" class="slide level2">
 <h2>Visualizing Clusters</h2>
 <ul>
 <li>Seems like Gender is main differentiator</li>
 </ul>
 
-<img data-src="meetup-12_files/figure-revealjs/unnamed-chunk-18-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-12_files/figure-revealjs/unnamed-chunk-19-1.png" width="960" class="r-stretch"></section>
+<section id="dendrogram-code" class="slide level2 smaller">
+<h2>Dendrogram Code</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>hc <span class="ot">&lt;-</span> US_state_stats <span class="sc">|&gt;</span></span>
+<span id="cb12-2"><a></a>  <span class="fu">column_to_rownames</span>(<span class="at">var =</span> <span class="st">"state"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-3"><a></a>  <span class="fu">scale</span>() <span class="sc">|&gt;</span></span>
+<span id="cb12-4"><a></a>  <span class="fu">dist</span>(<span class="at">method =</span> <span class="st">"euclidean"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb12-5"><a></a>  <span class="fu">hclust</span>(<span class="at">method =</span> <span class="st">"ward.D2"</span>)</span>
+<span id="cb12-6"><a></a></span>
+<span id="cb12-7"><a></a>ddata <span class="ot">&lt;-</span> <span class="fu">dendro_data</span>(<span class="fu">as.dendrogram</span>(hc), <span class="at">type =</span> <span class="st">"rectangle"</span>)</span>
+<span id="cb12-8"><a></a>segments <span class="ot">&lt;-</span> <span class="fu">segment</span>(ddata)</span>
+<span id="cb12-9"><a></a>labels <span class="ot">&lt;-</span> <span class="fu">label</span>(ddata)</span>
+<span id="cb12-10"><a></a></span>
+<span id="cb12-11"><a></a>cut_height <span class="ot">&lt;-</span> <span class="fl">5.0</span></span>
+<span id="cb12-12"><a></a>clusters <span class="ot">&lt;-</span> <span class="fu">cutree</span>(hc, <span class="at">h =</span> cut_height)</span>
+<span id="cb12-13"><a></a>clustered_labels <span class="ot">&lt;-</span> <span class="fu">left_join</span>(</span>
+<span id="cb12-14"><a></a>  labels,</span>
+<span id="cb12-15"><a></a>  <span class="fu">tibble</span>(<span class="at">label =</span> <span class="fu">names</span>(clusters), <span class="at">cluster =</span> <span class="fu">factor</span>(clusters)),</span>
+<span id="cb12-16"><a></a>  <span class="at">by =</span> <span class="st">"label"</span></span>
+<span id="cb12-17"><a></a>)</span>
+<span id="cb12-18"><a></a></span>
+<span id="cb12-19"><a></a><span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb12-20"><a></a>  <span class="fu">geom_segment</span>(<span class="at">data =</span> segments, <span class="fu">aes</span>(x, <span class="sc">-</span>y, <span class="at">xend =</span> xend, <span class="at">yend =</span> <span class="sc">-</span>yend)) <span class="sc">+</span></span>
+<span id="cb12-21"><a></a>  <span class="fu">geom_text</span>(</span>
+<span id="cb12-22"><a></a>    <span class="at">data =</span> clustered_labels,</span>
+<span id="cb12-23"><a></a>    <span class="fu">aes</span>(x, <span class="sc">-</span>y<span class="fl">+.5</span>, <span class="at">label =</span> label, <span class="at">color =</span> cluster),</span>
+<span id="cb12-24"><a></a>    <span class="at">hjust =</span> <span class="dv">0</span>,</span>
+<span id="cb12-25"><a></a>    <span class="at">angle =</span> <span class="dv">90</span>,</span>
+<span id="cb12-26"><a></a>    <span class="at">key_glyph =</span> <span class="st">"point"</span>,</span>
+<span id="cb12-27"><a></a>    <span class="at">size =</span> <span class="dv">4</span></span>
+<span id="cb12-28"><a></a>  ) <span class="sc">+</span></span>
+<span id="cb12-29"><a></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="sc">-</span>cut_height, <span class="at">linetype =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb12-30"><a></a>  <span class="fu">scale_color_viridis_d</span>(<span class="at">option =</span> <span class="st">"B"</span>, <span class="at">begin =</span> <span class="fl">0.05</span>, <span class="at">end =</span> <span class="fl">0.95</span>) <span class="sc">+</span></span>
+<span id="cb12-31"><a></a>  <span class="fu">scale_x_continuous</span>(<span class="at">name =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb12-32"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">name =</span> <span class="cn">NULL</span>, <span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">20</span>, <span class="dv">6</span>), <span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb12-33"><a></a>  <span class="fu">theme_void</span>(<span class="dv">16</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="circular-dendrogram" class="slide level2">
+<h2>Circular Dendrogram</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">library</span>(ape)</span>
+<span id="cb13-2"><a></a><span class="fu">plot</span>(<span class="fu">as.phylo</span>(hc), <span class="at">type =</span> <span class="st">"fan"</span>, <span class="at">cex =</span> <span class="fl">0.95</span>, <span class="at">no.margin =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb13-3"><a></a>     <span class="at">tip.color =</span> <span class="fu">darken</span>(<span class="fu">palette_okabe_ito</span>()[<span class="fu">cutree</span>(hc, <span class="at">k =</span> <span class="dv">4</span>)], <span class="fl">0.3</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="meetup-12_files/figure-revealjs/unnamed-chunk-21-1.png" width="960" class="r-stretch"></section>
 <section id="try-something-else" class="slide level2">
 <h2>Try Something Else</h2>
 <ul>
 <li>Dropped Gender and Age</li>
 </ul>
 
-<img data-src="meetup-12_files/figure-revealjs/unnamed-chunk-19-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-12_files/figure-revealjs/unnamed-chunk-22-1.png" width="960" class="r-stretch"></section>
 <section id="try-a-different-linkage" class="slide level2">
 <h2>Try a Different Linkage</h2>
 <ul>
 <li>Use the Ward Linkage Instead</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>mall_clusters <span class="ot">=</span> mall_dist <span class="sc">|&gt;</span> </span>
-<span id="cb12-2"><a></a>  <span class="fu">hclust</span>(</span>
-<span id="cb12-3"><a></a>  <span class="at">method =</span> <span class="st">"ward"</span></span>
-<span id="cb12-4"><a></a>) </span>
-<span id="cb12-5"><a></a></span>
-<span id="cb12-6"><a></a>mall_customers <span class="ot">=</span> mall_customers <span class="sc">|&gt;</span> <span class="fu">left_join</span>(</span>
-<span id="cb12-7"><a></a>  mall_clusters <span class="sc">|&gt;</span> <span class="fu">cutree</span>(<span class="at">k=</span><span class="dv">5</span>) <span class="sc">|&gt;</span> <span class="fu">tidy</span>() <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">names =</span> <span class="fu">as.numeric</span>(names)),</span>
-<span id="cb12-8"><a></a>  <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"CustomerID"</span> <span class="ot">=</span> <span class="st">"names"</span>) )<span class="sc">|&gt;</span> </span>
-<span id="cb12-9"><a></a>  <span class="fu">rename</span>(<span class="at">clusters =</span> x)</span>
-<span id="cb12-10"><a></a></span>
-<span id="cb12-11"><a></a>mall_customers <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Annual Income (k$)</span><span class="st">`</span>,<span class="at">y=</span><span class="st">`</span><span class="at">Spending Score (1-100)</span><span class="st">`</span>,<span class="at">color =</span> <span class="fu">as_factor</span>(clusters),<span class="at">fill =</span> <span class="fu">as_factor</span>(clusters) )) <span class="sc">+</span></span>
-<span id="cb12-12"><a></a>  <span class="fu">geom_point</span>()  <span class="sc">+</span></span>
-<span id="cb12-13"><a></a>  <span class="fu">scale_color_okabe_ito</span>() <span class="sc">+</span></span>
-<span id="cb12-14"><a></a>  <span class="fu">scale_fill_okabe_ito</span>()  <span class="sc">+</span></span>
-<span id="cb12-15"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
-<span id="cb12-16"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Cluster Differences"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>mall_clusters <span class="ot">=</span> mall_dist <span class="sc">|&gt;</span> </span>
+<span id="cb14-2"><a></a>  <span class="fu">hclust</span>(</span>
+<span id="cb14-3"><a></a>  <span class="at">method =</span> <span class="st">"ward.D2"</span></span>
+<span id="cb14-4"><a></a>) </span>
+<span id="cb14-5"><a></a></span>
+<span id="cb14-6"><a></a>mall_customers <span class="ot">=</span> mall_customers <span class="sc">|&gt;</span> <span class="fu">left_join</span>(</span>
+<span id="cb14-7"><a></a>  mall_clusters <span class="sc">|&gt;</span> <span class="fu">cutree</span>(<span class="at">k=</span><span class="dv">5</span>) <span class="sc">|&gt;</span> <span class="fu">tidy</span>() <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">names =</span> <span class="fu">as.numeric</span>(names)),</span>
+<span id="cb14-8"><a></a>  <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"CustomerID"</span> <span class="ot">=</span> <span class="st">"names"</span>) )<span class="sc">|&gt;</span> </span>
+<span id="cb14-9"><a></a>  <span class="fu">rename</span>(<span class="at">clusters =</span> x)</span>
+<span id="cb14-10"><a></a></span>
+<span id="cb14-11"><a></a>mall_customers <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Annual Income (k$)</span><span class="st">`</span>,<span class="at">y=</span><span class="st">`</span><span class="at">Spending Score (1-100)</span><span class="st">`</span>,<span class="at">color =</span> <span class="fu">as_factor</span>(clusters),<span class="at">fill =</span> <span class="fu">as_factor</span>(clusters) )) <span class="sc">+</span></span>
+<span id="cb14-12"><a></a>  <span class="fu">geom_point</span>()  <span class="sc">+</span></span>
+<span id="cb14-13"><a></a>  <span class="fu">scale_color_okabe_ito</span>() <span class="sc">+</span></span>
+<span id="cb14-14"><a></a>  <span class="fu">scale_fill_okabe_ito</span>()  <span class="sc">+</span></span>
+<span id="cb14-15"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
+<span id="cb14-16"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Cluster Differences"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="try-a-different-linkage-1" class="slide level2">
@@ -7662,32 +7715,8 @@ George I. Hagstrom
 <ul>
 <li>Use the Ward Linkage Instead</li>
 </ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>mall_clusters <span class="ot">=</span> mall_dist <span class="sc">|&gt;</span> </span>
-<span id="cb13-2"><a></a>  <span class="fu">hclust</span>(</span>
-<span id="cb13-3"><a></a>  <span class="at">method =</span> <span class="st">"ward"</span></span>
-<span id="cb13-4"><a></a>) </span>
-<span id="cb13-5"><a></a></span>
-<span id="cb13-6"><a></a>mall_customers <span class="ot">=</span> mall_customers <span class="sc">|&gt;</span> <span class="fu">left_join</span>(</span>
-<span id="cb13-7"><a></a>  mall_clusters <span class="sc">|&gt;</span> <span class="fu">cutree</span>(<span class="at">k=</span><span class="dv">5</span>) <span class="sc">|&gt;</span> <span class="fu">tidy</span>() <span class="sc">|&gt;</span> <span class="fu">mutate</span>(<span class="at">names =</span> <span class="fu">as.numeric</span>(names)),</span>
-<span id="cb13-8"><a></a>  <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"CustomerID"</span> <span class="ot">=</span> <span class="st">"names"</span>) )<span class="sc">|&gt;</span> </span>
-<span id="cb13-9"><a></a>  <span class="fu">rename</span>(<span class="at">clusters =</span> x)</span>
-<span id="cb13-10"><a></a></span>
-<span id="cb13-11"><a></a>mall_customers <span class="sc">|&gt;</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Annual Income (k$)</span><span class="st">`</span>,<span class="at">y=</span><span class="st">`</span><span class="at">Spending Score (1-100)</span><span class="st">`</span>,<span class="at">color =</span> <span class="fu">as_factor</span>(clusters),<span class="at">fill =</span> <span class="fu">as_factor</span>(clusters) )) <span class="sc">+</span></span>
-<span id="cb13-12"><a></a>  <span class="fu">geom_point</span>()  <span class="sc">+</span></span>
-<span id="cb13-13"><a></a>  <span class="fu">scale_color_okabe_ito</span>() <span class="sc">+</span></span>
-<span id="cb13-14"><a></a>  <span class="fu">scale_fill_okabe_ito</span>()  <span class="sc">+</span></span>
-<span id="cb13-15"><a></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>) <span class="sc">+</span></span>
-<span id="cb13-16"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Cluster Differences"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="try-a-different-linkage-2" class="slide level2">
-<h2>Try a Different Linkage</h2>
-<ul>
-<li>Use the Ward Linkage Instead</li>
-</ul>
 
-<img data-src="meetup-12_files/figure-revealjs/unnamed-chunk-22-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-12_files/figure-revealjs/unnamed-chunk-24-1.png" width="960" class="r-stretch"></section>
 <section id="interpreting-clusters" class="slide level2">
 <h2>Interpreting Clusters</h2>
 <ul>
@@ -7702,8 +7731,12 @@ George I. Hagstrom
 <section id="clustered-heatmaps" class="slide level2">
 <h2>Clustered Heatmaps</h2>
 
-<img data-src="meetup-12_files/figure-revealjs/unnamed-chunk-23-1.png" width="960" class="r-stretch"></section>
+<img data-src="eisen_fig1.jpg" class="r-stretch quarto-figure-center"><p class="caption">Eisen et al.&nbsp;(1998), PNAS</p></section>
 <section id="clustered-heatmaps-1" class="slide level2">
+<h2>Clustered Heatmaps</h2>
+
+<img data-src="meetup-12_files/figure-revealjs/unnamed-chunk-25-1.png" width="960" class="r-stretch"></section>
+<section id="clustered-heatmaps-2" class="slide level2">
 <h2>Clustered Heatmaps</h2>
 <ul>
 <li><code>tidyheatmaps</code> package
@@ -7714,13 +7747,13 @@ George I. Hagstrom
 <li>Not <code>ggplot2</code> compatible</li>
 </ul>
 </section>
-<section id="clustered-heatmaps-2" class="slide level2 smaller">
+<section id="clustered-heatmaps-3" class="slide level2 smaller">
 <h2>Clustered Heatmaps</h2>
 <ul>
 <li>Need long-format data</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>US_state_stats</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>US_state_stats</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 50 × 15
    state       homeownership multiunit income med_income poverty fed_spend smoke
@@ -7741,62 +7774,41 @@ George I. Hagstrom
 </div>
 </div>
 </section>
-<section id="clustered-heatmaps-3" class="slide level2 smaller">
+<section id="clustered-heatmaps-4" class="slide level2 smaller">
 <h2>Clustered Heatmaps</h2>
 <ul>
 <li>Need long-format data</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>US_long <span class="ot">=</span> US_state_stats <span class="sc">|&gt;</span> <span class="fu">pivot_longer</span>(</span>
-<span id="cb16-2"><a></a>  <span class="at">names_to =</span> <span class="st">"variable"</span>,</span>
-<span id="cb16-3"><a></a>  <span class="at">cols=</span>homeownership<span class="sc">:</span>popdens2010,</span>
-<span id="cb16-4"><a></a>  <span class="at">values_to =</span> <span class="st">"value"</span>)</span>
-<span id="cb16-5"><a></a>US_long</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>US_long <span class="ot">=</span> US_state_stats <span class="sc">|&gt;</span> </span>
+<span id="cb17-2"><a></a>  <span class="fu">mutate</span>(<span class="at">state =</span> state.abb[<span class="fu">match</span>(state, state.name)]) <span class="sc">|&gt;</span> </span>
+<span id="cb17-3"><a></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb17-4"><a></a>  <span class="at">names_to =</span> <span class="st">"variable"</span>,</span>
+<span id="cb17-5"><a></a>  <span class="at">cols=</span>homeownership<span class="sc">:</span>popdens2010,</span>
+<span id="cb17-6"><a></a>  <span class="at">values_to =</span> <span class="st">"value"</span>)</span>
+<span id="cb17-7"><a></a>US_long</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 700 × 3
-   state   variable        value
-   &lt;chr&gt;   &lt;chr&gt;           &lt;dbl&gt;
- 1 Alabama homeownership    71.1
- 2 Alabama multiunit        15.5
- 3 Alabama income        22984  
- 4 Alabama med_income    42081  
- 5 Alabama poverty          17.1
- 6 Alabama fed_spend        11.7
- 7 Alabama smoke            24.8
- 8 Alabama soc_sec          18.5
- 9 Alabama nuclear          16.3
-10 Alabama coal             56.6
+   state variable        value
+   &lt;chr&gt; &lt;chr&gt;           &lt;dbl&gt;
+ 1 AL    homeownership    71.1
+ 2 AL    multiunit        15.5
+ 3 AL    income        22984  
+ 4 AL    med_income    42081  
+ 5 AL    poverty          17.1
+ 6 AL    fed_spend        11.7
+ 7 AL    smoke            24.8
+ 8 AL    soc_sec          18.5
+ 9 AL    nuclear          16.3
+10 AL    coal             56.6
 # ℹ 690 more rows</code></pre>
 </div>
-</div>
-</section>
-<section id="clustered-heatmaps-4" class="slide level2">
-<h2>Clustered Heatmaps</h2>
-<ul>
-<li><code>tidy_heatmap</code> computes clusters for you, but takes a ton of arguments</li>
-</ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">library</span>(tidyheatmaps)</span>
-<span id="cb18-2"><a></a></span>
-<span id="cb18-3"><a></a>US_long <span class="sc">|&gt;</span> </span>
-<span id="cb18-4"><a></a>  <span class="fu">tidy_heatmap</span>(</span>
-<span id="cb18-5"><a></a>                <span class="at">rows =</span> state,</span>
-<span id="cb18-6"><a></a>                <span class="at">columns =</span> variable, </span>
-<span id="cb18-7"><a></a>                <span class="at">values =</span> value,</span>
-<span id="cb18-8"><a></a>                <span class="at">cluster_rows =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb18-9"><a></a>                <span class="at">cluster_cols =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb18-10"><a></a>                <span class="at">scale =</span> <span class="st">"column"</span>,</span>
-<span id="cb18-11"><a></a>                <span class="at">fontsize_row =</span> <span class="dv">6</span>,</span>
-<span id="cb18-12"><a></a>                <span class="at">fontsize_col=</span><span class="dv">12</span>,</span>
-<span id="cb18-13"><a></a>                <span class="at">clustering_method =</span> <span class="st">"ward"</span>,</span>
-<span id="cb18-14"><a></a>                <span class="at">main =</span> <span class="st">"Hierarchical Clustering of US States"</span>,</span>
-<span id="cb18-15"><a></a>                <span class="at">fontsize =</span> <span class="dv">12</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="clustered-heatmaps-5" class="slide level2">
 <h2>Clustered Heatmaps</h2>
 <ul>
-<li><code>scale = column/row is very important</code></li>
+<li><code>tidy_heatmap</code> computes clusters for you, but takes a ton of arguments</li>
 </ul>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">library</span>(tidyheatmaps)</span>
@@ -7809,11 +7821,13 @@ George I. Hagstrom
 <span id="cb19-8"><a></a>                <span class="at">cluster_rows =</span> <span class="cn">TRUE</span>, </span>
 <span id="cb19-9"><a></a>                <span class="at">cluster_cols =</span> <span class="cn">TRUE</span>,</span>
 <span id="cb19-10"><a></a>                <span class="at">scale =</span> <span class="st">"column"</span>,</span>
-<span id="cb19-11"><a></a>                <span class="at">fontsize_row =</span> <span class="dv">6</span>,</span>
-<span id="cb19-12"><a></a>                <span class="at">fontsize_col=</span><span class="dv">12</span>,</span>
-<span id="cb19-13"><a></a>                <span class="at">clustering_method =</span> <span class="st">"ward"</span>,</span>
-<span id="cb19-14"><a></a>                <span class="at">main =</span> <span class="st">"Hierarchical Clustering of US States"</span>,</span>
-<span id="cb19-15"><a></a>                <span class="at">fontsize =</span> <span class="dv">12</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb19-11"><a></a>                <span class="at">fontsize_row =</span> <span class="dv">7</span>,</span>
+<span id="cb19-12"><a></a>                <span class="at">fontsize_col=</span><span class="dv">11</span>,</span>
+<span id="cb19-13"><a></a>                <span class="at">angle_col =</span> <span class="st">"315"</span>,</span>
+<span id="cb19-14"><a></a>                <span class="at">treeheight_col =</span> <span class="dv">30</span>,</span>
+<span id="cb19-15"><a></a>                <span class="at">clustering_method =</span> <span class="st">"ward.D2"</span>,</span>
+<span id="cb19-16"><a></a>                <span class="at">main =</span> <span class="st">"Hierarchical Clustering of US States"</span>,</span>
+<span id="cb19-17"><a></a>                <span class="at">fontsize =</span> <span class="dv">12</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="clustered-heatmaps-6" class="slide level2">
@@ -7821,15 +7835,40 @@ George I. Hagstrom
 <ul>
 <li><code>scale = column/row is very important</code></li>
 </ul>
-
-<img data-src="meetup-12_files/figure-revealjs/unnamed-chunk-28-1.png" width="960" class="r-stretch"></section>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">library</span>(tidyheatmaps)</span>
+<span id="cb20-2"><a></a></span>
+<span id="cb20-3"><a></a>US_long <span class="sc">|&gt;</span> </span>
+<span id="cb20-4"><a></a>  <span class="fu">tidy_heatmap</span>(</span>
+<span id="cb20-5"><a></a>                <span class="at">rows =</span> state,</span>
+<span id="cb20-6"><a></a>                <span class="at">columns =</span> variable, </span>
+<span id="cb20-7"><a></a>                <span class="at">values =</span> value,</span>
+<span id="cb20-8"><a></a>                <span class="at">cluster_rows =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb20-9"><a></a>                <span class="at">cluster_cols =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb20-10"><a></a>                <span class="at">scale =</span> <span class="st">"column"</span>,</span>
+<span id="cb20-11"><a></a>                <span class="at">fontsize_row =</span> <span class="dv">7</span>,</span>
+<span id="cb20-12"><a></a>                <span class="at">fontsize_col=</span><span class="dv">11</span>,</span>
+<span id="cb20-13"><a></a>                <span class="at">angle_col =</span> <span class="st">"315"</span>,</span>
+<span id="cb20-14"><a></a>                <span class="at">treeheight_col =</span> <span class="dv">30</span>,</span>
+<span id="cb20-15"><a></a>                <span class="at">clustering_method =</span> <span class="st">"ward.D2"</span>,</span>
+<span id="cb20-16"><a></a>                <span class="at">main =</span> <span class="st">"Hierarchical Clustering of US States"</span>,</span>
+<span id="cb20-17"><a></a>                <span class="at">fontsize =</span> <span class="dv">12</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
 <section id="clustered-heatmaps-7" class="slide level2">
 <h2>Clustered Heatmaps</h2>
 <ul>
 <li><code>scale = column/row is very important</code></li>
 </ul>
 
-<img data-src="meetup-12_files/figure-revealjs/unnamed-chunk-29-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-12_files/figure-revealjs/unnamed-chunk-30-1.png" width="960" class="r-stretch"></section>
+<section id="clustered-heatmaps-8" class="slide level2">
+<h2>Clustered Heatmaps</h2>
+<ul>
+<li><code>scale = column/row is very important</code></li>
+</ul>
+
+<img data-src="meetup-12_files/figure-revealjs/unnamed-chunk-31-1.png" width="960" class="r-stretch"></section>
 <section id="annotations" class="slide level2">
 <h2>Annotations</h2>
 <ul>
@@ -7837,14 +7876,14 @@ George I. Hagstrom
 <li>Add US-Regions to data frame</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>US_state_aug <span class="ot">=</span> US_state_stats <span class="sc">|&gt;</span> </span>
-<span id="cb20-2"><a></a>  <span class="fu">left_join</span>(US_regions) <span class="sc">|&gt;</span> </span>
-<span id="cb20-3"><a></a>  <span class="fu">mutate</span>(<span class="at">state =</span> state_abr) <span class="sc">|&gt;</span> </span>
-<span id="cb20-4"><a></a>  <span class="fu">select</span>(<span class="sc">-</span>state_abr) <span class="sc">|&gt;</span> </span>
-<span id="cb20-5"><a></a>  <span class="fu">pivot_longer</span>(</span>
-<span id="cb20-6"><a></a>    <span class="at">names_to =</span> <span class="st">"variable"</span>,</span>
-<span id="cb20-7"><a></a>    <span class="at">cols=</span>homeownership<span class="sc">:</span>popdens2010,</span>
-<span id="cb20-8"><a></a>    <span class="at">values_to =</span> <span class="st">"value"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>US_state_aug <span class="ot">=</span> US_state_stats <span class="sc">|&gt;</span> </span>
+<span id="cb21-2"><a></a>  <span class="fu">left_join</span>(US_regions) <span class="sc">|&gt;</span> </span>
+<span id="cb21-3"><a></a>  <span class="fu">mutate</span>(<span class="at">state =</span> state_abr) <span class="sc">|&gt;</span> </span>
+<span id="cb21-4"><a></a>  <span class="fu">select</span>(<span class="sc">-</span>state_abr) <span class="sc">|&gt;</span> </span>
+<span id="cb21-5"><a></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb21-6"><a></a>    <span class="at">names_to =</span> <span class="st">"variable"</span>,</span>
+<span id="cb21-7"><a></a>    <span class="at">cols=</span>homeownership<span class="sc">:</span>popdens2010,</span>
+<span id="cb21-8"><a></a>    <span class="at">values_to =</span> <span class="st">"value"</span>) </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="annotations-1" class="slide level2">
@@ -7875,33 +7914,35 @@ George I. Hagstrom
 <section id="annotations-2" class="slide level2">
 <h2>Annotations</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>US_state_aug <span class="sc">|&gt;</span></span>
-<span id="cb22-2"><a></a>  <span class="fu">tidy_heatmap</span>(</span>
-<span id="cb22-3"><a></a>                <span class="at">rows =</span> state,</span>
-<span id="cb22-4"><a></a>                <span class="at">columns =</span> variable, </span>
-<span id="cb22-5"><a></a>                <span class="at">values =</span> value,</span>
-<span id="cb22-6"><a></a>                <span class="at">cluster_rows =</span> <span class="cn">TRUE</span>, </span>
-<span id="cb22-7"><a></a>                <span class="at">cluster_cols =</span> <span class="cn">TRUE</span>,</span>
-<span id="cb22-8"><a></a>                <span class="at">scale =</span> <span class="st">"column"</span>,</span>
-<span id="cb22-9"><a></a>                <span class="at">fontsize_row =</span> <span class="dv">6</span>,</span>
-<span id="cb22-10"><a></a>                <span class="at">fontsize_col=</span><span class="dv">12</span>,</span>
-<span id="cb22-11"><a></a>                <span class="at">clustering_method =</span> <span class="st">"ward"</span>,</span>
-<span id="cb22-12"><a></a>                <span class="at">main =</span> <span class="st">"Hierarchical Clustering of US States"</span>,</span>
-<span id="cb22-13"><a></a>                <span class="at">fontsize =</span> <span class="dv">12</span>,</span>
-<span id="cb22-14"><a></a>                <span class="at">annotation_row =</span> region,</span>
-<span id="cb22-15"><a></a>                <span class="at">annotation_colors =</span>  <span class="fu">list</span>(  <span class="co"># specify colors for annotations</span></span>
-<span id="cb22-16"><a></a>      <span class="at">region =</span> <span class="fu">c</span>(<span class="st">"Northeast"</span> <span class="ot">=</span> <span class="st">"#56B4E9"</span>, <span class="st">"South"</span> <span class="ot">=</span> <span class="st">"#E69F00"</span>, <span class="st">"West"</span> <span class="ot">=</span> <span class="st">"#009E73"</span>, <span class="st">"Midwest"</span> <span class="ot">=</span><span class="st">"#F0E442"</span>)</span>
-<span id="cb22-17"><a></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>US_state_aug <span class="sc">|&gt;</span></span>
+<span id="cb23-2"><a></a>  <span class="fu">tidy_heatmap</span>(</span>
+<span id="cb23-3"><a></a>                <span class="at">rows =</span> state,</span>
+<span id="cb23-4"><a></a>                <span class="at">columns =</span> variable, </span>
+<span id="cb23-5"><a></a>                <span class="at">values =</span> value,</span>
+<span id="cb23-6"><a></a>                <span class="at">cluster_rows =</span> <span class="cn">TRUE</span>, </span>
+<span id="cb23-7"><a></a>                <span class="at">cluster_cols =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb23-8"><a></a>                <span class="at">scale =</span> <span class="st">"column"</span>,</span>
+<span id="cb23-9"><a></a>                <span class="at">fontsize_row =</span> <span class="dv">7</span>,</span>
+<span id="cb23-10"><a></a>                <span class="at">fontsize_col=</span><span class="dv">11</span>,</span>
+<span id="cb23-11"><a></a>                <span class="at">angle_col =</span> <span class="st">"315"</span>,</span>
+<span id="cb23-12"><a></a>                <span class="at">treeheight_col =</span> <span class="dv">30</span>,</span>
+<span id="cb23-13"><a></a>                <span class="at">clustering_method =</span> <span class="st">"ward.D2"</span>,</span>
+<span id="cb23-14"><a></a>                <span class="at">main =</span> <span class="st">"Hierarchical Clustering of US States"</span>,</span>
+<span id="cb23-15"><a></a>                <span class="at">fontsize =</span> <span class="dv">12</span>,</span>
+<span id="cb23-16"><a></a>                <span class="at">annotation_row =</span> region,</span>
+<span id="cb23-17"><a></a>                <span class="at">annotation_colors =</span>  <span class="fu">list</span>(  <span class="co"># specify colors for annotations</span></span>
+<span id="cb23-18"><a></a>      <span class="at">region =</span> <span class="fu">c</span>(<span class="st">"Northeast"</span> <span class="ot">=</span> <span class="st">"#56B4E9"</span>, <span class="st">"South"</span> <span class="ot">=</span> <span class="st">"#E69F00"</span>, <span class="st">"West"</span> <span class="ot">=</span> <span class="st">"#009E73"</span>, <span class="st">"Midwest"</span> <span class="ot">=</span><span class="st">"#F0E442"</span>)</span>
+<span id="cb23-19"><a></a>    ))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="annotations-3" class="slide level2">
 <h2>Annotations</h2>
 
-<img data-src="meetup-12_files/figure-revealjs/unnamed-chunk-33-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-12_files/figure-revealjs/unnamed-chunk-35-1.png" width="960" class="r-stretch"></section>
 <section id="multiple-annotations" class="slide level2">
 <h2>Multiple Annotations</h2>
 
-<img data-src="meetup-12_files/figure-revealjs/unnamed-chunk-34-1.png" width="960" class="r-stretch"></section>
+<img data-src="meetup-12_files/figure-revealjs/unnamed-chunk-36-1.png" width="960" class="r-stretch"></section>
 <section id="downsides-of-hierarchical-clustering" class="slide level2">
 <h2>Downsides of Hierarchical Clustering</h2>
 <ul>

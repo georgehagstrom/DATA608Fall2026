@@ -44,13 +44,16 @@ library(ggokabeito)
 5. [For Python: Seaborn Clustermap](https://seaborn.pydata.org/generated/seaborn.clustermap.html)
 6. [For Python: Scipy Clusters](https://docs.scipy.org/doc/scipy/reference/cluster.html)
 
-<!-- TODO Fall 2026: Spring 2025 event announcement - swap in a current
-     event card before the meetup.
 
-## May 9th Meetup!
 
-![](May_2025_Meetup_Card.png)
--->
+## Meetup Thursday November 19th!
+
+
+
+![](Nov2026Seminar.png)
+
+
+[Registration Link](https://us02web.zoom.us/meeting/register/vNnES24tQkqUktS86HL1og)
 
 
 
@@ -59,6 +62,11 @@ library(ggokabeito)
 - Lots of data has a hierarchical structure
 
 ![Jonathan Eisen](tree_of_life.jpg)
+
+
+## Language Families
+
+![Minna Sundberg](sundberg_language_tree.jpg)
 
 
 ## Statistics of US States {.smaller}
@@ -113,7 +121,7 @@ US_clusters |>
   scale_fill_okabe_ito() +
   theme_void(base_size=16) +
   theme(panel.grid = element_line(color = "transparent")) +
-  labs(title = "State Clusters")
+  labs(title = "State Clusters", fill = "Cluster")
 
 
   
@@ -140,7 +148,7 @@ US_clusters |>
   scale_fill_okabe_ito() +
   theme_void(base_size=16) +
   theme(panel.grid = element_line(color = "transparent")) +
-  labs(title = "State Clusters",subtitle="Different Patterns Appear when we use 8 Clusters")
+  labs(title = "State Clusters",subtitle="Different Patterns Appear when we use 8 Clusters", fill = "Cluster")
 
 ```
 
@@ -313,6 +321,18 @@ ggplot() +
 
 ```
 
+
+## Dendrogram Clusters on a Map
+
+```{r}
+tibble(state = hc$labels, cluster = factor(cutree(hc, k = 4))) |> 
+  left_join(us_state_map, by = c("state" = "full")) |> 
+  ggplot(aes(fill = cluster)) +
+  geom_sf(aes(geometry = geom)) +
+  scale_fill_okabe_ito() +
+  theme_void(base_size = 16) +
+  labs(title = "Hierarchical Clusters of US States", fill = "Cluster")
+```
 
 ## Why Hierarchical Clustering?
 
@@ -706,12 +726,62 @@ mall_customers |> ggplot(aes(x = `Annual Income (k$)`,y=`Spending Score (1-100)`
 
 
 mall_customers |> ggplot(aes(x = `Annual Income (k$)`,y=`Spending Score (1-100)`,color = as_factor(clusters),fill = as_factor(clusters) )) +
-  geom_text(aes(label = Gender))  +
+  geom_text(aes(label = Gender), key_glyph = "point")  +
   scale_color_okabe_ito() +
   scale_fill_okabe_ito() +
   theme_minimal(base_size = 16) +
   labs(title = "Cluster Differences")
   
+```
+
+## Dendrogram Code {.smaller}
+
+```{r}
+#| echo: true
+#| eval: false
+hc <- US_state_stats |>
+  column_to_rownames(var = "state") |>
+  scale() |>
+  dist(method = "euclidean") |>
+  hclust(method = "ward.D2")
+
+ddata <- dendro_data(as.dendrogram(hc), type = "rectangle")
+segments <- segment(ddata)
+labels <- label(ddata)
+
+cut_height <- 5.0
+clusters <- cutree(hc, h = cut_height)
+clustered_labels <- left_join(
+  labels,
+  tibble(label = names(clusters), cluster = factor(clusters)),
+  by = "label"
+)
+
+ggplot() +
+  geom_segment(data = segments, aes(x, -y, xend = xend, yend = -yend)) +
+  geom_text(
+    data = clustered_labels,
+    aes(x, -y+.5, label = label, color = cluster),
+    hjust = 0,
+    angle = 90,
+    key_glyph = "point",
+    size = 4
+  ) +
+  geom_hline(yintercept = -cut_height, linetype = 2) +
+  scale_color_viridis_d(option = "B", begin = 0.05, end = 0.95) +
+  scale_x_continuous(name = NULL) +
+  scale_y_continuous(name = NULL, limits = c(-20, 6), expand = c(0, 0)) +
+  theme_void(16)
+```
+
+## Circular Dendrogram
+
+```{r}
+#| echo: true
+#| fig-height: 6.5
+library(ape)
+plot(as.phylo(hc), type = "fan", cex = 0.95, no.margin = TRUE,
+     tip.color = darken(palette_okabe_ito()[cutree(hc, k = 4)], 0.3))
 ```
 
 ## Try Something Else
@@ -760,34 +830,7 @@ mall_customers_with_clusters |> ggplot(aes(x = `Annual Income (k$)`,y=`Spending 
 
 mall_clusters = mall_dist |> 
   hclust(
-  method = "ward"
-) 
-
-mall_customers = mall_customers |> left_join(
-  mall_clusters |> cutree(k=5) |> tidy() |> mutate(names = as.numeric(names)),
-  by = c("CustomerID" = "names") )|> 
-  rename(clusters = x)
-
-mall_customers |> ggplot(aes(x = `Annual Income (k$)`,y=`Spending Score (1-100)`,color = as_factor(clusters),fill = as_factor(clusters) )) +
-  geom_point()  +
-  scale_color_okabe_ito() +
-  scale_fill_okabe_ito()  +
-  theme_minimal(base_size = 16) +
-  labs(title = "Cluster Differences")
-  
-```
-
-## Try a Different Linkage
-
-- Use the Ward Linkage Instead
-
-```{r}
-#| echo: true
-#| eval: false
-
-mall_clusters = mall_dist |> 
-  hclust(
-  method = "ward"
+  method = "ward.D2"
 ) 
 
 mall_customers = mall_customers |> left_join(
@@ -813,7 +856,7 @@ mall_customers |> ggplot(aes(x = `Annual Income (k$)`,y=`Spending Score (1-100)`
 
 mall_clusters = mall_dist |> 
   hclust(
-  method = "ward"
+  method = "ward.D2"
 ) 
 
 mall_customers = mall_customers |> left_join(
@@ -841,13 +884,18 @@ mall_customers |> ggplot(aes(x = `Annual Income (k$)`,y=`Spending Score (1-100)`
 
 ## Clustered Heatmaps
 
+![Eisen et al. (1998), PNAS](eisen_fig1.jpg)
+
+## Clustered Heatmaps
+
 ```{r}
+#| fig-height: 6.5
 library(tidyheatmaps)
 
-US_long = US_state_stats |> pivot_longer(names_to = "variable",cols=homeownership:popdens2010,values_to = "value")
+US_long = US_state_stats |> mutate(state = state.abb[match(state, state.name)]) |> pivot_longer(names_to = "variable",cols=homeownership:popdens2010,values_to = "value")
 
-US_long |> tidy_heatmap(rows = state,columns = variable, values = value,cluster_rows = TRUE, cluster_cols = TRUE,scale = "column",fontsize_row = 6,
-                        ,fontsize_col=12,clustering_method = "ward",main = "Hierarchical Clustering of US States",fontsize = 12)
+US_long |> tidy_heatmap(rows = state,columns = variable, values = value,cluster_rows = TRUE, cluster_cols = TRUE,scale = "column",fontsize_row = 7,
+                        fontsize_col=11,angle_col = "315",treeheight_col = 30,clustering_method = "ward.D2",main = "Hierarchical Clustering of US States",fontsize = 12)
 
 ```
 
@@ -875,7 +923,9 @@ US_state_stats
 
 ```{r}
 #| echo: true
-US_long = US_state_stats |> pivot_longer(
+US_long = US_state_stats |> 
+  mutate(state = state.abb[match(state, state.name)]) |> 
+  pivot_longer(
   names_to = "variable",
   cols=homeownership:popdens2010,
   values_to = "value")
@@ -901,9 +951,11 @@ US_long |>
                 cluster_rows = TRUE, 
                 cluster_cols = TRUE,
                 scale = "column",
-                fontsize_row = 6,
-                fontsize_col=12,
-                clustering_method = "ward",
+                fontsize_row = 7,
+                fontsize_col=11,
+                angle_col = "315",
+                treeheight_col = 30,
+                clustering_method = "ward.D2",
                 main = "Hierarchical Clustering of US States",
                 fontsize = 12)
 
@@ -927,9 +979,11 @@ US_long |>
                 cluster_rows = TRUE, 
                 cluster_cols = TRUE,
                 scale = "column",
-                fontsize_row = 6,
-                fontsize_col=12,
-                clustering_method = "ward",
+                fontsize_row = 7,
+                fontsize_col=11,
+                angle_col = "315",
+                treeheight_col = 30,
+                clustering_method = "ward.D2",
                 main = "Hierarchical Clustering of US States",
                 fontsize = 12)
 
@@ -941,6 +995,7 @@ US_long |>
 - `scale = column/row is very important` 
 
 ```{r}
+#| fig-height: 6.5
 
 
 US_long |> 
@@ -950,9 +1005,11 @@ US_long |>
                 values = value,
                 cluster_rows = TRUE, 
                 cluster_cols = TRUE,
-                fontsize_row = 6,
-                fontsize_col=12,
-                clustering_method = "ward",
+                fontsize_row = 7,
+                fontsize_col=11,
+                angle_col = "315",
+                treeheight_col = 30,
+                clustering_method = "ward.D2",
                 main = "I forgot to scale the columns and now my plot is worthless",
                 fontsize = 12)
 
@@ -964,6 +1021,7 @@ US_long |>
 - `scale = column/row is very important` 
 
 ```{r}
+#| fig-height: 6.5
 
 
 US_long |> 
@@ -974,9 +1032,11 @@ US_long |>
                 cluster_rows = TRUE, 
                 cluster_cols = TRUE,
                 scale = "column",
-                fontsize_row = 6,
-                fontsize_col=12,
-                clustering_method = "ward",
+                fontsize_row = 7,
+                fontsize_col=11,
+                angle_col = "315",
+                treeheight_col = 30,
+                clustering_method = "ward.D2",
                 main = "I forgot to scale the columns and now my plot is worthless",
                 fontsize = 12)
 
@@ -1029,9 +1089,11 @@ US_state_aug |>
                 cluster_rows = TRUE, 
                 cluster_cols = TRUE,
                 scale = "column",
-                fontsize_row = 6,
-                fontsize_col=12,
-                clustering_method = "ward",
+                fontsize_row = 7,
+                fontsize_col=11,
+                angle_col = "315",
+                treeheight_col = 30,
+                clustering_method = "ward.D2",
                 main = "Hierarchical Clustering of US States",
                 fontsize = 12,
                 annotation_row = region,
@@ -1045,6 +1107,7 @@ US_state_aug |>
 ## Annotations
 
 ```{r}
+#| fig-height: 6.5
 
 US_state_aug |>
   tidy_heatmap(
@@ -1054,9 +1117,11 @@ US_state_aug |>
                 cluster_rows = TRUE, 
                 cluster_cols = TRUE,
                 scale = "column",
-                fontsize_row = 6,
-                fontsize_col=12,
-                clustering_method = "ward",
+                fontsize_row = 7,
+                fontsize_col=11,
+                angle_col = "315",
+                treeheight_col = 30,
+                clustering_method = "ward.D2",
                 main = "Hierarchical Clustering of US States",
                 fontsize = 12,
                 annotation_row = region,
@@ -1069,6 +1134,7 @@ US_state_aug |>
 ## Multiple Annotations
 
 ```{r}
+#| fig-height: 6.5
 
 US_state_aug |>
   tidy_heatmap(
@@ -1078,9 +1144,11 @@ US_state_aug |>
                 cluster_rows = TRUE, 
                 cluster_cols = TRUE,
                 scale = "column",
-                fontsize_row = 6,
-                fontsize_col=12,
-                clustering_method = "ward",
+                fontsize_row = 7,
+                fontsize_col=11,
+                angle_col = "315",
+                treeheight_col = 30,
+                clustering_method = "ward.D2",
                 main = "Hierarchical Clustering of US States",
                 fontsize = 12,
                 annotation_row = c("region","division"),
